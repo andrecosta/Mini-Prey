@@ -38,6 +38,7 @@ namespace MiniPrey
             gameController.AddComponent<GameController>();
 
             GameObject player = new GameObject();
+            player.Transform.scale = new Vector3(0.5f, 1, 1);
             var sr = player.AddComponent<SpriteRenderer>();
             Sprite sprite = new Sprite();
             sprite.texture = dummyTexture;
@@ -94,16 +95,6 @@ namespace MiniPrey
 
             // Update the active scene's game objects
             SceneManager.UpdateActiveScene(dt);
-            /*foreach (GameObject go in SceneManager.GetActiveScene().GetRootGameObjects())
-            {
-                foreach (Component c in go.GetComponents())
-                {
-                    Script script = c as Script;
-                    script?.Update(dt);
-                }
-            }*/
-
-            //UpdateLoop(dt);
 
             base.Update(gameTime);
         }
@@ -123,13 +114,6 @@ namespace MiniPrey
 
             // Draw the active scene's game objects which contain renderable components
             SceneManager.DrawActiveScene(spriteBatch, dummyTexture);
-            /*foreach (GameObject go in SceneManager.GetActiveScene().GetRootGameObjects())
-            {
-                SpriteRenderer sr = go.GetComponent<SpriteRenderer>();
-                if (sr?.sprite != null)
-                    spriteBatch.Draw(dummyTexture, new Rectangle((int)go.Transform.position.X, (int)go.Transform.position.Y,
-                        50, 50), sr.color);
-            }*/
 
             spriteBatch.End();
 

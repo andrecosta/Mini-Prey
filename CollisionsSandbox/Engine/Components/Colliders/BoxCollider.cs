@@ -5,11 +5,9 @@ using System.Text;
 
 namespace MiniPrey.Engine
 {
-    class Collider : Component
+    class BoxCollider : Collider
     {
-        public override void Update(float dt)
-        {
-
-        }
+        int Width { get; set; }
+        int Height { get; set; }
     }
 }

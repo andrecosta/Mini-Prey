@@ -38,6 +38,7 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Engine\Components\Colliders\BoxCollider.cs" />
     <Compile Include="Engine\Components\Component.cs" />
     <Compile Include="Engine\Components\Behaviours\Behaviour.cs" />
     <Compile Include="Engine\Components\Behaviours\Script.cs" />

@@ -94,7 +94,7 @@ namespace MiniPrey.Engine.SceneManagement
                     continue;
 
                 sb.Draw(dummyTexture, new Rectangle((int)sr.Transform.position.X, (int)sr.Transform.position.Y,
-                    50, 50), sr.color);
+                    (int)(50 * sr.Transform.scale.X), (int)(50 * sr.Transform.scale.Y)), sr.color);
             }
 
             foreach (var child in rootGameObject.Transform.Children)
