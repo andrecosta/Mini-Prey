@@ -3,12 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using MiniPrey.Engine.SceneManagement;
 
 namespace MiniPrey.Engine
 {
     class Rigidbody : Component
     {
-        static readonly float Damping = 0.9f;
+        static readonly float Damping = 0.98f;
         static readonly Vector3 Gravity = new Vector3(0, 0, 0);
 
         public float mass { get; set; }
@@ -29,7 +30,7 @@ namespace MiniPrey.Engine
             acceleration += force * (1/mass);
             velocity *= Damping;
             velocity += acceleration;
-            transform.Translate(velocity * dt);
+            Transform.Translate(velocity * dt);
 
             acceleration = Gravity;
         }

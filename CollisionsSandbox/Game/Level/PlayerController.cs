@@ -9,9 +9,9 @@ using MiniPrey.Engine;
 
 namespace MiniPrey.Game
 {
-    class PlayerController : Component
+    class PlayerController : Script
     {
-        public float Speed = 200;
+        public float Speed = 500;
 
         private Rigidbody _rb;
 

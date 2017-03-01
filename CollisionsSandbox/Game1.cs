@@ -1,15 +1,11 @@
-﻿using InputManager;
+﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
+using InputManager;
 using MiniPrey.Engine;
 using MiniPrey.Engine.SceneManagement;
 using MiniPrey.Game;
-using ButtonState = Microsoft.Xna.Framework.Input.ButtonState;
-using Keys = Microsoft.Xna.Framework.Input.Keys;
 
 namespace MiniPrey
 {
@@ -22,9 +18,9 @@ namespace MiniPrey
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        // UI
-        List<MonoObject> monoObjects = new List<MonoObject>();
         Texture2D dummyTexture;
+
+        public static Action<float> UpdateLoop;
 
         public Game1()
         {
@@ -33,16 +29,25 @@ namespace MiniPrey
             Content.RootDirectory = "Content";
             Components.Add(new Input(this));        // » InputManager Component
 
-            // Setup scenes
+            // Setup scene 1
             Scene levelScene = new Scene();
-            // Load first scene
             SceneManager.SceneMap.Add("level", levelScene);
             SceneManager.LoadScene(0);
 
             GameObject gameController = new GameObject();
-            GameController gc = gameController.AddComponent<GameController>();
-            gc.DummyTexture = dummyTexture;
+            gameController.AddComponent<GameController>();
 
+            GameObject player = new GameObject();
+            var sr = player.AddComponent<SpriteRenderer>();
+            Sprite sprite = new Sprite();
+            sprite.texture = dummyTexture;
+            sr.sprite = sprite;
+            sr.color = Color.Red;
+
+            player.AddComponent<Rigidbody>();
+            player.AddComponent<PlayerController>();
+
+            SceneManager.AwakeScene();
         }
 
         /// <summary>
@@ -53,6 +58,7 @@ namespace MiniPrey
         /// </summary>
         protected override void Initialize()
         {
+            SceneManager.StartScene();
 
             base.Initialize();
         }
@@ -87,9 +93,17 @@ namespace MiniPrey
             float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             // Update the active scene's game objects
-            foreach (GameObject go in SceneManager.GetActiveScene().GetRootGameObjects())
+            SceneManager.UpdateActiveScene(dt);
+            /*foreach (GameObject go in SceneManager.GetActiveScene().GetRootGameObjects())
+            {
                 foreach (Component c in go.GetComponents())
-                    c.Update(dt);
+                {
+                    Script script = c as Script;
+                    script?.Update(dt);
+                }
+            }*/
+
+            //UpdateLoop(dt);
 
             base.Update(gameTime);
         }
@@ -107,20 +121,15 @@ namespace MiniPrey
 
             spriteBatch.Begin();
 
-            // Draw all MonoObjects
-            foreach (MonoObject mo in monoObjects)
-            {
-                mo.Draw(spriteBatch);
-            }
-
             // Draw the active scene's game objects which contain renderable components
-            foreach (GameObject go in SceneManager.GetActiveScene().GetRootGameObjects())
+            SceneManager.DrawActiveScene(spriteBatch, dummyTexture);
+            /*foreach (GameObject go in SceneManager.GetActiveScene().GetRootGameObjects())
             {
                 SpriteRenderer sr = go.GetComponent<SpriteRenderer>();
-                if (sr != null && sr.sprite != null)
-                    spriteBatch.Draw(dummyTexture, new Rectangle((int)go.transform.position.X, (int)go.transform.position.Y,
+                if (sr?.sprite != null)
+                    spriteBatch.Draw(dummyTexture, new Rectangle((int)go.Transform.position.X, (int)go.Transform.position.Y,
                         50, 50), sr.color);
-            }
+            }*/
 
             spriteBatch.End();
 

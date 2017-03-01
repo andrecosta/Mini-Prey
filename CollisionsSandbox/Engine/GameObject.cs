@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using MiniPrey.Engine.SceneManagement;
 
 namespace MiniPrey.Engine
 {
     class GameObject
     {
-        public Transform transform { get; set; }
-        public string tag { get; set; }
+        public Transform Transform { get; set; }
+        public string Tag { get; set; }
 
-        List<Component> _components = new List<Component>();
+        private List<Component> _components = new List<Component>();
 
         public GameObject()
         {
             SceneManager.GetActiveScene().AddRootGameObject(this);
 
             // Every game object will always have a Transform component by default
-            transform = AddComponent<Transform>();
+            Transform = AddComponent<Transform>();
         }
 
         /// <summary>
@@ -28,12 +27,10 @@ namespace MiniPrey.Engine
         /// <returns></returns>
         public T AddComponent<T>() where T : Component, new()
         {
-            T component = new T();
-            component.gameObject = this;
-            if (transform != null)
-                component.Awake();
-            _components.Add(component);
-            return component;
+            T c = new T();
+            c.GameObject = this;
+            _components.Add(c);
+            return c;
         }
 
         /// <summary>
@@ -43,13 +40,7 @@ namespace MiniPrey.Engine
         /// <returns></returns>
         public T GetComponent<T>() where T : Component
         {
-            foreach (var component in _components)
-            {
-                if (component is T)
-                    return (T)component;
-            }
-
-            return default(T);
+            return _components.FirstOrDefault(c => c is T) as T;
         }
 
         /// <summary>

@@ -38,9 +38,12 @@
     <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Engine\Component.cs" />
-    <Compile Include="Engine\Components\Camera.cs" />
-    <Compile Include="Engine\Components\CircleCollider.cs" />
+    <Compile Include="Engine\Components\Component.cs" />
+    <Compile Include="Engine\Components\Behaviours\Behaviour.cs" />
+    <Compile Include="Engine\Components\Behaviours\Script.cs" />
+    <Compile Include="Engine\Components\Behaviours\Camera.cs" />
+    <Compile Include="Engine\Components\Colliders\CircleCollider.cs" />
+    <Compile Include="Engine\Components\Colliders\Collider.cs" />
     <Compile Include="Engine\Components\SpriteRenderer.cs" />
     <Compile Include="Engine\Components\Transform.cs" />
     <Compile Include="Engine\SceneManagement\Scene.cs" />

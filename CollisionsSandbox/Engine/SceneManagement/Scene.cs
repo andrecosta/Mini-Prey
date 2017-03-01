@@ -5,25 +5,25 @@ using System.Text;
 
 namespace MiniPrey.Engine.SceneManagement
 {
-    struct Scene
+    class Scene
     {
         public string name { get; set; }
-        List<GameObject> RootGameObjects;
+        private List<GameObject> _rootGameObjects;
 
         public void AddRootGameObject(GameObject go)
         {
-            if (RootGameObjects == null)
-                RootGameObjects = new List<GameObject>();
+            if (_rootGameObjects == null)
+                _rootGameObjects = new List<GameObject>();
 
-            RootGameObjects.Add(go);
+            _rootGameObjects.Add(go);
         }
 
         public List<GameObject> GetRootGameObjects()
         {
-            if (RootGameObjects == null)
-                RootGameObjects = new List<GameObject>();
+            if (_rootGameObjects == null)
+                _rootGameObjects = new List<GameObject>();
 
-            return RootGameObjects;
+            return _rootGameObjects;
         }
     }
 }

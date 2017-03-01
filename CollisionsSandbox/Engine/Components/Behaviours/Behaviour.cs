@@ -5,7 +5,8 @@ using System.Text;
 
 namespace MiniPrey.Engine
 {
-    class Camera : Component
+    abstract class Behaviour : Component
     {
+        public bool enabled { get; set; }
     }
 }
