@@ -63,6 +63,10 @@
     <Compile Include="SpriteAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="MiniEngine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MiniEngine\bin\Debug\MiniEngine.dll</HintPath>
+    </Reference>
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MSBuildProgramFiles32)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
     </Reference>
