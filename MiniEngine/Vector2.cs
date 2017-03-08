@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 namespace MiniEngine
 {
     struct Vector2
@@ -55,7 +50,7 @@ namespace MiniEngine
 
         public static bool operator ==(Vector2 lhs, Vector2 rhs)
         {
-            return SqrMagnitude(lhs - rhs) < 9.99999943962493E-11;
+            return SqrMagnitude(lhs - rhs) < 9.9E-11;
         }
 
         public static bool operator !=(Vector2 lhs, Vector2 rhs)

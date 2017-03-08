@@ -2,6 +2,6 @@
 {
     class Sprite
     {
-        public Texture texture;
+        public Color texture;
     }
 }
