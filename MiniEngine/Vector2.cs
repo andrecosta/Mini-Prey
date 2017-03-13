@@ -11,6 +11,11 @@ namespace MiniEngine
         public float Y;
 
         public static Vector2 One => new Vector2(1f, 1f);
+        public static Vector2 Up => new Vector2(0, 1);
+        public static Vector2 Down => new Vector2(0, -1);
+        public static Vector2 Left => new Vector2(-1, 0);
+        public static Vector2 Right => new Vector2(1, 0);
+        public Vector2 Normalized => Normalize(this);
 
         public Vector2(float x = 0, float y = 0)
         {
@@ -60,13 +65,22 @@ namespace MiniEngine
 
         public static float Magnitude(Vector2 a)
         {
-            return (float)Math.Sqrt(a.X * a.X + a.Y * a.Y);
+            return (float)Math.Sqrt(SqrMagnitude(a));
         }
 
         public static float SqrMagnitude(Vector2 a)
         {
             return a.X * a.X + a.Y * a.Y;
         }
+
+        public static Vector2 Normalize(Vector2 a)
+        {
+            return a / Magnitude(a);
+        }
+
+
+
+
     }
 }
 
