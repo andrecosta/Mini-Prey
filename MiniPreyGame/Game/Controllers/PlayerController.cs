@@ -39,6 +39,14 @@ namespace MiniPreyGame
             {
                 dir.X = 1;
             }
+            if (Input.IsKeyDown(Keys.Q))
+            {
+                Transform.rotation -= dt;
+            }
+            if (Input.IsKeyDown(Keys.E))
+            {
+                Transform.rotation += dt;
+            }
 
             _rb.AddForce(dir * Speed * dt);
         }

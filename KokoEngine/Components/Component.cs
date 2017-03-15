@@ -2,17 +2,17 @@
 
 namespace KokoEngine
 {
-    public abstract class Component
+    public abstract class Component : IComponent
     {
         public GameObject GameObject { get; set; } // TODO: Make set private
         public Transform Transform => GameObject.Transform;
 
-        public T GetComponent<T>() where T : Component
+        public T GetComponent<T>() where T : IComponent
         {
             return GameObject.GetComponent<T>();
         }
 
-        public List<Component> GetComponents()
+        public List<IComponent> GetComponents()
         {
             return GameObject.GetComponents();
         }

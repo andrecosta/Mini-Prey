@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using KokoEngine;
+using Vector2 = Microsoft.Xna.Framework.Vector2;
 
 namespace MiniPreyGame
 {
@@ -34,12 +35,12 @@ namespace MiniPreyGame
             gameController.AddComponent<GameController>();
 
             GameObject player = new GameObject();
-            player.Transform.scale = new KokoEngine.Vector3(0.5f, 1, 1);
+            player.Transform.scale = new KokoEngine.Vector3(0.05f, 0.05f, 0.05f);
             var sr = player.AddComponent<SpriteRenderer>();
             Sprite sprite = new Sprite();
-            sprite.texture = "dummy";
+            sprite.texture = "boid";
             sr.sprite = sprite;
-            sr.color = KokoEngine.Color.Red;
+            sr.color = KokoEngine.Color.White;
 
             player.AddComponent<Rigidbody>();
             player.AddComponent<PlayerController>();
@@ -73,6 +74,7 @@ namespace MiniPreyGame
             dummyTexture = new Texture2D(GraphicsDevice, 1, 1);
             dummyTexture.SetData(new[] { Microsoft.Xna.Framework.Color.White });
             textureMap.Add("dummy", dummyTexture);
+            textureMap.Add("boid", Content.Load<Texture2D>("boid"));
         }
 
         /// <summary>
@@ -109,12 +111,14 @@ namespace MiniPreyGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(new Microsoft.Xna.Framework.Color(50, 50, 50));
+            GraphicsDevice.Clear(new Microsoft.Xna.Framework.Color(250, 250, 250));
             spriteBatch.Begin();
+
             // Draw the active scene's game objects which contain renderable components
             //SceneManager.DrawActiveScene(spriteBatch, dummyTexture);
             foreach (var rootGameObject in SceneManager.GetActiveScene().GetRootGameObjects())
                 DrawGameObjects(rootGameObject, spriteBatch);
+
             spriteBatch.End();
 
             base.Draw(gameTime);
@@ -128,8 +132,14 @@ namespace MiniPreyGame
                 if (sr == null)
                     continue;
 
-                sb.Draw(textureMap[sr.sprite.texture], new Rectangle((int)sr.Transform.position.X, (int)sr.Transform.position.Y,
-                    (int)(50 * sr.Transform.scale.X), (int)(50 * sr.Transform.scale.Y)), new Microsoft.Xna.Framework.Color(sr.color.R, sr.color.G, sr.color.B));
+                // Big draw
+                sb.Draw(textureMap[sr.sprite.texture],
+                    new Rectangle((int) sr.Transform.position.X, (int) sr.Transform.position.Y,
+                        (int) (textureMap[sr.sprite.texture].Width * sr.Transform.scale.X),
+                        (int) (textureMap[sr.sprite.texture].Height * sr.Transform.scale.Y)), null,
+                    new Microsoft.Xna.Framework.Color(sr.color.R, sr.color.G, sr.color.B), sr.Transform.rotation,
+                    new Vector2(textureMap[sr.sprite.texture].Width / 2f, textureMap[sr.sprite.texture].Height / 2f),
+                    SpriteEffects.None, 0);
             }
 
             foreach (var child in rootGameObject.Transform.Children)

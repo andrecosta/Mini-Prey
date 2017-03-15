@@ -13,6 +13,7 @@ namespace KokoEngine
         public int B;
 
         public static Color Red => new Color(255, 0, 0);
+        public static Color White => new Color(255, 255, 255);
 
         public Color(int r, int g, int b)
         {
