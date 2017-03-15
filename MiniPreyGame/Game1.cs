@@ -24,7 +24,6 @@ namespace MiniPreyGame
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             Components.Add(new Input(this));            // » InputManager Component
-            textureMap.Add("dummy", dummyTexture);
 
             // Setup scene 1
             Scene levelScene = new Scene();
@@ -73,6 +72,7 @@ namespace MiniPreyGame
             // Create a dummy texture
             dummyTexture = new Texture2D(GraphicsDevice, 1, 1);
             dummyTexture.SetData(new[] { Microsoft.Xna.Framework.Color.White });
+            textureMap.Add("dummy", dummyTexture);
         }
 
         /// <summary>
@@ -113,9 +113,27 @@ namespace MiniPreyGame
             spriteBatch.Begin();
             // Draw the active scene's game objects which contain renderable components
             //SceneManager.DrawActiveScene(spriteBatch, dummyTexture);
+            foreach (var rootGameObject in SceneManager.GetActiveScene().GetRootGameObjects())
+                DrawGameObjects(rootGameObject, spriteBatch);
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        void DrawGameObjects(GameObject rootGameObject, SpriteBatch sb)
+        {
+            foreach (Component component in rootGameObject.GetComponents())
+            {
+                SpriteRenderer sr = component as SpriteRenderer;
+                if (sr == null)
+                    continue;
+
+                sb.Draw(textureMap[sr.sprite.texture], new Rectangle((int)sr.Transform.position.X, (int)sr.Transform.position.Y,
+                    (int)(50 * sr.Transform.scale.X), (int)(50 * sr.Transform.scale.Y)), new Microsoft.Xna.Framework.Color(sr.color.R, sr.color.G, sr.color.B));
+            }
+
+            foreach (var child in rootGameObject.Transform.Children)
+                DrawGameObjects(child.GameObject, sb);
         }
     }
 }
