@@ -2,7 +2,7 @@
 {
     public class Rigidbody : Component
     {
-        static readonly float Damping = 0.98f;
+        static readonly float Damping = 0.97f;
         static readonly Vector3 Gravity = new Vector3(0, 0, 0);
 
         public float mass { get; set; }

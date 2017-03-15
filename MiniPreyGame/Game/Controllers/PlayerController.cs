@@ -6,7 +6,7 @@ namespace MiniPreyGame
 {
     class PlayerController : Script
     {
-        public float Speed = 500;
+        public float Speed = 250;
 
         private Rigidbody _rb;
 
@@ -25,27 +25,19 @@ namespace MiniPreyGame
 
             if (Input.IsKeyDown(Keys.W))
             {
-                dir.Y = -1;
-            }
-            if (Input.IsKeyDown(Keys.A))
-            {
-                dir.X = -1;
+                dir = -Transform.Up;
             }
             if (Input.IsKeyDown(Keys.S))
             {
-                dir.Y = 1;
+                dir = Transform.Up;
+            }
+            if (Input.IsKeyDown(Keys.A))
+            {
+                Transform.rotation -= dt*2;
             }
             if (Input.IsKeyDown(Keys.D))
             {
-                dir.X = 1;
-            }
-            if (Input.IsKeyDown(Keys.Q))
-            {
-                Transform.rotation -= dt;
-            }
-            if (Input.IsKeyDown(Keys.E))
-            {
-                Transform.rotation += dt;
+                Transform.rotation += dt*2;
             }
 
             _rb.AddForce(dir * Speed * dt);

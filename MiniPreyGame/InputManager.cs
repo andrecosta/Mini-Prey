@@ -56,8 +56,7 @@ namespace InputManager
                 keyPressTimer = interval;
                 return true;
             }
-            else
-                return false;
+            return false;
         }
 
         /// <summary>

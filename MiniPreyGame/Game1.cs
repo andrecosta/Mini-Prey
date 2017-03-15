@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using InputManager;
+using KokoEngine;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using KokoEngine;
+using Color = KokoEngine.Color;
 using Vector2 = Microsoft.Xna.Framework.Vector2;
+using Vector3 = KokoEngine.Vector3;
 
 namespace MiniPreyGame
 {
@@ -35,12 +36,12 @@ namespace MiniPreyGame
             gameController.AddComponent<GameController>();
 
             GameObject player = new GameObject();
-            player.Transform.scale = new KokoEngine.Vector3(0.05f, 0.05f, 0.05f);
+            player.Transform.scale = new Vector3(0.05f, 0.05f, 0.05f);
             var sr = player.AddComponent<SpriteRenderer>();
             Sprite sprite = new Sprite();
             sprite.texture = "boid";
             sr.sprite = sprite;
-            sr.color = KokoEngine.Color.White;
+            sr.color = Color.White;
 
             player.AddComponent<Rigidbody>();
             player.AddComponent<PlayerController>();
@@ -115,7 +116,6 @@ namespace MiniPreyGame
             spriteBatch.Begin();
 
             // Draw the active scene's game objects which contain renderable components
-            //SceneManager.DrawActiveScene(spriteBatch, dummyTexture);
             foreach (var rootGameObject in SceneManager.GetActiveScene().GetRootGameObjects())
                 DrawGameObjects(rootGameObject, spriteBatch);
 

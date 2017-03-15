@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace KokoEngine
 {
@@ -7,6 +8,16 @@ namespace KokoEngine
         public Vector3 position { get; set; }
         public float rotation { get; set; }
         public Vector3 scale { get; set; }
+
+        public Vector3 Up
+        {
+            get
+            {
+                float c = (float) Math.Cos(rotation);
+                float s = (float) Math.Sin(rotation);
+                return new Vector3(-s, c);
+            }
+        }
 
         public Transform()
         {
