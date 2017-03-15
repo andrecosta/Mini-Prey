@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace KokoEngine
@@ -8,7 +9,7 @@ namespace KokoEngine
         public Transform Transform { get; set; }
         public string Tag { get; set; }
 
-        private List<Component> _components = new List<Component>();
+        private List<IComponent> _components = new List<IComponent>();
 
         public GameObject()
         {
@@ -23,7 +24,7 @@ namespace KokoEngine
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T AddComponent<T>() where T : Component, new()
+        public T AddComponent<T>() where T : IComponent, new()
         {
             T c = new T();
             c.GameObject = this;
@@ -36,16 +37,16 @@ namespace KokoEngine
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        public T GetComponent<T>() where T : Component
+        public T GetComponent<T>() where T : IComponent
         {
-            return _components.FirstOrDefault(c => c is T) as T;
+            return (T)_components.FirstOrDefault(c => c is T);
         }
 
         /// <summary>
         /// Returns all the components associated with this game object
         /// </summary>
         /// <returns></returns>
-        public List<Component> GetComponents()
+        public List<IComponent> GetComponents()
         {
             return _components;
         }
