@@ -7,7 +7,7 @@ namespace KokoEngine
 {
     public interface IComponent
     {
-        GameObject GameObject { get; set; }
+        GameObject GameObject { get; }
         Transform Transform { get; }
 
         T GetComponent<T>() where T : IComponent;

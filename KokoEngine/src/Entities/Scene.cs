@@ -2,10 +2,14 @@
 
 namespace KokoEngine
 {
-    public class Scene
+    public sealed class Scene : Entity
     {
-        public string name { get; set; }
         private List<GameObject> _rootGameObjects;
+
+        public Scene(string name)
+        {
+            Name = name;
+        }
 
         public void AddRootGameObject(GameObject go)
         {
@@ -22,5 +26,6 @@ namespace KokoEngine
 
             return _rootGameObjects;
         }
+
     }
 }

@@ -3,8 +3,8 @@ using InputManager;
 using KokoEngine;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Color = KokoEngine.Color;
 using Vector2 = Microsoft.Xna.Framework.Vector2;
+using Texture2D = KokoEngine.Texture2D;
 using Vector3 = KokoEngine.Vector3;
 
 namespace MiniPreyGame
@@ -17,36 +17,17 @@ namespace MiniPreyGame
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        Texture2D dummyTexture;
-        Dictionary<string, Texture2D> textureMap = new Dictionary<string, Texture2D>();
+        // Managers
+        private readonly AssetManager _assetManager = new AssetManager();
+
 
         public Game1()
         {
-            // Monogame-specific
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            Components.Add(new Input(this));            // » InputManager Component
 
-            // Setup scene 1
-            Scene levelScene = new Scene();
-            SceneManager.SceneMap.Add("level", levelScene);
-            SceneManager.LoadScene(0);
-
-            GameObject gameController = new GameObject();
-            gameController.AddComponent<GameController>();
-
-            GameObject player = new GameObject();
-            player.Transform.scale = new Vector3(0.05f, 0.05f, 0.05f);
-            var sr = player.AddComponent<SpriteRenderer>();
-            Sprite sprite = new Sprite();
-            sprite.texture = "boid";
-            sr.sprite = sprite;
-            sr.color = Color.White;
-
-            player.AddComponent<Rigidbody>();
-            player.AddComponent<PlayerController>();
-
-            SceneManager.AwakeScene();
+            // Add the InputManager Component
+            Components.Add(new Input(this));
         }
 
         /// <summary>
@@ -57,9 +38,28 @@ namespace MiniPreyGame
         /// </summary>
         protected override void Initialize()
         {
-            SceneManager.StartScene();
-
             base.Initialize();
+
+            // Setup initial scene
+            Scene levelScene = new Scene("level");
+
+            //Scene level = SceneManager.CreateScene("level");
+            SceneManager.SceneMap.Add("level", levelScene);
+            SceneManager.LoadScene(0);
+
+            GameObject gameController = new GameObject();
+            gameController.AddComponent<GameController>();
+
+            GameObject player = new GameObject();
+            player.Transform.scale = new Vector3(0.05f, 0.05f, 0.05f);
+            var sr = player.AddComponent<SpriteRenderer>();
+            Sprite sprite = new Sprite("boid");
+            sr.sprite = sprite;
+            player.AddComponent<Rigidbody>();
+            player.AddComponent<PlayerController>();
+
+            SceneManager.AwakeScene();
+            SceneManager.StartScene();
         }
 
         /// <summary>
@@ -71,11 +71,13 @@ namespace MiniPreyGame
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // Create a dummy texture
-            dummyTexture = new Texture2D(GraphicsDevice, 1, 1);
+            // Load and register resources with the Asset Manager
+            var dummyTexture = new Microsoft.Xna.Framework.Graphics.Texture2D(GraphicsDevice, 1, 1);
             dummyTexture.SetData(new[] { Microsoft.Xna.Framework.Color.White });
-            textureMap.Add("dummy", dummyTexture);
-            textureMap.Add("boid", Content.Load<Texture2D>("boid"));
+            _assetManager.AddAsset("dummy", new Texture2D("dummy", dummyTexture, 1, 1));
+
+            var boidTexture = Content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("boid");
+            _assetManager.AddAsset("boid", new Texture2D("boid", boidTexture, boidTexture.Width, boidTexture.Height));
         }
 
         /// <summary>
@@ -126,20 +128,20 @@ namespace MiniPreyGame
 
         void DrawGameObjects(GameObject rootGameObject, SpriteBatch sb)
         {
-            foreach (Component component in rootGameObject.GetComponents())
+            foreach (IComponent component in rootGameObject.GetComponents())
             {
                 SpriteRenderer sr = component as SpriteRenderer;
                 if (sr == null)
                     continue;
 
                 // Big draw
-                sb.Draw(textureMap[sr.sprite.texture],
+                // TODO: maybe make it smaller?
+                Texture2D t = _assetManager.GetAsset<Texture2D>(sr.sprite.texture.Name);
+                sb.Draw((Microsoft.Xna.Framework.Graphics.Texture2D) t.RawData,
                     new Rectangle((int) sr.Transform.position.X, (int) sr.Transform.position.Y,
-                        (int) (textureMap[sr.sprite.texture].Width * sr.Transform.scale.X),
-                        (int) (textureMap[sr.sprite.texture].Height * sr.Transform.scale.Y)), null,
+                        (int) (t.Width * sr.Transform.scale.X), (int) (t.Height * sr.Transform.scale.Y)), null,
                     new Microsoft.Xna.Framework.Color(sr.color.R, sr.color.G, sr.color.B), sr.Transform.rotation,
-                    new Vector2(textureMap[sr.sprite.texture].Width / 2f, textureMap[sr.sprite.texture].Height / 2f),
-                    SpriteEffects.None, 0);
+                    new Vector2(t.Width / 2f, t.Height / 2f), SpriteEffects.None, 0);
             }
 
             foreach (var child in rootGameObject.Transform.Children)

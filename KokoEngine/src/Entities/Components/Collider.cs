@@ -1,6 +1,6 @@
 ﻿namespace KokoEngine
 {
-    class Collider : Component
+    abstract class Collider : Component
     {
         public override void Update(float dt)
         {

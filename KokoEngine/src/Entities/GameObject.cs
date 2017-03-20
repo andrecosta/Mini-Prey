@@ -4,48 +4,51 @@ using System.Linq;
 
 namespace KokoEngine
 {
-    public class GameObject
+    public class GameObject : Entity
     {
-        public Transform Transform { get; set; }
+        public Transform Transform { get; private set; }
         public string Tag { get; set; }
 
-        private List<IComponent> _components = new List<IComponent>();
+        private readonly List<IComponent> _components = new List<IComponent>();
 
         public GameObject()
         {
             SceneManager.GetActiveScene().AddRootGameObject(this);
 
-            // Every game object will always have a Transform component by default
+            // Every GameObject will always have a Transform component by default
             Transform = AddComponent<Transform>();
         }
 
+        public GameObject(string name) : this()
+        {
+            Name = name;
+        }
+
         /// <summary>
-        /// Adds a new component of type T to this game object
+        /// Adds a new component of type T to this GameObject.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
+        /// <typeparam name="T">The type of the component to add</typeparam>
         public T AddComponent<T>() where T : IComponent, new()
         {
             T c = new T();
-            c.GameObject = this;
+            ((IComponentInternal)c).SetGameObject(this);
             _components.Add(c);
             return c;
         }
 
         /// <summary>
-        /// Returns the first component of type T associated with this game object
+        /// Returns the first component of type T associated with this GameObject.
+        /// If one isn't found, return null.
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <returns></returns>
+        /// <typeparam name="T">The type of the component to get</typeparam>
         public T GetComponent<T>() where T : IComponent
         {
             return (T)_components.FirstOrDefault(c => c is T);
         }
 
         /// <summary>
-        /// Returns all the components associated with this game object
+        /// Returns all the components associated with this GameObject.
         /// </summary>
-        /// <returns></returns>
         public List<IComponent> GetComponents()
         {
             return _components;

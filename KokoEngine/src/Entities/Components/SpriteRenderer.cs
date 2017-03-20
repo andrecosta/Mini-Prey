@@ -4,5 +4,10 @@
     {
         public Sprite sprite { get; set; }
         public Color color { get; set; }
+
+        public SpriteRenderer()
+        {
+            color = Color.White;
+        }
     }
 }
