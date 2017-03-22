@@ -78,10 +78,6 @@ namespace KokoEngine
         {
             return a / Magnitude(a);
         }
-
-
-
-
     }
 }
 

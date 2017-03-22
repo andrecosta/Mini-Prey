@@ -6,7 +6,7 @@ namespace MiniPreyGame
 {
     class PlayerController : Script
     {
-        public float Speed = 250;
+        public float Speed = 6;
 
         private Rigidbody _rb;
 
@@ -44,7 +44,7 @@ namespace MiniPreyGame
                 Debug.Log("Moving RIGHT");
             }
 
-            _rb.AddForce(dir * Speed * dt);
+            _rb.AddForce(dir * Speed);
 
             Debug.Track(GameObject);
         }

@@ -68,9 +68,18 @@ namespace KokoEngine
 
         static void UpdateGameObjects(GameObject rootGameObject, float dt)
         {
-            foreach (Component c in rootGameObject.GetComponents())
-                ((IComponentInternal) c).Update(dt);
+            //List<Collider> colliders = new List<Collider>();
 
+            // Call the attached GameObject components' internal Update method
+            foreach (Component c in rootGameObject.GetComponents())
+            {
+                ((IComponentInternal) c).Update(dt);
+                //var collider = c as Collider;
+                //if (collider != null)
+                //    colliders.Add(collider);
+            }
+
+            // Recursively update the children GameObjects
             foreach (var child in rootGameObject.Transform.Children)
                 UpdateGameObjects(child.GameObject, dt);
         }

@@ -1,8 +1,10 @@
 ﻿namespace KokoEngine
 {
-    abstract class Collider : Component
+    public abstract class Collider : Component
     {
-        public void Update(float dt)
+        public bool IsColliding { get; set; }
+
+        public override void Update(float dt)
         {
 
         }

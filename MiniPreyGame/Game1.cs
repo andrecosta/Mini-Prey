@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using InputManager;
 using KokoEngine;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Color = KokoEngine.Color;
 using Vector2 = Microsoft.Xna.Framework.Vector2;
 using Texture2D = KokoEngine.Texture2D;
 using Vector3 = KokoEngine.Vector3;
@@ -40,10 +42,12 @@ namespace MiniPreyGame
         protected override void Initialize()
         {
             base.Initialize();
+            Random r = new Random();
 
             // Setup initial scene
             Scene levelScene = new Scene("level");
 
+            // TODO: do this
             //Scene level = SceneManager.CreateScene("level");
             SceneManager.SceneMap.Add("level", levelScene);
             SceneManager.LoadScene(0);
@@ -51,14 +55,40 @@ namespace MiniPreyGame
             GameObject gameController = new GameObject();
             gameController.AddComponent<GameController>();
 
+            // Create Player
             GameObject player = new GameObject();
             player.Transform.scale = new Vector3(0.05f, 0.05f, 0.05f);
             var sr = player.AddComponent<SpriteRenderer>();
             Sprite sprite = new Sprite("boid");
             sr.sprite = sprite;
             player.AddComponent<Rigidbody>();
+            var cc = player.AddComponent<BoxCollider>();
+            cc.Width = sprite.texture.Height;
+            cc.Height = sprite.texture.Height;
             player.AddComponent<PlayerController>();
 
+            // Create 10 NPCs
+            for (int i = 0; i < 10; i++)
+            {
+                GameObject boid = new GameObject();
+                boid.Transform.position = new Vector3(
+                    r.Next(0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width),
+                    r.Next(0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height));
+                boid.Transform.scale = new Vector3(0.05f, 0.05f, 0.05f);
+                sr = boid.AddComponent<SpriteRenderer>();
+                sprite = new Sprite("boid");
+                sr.sprite = sprite;
+                sr.color = Color.Red;
+                boid.AddComponent<Rigidbody>();
+                cc = boid.AddComponent<BoxCollider>();
+                cc.Width = sprite.texture.Height;
+                cc.Height = sprite.texture.Height;
+                var b = boid.AddComponent<Boid>();
+                b.Target = player;
+            }
+
+            // TODO: review
+            // Perform the scene's startup functions
             SceneManager.AwakeScene();
             SceneManager.StartScene();
         }

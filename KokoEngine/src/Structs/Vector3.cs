@@ -11,8 +11,12 @@ namespace KokoEngine
         public float Y;
         public float Z;
 
+        public static Vector3 Up => new Vector3(0, 1, 0);
+        public static Vector3 Right => new Vector3(1, 0, 0);
+        public static Vector3 Forward => new Vector3(1, 0, 1);
         public static Vector3 One => new Vector3(1, 1, 1);
         public static Vector3 Zero => new Vector3(0, 0, 0);
+        public Vector3 Normalized => Normalize(this);
 
         public Vector3(float x, float y, float z = 0)
         {
@@ -63,12 +67,22 @@ namespace KokoEngine
 
         public static float Magnitude(Vector3 a)
         {
-            return (float) Math.Sqrt(a.X * a.X + a.Y * a.Y + a.Z * a.Z);
+            return (float) Math.Sqrt(SqrMagnitude(a));
         }
 
         public static float SqrMagnitude(Vector3 a)
         {
             return a.X * a.X + a.Y * a.Y + a.Z * a.Z;
+        }
+
+        public static Vector3 Normalize(Vector3 a)
+        {
+            return a / Magnitude(a);
+        }
+
+        public override string ToString()
+        {
+            return $"Vector3 ({X}, {Y})";
         }
     }
 }

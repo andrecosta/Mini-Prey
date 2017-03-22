@@ -1,8 +1,8 @@
 ﻿namespace KokoEngine
 {
-    class BoxCollider : Collider
+    public class BoxCollider : Collider
     {
-        int Width { get; set; }
-        int Height { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
     }
 }

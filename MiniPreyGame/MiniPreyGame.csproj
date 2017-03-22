@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Debug.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Scripts\Boid.cs" />
     <Compile Include="Scripts\GameController.cs" />
     <Compile Include="Scripts\PlayerController.cs" />
     <Compile Include="Managers\InputManager.cs" />

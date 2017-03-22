@@ -1,7 +1,9 @@
 ﻿namespace KokoEngine
 {
-    class CircleCollider : Collider
+    public class CircleCollider : Collider
     {
-        float radius { get; set; }
+        public float Radius { get; set; }
+
+        
     }
 }
