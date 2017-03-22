@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace KokoEngine
 {
-    public class GameObject : Entity
+    public sealed class GameObject : Entity, IGameObject
     {
-        public Transform Transform { get; private set; }
+        public ITransform Transform { get; private set; }
         public string Tag { get; set; }
 
         private readonly List<IComponent> _components = new List<IComponent>();
@@ -32,7 +32,8 @@ namespace KokoEngine
         {
             T c = new T();
             var componentInternal = c as IComponentInternal;
-            if (componentInternal != null) componentInternal.GameObject = this;
+            if (componentInternal != null)
+                componentInternal.GameObject = this;
             _components.Add(c);
             return c;
         }

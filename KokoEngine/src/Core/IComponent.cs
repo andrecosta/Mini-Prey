@@ -12,13 +12,13 @@ namespace KokoEngine
     /// <summary>
     /// Interface that defines a component which can be added to a GameObject
     /// </summary>
-    public interface IComponent
+    public interface IComponent : IEntity
     {
         /// <summary>
         /// The GameObject to with this component belongs to
         /// </summary>
-        GameObject GameObject { get; }
-        Transform Transform { get; }
+        IGameObject GameObject { get; }
+        ITransform Transform { get; }
 
         T GetComponent<T>() where T : IComponent;
         List<IComponent> GetComponents();
@@ -26,7 +26,7 @@ namespace KokoEngine
 
     internal interface IComponentInternal : IComponent
     {
-        GameObject GameObject { set; }
+        IGameObject GameObject { set; }
 
         void Awake();
         void Start();

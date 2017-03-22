@@ -33,7 +33,7 @@ namespace KokoEngine
                 AwakeGameObjects(rootGameObject);
         }
 
-        static void AwakeGameObjects(GameObject rootGameObject)
+        static void AwakeGameObjects(IGameObject rootGameObject)
         {
             foreach (IComponent c in rootGameObject.GetComponents())
                 ((IComponentInternal)c).Awake();
@@ -48,7 +48,7 @@ namespace KokoEngine
                 StartGameObjects(rootGameObject);
         }
 
-        static void StartGameObjects(GameObject rootGameObject)
+        static void StartGameObjects(IGameObject rootGameObject)
         {
             foreach (IComponent c in rootGameObject.GetComponents())
                 ((IComponentInternal)c).Start();
@@ -66,12 +66,12 @@ namespace KokoEngine
                 UpdateGameObjects(rootGameObject, dt);
         }
 
-        static void UpdateGameObjects(GameObject rootGameObject, float dt)
+        static void UpdateGameObjects(IGameObject rootGameObject, float dt)
         {
             //List<Collider> colliders = new List<Collider>();
 
             // Call the attached GameObject components' internal Update method
-            foreach (Component c in rootGameObject.GetComponents())
+            foreach (IComponent c in rootGameObject.GetComponents())
             {
                 ((IComponentInternal) c).Update(dt);
                 //var collider = c as Collider;

@@ -6,13 +6,13 @@ namespace KokoEngine
     public abstract class Component : Entity, IComponentInternal
     {
         public override string Name => GameObject.Name;
-        public GameObject GameObject { get; private set; }
-        GameObject IComponentInternal.GameObject
+        public IGameObject GameObject { get; private set; }
+        IGameObject IComponentInternal.GameObject
         {
             set { GameObject = value; }
         }
 
-        public Transform Transform => GameObject.Transform;
+        public ITransform Transform => GameObject.Transform;
         
         public T GetComponent<T>() where T : IComponent
         {

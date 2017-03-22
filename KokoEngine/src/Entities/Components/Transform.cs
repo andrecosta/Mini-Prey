@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace KokoEngine
 {
-    public class Transform : Component
+    public class Transform : Component, ITransform
     {
         public Vector3 position { get; set; }
         public float rotation { get; set; }
@@ -19,12 +19,7 @@ namespace KokoEngine
             }
         }
 
-        public Transform()
-        {
-            scale = Vector3.One;
-        }
-
-        public Transform parent
+        public ITransform parent
         {
             get { return _parent; }
             set
@@ -34,10 +29,16 @@ namespace KokoEngine
                 parent.Children.Add(_parent);
             }
         }
-        public List<Transform> Children = new List<Transform>();
+        public List<ITransform> Children { get; }
         public int childCount => Children.Count;
 
-        private Transform _parent;
+        private ITransform _parent;
+
+        public Transform()
+        {
+            Children = new List<ITransform>();
+            scale = Vector3.One;
+        }
 
         public void Translate(Vector3 translation)
         {
@@ -54,12 +55,12 @@ namespace KokoEngine
             Translate(translation.X, translation.Y, z);
         }
 
-        public void SetParent(Transform parent)
+        public void SetParent(ITransform parent)
         {
             this.parent = parent;
         }
 
-        public Transform GetChild(int index)
+        public ITransform GetChild(int index)
         {
             return Children[index];
         }

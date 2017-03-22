@@ -5,7 +5,7 @@ using System.Text;
 
 namespace KokoEngine
 {
-    public interface IAsset
+    public interface IAsset : IEntity
     {
         object RawData { get; set; }
     }

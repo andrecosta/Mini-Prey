@@ -19,10 +19,6 @@ namespace MiniPreyGame
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        // Managers
-        private readonly AssetManager _assetManager = new AssetManager();
-
-
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -105,10 +101,10 @@ namespace MiniPreyGame
             // Load and register resources with the Asset Manager
             var dummyTexture = new Microsoft.Xna.Framework.Graphics.Texture2D(GraphicsDevice, 1, 1);
             dummyTexture.SetData(new[] { Microsoft.Xna.Framework.Color.White });
-            _assetManager.AddAsset("dummy", new Texture2D("dummy", dummyTexture, 1, 1));
+            AssetManager.Instance.AddAsset("dummy", new Texture2D("dummy", dummyTexture, 1, 1));
 
             var boidTexture = Content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("boid");
-            _assetManager.AddAsset("boid", new Texture2D("boid", boidTexture, boidTexture.Width, boidTexture.Height));
+            AssetManager.Instance.AddAsset("boid", new Texture2D("boid", boidTexture, boidTexture.Width, boidTexture.Height));
         }
 
         /// <summary>
@@ -157,7 +153,7 @@ namespace MiniPreyGame
             base.Draw(gameTime);
         }
 
-        void DrawGameObjects(GameObject rootGameObject, SpriteBatch sb)
+        void DrawGameObjects(IGameObject rootGameObject, SpriteBatch sb)
         {
             foreach (IComponent component in rootGameObject.GetComponents())
             {
@@ -167,7 +163,7 @@ namespace MiniPreyGame
 
                 // Big draw
                 // TODO: maybe make it smaller?
-                Texture2D t = _assetManager.GetAsset<Texture2D>(sr.sprite.texture.Name);
+                Texture2D t = AssetManager.Instance.GetAsset<Texture2D>(sr.sprite.texture.Name);
                 sb.Draw((Microsoft.Xna.Framework.Graphics.Texture2D) t.RawData,
                     new Rectangle((int) sr.Transform.position.X, (int) sr.Transform.position.Y,
                         (int) (t.Width * sr.Transform.scale.X), (int) (t.Height * sr.Transform.scale.Y)), null,

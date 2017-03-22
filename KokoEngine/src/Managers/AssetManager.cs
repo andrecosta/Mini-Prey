@@ -8,15 +8,22 @@ namespace KokoEngine
     public class AssetManager
     {
         // Singleton
-        public static AssetManager Instance { get; private set; }
+        public static AssetManager Instance
+        {
+            get
+            {
+                if (_instance != null)
+                    return _instance;
+                _instance = new AssetManager();
+                return _instance;
+            }
+        }
+
+        private static AssetManager _instance;
 
         private readonly Dictionary<string, IAsset> _assetMap = new Dictionary<string, IAsset>();
 
-        public AssetManager()
-        {
-            if (Instance == null)
-                Instance = this;
-        }
+        private AssetManager() { }
 
         public void AddAsset<T>(string key, T asset) where T : IAsset
         {

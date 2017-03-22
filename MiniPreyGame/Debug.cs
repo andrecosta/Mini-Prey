@@ -30,7 +30,7 @@ namespace MiniPreyGame
         public static bool IsOpen { get; set; }
         public static bool PlayerTestMode { get; set; }
         private static List<string> _messageLog;
-        private static List<GameObject> _tracking;
+        private static List<IGameObject> _tracking;
         private SpriteBatch spriteBatch;
         private Texture2D _consoleWindow;
         private Rectangle _consoleBounds;
@@ -59,7 +59,7 @@ namespace MiniPreyGame
             _consoleBounds = new Rectangle(0, 0, GraphicsDevice.Viewport.Width, (int)(GraphicsDevice.Viewport.Height * 0.37));
 
             _messageLog = new List<string>();
-            _tracking = new List<GameObject>();
+            _tracking = new List<IGameObject>();
 
             base.LoadContent();
         }
@@ -177,7 +177,7 @@ namespace MiniPreyGame
             spriteBatch.Draw(_pixel, new Rectangle(r.X, r.Y + r.Height - borderSize, r.Width, borderSize), borderColor);
         }
 
-        private void DrawVector(SpriteBatch spriteBatch, GameObject sprite, int borderSize, Color borderColor)
+        private void DrawVector(SpriteBatch spriteBatch, IGameObject sprite, int borderSize, Color borderColor)
         {
             // Calculate line size and angle
             var sr = sprite.GetComponent<SpriteRenderer>();
@@ -237,7 +237,7 @@ namespace MiniPreyGame
         /// 
         /// </summary>
         /// <param name="obj"></param>
-        public static void Track(GameObject obj)
+        public static void Track(IGameObject obj)
         {
             _tracking.Add(obj);
         }

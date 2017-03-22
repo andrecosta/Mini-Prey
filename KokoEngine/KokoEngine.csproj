@@ -47,8 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\Entities\Asset.cs" />
-    <Compile Include="src\Entities\IAsset.cs" />
-    <Compile Include="src\Structs\Color.cs" />
+    <Compile Include="src\Core\IAsset.cs" />
+    <Compile Include="src\Core\Structs\Color.cs" />
     <Compile Include="src\Entities\Components\Behaviour.cs" />
     <Compile Include="src\Entities\Components\Behaviours\Camera.cs" />
     <Compile Include="src\Entities\Components\Behaviours\Script.cs" />
@@ -56,21 +56,23 @@
     <Compile Include="src\Entities\Components\Colliders\CircleCollider.cs" />
     <Compile Include="src\Entities\Components\Collider.cs" />
     <Compile Include="src\Entities\Component.cs" />
+    <Compile Include="src\Core\ITransform.cs" />
     <Compile Include="src\Entities\Components\Rigidbody.cs" />
     <Compile Include="src\Entities\Components\SpriteRenderer.cs" />
     <Compile Include="src\Entities\Components\Transform.cs" />
+    <Compile Include="src\Core\IGameObject.cs" />
     <Compile Include="src\Entity.cs" />
     <Compile Include="src\Entities\GameObject.cs" />
-    <Compile Include="src\Entities\IComponent.cs" />
-    <Compile Include="src\IEntity.cs" />
+    <Compile Include="src\Core\IComponent.cs" />
+    <Compile Include="src\Core\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Managers\AssetManager.cs" />
     <Compile Include="src\Entities\Scene.cs" />
     <Compile Include="src\Managers\SceneManager.cs" />
     <Compile Include="src\Entities\Sprite.cs" />
     <Compile Include="src\Entities\Assets\Texture2D.cs" />
-    <Compile Include="src\Structs\Vector2.cs" />
-    <Compile Include="src\Structs\Vector3.cs" />
+    <Compile Include="src\Core\Structs\Vector2.cs" />
+    <Compile Include="src\Core\Structs\Vector3.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="api\index.md" />
