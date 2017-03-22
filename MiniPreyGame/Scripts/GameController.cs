@@ -4,15 +4,15 @@ namespace MiniPreyGame
 {
     class GameController : Script
     {
-        public override void Awake() 
+        public void Awake() 
         {
         }
 
-        public override void Start()
+        public void Start()
         {
         }
 
-        public override void Update(float dt)
+        public void Update(float dt)
         {
         }
     }

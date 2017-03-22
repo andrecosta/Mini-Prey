@@ -1,5 +1,10 @@
 ﻿namespace KokoEngine
 {
+    public interface IScript
+    {
+        
+    }
+
     public class Script : Behaviour
     {
         // TODO: This should be here

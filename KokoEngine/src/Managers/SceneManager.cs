@@ -35,8 +35,8 @@ namespace KokoEngine
 
         static void AwakeGameObjects(GameObject rootGameObject)
         {
-            foreach (Component c in rootGameObject.GetComponents())
-                c.Awake();
+            foreach (IComponent c in rootGameObject.GetComponents())
+                ((IComponentInternal)c).Awake();
 
             foreach (var child in rootGameObject.Transform.Children)
                 AwakeGameObjects(child.GameObject);
@@ -50,8 +50,8 @@ namespace KokoEngine
 
         static void StartGameObjects(GameObject rootGameObject)
         {
-            foreach (Component c in rootGameObject.GetComponents())
-                c.Start();
+            foreach (IComponent c in rootGameObject.GetComponents())
+                ((IComponentInternal)c).Start();
 
             foreach (var child in rootGameObject.Transform.Children)
                 StartGameObjects(child.GameObject);
@@ -69,7 +69,7 @@ namespace KokoEngine
         static void UpdateGameObjects(GameObject rootGameObject, float dt)
         {
             foreach (Component c in rootGameObject.GetComponents())
-                c.Update(dt);
+                ((IComponentInternal) c).Update(dt);
 
             foreach (var child in rootGameObject.Transform.Children)
                 UpdateGameObjects(child.GameObject, dt);

@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IComponentInternal.cs" />
     <Compile Include="src\Entities\Asset.cs" />
     <Compile Include="src\Entities\IAsset.cs" />
     <Compile Include="src\Structs\Color.cs" />

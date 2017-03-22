@@ -31,7 +31,7 @@ namespace KokoEngine
         public T AddComponent<T>() where T : IComponent, new()
         {
             T c = new T();
-            ((IComponentInternal)c).SetGameObject(this);
+            ((IComponentInternal) c).GameObject = this;
             _components.Add(c);
             return c;
         }

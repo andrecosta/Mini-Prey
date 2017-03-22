@@ -26,21 +26,27 @@ namespace MiniPreyGame
             if (Input.IsKeyDown(Keys.W))
             {
                 dir = -Transform.Up;
+                Debug.Log("Moving UP");
             }
             if (Input.IsKeyDown(Keys.S))
             {
                 dir = Transform.Up;
+                Debug.Log("Moving DOWN");
             }
             if (Input.IsKeyDown(Keys.A))
             {
                 Transform.rotation -= dt*2;
+                Debug.Log("Moving LEFT");
             }
             if (Input.IsKeyDown(Keys.D))
             {
                 Transform.rotation += dt*2;
+                Debug.Log("Moving RIGHT");
             }
 
             _rb.AddForce(dir * Speed * dt);
+
+            Debug.Track(GameObject);
         }
     }
 }

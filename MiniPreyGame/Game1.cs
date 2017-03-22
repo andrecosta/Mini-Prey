@@ -28,6 +28,7 @@ namespace MiniPreyGame
 
             // Add the InputManager Component
             Components.Add(new Input(this));
+            Components.Add(new Debug(this));
         }
 
         /// <summary>
@@ -114,7 +115,7 @@ namespace MiniPreyGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(new Microsoft.Xna.Framework.Color(250, 250, 250));
+            GraphicsDevice.Clear(new Microsoft.Xna.Framework.Color(20, 20, 20));
             spriteBatch.Begin();
 
             // Draw the active scene's game objects which contain renderable components

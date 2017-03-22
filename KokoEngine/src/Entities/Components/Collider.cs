@@ -2,7 +2,7 @@
 {
     abstract class Collider : Component
     {
-        public override void Update(float dt)
+        public void Update(float dt)
         {
 
         }
