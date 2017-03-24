@@ -122,7 +122,7 @@ namespace MiniPreyGame
                 {
                     // Set text content
                     string text = "[" + _tracking[i].GetType() + "] " +
-                        new Vector2((int)_tracking[i].Transform.position.X, (int)_tracking[i].Transform.position.Y);
+                        new Vector2((int)_tracking[i].Transform.Position.X, (int)_tracking[i].Transform.Position.Y);
 
                     // Set text position
                     Vector2 textPos = new Vector2(_consoleBounds.Right - _spriteFont.MeasureString(text).X - 21,
@@ -145,9 +145,9 @@ namespace MiniPreyGame
                     // Draw bounding box of object
                     var srr = _tracking[i].GetComponent<SpriteRenderer>();
                     DrawBoundingBox(spriteBatch,
-                        new Rectangle((int) ((int) srr.Transform.position.X-srr.sprite.texture.Width/2f*srr.Transform.scale.X), (int) ((int) srr.Transform.position.Y-srr.sprite.texture.Height/2f*srr.Transform.scale.Y),
-                            (int) (srr.sprite.texture.Width * srr.Transform.scale.X),
-                            (int) (srr.sprite.texture.Height * srr.Transform.scale.Y)), 1, color);
+                        new Rectangle((int) ((int) srr.Transform.Position.X-srr.sprite.texture.Width/2f*srr.Transform.Scale.X), (int) ((int) srr.Transform.Position.Y-srr.sprite.texture.Height/2f*srr.Transform.Scale.Y),
+                            (int) (srr.sprite.texture.Width * srr.Transform.Scale.X),
+                            (int) (srr.sprite.texture.Height * srr.Transform.Scale.Y)), 1, color);
 
                     // Draw vector line
                     DrawVector(spriteBatch, _tracking[i], 1, Color.Gold);
@@ -183,7 +183,7 @@ namespace MiniPreyGame
             var sr = sprite.GetComponent<SpriteRenderer>();
             var rb = sprite.GetComponent<Rigidbody>();
             Vector2 vv = new Vector2(rb.velocity.X, rb.velocity.Y);
-            Vector2 begin = new Vector2(sprite.Transform.position.X, sprite.Transform.position.Y);
+            Vector2 begin = new Vector2(sprite.Transform.Position.X, sprite.Transform.Position.Y);
             Vector2 end = begin + vv;
             Rectangle r = new Rectangle((int)begin.X, (int)begin.Y, (int)(end - begin).Length() + borderSize, borderSize);
             Vector2 v = Vector2.Normalize(begin - end);

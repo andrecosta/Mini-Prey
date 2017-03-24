@@ -24,7 +24,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Debug\KokoEngine.XML</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -46,6 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Core\IComponentInternal.cs" />
+    <Compile Include="src\Core\IFactory.cs" />
+    <Compile Include="src\Core\IGameObjectInternal.cs" />
+    <Compile Include="src\Core\IScene.cs" />
     <Compile Include="src\Entities\Asset.cs" />
     <Compile Include="src\Core\IAsset.cs" />
     <Compile Include="src\Core\Structs\Color.cs" />
@@ -73,6 +78,7 @@
     <Compile Include="src\Entities\Assets\Texture2D.cs" />
     <Compile Include="src\Core\Structs\Vector2.cs" />
     <Compile Include="src\Core\Structs\Vector3.cs" />
+    <Compile Include="src\SceneFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="api\index.md" />

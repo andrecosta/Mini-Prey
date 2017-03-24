@@ -6,8 +6,7 @@ namespace KokoEngine
     {
         ITransform Transform { get; }
         string Tag { get; set; }
-        string Guid { get; }
-        string Name { get; }
+        IScene Scene { get; }
 
         /// <summary>
         /// Adds a new component of type T to this GameObject.

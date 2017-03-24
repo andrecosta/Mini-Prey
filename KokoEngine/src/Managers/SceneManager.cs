@@ -3,37 +3,93 @@ using System.Linq;
 
 namespace KokoEngine
 {
-    public static class SceneManager
+    public class SceneManager
     {
-        public static Dictionary<string, Scene> SceneMap = new Dictionary<string, Scene>();
-        private static Scene _activeScene;
+        // Singleton
+        private static SceneManager _instance;
+        public static SceneManager Instance
+        {
+            get
+            {
+                if (_instance != null)
+                    return _instance;
+                _instance = new SceneManager();
+                return _instance;
+            }
+        }
 
-        public static Scene GetActiveScene()
+        private Dictionary<string, IScene> _sceneMap = new Dictionary<string, IScene>();
+        private IScene _activeScene;
+
+
+        /// <summary>
+        /// Create a new scene and add it to the scene map.
+        /// </summary>
+        /// <param name="name">The name of the scene to create</param>
+        /// <returns></returns>
+        public IScene CreateScene(string name)
+        {
+            var fac = new SceneFactory();
+
+            var scene = fac.Create();
+            _sceneMap.Add(name, scene);
+
+            return scene;
+        }
+
+
+
+        public IScene GetActiveScene()
         {
             return _activeScene;
         }
 
-        public static void LoadScene(string sceneName)
+        /// <summary>
+        /// Load a scene. This will set it as the active scene and Awake all of its GameObjects.
+        /// </summary>
+        /// <param name="sceneName">The name of the scene to load</param>
+        public void LoadScene(string sceneName)
         {
-            SceneMap.TryGetValue(sceneName, out _activeScene);
+            _sceneMap.TryGetValue(sceneName, out _activeScene);
 
-            //foreach (var rootGameObject in _activeScene.GetRootGameObjects())
-                //AwakeGameObjects(rootGameObject);
+            // Get the scene's root GameObjects
+            var rootGameObjects = _activeScene?.GetRootGameObjects();
+            if (rootGameObjects == null) return; // TODO: throw exception
+
+            AwakeScene();
         }
 
-        public static void LoadScene(int sceneIndex)
+        /// <summary>
+        /// Load a scene. This will set it as the active scene and Awake all of its GameObjects.
+        /// </summary>
+        /// <param name="sceneIndex">The index of the scene to load</param>
+        public void LoadScene(int sceneIndex)
         {
-            if (sceneIndex < SceneMap.Count)
-                LoadScene(SceneMap.ElementAt(sceneIndex).Key);
+            if (sceneIndex < _sceneMap.Count)
+                LoadScene(_sceneMap.ElementAt(sceneIndex).Key);
         }
 
-        public static void AwakeScene()
+        /// <summary>
+        /// Load a scene. This will set it as the active scene and Awake all of its GameObjects.
+        /// </summary>
+        /// <param name="scene">The scene to load</param>
+        public void LoadScene(IScene scene)
         {
-            foreach (var rootGameObject in _activeScene.GetRootGameObjects())
+            foreach (var s in _sceneMap)
+            {
+                if (s.Value == scene)
+                    LoadScene(s.Key);
+            }
+        }
+
+        private void AwakeScene()
+        {
+            // Awake every root GameObject and their children
+            foreach (IGameObject rootGameObject in _activeScene.GetRootGameObjects())
                 AwakeGameObjects(rootGameObject);
         }
 
-        static void AwakeGameObjects(IGameObject rootGameObject)
+        private void AwakeGameObjects(IGameObject rootGameObject)
         {
             foreach (IComponent c in rootGameObject.GetComponents())
                 ((IComponentInternal)c).Awake();
@@ -42,13 +98,16 @@ namespace KokoEngine
                 AwakeGameObjects(child.GameObject);
         }
 
-        public static void StartScene()
+        /// <summary>
+        /// Starts all GameObjects contained in this scene.
+        /// </summary>
+        public void StartScene()
         {
             foreach (var rootGameObject in _activeScene.GetRootGameObjects())
                 StartGameObjects(rootGameObject);
         }
 
-        static void StartGameObjects(IGameObject rootGameObject)
+        private void StartGameObjects(IGameObject rootGameObject)
         {
             foreach (IComponent c in rootGameObject.GetComponents())
                 ((IComponentInternal)c).Start();
@@ -60,13 +119,13 @@ namespace KokoEngine
 
         // TODO: make private and/or decouple!!! -----------------------------------------------------
 
-        public static void UpdateActiveScene(float dt)
+        public void UpdateActiveScene(float dt)
         {
             foreach(var rootGameObject in _activeScene.GetRootGameObjects())
                 UpdateGameObjects(rootGameObject, dt);
         }
 
-        static void UpdateGameObjects(IGameObject rootGameObject, float dt)
+        private void UpdateGameObjects(IGameObject rootGameObject, float dt)
         {
             //List<Collider> colliders = new List<Collider>();
 

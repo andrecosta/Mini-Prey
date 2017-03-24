@@ -5,64 +5,37 @@ namespace KokoEngine
 {
     public class Transform : Component, ITransform
     {
-        public Vector3 position { get; set; }
-        public float rotation { get; set; }
-        public Vector3 scale { get; set; }
+        public Vector3 Position { get; set; }
+        public float Rotation { get; set; }
+        public Vector3 Scale { get; set; } = Vector3.One;
 
         public Vector3 Up
         {
             get
             {
-                float c = (float) Math.Cos(rotation);
-                float s = (float) Math.Sin(rotation);
+                float c = (float) Math.Cos(Rotation);
+                float s = (float) Math.Sin(Rotation);
                 return new Vector3(-s, c);
             }
         }
+        public void Translate(Vector3 translation) => Position += translation;
+        public void Translate(float x, float y, float z = 0) => Translate(new Vector3(x, y, z));
+        public void Translate(Vector2 translation, float z = 0) => Translate(translation.X, translation.Y, z);
 
-        public ITransform parent
+        public ITransform Parent
         {
             get { return _parent; }
             set
             {
                 _parent.Children.Remove(value);
                 _parent = value;
-                parent.Children.Add(_parent);
+                Parent.Children.Add(_parent);
             }
         }
-        public List<ITransform> Children { get; }
-        public int childCount => Children.Count;
-
+        public List<ITransform> Children { get; } = new List<ITransform>();
+        public int ChildCount => Children.Count;
         private ITransform _parent;
-
-        public Transform()
-        {
-            Children = new List<ITransform>();
-            scale = Vector3.One;
-        }
-
-        public void Translate(Vector3 translation)
-        {
-            position += translation;
-        }
-
-        public void Translate(float x, float y, float z = 0)
-        {
-            Translate(new Vector3(x, y, z));
-        }
-
-        public void Translate(Vector2 translation, float z = 0)
-        {
-            Translate(translation.X, translation.Y, z);
-        }
-
-        public void SetParent(ITransform parent)
-        {
-            this.parent = parent;
-        }
-
-        public ITransform GetChild(int index)
-        {
-            return Children[index];
-        }
+        //public void SetParent(ITransform parent) => Parent = parent;
+        public ITransform GetChild(int index) => Children[index];
     }
 }

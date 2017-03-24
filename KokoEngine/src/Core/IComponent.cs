@@ -2,10 +2,7 @@
 // - We need that every object inherits from Entity (for Guid and Name)
 // - If we want to make (by design) the client inherit from 'Component' to create their own components, instead of creating his own implementation based on IComponent
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace KokoEngine
 {
@@ -22,14 +19,5 @@ namespace KokoEngine
 
         T GetComponent<T>() where T : IComponent;
         List<IComponent> GetComponents();
-    }
-
-    internal interface IComponentInternal : IComponent
-    {
-        IGameObject GameObject { set; }
-
-        void Awake();
-        void Start();
-        void Update(float dt);
     }
 }

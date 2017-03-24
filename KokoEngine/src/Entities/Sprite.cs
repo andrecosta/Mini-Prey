@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace KokoEngine
+﻿namespace KokoEngine
 {
     public sealed class Sprite : Entity
     {

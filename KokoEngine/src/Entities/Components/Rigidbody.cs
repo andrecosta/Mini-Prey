@@ -23,7 +23,7 @@ namespace KokoEngine
             All.Add(this);
         }
 
-        public override void Update(float dt)
+        internal override void Update(float dt)
         {
             foreach (Vector3 force in _forces)
                 acceleration += force * (1/mass);

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace KokoEngine
 {
     public class AssetManager
     {
         // Singleton
+        private static AssetManager _instance;
         public static AssetManager Instance
         {
             get
@@ -18,8 +16,6 @@ namespace KokoEngine
                 return _instance;
             }
         }
-
-        private static AssetManager _instance;
 
         private readonly Dictionary<string, IAsset> _assetMap = new Dictionary<string, IAsset>();
 

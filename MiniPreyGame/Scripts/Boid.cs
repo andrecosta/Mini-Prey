@@ -25,15 +25,15 @@ namespace MiniPreyGame
 
         public override void Update(float dt)
         {
-            Vector3 dir = (Target.Transform.position - Transform.position).Normalized;
+            Vector3 dir = (Target.Transform.Position - Transform.Position).Normalized;
 
             _rb.AddForce(dir * Speed);
 
-            Transform.rotation = (float) Math.Atan2(_rb.velocity.X, -_rb.velocity.Y);
+            Transform.Rotation = (float) Math.Atan2(_rb.velocity.X, -_rb.velocity.Y);
 
             foreach (Rigidbody rb in Rigidbody.All)
             {
-                Vector3 diff = rb.Transform.position - Transform.position;
+                Vector3 diff = rb.Transform.Position - Transform.Position;
                 /*Debug.Log("Transform: " + Transform.position.ToString());
                 Debug.Log("Other Transform: " + rb.Transform.position.ToString());
                 Debug.Log("Diff: " + diff.ToString());*/

@@ -2,30 +2,34 @@
 
 namespace KokoEngine
 {
-    public sealed class Scene : Entity
+    public struct Scene : IScene
     {
-        private List<GameObject> _rootGameObjects;
+        public string Name { get; }
+        private List<IGameObject> _rootGameObjects;
 
         public Scene(string name)
         {
+            _rootGameObjects = new List<IGameObject>();
             Name = name;
         }
 
-        public void AddRootGameObject(GameObject go)
+        public void AddRootGameObject(IGameObject go)
         {
             if (_rootGameObjects == null)
-                _rootGameObjects = new List<GameObject>();
+                _rootGameObjects = new List<IGameObject>();
+
+            var gameObjectInternal = go as IGameObjectInternal;
+            if (gameObjectInternal != null) gameObjectInternal.Scene = this;
 
             _rootGameObjects.Add(go);
         }
 
-        public List<GameObject> GetRootGameObjects()
+        public List<IGameObject> GetRootGameObjects()
         {
             if (_rootGameObjects == null)
-                _rootGameObjects = new List<GameObject>();
+                _rootGameObjects = new List<IGameObject>();
 
             return _rootGameObjects;
         }
-
     }
 }

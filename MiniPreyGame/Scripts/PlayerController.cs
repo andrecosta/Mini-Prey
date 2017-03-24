@@ -35,12 +35,12 @@ namespace MiniPreyGame
             }
             if (Input.IsKeyDown(Keys.A))
             {
-                Transform.rotation -= dt*2;
+                Transform.Rotation -= dt*2;
                 Debug.Log("Moving LEFT");
             }
             if (Input.IsKeyDown(Keys.D))
             {
-                Transform.rotation += dt*2;
+                Transform.Rotation += dt*2;
                 Debug.Log("Moving RIGHT");
             }
 

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace KokoEngine
 {
@@ -11,18 +10,15 @@ namespace KokoEngine
         {
             set { GameObject = value; }
         }
-
         public ITransform Transform => GameObject.Transform;
-        
-        public T GetComponent<T>() where T : IComponent
+
+        public Component(IGameObject go)
         {
-            return GameObject.GetComponent<T>();
+            GameObject = go;
         }
 
-        public List<IComponent> GetComponents()
-        {
-            return GameObject.GetComponents();
-        }
+        public T GetComponent<T>() where T : IComponent => GameObject.GetComponent<T>();
+        public List<IComponent> GetComponents() => GameObject.GetComponents();
 
         public virtual void Awake() { }
         public virtual void Start() { }

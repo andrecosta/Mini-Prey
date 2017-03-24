@@ -16,12 +16,14 @@ namespace MiniPreyGame
     /// </summary>
     public class Game1 : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        GraphicsDeviceManager _graphics;
+        SpriteBatch _spriteBatch;
+
+        private SceneManager _sceneManager = new SceneManager();
 
         public Game1()
         {
-            graphics = new GraphicsDeviceManager(this);
+            _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
             // Add the InputManager Component
@@ -39,38 +41,36 @@ namespace MiniPreyGame
         {
             base.Initialize();
             Random r = new Random();
-
+            
             // Setup initial scene
-            Scene levelScene = new Scene("level");
+            IScene levelScene = SceneManager.Instance.CreateScene("level");
 
-            // TODO: do this
-            //Scene level = SceneManager.CreateScene("level");
-            SceneManager.SceneMap.Add("level", levelScene);
-            SceneManager.LoadScene(0);
 
-            GameObject gameController = new GameObject();
+            var gameController = new GameObject();
             gameController.AddComponent<GameController>();
+            levelScene.AddRootGameObject(gameController);
 
             // Create Player
-            GameObject player = new GameObject();
-            player.Transform.scale = new Vector3(0.05f, 0.05f, 0.05f);
+            var player = new GameObject();
+            player.Transform.Scale = new Vector3(0.05f, 0.05f, 0.05f);
             var sr = player.AddComponent<SpriteRenderer>();
-            Sprite sprite = new Sprite("boid");
+            var sprite = new Sprite("boid");
             sr.sprite = sprite;
             player.AddComponent<Rigidbody>();
             var cc = player.AddComponent<BoxCollider>();
             cc.Width = sprite.texture.Height;
             cc.Height = sprite.texture.Height;
             player.AddComponent<PlayerController>();
+            levelScene.AddRootGameObject(player);
 
             // Create 10 NPCs
             for (int i = 0; i < 10; i++)
             {
-                GameObject boid = new GameObject();
-                boid.Transform.position = new Vector3(
+                var boid = new GameObject();
+                boid.Transform.Position = new Vector3(
                     r.Next(0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width),
                     r.Next(0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height));
-                boid.Transform.scale = new Vector3(0.05f, 0.05f, 0.05f);
+                boid.Transform.Scale = new Vector3(0.05f, 0.05f, 0.05f);
                 sr = boid.AddComponent<SpriteRenderer>();
                 sprite = new Sprite("boid");
                 sr.sprite = sprite;
@@ -81,12 +81,14 @@ namespace MiniPreyGame
                 cc.Height = sprite.texture.Height;
                 var b = boid.AddComponent<Boid>();
                 b.Target = player;
+                levelScene.AddRootGameObject(boid);
             }
 
-            // TODO: review
-            // Perform the scene's startup functions
-            SceneManager.AwakeScene();
-            SceneManager.StartScene();
+            // Load the scene
+            SceneManager.Instance.LoadScene(levelScene);
+
+            // After the scene is loaded, start it
+            SceneManager.Instance.StartScene();
         }
 
         /// <summary>
@@ -96,7 +98,7 @@ namespace MiniPreyGame
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // Load and register resources with the Asset Manager
             var dummyTexture = new Microsoft.Xna.Framework.Graphics.Texture2D(GraphicsDevice, 1, 1);
@@ -130,7 +132,7 @@ namespace MiniPreyGame
             float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             // Update the active scene's game objects
-            SceneManager.UpdateActiveScene(dt);
+            SceneManager.Instance.UpdateActiveScene(dt);
 
             base.Update(gameTime);
         }
@@ -142,13 +144,13 @@ namespace MiniPreyGame
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(new Microsoft.Xna.Framework.Color(20, 20, 20));
-            spriteBatch.Begin();
+            _spriteBatch.Begin();
 
             // Draw the active scene's game objects which contain renderable components
-            foreach (var rootGameObject in SceneManager.GetActiveScene().GetRootGameObjects())
-                DrawGameObjects(rootGameObject, spriteBatch);
+            foreach (var rootGameObject in SceneManager.Instance.GetActiveScene().GetRootGameObjects())
+                DrawGameObjects(rootGameObject, _spriteBatch);
 
-            spriteBatch.End();
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }
@@ -165,9 +167,9 @@ namespace MiniPreyGame
                 // TODO: maybe make it smaller?
                 Texture2D t = AssetManager.Instance.GetAsset<Texture2D>(sr.sprite.texture.Name);
                 sb.Draw((Microsoft.Xna.Framework.Graphics.Texture2D) t.RawData,
-                    new Rectangle((int) sr.Transform.position.X, (int) sr.Transform.position.Y,
-                        (int) (t.Width * sr.Transform.scale.X), (int) (t.Height * sr.Transform.scale.Y)), null,
-                    new Microsoft.Xna.Framework.Color(sr.color.R, sr.color.G, sr.color.B), sr.Transform.rotation,
+                    new Rectangle((int) sr.Transform.Position.X, (int) sr.Transform.Position.Y,
+                        (int) (t.Width * sr.Transform.Scale.X), (int) (t.Height * sr.Transform.Scale.Y)), null,
+                    new Microsoft.Xna.Framework.Color(sr.color.R, sr.color.G, sr.color.B), sr.Transform.Rotation,
                     new Vector2(t.Width / 2f, t.Height / 2f), SpriteEffects.None, 0);
             }
 
