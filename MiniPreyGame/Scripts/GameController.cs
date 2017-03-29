@@ -2,17 +2,17 @@
 
 namespace MiniPreyGame
 {
-    class GameController : Script
+    class GameController : Behaviour
     {
-        public override void Awake() 
+        protected override void Awake() 
         {
         }
 
-        public override void Start()
+        protected override void Start()
         {
         }
 
-        public override void Update(float dt)
+        protected override void Update(float dt)
         {
         }
     }

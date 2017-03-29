@@ -1,6 +1,6 @@
 ﻿namespace KokoEngine
 {
-    public class Texture2D : Asset
+    public sealed class Texture2D : Asset
     {
         public int Width { get; }
         public int Height { get; }

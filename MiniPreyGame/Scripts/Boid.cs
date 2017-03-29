@@ -1,29 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using KokoEngine;
 
 namespace MiniPreyGame
 {
-    class Boid : Script
+    class Boid : Behaviour
     {
         public float Speed = 5;
         public GameObject Target;
 
         private Rigidbody _rb;
 
-        public override void Awake()
+        protected override void Awake()
         {
             _rb = GetComponent<Rigidbody>();
         }
 
-        public override void Start()
+        protected override void Start()
         {
         }
 
-        public override void Update(float dt)
+        protected override void Update(float dt)
         {
             Vector3 dir = (Target.Transform.Position - Transform.Position).Normalized;
 

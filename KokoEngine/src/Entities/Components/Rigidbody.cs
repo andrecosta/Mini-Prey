@@ -2,15 +2,15 @@
 
 namespace KokoEngine
 {
-    public class Rigidbody : Component
+    public class Rigidbody : Component, IRigidbody
     {
         public static List<Rigidbody> All = new List<Rigidbody>();
-        static readonly float Damping = 0.97f;
-        static readonly Vector3 Gravity = new Vector3(0, 0, 0);
+        public float Damping { get; } = 0.97f;
+        public Vector3 Gravity { get; }= new Vector3(0, 0, 0);
 
         public float mass { get; set; }
-        public Vector3 velocity { get; set; }
-        public Vector3 acceleration { get; set; }
+        public Vector3 velocity { get; private set; }
+        public Vector3 acceleration { get; private set; }
         //Restitution
         //Energy 
         //Vector2 Collision normal
@@ -23,7 +23,7 @@ namespace KokoEngine
             All.Add(this);
         }
 
-        internal override void Update(float dt)
+        protected override void Update(float dt)
         {
             foreach (Vector3 force in _forces)
                 acceleration += force * (1/mass);

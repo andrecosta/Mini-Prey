@@ -2,9 +2,10 @@
 
 namespace KokoEngine
 {
-    public struct Scene : IScene
+    public sealed class Scene : IScene
     {
         public string Name { get; }
+
         private List<IGameObject> _rootGameObjects;
 
         public Scene(string name)

@@ -1,8 +1,4 @@
-﻿// Questions
-// - We need that every object inherits from Entity (for Guid and Name)
-// - If we want to make (by design) the client inherit from 'Component' to create their own components, instead of creating his own implementation based on IComponent
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace KokoEngine
 {

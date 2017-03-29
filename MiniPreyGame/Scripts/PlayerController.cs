@@ -4,22 +4,22 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MiniPreyGame
 {
-    class PlayerController : Script
+    class PlayerController : Behaviour
     {
         public float Speed = 6;
 
         private Rigidbody _rb;
 
-        public override void Awake()
+        protected override void Awake()
         {
             _rb = GetComponent<Rigidbody>();
         }
 
-        public override void Start()
+        protected override void Start()
         {
         }
 
-        public override void Update(float dt)
+        protected override void Update(float dt)
         {
             Vector3 dir = Vector3.Zero;
 

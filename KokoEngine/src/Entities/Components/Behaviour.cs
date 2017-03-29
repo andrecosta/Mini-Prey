@@ -1,7 +1,7 @@
 ﻿namespace KokoEngine
 {
-    public abstract class Behaviour : Component
+    public abstract class Behaviour : Component, IBehaviour
     {
-        public bool enabled { get; set; }
+        public bool Enabled { get; set; }
     }
 }

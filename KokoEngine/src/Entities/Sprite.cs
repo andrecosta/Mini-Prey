@@ -1,8 +1,8 @@
 ﻿namespace KokoEngine
 {
-    public sealed class Sprite : Entity
+    public sealed class Sprite : Entity, ISprite
     {
-        public Texture2D texture;
+        public Texture2D texture { get; }
 
         public Sprite(string textureName)
         {

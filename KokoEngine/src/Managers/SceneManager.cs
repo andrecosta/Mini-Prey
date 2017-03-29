@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace KokoEngine
 {
-    public class SceneManager
+    public class SceneManager : ISceneManager
     {
         // Singleton
-        private static SceneManager _instance;
-        public static SceneManager Instance
+        private static ISceneManager _instance;
+        public static ISceneManager Instance
         {
             get
             {
@@ -29,9 +30,7 @@ namespace KokoEngine
         /// <returns></returns>
         public IScene CreateScene(string name)
         {
-            var fac = new SceneFactory();
-
-            var scene = fac.Create();
+            IScene scene = new Scene(name);
             _sceneMap.Add(name, scene);
 
             return scene;
@@ -142,27 +141,33 @@ namespace KokoEngine
             foreach (var child in rootGameObject.Transform.Children)
                 UpdateGameObjects(child.GameObject, dt);
         }
-        /*
-        public static void DrawActiveScene(SpriteBatch sb, Texture2D dummyTexture)
+
+        public void OnGameObjectCreated(IGameObject go)
         {
-            foreach (var rootGameObject in _activeScene.GetRootGameObjects())
-                DrawGameObjects(rootGameObject, sb, dummyTexture);
+            _activeScene.AddRootGameObject(go);
         }
 
-        static void DrawGameObjects(GameObject rootGameObject, SpriteBatch sb, Texture2D dummyTexture)
-        {
-            foreach (Component component in rootGameObject.GetComponents())
-            {
-                SpriteRenderer sr = component as SpriteRenderer;
-                if (sr == null)
-                    continue;
+        /*
+public static void DrawActiveScene(SpriteBatch sb, Texture2D dummyTexture)
+{
+   foreach (var rootGameObject in _activeScene.GetRootGameObjects())
+       DrawGameObjects(rootGameObject, sb, dummyTexture);
+}
 
-                sb.Draw(dummyTexture, new Rectangle((int)sr.Transform.position.X, (int)sr.Transform.position.Y,
-                    (int)(50 * sr.Transform.scale.X), (int)(50 * sr.Transform.scale.Y)), sr.color);
-            }
+static void DrawGameObjects(GameObject rootGameObject, SpriteBatch sb, Texture2D dummyTexture)
+{
+   foreach (Component component in rootGameObject.GetComponents())
+   {
+       SpriteRenderer sr = component as SpriteRenderer;
+       if (sr == null)
+           continue;
 
-            foreach (var child in rootGameObject.Transform.Children)
-                DrawGameObjects(child.GameObject, sb, dummyTexture);
-        }*/
+       sb.Draw(dummyTexture, new Rectangle((int)sr.Transform.position.X, (int)sr.Transform.position.Y,
+           (int)(50 * sr.Transform.scale.X), (int)(50 * sr.Transform.scale.Y)), sr.color);
+   }
+
+   foreach (var child in rootGameObject.Transform.Children)
+       DrawGameObjects(child.GameObject, sb, dummyTexture);
+}*/
     }
 }

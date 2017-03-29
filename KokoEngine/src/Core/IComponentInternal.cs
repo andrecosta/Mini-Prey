@@ -7,5 +7,6 @@
         void Awake();
         void Start();
         void Update(float dt);
+        void End();
     }
 }
