@@ -364,18 +364,6 @@ references:
   commentId: T:KokoEngine.Entity
   fullName: KokoEngine.Entity
   nameWithType: Entity
-- uid: KokoEngine.Entity.#ctor
-  name: Entity()
-  href: api/KokoEngine.Entity.html#KokoEngine_Entity__ctor
-  commentId: M:KokoEngine.Entity.#ctor
-  fullName: KokoEngine.Entity.Entity()
-  nameWithType: Entity.Entity()
-- uid: KokoEngine.Entity.#ctor*
-  name: Entity
-  href: api/KokoEngine.Entity.html#KokoEngine_Entity__ctor_
-  commentId: Overload:KokoEngine.Entity.#ctor
-  fullName: KokoEngine.Entity.Entity
-  nameWithType: Entity.Entity
 - uid: KokoEngine.Entity.Guid
   name: Guid
   href: api/KokoEngine.Entity.html#KokoEngine_Entity_Guid
@@ -841,18 +829,18 @@ references:
   commentId: T:KokoEngine.IScene
   fullName: KokoEngine.IScene
   nameWithType: IScene
-- uid: KokoEngine.IScene.AddRootGameObject(KokoEngine.IGameObject)
-  name: AddRootGameObject(IGameObject)
-  href: api/KokoEngine.IScene.html#KokoEngine_IScene_AddRootGameObject_KokoEngine_IGameObject_
-  commentId: M:KokoEngine.IScene.AddRootGameObject(KokoEngine.IGameObject)
-  fullName: KokoEngine.IScene.AddRootGameObject(KokoEngine.IGameObject)
-  nameWithType: IScene.AddRootGameObject(IGameObject)
-- uid: KokoEngine.IScene.AddRootGameObject*
-  name: AddRootGameObject
-  href: api/KokoEngine.IScene.html#KokoEngine_IScene_AddRootGameObject_
-  commentId: Overload:KokoEngine.IScene.AddRootGameObject
-  fullName: KokoEngine.IScene.AddRootGameObject
-  nameWithType: IScene.AddRootGameObject
+- uid: KokoEngine.IScene.AddGameObject(KokoEngine.IGameObject)
+  name: AddGameObject(IGameObject)
+  href: api/KokoEngine.IScene.html#KokoEngine_IScene_AddGameObject_KokoEngine_IGameObject_
+  commentId: M:KokoEngine.IScene.AddGameObject(KokoEngine.IGameObject)
+  fullName: KokoEngine.IScene.AddGameObject(KokoEngine.IGameObject)
+  nameWithType: IScene.AddGameObject(IGameObject)
+- uid: KokoEngine.IScene.AddGameObject*
+  name: AddGameObject
+  href: api/KokoEngine.IScene.html#KokoEngine_IScene_AddGameObject_
+  commentId: Overload:KokoEngine.IScene.AddGameObject
+  fullName: KokoEngine.IScene.AddGameObject
+  nameWithType: IScene.AddGameObject
 - uid: KokoEngine.IScene.GetRootGameObjects
   name: GetRootGameObjects()
   href: api/KokoEngine.IScene.html#KokoEngine_IScene_GetRootGameObjects
@@ -1021,54 +1009,6 @@ references:
   commentId: T:KokoEngine.ITransform
   fullName: KokoEngine.ITransform
   nameWithType: ITransform
-- uid: KokoEngine.ITransform.ChildCount
-  name: ChildCount
-  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_ChildCount
-  commentId: P:KokoEngine.ITransform.ChildCount
-  fullName: KokoEngine.ITransform.ChildCount
-  nameWithType: ITransform.ChildCount
-- uid: KokoEngine.ITransform.ChildCount*
-  name: ChildCount
-  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_ChildCount_
-  commentId: Overload:KokoEngine.ITransform.ChildCount
-  fullName: KokoEngine.ITransform.ChildCount
-  nameWithType: ITransform.ChildCount
-- uid: KokoEngine.ITransform.Children
-  name: Children
-  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_Children
-  commentId: P:KokoEngine.ITransform.Children
-  fullName: KokoEngine.ITransform.Children
-  nameWithType: ITransform.Children
-- uid: KokoEngine.ITransform.Children*
-  name: Children
-  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_Children_
-  commentId: Overload:KokoEngine.ITransform.Children
-  fullName: KokoEngine.ITransform.Children
-  nameWithType: ITransform.Children
-- uid: KokoEngine.ITransform.GetChild(System.Int32)
-  name: GetChild(Int32)
-  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_GetChild_System_Int32_
-  commentId: M:KokoEngine.ITransform.GetChild(System.Int32)
-  fullName: KokoEngine.ITransform.GetChild(System.Int32)
-  nameWithType: ITransform.GetChild(Int32)
-- uid: KokoEngine.ITransform.GetChild*
-  name: GetChild
-  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_GetChild_
-  commentId: Overload:KokoEngine.ITransform.GetChild
-  fullName: KokoEngine.ITransform.GetChild
-  nameWithType: ITransform.GetChild
-- uid: KokoEngine.ITransform.Parent
-  name: Parent
-  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_Parent
-  commentId: P:KokoEngine.ITransform.Parent
-  fullName: KokoEngine.ITransform.Parent
-  nameWithType: ITransform.Parent
-- uid: KokoEngine.ITransform.Parent*
-  name: Parent
-  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_Parent_
-  commentId: Overload:KokoEngine.ITransform.Parent
-  fullName: KokoEngine.ITransform.Parent
-  nameWithType: ITransform.Parent
 - uid: KokoEngine.ITransform.Position
   name: Position
   href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_Position
@@ -1141,6 +1081,79 @@ references:
   commentId: Overload:KokoEngine.ITransform.Up
   fullName: KokoEngine.ITransform.Up
   nameWithType: ITransform.Up
+- uid: KokoEngine.ITree`1
+  name: ITree<T>
+  href: api/KokoEngine.ITree-1.html
+  commentId: T:KokoEngine.ITree`1
+  name.vb: ITree(Of T)
+  fullName: KokoEngine.ITree<T>
+  fullName.vb: KokoEngine.ITree(Of T)
+  nameWithType: ITree<T>
+  nameWithType.vb: ITree(Of T)
+- uid: KokoEngine.ITree`1.ChildCount
+  name: ChildCount
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_ChildCount
+  commentId: P:KokoEngine.ITree`1.ChildCount
+  fullName: KokoEngine.ITree<T>.ChildCount
+  fullName.vb: KokoEngine.ITree(Of T).ChildCount
+  nameWithType: ITree<T>.ChildCount
+  nameWithType.vb: ITree(Of T).ChildCount
+- uid: KokoEngine.ITree`1.ChildCount*
+  name: ChildCount
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_ChildCount_
+  commentId: Overload:KokoEngine.ITree`1.ChildCount
+  fullName: KokoEngine.ITree<T>.ChildCount
+  fullName.vb: KokoEngine.ITree(Of T).ChildCount
+  nameWithType: ITree<T>.ChildCount
+  nameWithType.vb: ITree(Of T).ChildCount
+- uid: KokoEngine.ITree`1.Children
+  name: Children
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_Children
+  commentId: P:KokoEngine.ITree`1.Children
+  fullName: KokoEngine.ITree<T>.Children
+  fullName.vb: KokoEngine.ITree(Of T).Children
+  nameWithType: ITree<T>.Children
+  nameWithType.vb: ITree(Of T).Children
+- uid: KokoEngine.ITree`1.Children*
+  name: Children
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_Children_
+  commentId: Overload:KokoEngine.ITree`1.Children
+  fullName: KokoEngine.ITree<T>.Children
+  fullName.vb: KokoEngine.ITree(Of T).Children
+  nameWithType: ITree<T>.Children
+  nameWithType.vb: ITree(Of T).Children
+- uid: KokoEngine.ITree`1.GetChild(System.Int32)
+  name: GetChild(Int32)
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_GetChild_System_Int32_
+  commentId: M:KokoEngine.ITree`1.GetChild(System.Int32)
+  fullName: KokoEngine.ITree<T>.GetChild(System.Int32)
+  fullName.vb: KokoEngine.ITree(Of T).GetChild(System.Int32)
+  nameWithType: ITree<T>.GetChild(Int32)
+  nameWithType.vb: ITree(Of T).GetChild(Int32)
+- uid: KokoEngine.ITree`1.GetChild*
+  name: GetChild
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_GetChild_
+  commentId: Overload:KokoEngine.ITree`1.GetChild
+  fullName: KokoEngine.ITree<T>.GetChild
+  fullName.vb: KokoEngine.ITree(Of T).GetChild
+  nameWithType: ITree<T>.GetChild
+  nameWithType.vb: ITree(Of T).GetChild
+- uid: KokoEngine.ITree`1.Parent
+  name: Parent
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_Parent
+  commentId: P:KokoEngine.ITree`1.Parent
+  fullName: KokoEngine.ITree<T>.Parent
+  fullName.vb: KokoEngine.ITree(Of T).Parent
+  nameWithType: ITree<T>.Parent
+  nameWithType.vb: ITree(Of T).Parent
+- uid: KokoEngine.ITree`1.Parent*
+  name: Parent
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_Parent_
+  commentId: Overload:KokoEngine.ITree`1.Parent
+  fullName: KokoEngine.ITree<T>.Parent
+  fullName.vb: KokoEngine.ITree(Of T).Parent
+  nameWithType: ITree<T>.Parent
+  nameWithType.vb: ITree(Of T).Parent
 - uid: KokoEngine.Rigidbody
   name: Rigidbody
   href: api/KokoEngine.Rigidbody.html
@@ -1267,18 +1280,18 @@ references:
   commentId: Overload:KokoEngine.Scene.#ctor
   fullName: KokoEngine.Scene.Scene
   nameWithType: Scene.Scene
-- uid: KokoEngine.Scene.AddRootGameObject(KokoEngine.IGameObject)
-  name: AddRootGameObject(IGameObject)
-  href: api/KokoEngine.Scene.html#KokoEngine_Scene_AddRootGameObject_KokoEngine_IGameObject_
-  commentId: M:KokoEngine.Scene.AddRootGameObject(KokoEngine.IGameObject)
-  fullName: KokoEngine.Scene.AddRootGameObject(KokoEngine.IGameObject)
-  nameWithType: Scene.AddRootGameObject(IGameObject)
-- uid: KokoEngine.Scene.AddRootGameObject*
-  name: AddRootGameObject
-  href: api/KokoEngine.Scene.html#KokoEngine_Scene_AddRootGameObject_
-  commentId: Overload:KokoEngine.Scene.AddRootGameObject
-  fullName: KokoEngine.Scene.AddRootGameObject
-  nameWithType: Scene.AddRootGameObject
+- uid: KokoEngine.Scene.AddGameObject(KokoEngine.IGameObject)
+  name: AddGameObject(IGameObject)
+  href: api/KokoEngine.Scene.html#KokoEngine_Scene_AddGameObject_KokoEngine_IGameObject_
+  commentId: M:KokoEngine.Scene.AddGameObject(KokoEngine.IGameObject)
+  fullName: KokoEngine.Scene.AddGameObject(KokoEngine.IGameObject)
+  nameWithType: Scene.AddGameObject(IGameObject)
+- uid: KokoEngine.Scene.AddGameObject*
+  name: AddGameObject
+  href: api/KokoEngine.Scene.html#KokoEngine_Scene_AddGameObject_
+  commentId: Overload:KokoEngine.Scene.AddGameObject
+  fullName: KokoEngine.Scene.AddGameObject
+  nameWithType: Scene.AddGameObject
 - uid: KokoEngine.Scene.GetRootGameObjects
   name: GetRootGameObjects()
   href: api/KokoEngine.Scene.html#KokoEngine_Scene_GetRootGameObjects

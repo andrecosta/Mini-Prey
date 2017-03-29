@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Entity
+    <title>Interface IScene
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Entity
+    <meta name="title" content="Interface IScene
    ">
     <meta name="generator" content="docfx 2.13.1.0">
     
@@ -70,69 +70,27 @@
             <article class="content wrap" id="_content">
               
               
-              <h1 id="KokoEngine_Entity" data-uid="KokoEngine.Entity">Class Entity
+              <h1 id="KokoEngine_IScene" data-uid="KokoEngine.IScene">Interface IScene
               </h1>
               <div class="markdown level0 summary"></div>
               <div class="markdown level0 conceptual"></div>
-              <div class="inheritance">
-                <h5>Inheritance</h5>
-                  <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><span class="xref">Entity</span></div>
-                  <div class="level2"><a class="xref" href="KokoEngine.Asset.html">Asset</a></div>
-                  <div class="level2"><a class="xref" href="KokoEngine.Component.html">Component</a></div>
-                  <div class="level2"><a class="xref" href="KokoEngine.GameObject.html">GameObject</a></div>
-                  <div class="level2"><a class="xref" href="KokoEngine.Sprite.html">Sprite</a></div>
-              </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:KokoEngine</h6>
               <h6><strong>Assembly</strong>:KokoEngine.dll</h6>
-              <h5 id="KokoEngine_Entity_syntax">Syntax</h5>
+              <h5 id="KokoEngine_IScene_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public abstract class Entity : IEntity</code></pre>
-              </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              
-              
-              <a id="KokoEngine_Entity__ctor_" data-uid="KokoEngine.Entity.#ctor*"></a>
-              <h4 id="KokoEngine_Entity__ctor" data-uid="KokoEngine.Entity.#ctor">Entity()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">protected Entity()</code></pre>
+                <pre><code class="lang-csharp hljs">public interface IScene</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
               
               
-              <a id="KokoEngine_Entity_Guid_" data-uid="KokoEngine.Entity.Guid*"></a>
-              <h4 id="KokoEngine_Entity_Guid" data-uid="KokoEngine.Entity.Guid">Guid</h4>
+              <a id="KokoEngine_IScene_Name_" data-uid="KokoEngine.IScene.Name*"></a>
+              <h4 id="KokoEngine_IScene_Name" data-uid="KokoEngine.IScene.Name">Name</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Guid { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">string Name { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -149,46 +107,44 @@
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="KokoEngine.IEntity.html#KokoEngine_IEntity_Guid">IEntity.Guid</a></div>
-              
-              
-              <a id="KokoEngine_Entity_Name_" data-uid="KokoEngine.Entity.Name*"></a>
-              <h4 id="KokoEngine_Entity_Name" data-uid="KokoEngine.Entity.Name">Name</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public virtual string Name { get; protected set; }</code></pre>
-              </div>
-              <h5 class="propertyValue">Property Value</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="KokoEngine.IEntity.html#KokoEngine_IEntity_Name">IEntity.Name</a></div>
               <h3 id="methods">Methods
               </h3>
               
               
-              <a id="KokoEngine_Entity_ToString_" data-uid="KokoEngine.Entity.ToString*"></a>
-              <h4 id="KokoEngine_Entity_ToString" data-uid="KokoEngine.Entity.ToString">ToString()</h4>
+              <a id="KokoEngine_IScene_AddGameObject_" data-uid="KokoEngine.IScene.AddGameObject*"></a>
+              <h4 id="KokoEngine_IScene_AddGameObject_KokoEngine_IGameObject_" data-uid="KokoEngine.IScene.AddGameObject(KokoEngine.IGameObject)">AddGameObject(IGameObject)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+                <pre><code class="lang-csharp hljs">void AddGameObject(IGameObject go)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="KokoEngine.IGameObject.html">IGameObject</a></td>
+                    <td><span class="parametername">go</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <a id="KokoEngine_IScene_GetRootGameObjects_" data-uid="KokoEngine.IScene.GetRootGameObjects*"></a>
+              <h4 id="KokoEngine_IScene_GetRootGameObjects" data-uid="KokoEngine.IScene.GetRootGameObjects">GetRootGameObjects()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">List&lt;IGameObject&gt; GetRootGameObjects()</code></pre>
               </div>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -200,13 +156,11 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="KokoEngine.IGameObject.html">IGameObject</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><span class="xref">System.Object.ToString()</span></div>
                         </article>
           </div>
           
