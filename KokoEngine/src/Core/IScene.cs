@@ -6,7 +6,7 @@ namespace KokoEngine
     {
         string Name { get; }
 
-        void AddRootGameObject(IGameObject go);
+        void AddGameObject(IGameObject go);
         List<IGameObject> GetRootGameObjects();
     }
 }

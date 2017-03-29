@@ -14,7 +14,7 @@ namespace KokoEngine
             Name = name;
         }
 
-        public void AddRootGameObject(IGameObject go)
+        public void AddGameObject(IGameObject go)
         {
             if (_rootGameObjects == null)
                 _rootGameObjects = new List<IGameObject>();

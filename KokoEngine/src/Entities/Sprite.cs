@@ -4,10 +4,10 @@
     {
         public Texture2D texture { get; }
 
-        public Sprite(string textureName)
+        public Sprite(Texture2D texture)
         {
-            texture = AssetManager.Instance.GetAsset<Texture2D>(textureName);
-            Name = textureName;
+            this.texture = texture;
+            Name = texture.Name;
         }
     }
 }

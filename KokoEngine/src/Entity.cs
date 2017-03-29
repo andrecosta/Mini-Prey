@@ -5,7 +5,7 @@
         public string Guid { get; }
         public virtual string Name { get; protected set; } = "KokoEngine Entity";
 
-        protected Entity()
+        internal Entity()
         {
             Guid = System.Guid.NewGuid().ToString();
         }

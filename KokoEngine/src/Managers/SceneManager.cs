@@ -6,22 +6,8 @@ namespace KokoEngine
 {
     public class SceneManager : ISceneManager
     {
-        // Singleton
-        private static ISceneManager _instance;
-        public static ISceneManager Instance
-        {
-            get
-            {
-                if (_instance != null)
-                    return _instance;
-                _instance = new SceneManager();
-                return _instance;
-            }
-        }
-
         private Dictionary<string, IScene> _sceneMap = new Dictionary<string, IScene>();
         private IScene _activeScene;
-
 
         /// <summary>
         /// Create a new scene and add it to the scene map.
@@ -35,8 +21,6 @@ namespace KokoEngine
 
             return scene;
         }
-
-
 
         public IScene GetActiveScene()
         {
@@ -144,7 +128,7 @@ namespace KokoEngine
 
         public void OnGameObjectCreated(IGameObject go)
         {
-            _activeScene.AddRootGameObject(go);
+            _activeScene.AddGameObject(go);
         }
 
         /*

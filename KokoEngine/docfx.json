@@ -6,7 +6,7 @@
           "files": [
             "*.csproj"
           ],
-          "cwd": "src",
+          "cwd": ".",
           "exclude": [
             "**/obj/**",
             "**/bin/**",
