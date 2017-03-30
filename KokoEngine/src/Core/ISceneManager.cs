@@ -38,11 +38,6 @@ namespace KokoEngine
         void LoadScene(IScene scene);
 
         /// <summary>
-        /// Starts all GameObjects contained in this scene.
-        /// </summary>
-        void StartScene();
-
-        /// <summary>
         /// Update the currently active scene.
         /// </summary>
         /// <param name="dt">Time delta</param>

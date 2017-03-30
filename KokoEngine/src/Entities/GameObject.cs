@@ -33,16 +33,21 @@ namespace KokoEngine
         public T AddComponent<T>() where T : IComponent, new()
         {
             // Instantiate the component
-            var c = new T();
+            T component = new T();
 
             // Set the component's GameObject property to the current GameObject
-            var componentInternal = c as IComponentInternal;
-            if (componentInternal != null) componentInternal.GameObject = this;
+            IComponentInternal componentInternal = component as IComponentInternal;
+            if (componentInternal != null)
+            {
+                componentInternal.GameObject = this;
+                IBehaviour behaviour = componentInternal as IBehaviour;
+                behaviour?.Awake();
+            }
 
             // Add the instantiated component to the GameObject's component list
-            _components.Add(c);
+            _components.Add(component);
 
-            return c;
+            return component;
         }
 
         /// <summary>

@@ -33,13 +33,15 @@ namespace KokoEngine
         /// <param name="sceneName">The name of the scene to load</param>
         public void LoadScene(string sceneName)
         {
+            // Get the scene reference from the scene map and set it as active
             _sceneMap.TryGetValue(sceneName, out _activeScene);
 
             // Get the scene's root GameObjects
-            var rootGameObjects = _activeScene?.GetRootGameObjects();
-            if (rootGameObjects == null) return; // TODO: throw exception
+            //var rootGameObjects = _activeScene?.GetRootGameObjects();
+            //if (rootGameObjects == null) return; // TODO: throw exception
 
-            AwakeScene();
+            // Start the scene scripts
+            StartScene();
         }
 
         /// <summary>
@@ -65,7 +67,7 @@ namespace KokoEngine
             }
         }
 
-        private void AwakeScene()
+        /*private void AwakeScene()
         {
             // Awake every root GameObject and their children
             foreach (IGameObject rootGameObject in _activeScene.GetRootGameObjects())
@@ -79,26 +81,30 @@ namespace KokoEngine
 
             foreach (var child in rootGameObject.Transform.Children)
                 AwakeGameObjects(child.GameObject);
-        }
+        }*/
 
         /// <summary>
         /// Starts all GameObjects contained in this scene.
         /// </summary>
-        public void StartScene()
+        private void StartScene()
         {
-            foreach (var rootGameObject in _activeScene.GetRootGameObjects())
-                StartGameObjects(rootGameObject);
+            if (_activeScene != null)
+                foreach (IGameObject rootGameObject in _activeScene.GetRootGameObjects())
+                    StartGameObjects(rootGameObject);
         }
 
         private void StartGameObjects(IGameObject rootGameObject)
         {
-            foreach (IComponent c in rootGameObject.GetComponents())
-                ((IComponentInternal)c).Start();
+            foreach (IComponent component in rootGameObject.GetComponents())
+            {
+                IBehaviour script = component as IBehaviour;
+                script?.Start();
+            }
 
+            // Recursively call this method for all children GameObjects
             foreach (var child in rootGameObject.Transform.Children)
                 StartGameObjects(child.GameObject);
         }
-
 
         // TODO: make private and/or decouple!!! -----------------------------------------------------
 
@@ -110,19 +116,12 @@ namespace KokoEngine
 
         private void UpdateGameObjects(IGameObject rootGameObject, float dt)
         {
-            //List<Collider> colliders = new List<Collider>();
-
             // Call the attached GameObject components' internal Update method
             foreach (IComponent c in rootGameObject.GetComponents())
-            {
                 ((IComponentInternal) c).Update(dt);
-                //var collider = c as Collider;
-                //if (collider != null)
-                //    colliders.Add(collider);
-            }
 
             // Recursively update the children GameObjects
-            foreach (var child in rootGameObject.Transform.Children)
+            foreach (ITransform child in rootGameObject.Transform.Children)
                 UpdateGameObjects(child.GameObject, dt);
         }
 

@@ -95,9 +95,6 @@ namespace MiniPreyGame
 
             // Load the scene
             _sceneManager.LoadScene(levelScene);
-
-            // After the scene is loaded, start it
-            _sceneManager.StartScene();
         }
 
         /// <summary>

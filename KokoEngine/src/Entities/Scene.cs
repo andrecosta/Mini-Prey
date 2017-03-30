@@ -6,31 +6,23 @@ namespace KokoEngine
     {
         public string Name { get; }
 
-        private List<IGameObject> _rootGameObjects;
+        private readonly List<IGameObject> _rootGameObjects = new List<IGameObject>();
 
         public Scene(string name)
         {
-            _rootGameObjects = new List<IGameObject>();
             Name = name;
         }
 
         public void AddGameObject(IGameObject go)
         {
-            if (_rootGameObjects == null)
-                _rootGameObjects = new List<IGameObject>();
-
             var gameObjectInternal = go as IGameObjectInternal;
-            if (gameObjectInternal != null) gameObjectInternal.Scene = this;
+            if (gameObjectInternal == null) return;
+
+            gameObjectInternal.Scene = this;
 
             _rootGameObjects.Add(go);
         }
 
-        public List<IGameObject> GetRootGameObjects()
-        {
-            if (_rootGameObjects == null)
-                _rootGameObjects = new List<IGameObject>();
-
-            return _rootGameObjects;
-        }
+        public List<IGameObject> GetRootGameObjects() => _rootGameObjects;
     }
 }

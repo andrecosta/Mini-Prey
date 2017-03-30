@@ -14,19 +14,9 @@ namespace KokoEngine
         // Component management
         public T GetComponent<T>() where T : IComponent => GameObject.GetComponent<T>();
         public List<IComponent> GetComponents() => GameObject.GetComponents();
-
-
-        protected virtual void Awake() { }
-        void IComponentInternal.Awake() => Awake();
-
-        protected virtual void Start() { }
-        void IComponentInternal.Start() => Start();
-
+        
         // Update
         protected virtual void Update(float dt) { }
         void IComponentInternal.Update(float dt) => Update(dt);
-
-        protected virtual void End() { }
-        void IComponentInternal.End() => End();
     }
 }
