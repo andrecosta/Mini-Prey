@@ -3,6 +3,6 @@
     public interface ISpriteRenderer : IComponent
     {
         Color color { get; set; }
-        Sprite sprite { get; set; }
+        ISprite sprite { get; set; }
     }
 }

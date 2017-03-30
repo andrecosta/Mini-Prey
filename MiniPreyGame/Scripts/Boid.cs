@@ -6,9 +6,9 @@ namespace MiniPreyGame
     class Boid : Behaviour
     {
         public float Speed = 5;
-        public GameObject Target;
+        public IGameObject Target;
 
-        private Rigidbody _rb;
+        private IRigidbody _rb;
 
         protected override void Awake()
         {

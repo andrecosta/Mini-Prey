@@ -19,6 +19,7 @@ namespace MiniPreyGame
         GraphicsDeviceManager _graphics;
         SpriteBatch _spriteBatch;
 
+        // Managers
         private readonly ISceneManager _sceneManager;
         private readonly IAssetManager _assetManager;
 
@@ -31,7 +32,7 @@ namespace MiniPreyGame
             Components.Add(new Input(this));
             Components.Add(new Debug(this));
 
-            // Inject the dependencies
+            // Store the injected dependencies
             _sceneManager = sceneManager;
             _assetManager = assetManager;
         }
@@ -59,10 +60,10 @@ namespace MiniPreyGame
             Texture2D boidTexture = _assetManager.GetAsset<Texture2D>("boid");
 
             // Create Player
-            var player = new GameObject();
+            IGameObject player = new GameObject();
             player.Transform.Scale = new Vector3(0.05f, 0.05f, 0.05f);
-            var sr = player.AddComponent<SpriteRenderer>();
-            var sprite = new Sprite(boidTexture);
+            ISpriteRenderer sr = player.AddComponent<SpriteRenderer>();
+            ISprite sprite = new Sprite(boidTexture);
             sr.sprite = sprite;
             player.AddComponent<Rigidbody>();
             var cc = player.AddComponent<BoxCollider>();
