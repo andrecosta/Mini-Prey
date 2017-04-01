@@ -55,7 +55,6 @@
     <Compile Include="src\Core\IGameObjectInternal.cs" />
     <Compile Include="src\Core\IScene.cs" />
     <Compile Include="src\Core\IAssetManager.cs" />
-    <Compile Include="src\Core\ITree.cs" />
     <Compile Include="src\Entities\Asset.cs" />
     <Compile Include="src\Core\IAsset.cs" />
     <Compile Include="src\Core\Structs\Color.cs" />
@@ -80,7 +79,6 @@
     <Compile Include="src\Managers\AssetManager.cs" />
     <Compile Include="src\Entities\Scene.cs" />
     <Compile Include="src\Core\ISceneManager.cs" />
-    <Compile Include="src\Managers\CollisionManager.cs" />
     <Compile Include="src\Core\ICollisionManager.cs" />
     <Compile Include="src\Managers\SceneManager.cs" />
     <Compile Include="src\Entities\Sprite.cs" />

@@ -2,7 +2,7 @@
 
 namespace KokoEngine
 {
-    public interface ITransform : IComponent, ITree<ITransform>
+    public interface ITransform : IComponent
     {
         Vector3 Position { get; set; }
         float Rotation { get; set; }
@@ -12,5 +12,10 @@ namespace KokoEngine
         void Translate(Vector3 translation);
         void Translate(Vector2 translation, float z = 0);
         void Translate(float x, float y, float z = 0);
+
+        ITransform Parent { get; set; }
+        List<ITransform> Children { get; }
+        int ChildCount { get; }
+        ITransform GetChild(int index);
     }
 }

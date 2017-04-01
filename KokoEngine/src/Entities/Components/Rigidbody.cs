@@ -8,7 +8,7 @@ namespace KokoEngine
         public float Damping { get; } = 0.97f;
         public Vector3 Gravity { get; }= new Vector3(0, 0, 0);
 
-        public float mass { get; set; }
+        public float mass { get; set; } = 1;
         public Vector3 velocity { get; private set; }
         public Vector3 acceleration { get; private set; }
         //Restitution
@@ -19,7 +19,6 @@ namespace KokoEngine
 
         public Rigidbody()
         {
-            mass = 1;
             All.Add(this);
         }
 

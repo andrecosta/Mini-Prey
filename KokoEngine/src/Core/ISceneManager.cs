@@ -2,11 +2,6 @@ namespace KokoEngine
 {
     public interface ISceneManager
     {
-        //Action<float> UpdateHook();
-        //void RegisterUpdateable(IGameObject go);
-
-        void OnGameObjectCreated(IGameObject go);
-
         /// <summary>
         /// Create a new scene and add it to the scene map.
         /// </summary>

@@ -24,7 +24,7 @@ namespace MiniPreyGame
         private readonly IAssetManager _assetManager;
         private readonly ICollisionManager _collisionManager;
 
-        public Game1(ISceneManager sceneManager, IAssetManager assetManager, ICollisionManager collisionManager)
+        public Game1(ISceneManager sceneManager, IAssetManager assetManager)
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -36,7 +36,6 @@ namespace MiniPreyGame
             // Store the injected dependencies
             _sceneManager = sceneManager;
             _assetManager = assetManager;
-            _collisionManager = collisionManager;
         }
 
         /// <summary>
