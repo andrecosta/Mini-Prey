@@ -4,7 +4,7 @@ namespace MiniPreyGame
 {
     class GameController : Behaviour
     {
-        protected override void Awake() 
+        protected override void Awake()
         {
         }
 

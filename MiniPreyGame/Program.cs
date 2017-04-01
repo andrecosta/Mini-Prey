@@ -18,8 +18,9 @@ namespace MiniPreyGame
             // Instantiate the managers
             ISceneManager sceneManager = new SceneManager();
             IAssetManager assetManager = new AssetManager();
+            ICollisionManager collisionManager = new CollisionManager();
 
-            using (var game = new Game1(sceneManager, assetManager))
+            using (var game = new Game1(sceneManager, assetManager, collisionManager))
                 game.Run();
         }
     }

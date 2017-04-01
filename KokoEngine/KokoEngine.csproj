@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RenderSystem.cs" />
+    <Compile Include="src\Engine.cs" />
     <Compile Include="src\Core\Components\IRigidbody.cs" />
     <Compile Include="src\Core\Components\ISpriteRenderer.cs" />
     <Compile Include="src\Core\IComponentInternal.cs" />
@@ -78,6 +80,8 @@
     <Compile Include="src\Managers\AssetManager.cs" />
     <Compile Include="src\Entities\Scene.cs" />
     <Compile Include="src\Core\ISceneManager.cs" />
+    <Compile Include="src\Managers\CollisionManager.cs" />
+    <Compile Include="src\Core\ICollisionManager.cs" />
     <Compile Include="src\Managers\SceneManager.cs" />
     <Compile Include="src\Entities\Sprite.cs" />
     <Compile Include="src\Entities\Assets\Texture2D.cs" />
@@ -93,7 +97,9 @@
     <None Include="packages.config" />
     <None Include="toc.yml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\docfx.console.2.15.2\build\docfx.console.targets" Condition="Exists('..\packages\docfx.console.2.15.2\build\docfx.console.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

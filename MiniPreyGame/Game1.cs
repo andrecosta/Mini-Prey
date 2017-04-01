@@ -22,8 +22,9 @@ namespace MiniPreyGame
         // Managers
         private readonly ISceneManager _sceneManager;
         private readonly IAssetManager _assetManager;
+        private readonly ICollisionManager _collisionManager;
 
-        public Game1(ISceneManager sceneManager, IAssetManager assetManager)
+        public Game1(ISceneManager sceneManager, IAssetManager assetManager, ICollisionManager collisionManager)
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -35,6 +36,7 @@ namespace MiniPreyGame
             // Store the injected dependencies
             _sceneManager = sceneManager;
             _assetManager = assetManager;
+            _collisionManager = collisionManager;
         }
 
         /// <summary>
@@ -139,6 +141,9 @@ namespace MiniPreyGame
 
             // Update the active scene's game objects
             _sceneManager.UpdateActiveScene(dt);
+
+            // Perform collision checks
+            _collisionManager.CheckCollisions(_sceneManager.GetActiveScene());
 
             base.Update(gameTime);
         }
