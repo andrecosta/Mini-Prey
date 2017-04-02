@@ -26,6 +26,12 @@ namespace MiniPreyGame
 
             // Change color
             _boid.SpriteRenderer.color = Color.Blue;
+
+            // Play flee animation
+            _boid.Animator.Looping = false;
+
+            // Play flee sound
+            _boid.AudioSource.Play(_boid.FleeSound);
         }
 
         public override void UpdateState()

@@ -2,6 +2,7 @@ namespace KokoEngine
 {
     public interface ISprite : IEntity
     {
-        Texture2D texture { get; }
+        Texture2D Texture { get; }
+        Rect SourceRect { get; }
     }
 }

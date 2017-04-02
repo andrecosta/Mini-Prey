@@ -7,15 +7,11 @@ namespace KokoEngine
         public Vector3 Direction => _direction;
         public Vector3 Position => Transform.Position;
         public Vector3 Velocity => _rb.velocity;
-
         public float MaxSpeed { get; set; } = 100;
-        //public float MaxForce { get; set; } = 50;
-        public float Deceleration { get; set; } = 0.3f;
-
         public List<SteeringBehaviour> Behaviours { get; } = new List<SteeringBehaviour>();
 
         private IRigidbody _rb;
-        Vector3 _direction;
+        private Vector3 _direction;
 
         protected override void Start()
         {
@@ -32,23 +28,15 @@ namespace KokoEngine
                     forces += b.Calculate(this);
             }
 
-            AddForce(forces);
+            _rb.AddForce(forces);
 
+            // Normalise velocity
             if (_rb.velocity.sqrMagnitude > 0.01f * 0.01f)
-            {
                 _direction = _rb.velocity.Normalized;
-            }
 
             // Limit velocity
             if (_rb.velocity.sqrMagnitude > MaxSpeed * MaxSpeed)
-            {
                 _rb.velocity = _rb.velocity.Normalized * MaxSpeed;
-            }
-        }
-
-        public void AddForce(Vector3 force)
-        {
-            _rb.AddForce(force);
         }
     }
 }

@@ -145,9 +145,9 @@ namespace MiniPreyGame
                     // Draw bounding box of object
                     var srr = _tracking[i].GetComponent<SpriteRenderer>();
                     DrawBoundingBox(spriteBatch,
-                        new Rectangle((int) ((int) srr.Transform.Position.X-srr.sprite.texture.Width/2f*srr.Transform.Scale.X), (int) ((int) srr.Transform.Position.Y-srr.sprite.texture.Height/2f*srr.Transform.Scale.Y),
-                            (int) (srr.sprite.texture.Width * srr.Transform.Scale.X),
-                            (int) (srr.sprite.texture.Height * srr.Transform.Scale.Y)), 1, color);
+                        new Rectangle((int) ((int) srr.Transform.Position.X-srr.sprite.Texture.Width/2f*srr.Transform.Scale.X), (int) ((int) srr.Transform.Position.Y-srr.sprite.Texture.Height/2f*srr.Transform.Scale.Y),
+                            (int) (srr.sprite.Texture.Width * srr.Transform.Scale.X),
+                            (int) (srr.sprite.Texture.Height * srr.Transform.Scale.Y)), 1, color);
 
                     // Draw vector line
                     DrawVector(spriteBatch, _tracking[i], 1, Color.Gold);

@@ -7,11 +7,15 @@ namespace MiniPreyGame
     {
         public float Speed { get; } = 5;
         public ITransform Target { get; set; }
+        public AudioClip SeekSound { get; set; }
+        public AudioClip FleeSound { get; set; }
 
         public Seek Seek { get; private set; }
         public Flee Flee { get; private set; }
         public Pursuit Pursuit { get; private set; }
         public SpriteRenderer SpriteRenderer { get; private set; }
+        public Animator Animator { get; private set; }
+        public AudioSource AudioSource { get; private set; }
 
         private IRigidbody _rb;
         private FSM _fsm;
@@ -26,6 +30,8 @@ namespace MiniPreyGame
             Pursuit = GetComponent<Pursuit>();
 
             SpriteRenderer = GetComponent<SpriteRenderer>();
+            Animator = GetComponent<Animator>();
+            AudioSource = GetComponent<AudioSource>();
         }
 
         protected override void Start()

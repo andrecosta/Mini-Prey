@@ -4,7 +4,6 @@ namespace KokoEngine
 {
     public class Rigidbody : Component, IRigidbody
     {
-        public static List<Rigidbody> All = new List<Rigidbody>();
         public float Damping { get; } = 0.97f;
         public Vector3 Gravity { get; }= new Vector3(0, 0, 0);
 
@@ -16,11 +15,6 @@ namespace KokoEngine
         //Vector2 Collision normal
 
         private List<Vector3> _forces = new List<Vector3>();
-
-        public Rigidbody()
-        {
-            All.Add(this);
-        }
 
         protected override void Update(float dt)
         {

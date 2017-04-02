@@ -26,6 +26,13 @@ namespace MiniPreyGame
 
             // Change color
             _boid.SpriteRenderer.color = Color.Red;
+
+            // Play seek animation
+            _boid.Animator.Play("seek");
+            _boid.Animator.Looping = true;
+
+            // Play seek sound
+            _boid.AudioSource.Play(_boid.SeekSound);
         }
 
         public override void UpdateState()
