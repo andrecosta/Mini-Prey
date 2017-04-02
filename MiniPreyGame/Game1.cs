@@ -84,29 +84,31 @@ namespace MiniPreyGame
                     r.Next(0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width),
                     r.Next(0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height));
                 boid.Transform.Scale = new Vector3(0.05f, 0.05f, 0.05f);
+
                 sr = boid.AddComponent<SpriteRenderer>();
                 sprite = new Sprite(boidTexture);
                 sr.sprite = sprite;
                 sr.color = Color.Red;
+
                 boid.AddComponent<Rigidbody>();
+
                 cc = boid.AddComponent<BoxCollider>();
                 cc.Width = sprite.texture.Height;
                 cc.Height = sprite.texture.Height;
-                boid.AddComponent<Boid>();
+
                 var v = boid.AddComponent<Vehicle>();
                 
-                //var seek = boid.AddComponent<Seek>();
-                //seek.target = player.Transform;
-
+                var seek = boid.AddComponent<Seek>();
+                var flee = boid.AddComponent<Flee>();
                 var pursuit = boid.AddComponent<Pursuit>();
-                pursuit.target = playerVehicle;
-
-                //var flee = boid.AddComponent<Flee>();
-                //flee.target = player.Transform;
-
-                //v.Behaviours.Add(seek);
+                v.Behaviours.Add(seek);
+                v.Behaviours.Add(flee);
                 v.Behaviours.Add(pursuit);
-                //v.Behaviours.Add(flee);
+
+                var fsm = boid.AddComponent<FSM>();
+
+                var b = boid.AddComponent<Boid>();
+                b.Target = player.Transform;
 
                 levelScene.AddGameObject(boid);
                 Debug.Track(boid);

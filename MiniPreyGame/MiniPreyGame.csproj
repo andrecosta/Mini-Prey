@@ -50,6 +50,8 @@
     <Compile Include="Managers\InputManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\States\BoidFleeState.cs" />
+    <Compile Include="Scripts\States\BoidSeekState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

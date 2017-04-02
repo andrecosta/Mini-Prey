@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="RenderSystem.cs" />
+    <Compile Include="src\Core\Components\IFSM.cs" />
     <Compile Include="src\Engine.cs" />
     <Compile Include="src\Core\Components\IRigidbody.cs" />
     <Compile Include="src\Core\Components\ISpriteRenderer.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="src\Core\IAsset.cs" />
     <Compile Include="src\Core\Structs\Color.cs" />
     <Compile Include="src\Entities\Components\Behaviour.cs" />
+    <Compile Include="src\Entities\Components\Behaviours\FSM\FSM.cs" />
     <Compile Include="src\Entities\Components\Behaviours\Steering Behaviours\Pursuit.cs" />
     <Compile Include="src\Entities\Components\Behaviours\Steering Behaviours\Flee.cs" />
     <Compile Include="src\Entities\Components\Colliders\BoxCollider.cs" />
@@ -88,7 +90,8 @@
     <Compile Include="src\Entities\Assets\Texture2D.cs" />
     <Compile Include="src\Core\Structs\Vector2.cs" />
     <Compile Include="src\Core\Structs\Vector3.cs" />
-    <Compile Include="src\SteeringBehaviours.cs" />
+    <Compile Include="src\Entities\Components\Behaviours\FSM\State.cs" />
+    <Compile Include="src\Entities\Components\Behaviours\Steering Behaviours\SteeringBehaviours.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="api\index.md" />

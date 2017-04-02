@@ -5,20 +5,41 @@ namespace MiniPreyGame
 {
     class Boid : Behaviour
     {
-        public float Speed = 5;
-        public IGameObject Target;
+        public float Speed { get; } = 5;
+        public ITransform Target { get; set; }
+
+        public Seek Seek { get; private set; }
+        public Flee Flee { get; private set; }
+        public Pursuit Pursuit { get; private set; }
+        public SpriteRenderer SpriteRenderer { get; private set; }
 
         private IRigidbody _rb;
+        private FSM _fsm;
 
         protected override void Awake()
         {
             _rb = GetComponent<Rigidbody>();
+            _fsm = GetComponent<FSM>();
+
+            Seek = GetComponent<Seek>();
+            Flee = GetComponent<Flee>();
+            Pursuit = GetComponent<Pursuit>();
+
+            SpriteRenderer = GetComponent<SpriteRenderer>();
+        }
+
+        protected override void Start()
+        {
+            _fsm.LoadState<BoidSeekState>();
+            _fsm.LoadState<BoidFleeState>();
+            //_fsm.LoadState<BoidPursuitState>();
+
+            _fsm.SetState<BoidSeekState>();
         }
 
         protected override void Update(float dt)
         {
             //Vector3 dir = (Target.Transform.Position - Transform.Position).Normalized;
-
             //_rb.AddForce(dir * Speed);
 
             Transform.Rotation = (float) Math.Atan2(_rb.velocity.X, -_rb.velocity.Y);
