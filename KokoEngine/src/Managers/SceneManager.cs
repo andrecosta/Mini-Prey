@@ -78,7 +78,11 @@ namespace KokoEngine
             foreach (IComponent component in rootGameObject.GetComponents())
             {
                 IBehaviour script = component as IBehaviour;
-                script?.Start();
+                if (script != null)
+                {
+                    script.Start();
+                    script.Enabled = true;
+                }
             }
 
             // Recursively start all children GameObjects

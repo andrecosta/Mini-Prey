@@ -15,24 +15,17 @@ namespace MiniPreyGame
             _rb = GetComponent<Rigidbody>();
         }
 
-        protected override void Start()
-        {
-        }
-
         protected override void Update(float dt)
         {
-            Vector3 dir = (Target.Transform.Position - Transform.Position).Normalized;
+            //Vector3 dir = (Target.Transform.Position - Transform.Position).Normalized;
 
-            _rb.AddForce(dir * Speed);
+            //_rb.AddForce(dir * Speed);
 
             Transform.Rotation = (float) Math.Atan2(_rb.velocity.X, -_rb.velocity.Y);
 
-            foreach (Rigidbody rb in Rigidbody.All)
+            /*foreach (Rigidbody rb in Rigidbody.All)
             {
                 Vector3 diff = rb.Transform.Position - Transform.Position;
-                /*Debug.Log("Transform: " + Transform.position.ToString());
-                Debug.Log("Other Transform: " + rb.Transform.position.ToString());
-                Debug.Log("Diff: " + diff.ToString());*/
                 if (Vector3.Magnitude(diff) < 50)
                 {
                     if (rb.GetComponent<PlayerController>() != null)
@@ -40,9 +33,7 @@ namespace MiniPreyGame
 
                     _rb.AddForce(-diff.Normalized * Speed * 0.2f);
                 }
-            }
-
-            Debug.Track(GameObject);
+            }*/
         }
     }
 }

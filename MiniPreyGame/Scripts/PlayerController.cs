@@ -15,10 +15,6 @@ namespace MiniPreyGame
             _rb = GetComponent<Rigidbody>();
         }
 
-        protected override void Start()
-        {
-        }
-
         protected override void Update(float dt)
         {
             Vector3 dir = Vector3.Zero;
@@ -35,18 +31,20 @@ namespace MiniPreyGame
             }
             if (Input.IsKeyDown(Keys.A))
             {
-                Transform.Rotation -= dt*2;
+                dir += -Vector3.Right;
+                //Transform.Rotation -= dt*2;
                 Debug.Log("Moving LEFT");
             }
             if (Input.IsKeyDown(Keys.D))
             {
-                Transform.Rotation += dt*2;
+                dir += Vector3.Right;
+                //Transform.Rotation += dt*2;
                 Debug.Log("Moving RIGHT");
             }
 
             _rb.AddForce(dir * Speed);
 
-            Debug.Track(GameObject);
+            
         }
     }
 }

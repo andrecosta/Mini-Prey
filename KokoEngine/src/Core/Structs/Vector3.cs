@@ -14,6 +14,10 @@ namespace KokoEngine
         public static Vector3 One => new Vector3(1, 1, 1);
         public static Vector3 Zero => new Vector3(0, 0, 0);
         public Vector3 Normalized => Normalize(this);
+        public float magnitude => Magnitude(this);
+        public float sqrMagnitude => SqrMagnitude(this);
+        public void Normalize() => Normalize(this);
+        public float Dot(Vector3 b) => Dot(this, b);
 
         public Vector3(float x, float y, float z = 0)
         {
@@ -77,9 +81,14 @@ namespace KokoEngine
             return a / Magnitude(a);
         }
 
+        public static float Dot(Vector3 a, Vector3 b)
+        {
+            return a.X * b.X + a.Y * b.Y + a.Z * b.Z;
+        }
+
         public override string ToString()
         {
-            return $"Vector3 ({X}, {Y})";
+            return $"Vector3 ({X}, {Y}, {Z})";
         }
     }
 }

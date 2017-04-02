@@ -9,7 +9,7 @@ namespace KokoEngine
         public Vector3 Gravity { get; }= new Vector3(0, 0, 0);
 
         public float mass { get; set; } = 1;
-        public Vector3 velocity { get; private set; }
+        public Vector3 velocity { get; set; }
         public Vector3 acceleration { get; private set; }
         //Restitution
         //Energy 

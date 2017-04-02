@@ -59,7 +59,8 @@
     <Compile Include="src\Core\IAsset.cs" />
     <Compile Include="src\Core\Structs\Color.cs" />
     <Compile Include="src\Entities\Components\Behaviour.cs" />
-    <Compile Include="src\Entities\Components\Behaviours\Camera.cs" />
+    <Compile Include="src\Entities\Components\Behaviours\Steering Behaviours\Pursuit.cs" />
+    <Compile Include="src\Entities\Components\Behaviours\Steering Behaviours\Flee.cs" />
     <Compile Include="src\Entities\Components\Colliders\BoxCollider.cs" />
     <Compile Include="src\Entities\Components\Colliders\CircleCollider.cs" />
     <Compile Include="src\Entities\Components\Collider.cs" />
@@ -68,9 +69,12 @@
     <Compile Include="src\Core\Components\IBehaviour.cs" />
     <Compile Include="src\Entities\Components\Rigidbody.cs" />
     <Compile Include="src\Entities\Components\SpriteRenderer.cs" />
+    <Compile Include="src\Entities\Components\Behaviours\Steering Behaviours\Seek.cs" />
+    <Compile Include="src\Entities\Components\Behaviours\SteeringBehaviour.cs" />
     <Compile Include="src\Entities\Components\Transform.cs" />
     <Compile Include="src\Core\IGameObject.cs" />
     <Compile Include="src\Core\ISprite.cs" />
+    <Compile Include="src\Entities\Components\Behaviours\Vehicle.cs" />
     <Compile Include="src\Entity.cs" />
     <Compile Include="src\Entities\GameObject.cs" />
     <Compile Include="src\Core\IComponent.cs" />
@@ -79,12 +83,12 @@
     <Compile Include="src\Managers\AssetManager.cs" />
     <Compile Include="src\Entities\Scene.cs" />
     <Compile Include="src\Core\ISceneManager.cs" />
-    <Compile Include="src\Core\ICollisionManager.cs" />
     <Compile Include="src\Managers\SceneManager.cs" />
     <Compile Include="src\Entities\Sprite.cs" />
     <Compile Include="src\Entities\Assets\Texture2D.cs" />
     <Compile Include="src\Core\Structs\Vector2.cs" />
     <Compile Include="src\Core\Structs\Vector3.cs" />
+    <Compile Include="src\SteeringBehaviours.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="api\index.md" />

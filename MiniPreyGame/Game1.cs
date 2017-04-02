@@ -22,7 +22,6 @@ namespace MiniPreyGame
         // Managers
         private readonly ISceneManager _sceneManager;
         private readonly IAssetManager _assetManager;
-        private readonly ICollisionManager _collisionManager;
 
         public Game1(ISceneManager sceneManager, IAssetManager assetManager)
         {
@@ -58,20 +57,24 @@ namespace MiniPreyGame
             levelScene.AddGameObject(gameController);
 
             // Texture
+            Texture2D playerTexture = _assetManager.GetAsset<Texture2D>("player");
             Texture2D boidTexture = _assetManager.GetAsset<Texture2D>("boid");
 
             // Create Player
             IGameObject player = new GameObject();
             player.Transform.Scale = new Vector3(0.05f, 0.05f, 0.05f);
             ISpriteRenderer sr = player.AddComponent<SpriteRenderer>();
-            ISprite sprite = new Sprite(boidTexture);
+            ISprite sprite = new Sprite(playerTexture);
             sr.sprite = sprite;
             player.AddComponent<Rigidbody>();
             var cc = player.AddComponent<BoxCollider>();
             cc.Width = sprite.texture.Height;
             cc.Height = sprite.texture.Height;
             player.AddComponent<PlayerController>();
+            var playerVehicle = player.AddComponent<Vehicle>();
+            playerVehicle.MaxSpeed = 200;
             levelScene.AddGameObject(player);
+            Debug.Track(player);
 
             // Create 50 NPCs
             for (int i = 0; i < 50; i++)
@@ -89,9 +92,24 @@ namespace MiniPreyGame
                 cc = boid.AddComponent<BoxCollider>();
                 cc.Width = sprite.texture.Height;
                 cc.Height = sprite.texture.Height;
-                var b = boid.AddComponent<Boid>();
-                b.Target = player;
+                boid.AddComponent<Boid>();
+                var v = boid.AddComponent<Vehicle>();
+                
+                //var seek = boid.AddComponent<Seek>();
+                //seek.target = player.Transform;
+
+                var pursuit = boid.AddComponent<Pursuit>();
+                pursuit.target = playerVehicle;
+
+                //var flee = boid.AddComponent<Flee>();
+                //flee.target = player.Transform;
+
+                //v.Behaviours.Add(seek);
+                v.Behaviours.Add(pursuit);
+                //v.Behaviours.Add(flee);
+
                 levelScene.AddGameObject(boid);
+                Debug.Track(boid);
             }
 
             // Load the scene
@@ -114,6 +132,9 @@ namespace MiniPreyGame
 
             var boidTexture = Content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("boid");
             _assetManager.AddAsset("boid", new Texture2D("boid", boidTexture, boidTexture.Width, boidTexture.Height));
+
+            var playerTexture = Content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("player");
+            _assetManager.AddAsset("player", new Texture2D("player", playerTexture, playerTexture.Width, playerTexture.Height));
         }
 
         /// <summary>
@@ -140,9 +161,6 @@ namespace MiniPreyGame
 
             // Update the active scene's game objects
             _sceneManager.UpdateActiveScene(dt);
-
-            // Perform collision checks
-            _collisionManager.CheckCollisions(_sceneManager.GetActiveScene());
 
             base.Update(gameTime);
         }

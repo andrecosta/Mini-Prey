@@ -158,7 +158,7 @@ namespace MiniPreyGame
             }
             spriteBatch.End();
 
-            _tracking.Clear();
+            //_tracking.Clear();
             base.Draw(gameTime);
         }
 
