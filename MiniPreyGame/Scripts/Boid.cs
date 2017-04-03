@@ -5,7 +5,7 @@ namespace MiniPreyGame
 {
     class Boid : Behaviour
     {
-        public float Speed { get; } = 5;
+        public float Speed { get; } = 2;
         public ITransform Target { get; set; }
         public AudioClip SeekSound { get; set; }
         public AudioClip FleeSound { get; set; }

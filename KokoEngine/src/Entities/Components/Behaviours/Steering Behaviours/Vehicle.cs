@@ -7,7 +7,7 @@ namespace KokoEngine
         public Vector3 Direction => _direction;
         public Vector3 Position => Transform.Position;
         public Vector3 Velocity => _rb.velocity;
-        public float MaxSpeed { get; set; } = 100;
+        public float MaxSpeed { get; set; } = 50;
         public List<SteeringBehaviour> Behaviours { get; } = new List<SteeringBehaviour>();
 
         private IRigidbody _rb;

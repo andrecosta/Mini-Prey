@@ -11,7 +11,6 @@ namespace KokoEngine
         private readonly Dictionary<string, AnimationClip> _animationClips = new Dictionary<string, AnimationClip>();
         private AnimationClip _currentAnimationClip;
         private ISpriteRenderer _sr;
-        private IFSM _fsm;
         private bool _isPlaying;
         private float _animationTimer;
         private int _currentFrame;
@@ -19,7 +18,6 @@ namespace KokoEngine
         protected override void Awake()
         {
             _sr = GetComponent<ISpriteRenderer>();
-            _fsm = GetComponent<IFSM>();
         }
 
         protected override void Update(float dt)
@@ -53,6 +51,7 @@ namespace KokoEngine
         {
             Stop();
             _currentAnimationClip = _animationClips[animationName];
+            _sr.sprite = _currentAnimationClip.Sprites[_currentFrame];
             _isPlaying = true;
         }
 

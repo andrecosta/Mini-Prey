@@ -6,7 +6,7 @@ namespace MiniPreyGame
 {
     class PlayerController : Behaviour
     {
-        public float Speed { get; set; } = 6;
+        public float Speed { get; set; } = 3;
 
         private Rigidbody _rb;
 

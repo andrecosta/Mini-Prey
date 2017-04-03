@@ -29,7 +29,7 @@ namespace MiniPreyGame
 
             // Play seek animation
             _boid.Animator.Play("seek");
-            _boid.Animator.Looping = true;
+            _boid.Transform.Scale = Vector3.One * 0.05f;
 
             // Play seek sound
             _boid.AudioSource.Play(_boid.SeekSound);
@@ -39,7 +39,7 @@ namespace MiniPreyGame
         {
             base.UpdateState();
 
-            if (Vector3.SqrMagnitude(_boid.Target.Position - _boid.Transform.Position) < 4*4)
+            if (Vector3.SqrMagnitude(_boid.Target.Position - _boid.Transform.Position) < 10*10)
             {
                 FSM.SetState<BoidFleeState>();
             }

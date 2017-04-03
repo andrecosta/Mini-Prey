@@ -56,20 +56,24 @@ namespace MiniPreyGame
             // Load assets from the Asset Manager
             Texture2D playerTexture = _assetManager.GetAsset<Texture2D>("player");
             Texture2D boidTexture = _assetManager.GetAsset<Texture2D>("boid");
+            Texture2D boidRainbowTexture = _assetManager.GetAsset<Texture2D>("boidRainbow");
             Texture2D boidSeekTexture = _assetManager.GetAsset<Texture2D>("boidSeek");
             AudioClip boidSeekSound = _assetManager.GetAsset<AudioClip>("boidSeekSound");
             AudioClip boidFleeSound = _assetManager.GetAsset<AudioClip>("boidFleeSound");
+            Texture2D waypointTexture = _assetManager.GetAsset<Texture2D>("waypointRed");
 
             // Create the player GameObject
             IGameObject player = new GameObject();
             {
                 // Add some components to the player GameObject
                 var sr = player.AddComponent<SpriteRenderer>();
-                //var a  = player.AddComponent<Animator>();
                 var rb = player.AddComponent<Rigidbody>();
                 var cc = player.AddComponent<BoxCollider>();
                 var pc = player.AddComponent<PlayerController>();
                 var v  = player.AddComponent<Vehicle>();
+
+                // Set the player's position to the centre of the screen
+                player.Transform.Position = new Vector3(GraphicsDevice.Viewport.Bounds.Width / 2f, GraphicsDevice.Viewport.Bounds.Height / 2f);
 
                 // Set the scale of the player's Transform component
                 player.Transform.Scale = new Vector3(0.05f, 0.05f, 0.05f);
@@ -78,19 +82,12 @@ namespace MiniPreyGame
                 var sprite = new Sprite(playerTexture);
                 sr.sprite = sprite;
 
-                // Create an animation clip based on the player sprite and set its properties
-                //var animationClip = new AnimationClip(sprite);
-                //animationClip.NumFrames = 3;
-
-                // Add the created animation to the Animator component
-                //a.AddAnimation("seek", animationClip);
-
                 // Set the BoxCollider component's bounds based on the player texture's dimensions
                 cc.Width = sprite.Texture.Height;
                 cc.Height = sprite.Texture.Height;
 
                 // Set the Vehicle component's maximum speed
-                v.MaxSpeed = 200;
+                v.MaxSpeed = 100;
 
                 // Add the player GameObject to the scene
                 levelScene.AddGameObject(player);
@@ -118,21 +115,22 @@ namespace MiniPreyGame
                 var fsm = boid.AddComponent<FSM>();
                 var b = boid.AddComponent<Boid>();
 
+                // Place the boid GameObject on a random location on the screen
                 boid.Transform.Position = new Vector3(
-                    r.Next(0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width),
-                    r.Next(0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height));
-                boid.Transform.Scale = new Vector3(0.05f, 0.05f, 0.05f);
+                    r.Next(0, GraphicsDevice.Viewport.Bounds.Width),
+                    r.Next(0, GraphicsDevice.Viewport.Bounds.Height));
 
-                // Create a sprite based on the boid texture and store it on the boid's SpriteRenderer component
+                // Create sprites based on the boid textures
                 var seekSprite = new Sprite(boidSeekTexture);
-                sr.sprite = seekSprite;
+                var fleeSprite = new Sprite(boidRainbowTexture);
 
-                // Create an animation clip based on the player sprite, with 3 frames
-                var animationClip = new AnimationClip(seekSprite, 3);
+                // Create animation clips based on the created sprites, with different number of frames
+                var seekAnimationClip = new AnimationClip(seekSprite, 3);
+                var fleeAnimationClip = new AnimationClip(fleeSprite, 12);
 
-                // Add the created animation to the Animator component and play it
-                a.AddAnimation("seek", animationClip);
-                a.Play("seek", 0.3f);
+                // Add the created animations to the Animator component
+                a.AddAnimation("seek", seekAnimationClip);
+                a.AddAnimation("flee", fleeAnimationClip);
                 
                 // Set the BoxCollider component's bounds based on the boid texture's dimensions
                 cc.Width = seekSprite.Texture.Height;
@@ -176,6 +174,9 @@ namespace MiniPreyGame
             var boidTexture = Content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("boid");
             _assetManager.AddAsset("boid", new Texture2D("boid", boidTexture, boidTexture.Width, boidTexture.Height));
 
+            var boidRainbowTexture = Content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("boid_rainbow");
+            _assetManager.AddAsset("boidRainbow", new Texture2D("boidRainbow", boidRainbowTexture, boidRainbowTexture.Width, boidRainbowTexture.Height));
+
             var boidSeekTexture = Content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("boidSeek");
             _assetManager.AddAsset("boidSeek", new Texture2D("boidSeek", boidSeekTexture, boidSeekTexture.Width, boidSeekTexture.Height));
 
@@ -184,6 +185,9 @@ namespace MiniPreyGame
 
             var boidFleeSound = Content.Load<SoundEffect>("fleeSound");
             _assetManager.AddAsset("boidFleeSound", new AudioClip(boidFleeSound));
+
+            var waypointTexture = Content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("waypoint_red");
+            _assetManager.AddAsset("waypointRed", new Texture2D("waypointRed", waypointTexture, waypointTexture.Width, waypointTexture.Height));
 
             var playerTexture = Content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("player");
             _assetManager.AddAsset("player", new Texture2D("player", playerTexture, playerTexture.Width, playerTexture.Height));
@@ -243,7 +247,7 @@ namespace MiniPreyGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(new Microsoft.Xna.Framework.Color(20, 20, 20));
+            GraphicsDevice.Clear(new Microsoft.Xna.Framework.Color(29, 29, 29));
             _spriteBatch.Begin();
 
             // Draw the active scene's game objects which contain renderable components

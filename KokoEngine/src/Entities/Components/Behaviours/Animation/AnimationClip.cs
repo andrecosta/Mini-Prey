@@ -15,7 +15,8 @@ namespace KokoEngine
 
             for (int i = 0; i < numFrames; i++)
             {
-                Sprites.Add( new Sprite(sprite.Texture, new Rect(i*frameWidth, sprite.SourceRect.Y, frameWidth, sprite.SourceRect.Height)));
+                Sprites.Add(new Sprite(sprite.Texture,
+                    new Rect(i * frameWidth, sprite.SourceRect.Y, frameWidth, sprite.SourceRect.Height)));
             }
         }
     }

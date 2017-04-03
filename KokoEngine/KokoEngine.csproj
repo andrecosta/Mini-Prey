@@ -56,13 +56,13 @@
     <Compile Include="src\Core\IGameObjectInternal.cs" />
     <Compile Include="src\Core\IScene.cs" />
     <Compile Include="src\Core\IAssetManager.cs" />
-    <Compile Include="src\Entities\AnimationClip.cs" />
+    <Compile Include="src\Entities\Components\Behaviours\Animation\AnimationClip.cs" />
     <Compile Include="src\Entities\Assets\Asset.cs" />
     <Compile Include="src\Core\IAsset.cs" />
     <Compile Include="src\Core\Structs\Color.cs" />
     <Compile Include="src\Entities\Assets\AudioClip.cs" />
     <Compile Include="src\Entities\Components\Behaviour.cs" />
-    <Compile Include="src\Entities\Components\Behaviours\Animator.cs" />
+    <Compile Include="src\Entities\Components\Behaviours\Animation\Animator.cs" />
     <Compile Include="src\Entities\Components\Behaviours\FSM\FSM.cs" />
     <Compile Include="src\Entities\Components\Behaviours\Steering Behaviours\Pursuit.cs" />
     <Compile Include="src\Entities\Components\Behaviours\Steering Behaviours\Flee.cs" />

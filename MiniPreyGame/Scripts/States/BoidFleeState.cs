@@ -25,10 +25,11 @@ namespace MiniPreyGame
             //_boid.Vehicle.MaxSpeed = 2;
 
             // Change color
-            _boid.SpriteRenderer.color = Color.Blue;
+            _boid.SpriteRenderer.color = Color.White;
 
             // Play flee animation
-            _boid.Animator.Looping = false;
+            _boid.Animator.Play("flee", 0.1f);
+            _boid.Transform.Scale = Vector3.One;
 
             // Play flee sound
             _boid.AudioSource.Play(_boid.FleeSound);
