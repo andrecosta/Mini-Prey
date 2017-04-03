@@ -9,7 +9,9 @@ namespace MiniPreyGame
         public ITransform Target { get; set; }
         public AudioClip SeekSound { get; set; }
         public AudioClip FleeSound { get; set; }
+        public bool Pursuer { get; set; }
 
+        public Vehicle Vehicle { get; private set; }
         public Seek Seek { get; private set; }
         public Flee Flee { get; private set; }
         public Pursuit Pursuit { get; private set; }
@@ -25,6 +27,7 @@ namespace MiniPreyGame
             _rb = GetComponent<Rigidbody>();
             _fsm = GetComponent<FSM>();
 
+            Vehicle = GetComponent<Vehicle>();
             Seek = GetComponent<Seek>();
             Flee = GetComponent<Flee>();
             Pursuit = GetComponent<Pursuit>();
@@ -38,9 +41,12 @@ namespace MiniPreyGame
         {
             _fsm.LoadState<BoidSeekState>();
             _fsm.LoadState<BoidFleeState>();
-            //_fsm.LoadState<BoidPursuitState>();
+            _fsm.LoadState<BoidPursuitState>();
 
-            _fsm.SetState<BoidSeekState>();
+            if (Pursuer)
+                _fsm.SetState<BoidPursuitState>();
+            else
+                _fsm.SetState<BoidSeekState>();
         }
 
         protected override void Update(float dt)

@@ -60,7 +60,6 @@ namespace MiniPreyGame
             Texture2D playerTexture = _assetManager.GetAsset<Texture2D>("player");
             Texture2D boidTexture = _assetManager.GetAsset<Texture2D>("boid");
             Texture2D boidRainbowTexture = _assetManager.GetAsset<Texture2D>("boidRainbow");
-            Texture2D boidSeekTexture = _assetManager.GetAsset<Texture2D>("boidSeek");
             AudioClip boidSeekSound = _assetManager.GetAsset<AudioClip>("boidSeekSound");
             AudioClip boidFleeSound = _assetManager.GetAsset<AudioClip>("boidFleeSound");
             Texture2D waypointTexture = _assetManager.GetAsset<Texture2D>("waypointRed");
@@ -79,7 +78,7 @@ namespace MiniPreyGame
                 player.Transform.Position = new Vector3(GraphicsDevice.Viewport.Bounds.Width / 2f, GraphicsDevice.Viewport.Bounds.Height / 2f);
 
                 // Set the scale of the player's Transform component
-                player.Transform.Scale = new Vector3(0.05f, 0.05f, 0.05f);
+                //player.Transform.Scale = new Vector3(0.05f, 0.05f, 0.05f);
 
                 // Create a sprite based on the player texture and store it on the player's SpriteRenderer component
                 var sprite = new Sprite(playerTexture);
@@ -99,8 +98,9 @@ namespace MiniPreyGame
                 Debug.Track(player);
             }
 
-            // Create 50 NPC boids
-            for (int i = 0; i < 50; i++)
+            Stack<IGameObject> boids = new Stack<IGameObject>();
+            // Create 20 NPC boids
+            for (int i = 0; i < 20; i++)
             {
                 // Create the boid GameObject
                 var boid = new GameObject();
@@ -124,20 +124,22 @@ namespace MiniPreyGame
                     r.Next(0, GraphicsDevice.Viewport.Bounds.Height));
 
                 // Create sprites based on the boid textures
-                var seekSprite = new Sprite(boidSeekTexture);
-                var fleeSprite = new Sprite(boidRainbowTexture);
+                var boidSprite = new Sprite(boidTexture);
+                var boidRainbowSprite = new Sprite(boidRainbowTexture);
 
                 // Create animation clips based on the created sprites, with different number of frames
-                var seekAnimationClip = new AnimationClip(seekSprite, 3);
-                var fleeAnimationClip = new AnimationClip(fleeSprite, 12);
+                var seekAnimationClip = new AnimationClip(boidSprite, 1);
+                var fleeAnimationClip = new AnimationClip(boidRainbowSprite, 12);
+                var defenderAnimationClip = new AnimationClip(boidSprite, 1);
 
                 // Add the created animations to the Animator component
                 a.AddAnimation("seek", seekAnimationClip);
                 a.AddAnimation("flee", fleeAnimationClip);
-                
+                a.AddAnimation("defend", defenderAnimationClip);
+
                 // Set the BoxCollider component's bounds based on the boid texture's dimensions
-                cc.Width = seekSprite.Texture.Height;
-                cc.Height = seekSprite.Texture.Height;
+                cc.Width = boidSprite.Texture.Height;
+                cc.Height = boidSprite.Texture.Height;
 
                 // Add the created steering behaviours to the vehicle's behaviour list
                 v.Behaviours.Add(seek);
@@ -149,12 +151,26 @@ namespace MiniPreyGame
                 b.SeekSound = boidSeekSound;
                 b.FleeSound = boidFleeSound;
 
+                // Assign half of the boids to seek the player, and another half to pursue other boids
+                if (i < 10)
+                {
+                    b.Target = player.Transform;
+                    boids.Push(boid);
+                }
+                else
+                {
+                    b.Target = boids.Pop().Transform;
+                    b.Pursuer = true;
+                }
+
                 // Add the boid GameObject to the scene
                 levelScene.AddGameObject(boid);
 
                 // Add the boid object to the list of objects being tracked by the Debug console
                 Debug.Track(boid);
             }
+
+            
 
             _waypointsController = new GameObject();
             var wc = _waypointsController.AddComponent<WaypointsController>();
@@ -219,9 +235,6 @@ namespace MiniPreyGame
 
             var boidRainbowTexture = Content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("boid_rainbow");
             _assetManager.AddAsset("boidRainbow", new Texture2D("boidRainbow", boidRainbowTexture, boidRainbowTexture.Width, boidRainbowTexture.Height));
-
-            var boidSeekTexture = Content.Load<Microsoft.Xna.Framework.Graphics.Texture2D>("boidSeek");
-            _assetManager.AddAsset("boidSeek", new Texture2D("boidSeek", boidSeekTexture, boidSeekTexture.Width, boidSeekTexture.Height));
 
             var boidSeekSound = Content.Load<SoundEffect>("seekSound");
             _assetManager.AddAsset("boidSeekSound", new AudioClip(boidSeekSound));

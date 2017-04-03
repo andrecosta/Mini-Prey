@@ -2,7 +2,7 @@
 
 namespace MiniPreyGame
 {
-    class BoidSeekState : State
+    class BoidPursuitState : State
     {
         private Boid _boid;
 
@@ -14,21 +14,21 @@ namespace MiniPreyGame
         public override void OnEnterState()
         {
             base.OnEnterState();
-            Debug.Log("SEEK STATE");
+            Debug.Log("PURSUIT STATE");
 
+            _boid.Seek.Enabled = false;
             _boid.Flee.Enabled = false;
-            _boid.Pursuit.Enabled = false;
 
-            _boid.Seek.target = _boid.Target;
-            _boid.Seek.Enabled = true;
+            _boid.Pursuit.target = _boid.Target.GetComponent<Vehicle>();
+            _boid.Pursuit.Enabled = true;
 
             //_boid.Vehicle.MaxSpeed = 2;
 
             // Change color
-            _boid.SpriteRenderer.color = Color.Red;
+            _boid.SpriteRenderer.color = Color.White;
 
             // Play seek animation
-            _boid.Animator.Play("seek");
+            _boid.Animator.Play("defend");
             _boid.Transform.Scale = Vector3.One * 0.7f;
 
             // Play seek sound

@@ -22,7 +22,7 @@ namespace MiniPreyGame
             _boid.Flee.target = _boid.Target;
             _boid.Flee.Enabled = true;
 
-            //_boid.Vehicle.MaxSpeed = 2;
+            _boid.Vehicle.MaxSpeed = 50;
 
             // Change color
             _boid.SpriteRenderer.color = Color.White;
@@ -41,7 +41,10 @@ namespace MiniPreyGame
 
             if (Vector3.SqrMagnitude(_boid.Target.Position - _boid.Transform.Position) > 300*300)
             {
-                FSM.SetState<BoidSeekState>();
+                if (_boid.Pursuer)
+                    FSM.SetState<BoidPursuitState>();
+                else
+                    FSM.SetState<BoidSeekState>();
             }
         }
 

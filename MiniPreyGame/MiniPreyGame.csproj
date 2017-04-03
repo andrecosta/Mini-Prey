@@ -45,6 +45,7 @@
     <Compile Include="Components\Debug.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Scripts\Boid.cs" />
+    <Compile Include="Scripts\States\BoidPursuitState.cs" />
     <Compile Include="Scripts\WaypointEuclideanHeuristicCAlculator.cs" />
     <Compile Include="Scripts\WaypointsController.cs" />
     <Compile Include="Scripts\Waypoint.cs" />
@@ -63,12 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\boidSeek.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Content\boid.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="Content\boid.png" />
     <Content Include="Content\boid_rainbow.png" />
     <Content Include="Content\fleeSound.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
