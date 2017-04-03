@@ -7,6 +7,180 @@ references:
   commentId: N:KokoEngine
   fullName: KokoEngine
   nameWithType: KokoEngine
+- uid: KokoEngine.AnimationClip
+  name: AnimationClip
+  href: api/KokoEngine.AnimationClip.html
+  commentId: T:KokoEngine.AnimationClip
+  fullName: KokoEngine.AnimationClip
+  nameWithType: AnimationClip
+- uid: KokoEngine.AnimationClip.#ctor(KokoEngine.ISprite,System.Int32)
+  name: AnimationClip(ISprite, Int32)
+  href: api/KokoEngine.AnimationClip.html#KokoEngine_AnimationClip__ctor_KokoEngine_ISprite_System_Int32_
+  commentId: M:KokoEngine.AnimationClip.#ctor(KokoEngine.ISprite,System.Int32)
+  fullName: KokoEngine.AnimationClip.AnimationClip(KokoEngine.ISprite, System.Int32)
+  nameWithType: AnimationClip.AnimationClip(ISprite, Int32)
+- uid: KokoEngine.AnimationClip.#ctor*
+  name: AnimationClip
+  href: api/KokoEngine.AnimationClip.html#KokoEngine_AnimationClip__ctor_
+  commentId: Overload:KokoEngine.AnimationClip.#ctor
+  fullName: KokoEngine.AnimationClip.AnimationClip
+  nameWithType: AnimationClip.AnimationClip
+- uid: KokoEngine.AnimationClip.NumFrames
+  name: NumFrames
+  href: api/KokoEngine.AnimationClip.html#KokoEngine_AnimationClip_NumFrames
+  commentId: P:KokoEngine.AnimationClip.NumFrames
+  fullName: KokoEngine.AnimationClip.NumFrames
+  nameWithType: AnimationClip.NumFrames
+- uid: KokoEngine.AnimationClip.NumFrames*
+  name: NumFrames
+  href: api/KokoEngine.AnimationClip.html#KokoEngine_AnimationClip_NumFrames_
+  commentId: Overload:KokoEngine.AnimationClip.NumFrames
+  fullName: KokoEngine.AnimationClip.NumFrames
+  nameWithType: AnimationClip.NumFrames
+- uid: KokoEngine.AnimationClip.Sprites
+  name: Sprites
+  href: api/KokoEngine.AnimationClip.html#KokoEngine_AnimationClip_Sprites
+  commentId: P:KokoEngine.AnimationClip.Sprites
+  fullName: KokoEngine.AnimationClip.Sprites
+  nameWithType: AnimationClip.Sprites
+- uid: KokoEngine.AnimationClip.Sprites*
+  name: Sprites
+  href: api/KokoEngine.AnimationClip.html#KokoEngine_AnimationClip_Sprites_
+  commentId: Overload:KokoEngine.AnimationClip.Sprites
+  fullName: KokoEngine.AnimationClip.Sprites
+  nameWithType: AnimationClip.Sprites
+- uid: KokoEngine.Animator
+  name: Animator
+  href: api/KokoEngine.Animator.html
+  commentId: T:KokoEngine.Animator
+  fullName: KokoEngine.Animator
+  nameWithType: Animator
+- uid: KokoEngine.Animator.AddAnimation(System.String,KokoEngine.IAnimationClip)
+  name: AddAnimation(String, IAnimationClip)
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_AddAnimation_System_String_KokoEngine_IAnimationClip_
+  commentId: M:KokoEngine.Animator.AddAnimation(System.String,KokoEngine.IAnimationClip)
+  fullName: KokoEngine.Animator.AddAnimation(System.String, KokoEngine.IAnimationClip)
+  nameWithType: Animator.AddAnimation(String, IAnimationClip)
+- uid: KokoEngine.Animator.AddAnimation*
+  name: AddAnimation
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_AddAnimation_
+  commentId: Overload:KokoEngine.Animator.AddAnimation
+  fullName: KokoEngine.Animator.AddAnimation
+  nameWithType: Animator.AddAnimation
+- uid: KokoEngine.Animator.Awake
+  name: Awake()
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Awake
+  commentId: M:KokoEngine.Animator.Awake
+  fullName: KokoEngine.Animator.Awake()
+  nameWithType: Animator.Awake()
+- uid: KokoEngine.Animator.Awake*
+  name: Awake
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Awake_
+  commentId: Overload:KokoEngine.Animator.Awake
+  fullName: KokoEngine.Animator.Awake
+  nameWithType: Animator.Awake
+- uid: KokoEngine.Animator.IsPlaying
+  name: IsPlaying
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_IsPlaying
+  commentId: P:KokoEngine.Animator.IsPlaying
+  fullName: KokoEngine.Animator.IsPlaying
+  nameWithType: Animator.IsPlaying
+- uid: KokoEngine.Animator.IsPlaying*
+  name: IsPlaying
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_IsPlaying_
+  commentId: Overload:KokoEngine.Animator.IsPlaying
+  fullName: KokoEngine.Animator.IsPlaying
+  nameWithType: Animator.IsPlaying
+- uid: KokoEngine.Animator.Looping
+  name: Looping
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Looping
+  commentId: P:KokoEngine.Animator.Looping
+  fullName: KokoEngine.Animator.Looping
+  nameWithType: Animator.Looping
+- uid: KokoEngine.Animator.Looping*
+  name: Looping
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Looping_
+  commentId: Overload:KokoEngine.Animator.Looping
+  fullName: KokoEngine.Animator.Looping
+  nameWithType: Animator.Looping
+- uid: KokoEngine.Animator.Play(System.String)
+  name: Play(String)
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Play_System_String_
+  commentId: M:KokoEngine.Animator.Play(System.String)
+  fullName: KokoEngine.Animator.Play(System.String)
+  nameWithType: Animator.Play(String)
+- uid: KokoEngine.Animator.Play(System.String,System.Single)
+  name: Play(String, Single)
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Play_System_String_System_Single_
+  commentId: M:KokoEngine.Animator.Play(System.String,System.Single)
+  fullName: KokoEngine.Animator.Play(System.String, System.Single)
+  nameWithType: Animator.Play(String, Single)
+- uid: KokoEngine.Animator.Play*
+  name: Play
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Play_
+  commentId: Overload:KokoEngine.Animator.Play
+  fullName: KokoEngine.Animator.Play
+  nameWithType: Animator.Play
+- uid: KokoEngine.Animator.Speed
+  name: Speed
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Speed
+  commentId: P:KokoEngine.Animator.Speed
+  fullName: KokoEngine.Animator.Speed
+  nameWithType: Animator.Speed
+- uid: KokoEngine.Animator.Speed*
+  name: Speed
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Speed_
+  commentId: Overload:KokoEngine.Animator.Speed
+  fullName: KokoEngine.Animator.Speed
+  nameWithType: Animator.Speed
+- uid: KokoEngine.Animator.Stop
+  name: Stop()
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Stop
+  commentId: M:KokoEngine.Animator.Stop
+  fullName: KokoEngine.Animator.Stop()
+  nameWithType: Animator.Stop()
+- uid: KokoEngine.Animator.Stop*
+  name: Stop
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Stop_
+  commentId: Overload:KokoEngine.Animator.Stop
+  fullName: KokoEngine.Animator.Stop
+  nameWithType: Animator.Stop
+- uid: KokoEngine.Animator.Update(System.Single)
+  name: Update(Single)
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Update_System_Single_
+  commentId: M:KokoEngine.Animator.Update(System.Single)
+  fullName: KokoEngine.Animator.Update(System.Single)
+  nameWithType: Animator.Update(Single)
+- uid: KokoEngine.Animator.Update*
+  name: Update
+  href: api/KokoEngine.Animator.html#KokoEngine_Animator_Update_
+  commentId: Overload:KokoEngine.Animator.Update
+  fullName: KokoEngine.Animator.Update
+  nameWithType: Animator.Update
+- uid: KokoEngine.Arrive
+  name: Arrive
+  href: api/KokoEngine.Arrive.html
+  commentId: T:KokoEngine.Arrive
+  fullName: KokoEngine.Arrive
+  nameWithType: Arrive
+- uid: KokoEngine.Arrive.Calculate(KokoEngine.Vehicle)
+  name: Calculate(Vehicle)
+  href: api/KokoEngine.Arrive.html#KokoEngine_Arrive_Calculate_KokoEngine_Vehicle_
+  commentId: M:KokoEngine.Arrive.Calculate(KokoEngine.Vehicle)
+  fullName: KokoEngine.Arrive.Calculate(KokoEngine.Vehicle)
+  nameWithType: Arrive.Calculate(Vehicle)
+- uid: KokoEngine.Arrive.Calculate*
+  name: Calculate
+  href: api/KokoEngine.Arrive.html#KokoEngine_Arrive_Calculate_
+  commentId: Overload:KokoEngine.Arrive.Calculate
+  fullName: KokoEngine.Arrive.Calculate
+  nameWithType: Arrive.Calculate
+- uid: KokoEngine.Arrive.target
+  name: target
+  href: api/KokoEngine.Arrive.html#KokoEngine_Arrive_target
+  commentId: F:KokoEngine.Arrive.target
+  fullName: KokoEngine.Arrive.target
+  nameWithType: Arrive.target
 - uid: KokoEngine.Asset
   name: Asset
   href: api/KokoEngine.Asset.html
@@ -61,12 +235,144 @@ references:
   fullName.vb: KokoEngine.AssetManager.GetAsset(Of T)(System.String)
   nameWithType: AssetManager.GetAsset<T>(String)
   nameWithType.vb: AssetManager.GetAsset(Of T)(String)
+- uid: KokoEngine.AStarGraphSearch
+  name: AStarGraphSearch
+  href: api/KokoEngine.AStarGraphSearch.html
+  commentId: T:KokoEngine.AStarGraphSearch
+  fullName: KokoEngine.AStarGraphSearch
+  nameWithType: AStarGraphSearch
+- uid: KokoEngine.AStarGraphSearch.Search(KokoEngine.Graph,KokoEngine.IGraphNode,KokoEngine.IGraphNode,KokoEngine.IHeuristicCalculator)
+  name: Search(Graph, IGraphNode, IGraphNode, IHeuristicCalculator)
+  href: api/KokoEngine.AStarGraphSearch.html#KokoEngine_AStarGraphSearch_Search_KokoEngine_Graph_KokoEngine_IGraphNode_KokoEngine_IGraphNode_KokoEngine_IHeuristicCalculator_
+  commentId: M:KokoEngine.AStarGraphSearch.Search(KokoEngine.Graph,KokoEngine.IGraphNode,KokoEngine.IGraphNode,KokoEngine.IHeuristicCalculator)
+  fullName: KokoEngine.AStarGraphSearch.Search(KokoEngine.Graph, KokoEngine.IGraphNode, KokoEngine.IGraphNode, KokoEngine.IHeuristicCalculator)
+  nameWithType: AStarGraphSearch.Search(Graph, IGraphNode, IGraphNode, IHeuristicCalculator)
+- uid: KokoEngine.AStarGraphSearch.Search*
+  name: Search
+  href: api/KokoEngine.AStarGraphSearch.html#KokoEngine_AStarGraphSearch_Search_
+  commentId: Overload:KokoEngine.AStarGraphSearch.Search
+  fullName: KokoEngine.AStarGraphSearch.Search
+  nameWithType: AStarGraphSearch.Search
+- uid: KokoEngine.AStarGraphSearch.searchFrontier
+  name: searchFrontier
+  href: api/KokoEngine.AStarGraphSearch.html#KokoEngine_AStarGraphSearch_searchFrontier
+  commentId: F:KokoEngine.AStarGraphSearch.searchFrontier
+  fullName: KokoEngine.AStarGraphSearch.searchFrontier
+  nameWithType: AStarGraphSearch.searchFrontier
+- uid: KokoEngine.AStarGraphSearch.shortestPahTree
+  name: shortestPahTree
+  href: api/KokoEngine.AStarGraphSearch.html#KokoEngine_AStarGraphSearch_shortestPahTree
+  commentId: F:KokoEngine.AStarGraphSearch.shortestPahTree
+  fullName: KokoEngine.AStarGraphSearch.shortestPahTree
+  nameWithType: AStarGraphSearch.shortestPahTree
+- uid: KokoEngine.AStarGraphSearch.shortestPath
+  name: shortestPath
+  href: api/KokoEngine.AStarGraphSearch.html#KokoEngine_AStarGraphSearch_shortestPath
+  commentId: F:KokoEngine.AStarGraphSearch.shortestPath
+  fullName: KokoEngine.AStarGraphSearch.shortestPath
+  nameWithType: AStarGraphSearch.shortestPath
+- uid: KokoEngine.AudioClip
+  name: AudioClip
+  href: api/KokoEngine.AudioClip.html
+  commentId: T:KokoEngine.AudioClip
+  fullName: KokoEngine.AudioClip
+  nameWithType: AudioClip
+- uid: KokoEngine.AudioClip.#ctor(System.Object)
+  name: AudioClip(Object)
+  href: api/KokoEngine.AudioClip.html#KokoEngine_AudioClip__ctor_System_Object_
+  commentId: M:KokoEngine.AudioClip.#ctor(System.Object)
+  fullName: KokoEngine.AudioClip.AudioClip(System.Object)
+  nameWithType: AudioClip.AudioClip(Object)
+- uid: KokoEngine.AudioClip.#ctor*
+  name: AudioClip
+  href: api/KokoEngine.AudioClip.html#KokoEngine_AudioClip__ctor_
+  commentId: Overload:KokoEngine.AudioClip.#ctor
+  fullName: KokoEngine.AudioClip.AudioClip
+  nameWithType: AudioClip.AudioClip
+- uid: KokoEngine.AudioSource
+  name: AudioSource
+  href: api/KokoEngine.AudioSource.html
+  commentId: T:KokoEngine.AudioSource
+  fullName: KokoEngine.AudioSource
+  nameWithType: AudioSource
+- uid: KokoEngine.AudioSource.AudioClip
+  name: AudioClip
+  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_AudioClip
+  commentId: P:KokoEngine.AudioSource.AudioClip
+  fullName: KokoEngine.AudioSource.AudioClip
+  nameWithType: AudioSource.AudioClip
+- uid: KokoEngine.AudioSource.AudioClip*
+  name: AudioClip
+  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_AudioClip_
+  commentId: Overload:KokoEngine.AudioSource.AudioClip
+  fullName: KokoEngine.AudioSource.AudioClip
+  nameWithType: AudioSource.AudioClip
+- uid: KokoEngine.AudioSource.Pan
+  name: Pan
+  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_Pan
+  commentId: P:KokoEngine.AudioSource.Pan
+  fullName: KokoEngine.AudioSource.Pan
+  nameWithType: AudioSource.Pan
+- uid: KokoEngine.AudioSource.Pan*
+  name: Pan
+  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_Pan_
+  commentId: Overload:KokoEngine.AudioSource.Pan
+  fullName: KokoEngine.AudioSource.Pan
+  nameWithType: AudioSource.Pan
+- uid: KokoEngine.AudioSource.Pitch
+  name: Pitch
+  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_Pitch
+  commentId: P:KokoEngine.AudioSource.Pitch
+  fullName: KokoEngine.AudioSource.Pitch
+  nameWithType: AudioSource.Pitch
+- uid: KokoEngine.AudioSource.Pitch*
+  name: Pitch
+  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_Pitch_
+  commentId: Overload:KokoEngine.AudioSource.Pitch
+  fullName: KokoEngine.AudioSource.Pitch
+  nameWithType: AudioSource.Pitch
+- uid: KokoEngine.AudioSource.Play(KokoEngine.AudioClip)
+  name: Play(AudioClip)
+  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_Play_KokoEngine_AudioClip_
+  commentId: M:KokoEngine.AudioSource.Play(KokoEngine.AudioClip)
+  fullName: KokoEngine.AudioSource.Play(KokoEngine.AudioClip)
+  nameWithType: AudioSource.Play(AudioClip)
+- uid: KokoEngine.AudioSource.Play*
+  name: Play
+  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_Play_
+  commentId: Overload:KokoEngine.AudioSource.Play
+  fullName: KokoEngine.AudioSource.Play
+  nameWithType: AudioSource.Play
+- uid: KokoEngine.AudioSource.Volume
+  name: Volume
+  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_Volume
+  commentId: P:KokoEngine.AudioSource.Volume
+  fullName: KokoEngine.AudioSource.Volume
+  nameWithType: AudioSource.Volume
+- uid: KokoEngine.AudioSource.Volume*
+  name: Volume
+  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_Volume_
+  commentId: Overload:KokoEngine.AudioSource.Volume
+  fullName: KokoEngine.AudioSource.Volume
+  nameWithType: AudioSource.Volume
 - uid: KokoEngine.Behaviour
   name: Behaviour
   href: api/KokoEngine.Behaviour.html
   commentId: T:KokoEngine.Behaviour
   fullName: KokoEngine.Behaviour
   nameWithType: Behaviour
+- uid: KokoEngine.Behaviour.Awake
+  name: Awake()
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_Awake
+  commentId: M:KokoEngine.Behaviour.Awake
+  fullName: KokoEngine.Behaviour.Awake()
+  nameWithType: Behaviour.Awake()
+- uid: KokoEngine.Behaviour.Awake*
+  name: Awake
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_Awake_
+  commentId: Overload:KokoEngine.Behaviour.Awake
+  fullName: KokoEngine.Behaviour.Awake
+  nameWithType: Behaviour.Awake
 - uid: KokoEngine.Behaviour.Enabled
   name: Enabled
   href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_Enabled
@@ -79,6 +385,134 @@ references:
   commentId: Overload:KokoEngine.Behaviour.Enabled
   fullName: KokoEngine.Behaviour.Enabled
   nameWithType: Behaviour.Enabled
+- uid: KokoEngine.Behaviour.End
+  name: End()
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_End
+  commentId: M:KokoEngine.Behaviour.End
+  fullName: KokoEngine.Behaviour.End()
+  nameWithType: Behaviour.End()
+- uid: KokoEngine.Behaviour.End*
+  name: End
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_End_
+  commentId: Overload:KokoEngine.Behaviour.End
+  fullName: KokoEngine.Behaviour.End
+  nameWithType: Behaviour.End
+- uid: KokoEngine.Behaviour.KokoEngine#IBehaviour#Awake
+  name: IBehaviour.Awake()
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_KokoEngine_IBehaviour_Awake
+  commentId: M:KokoEngine.Behaviour.KokoEngine#IBehaviour#Awake
+  name.vb: KokoEngine.IBehaviour.Awake()
+  fullName: KokoEngine.Behaviour.KokoEngine.IBehaviour.Awake()
+  nameWithType: Behaviour.IBehaviour.Awake()
+  nameWithType.vb: Behaviour.KokoEngine.IBehaviour.Awake()
+- uid: KokoEngine.Behaviour.KokoEngine#IBehaviour#Awake*
+  name: IBehaviour.Awake
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_KokoEngine_IBehaviour_Awake_
+  commentId: Overload:KokoEngine.Behaviour.KokoEngine#IBehaviour#Awake
+  name.vb: KokoEngine.IBehaviour.Awake
+  fullName: KokoEngine.Behaviour.KokoEngine.IBehaviour.Awake
+  nameWithType: Behaviour.IBehaviour.Awake
+  nameWithType.vb: Behaviour.KokoEngine.IBehaviour.Awake
+- uid: KokoEngine.Behaviour.KokoEngine#IBehaviour#End
+  name: IBehaviour.End()
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_KokoEngine_IBehaviour_End
+  commentId: M:KokoEngine.Behaviour.KokoEngine#IBehaviour#End
+  name.vb: KokoEngine.IBehaviour.End()
+  fullName: KokoEngine.Behaviour.KokoEngine.IBehaviour.End()
+  nameWithType: Behaviour.IBehaviour.End()
+  nameWithType.vb: Behaviour.KokoEngine.IBehaviour.End()
+- uid: KokoEngine.Behaviour.KokoEngine#IBehaviour#End*
+  name: IBehaviour.End
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_KokoEngine_IBehaviour_End_
+  commentId: Overload:KokoEngine.Behaviour.KokoEngine#IBehaviour#End
+  name.vb: KokoEngine.IBehaviour.End
+  fullName: KokoEngine.Behaviour.KokoEngine.IBehaviour.End
+  nameWithType: Behaviour.IBehaviour.End
+  nameWithType.vb: Behaviour.KokoEngine.IBehaviour.End
+- uid: KokoEngine.Behaviour.KokoEngine#IBehaviour#OnDisable
+  name: IBehaviour.OnDisable()
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_KokoEngine_IBehaviour_OnDisable
+  commentId: M:KokoEngine.Behaviour.KokoEngine#IBehaviour#OnDisable
+  name.vb: KokoEngine.IBehaviour.OnDisable()
+  fullName: KokoEngine.Behaviour.KokoEngine.IBehaviour.OnDisable()
+  nameWithType: Behaviour.IBehaviour.OnDisable()
+  nameWithType.vb: Behaviour.KokoEngine.IBehaviour.OnDisable()
+- uid: KokoEngine.Behaviour.KokoEngine#IBehaviour#OnDisable*
+  name: IBehaviour.OnDisable
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_KokoEngine_IBehaviour_OnDisable_
+  commentId: Overload:KokoEngine.Behaviour.KokoEngine#IBehaviour#OnDisable
+  name.vb: KokoEngine.IBehaviour.OnDisable
+  fullName: KokoEngine.Behaviour.KokoEngine.IBehaviour.OnDisable
+  nameWithType: Behaviour.IBehaviour.OnDisable
+  nameWithType.vb: Behaviour.KokoEngine.IBehaviour.OnDisable
+- uid: KokoEngine.Behaviour.KokoEngine#IBehaviour#OnEnable
+  name: IBehaviour.OnEnable()
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_KokoEngine_IBehaviour_OnEnable
+  commentId: M:KokoEngine.Behaviour.KokoEngine#IBehaviour#OnEnable
+  name.vb: KokoEngine.IBehaviour.OnEnable()
+  fullName: KokoEngine.Behaviour.KokoEngine.IBehaviour.OnEnable()
+  nameWithType: Behaviour.IBehaviour.OnEnable()
+  nameWithType.vb: Behaviour.KokoEngine.IBehaviour.OnEnable()
+- uid: KokoEngine.Behaviour.KokoEngine#IBehaviour#OnEnable*
+  name: IBehaviour.OnEnable
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_KokoEngine_IBehaviour_OnEnable_
+  commentId: Overload:KokoEngine.Behaviour.KokoEngine#IBehaviour#OnEnable
+  name.vb: KokoEngine.IBehaviour.OnEnable
+  fullName: KokoEngine.Behaviour.KokoEngine.IBehaviour.OnEnable
+  nameWithType: Behaviour.IBehaviour.OnEnable
+  nameWithType.vb: Behaviour.KokoEngine.IBehaviour.OnEnable
+- uid: KokoEngine.Behaviour.KokoEngine#IBehaviour#Start
+  name: IBehaviour.Start()
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_KokoEngine_IBehaviour_Start
+  commentId: M:KokoEngine.Behaviour.KokoEngine#IBehaviour#Start
+  name.vb: KokoEngine.IBehaviour.Start()
+  fullName: KokoEngine.Behaviour.KokoEngine.IBehaviour.Start()
+  nameWithType: Behaviour.IBehaviour.Start()
+  nameWithType.vb: Behaviour.KokoEngine.IBehaviour.Start()
+- uid: KokoEngine.Behaviour.KokoEngine#IBehaviour#Start*
+  name: IBehaviour.Start
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_KokoEngine_IBehaviour_Start_
+  commentId: Overload:KokoEngine.Behaviour.KokoEngine#IBehaviour#Start
+  name.vb: KokoEngine.IBehaviour.Start
+  fullName: KokoEngine.Behaviour.KokoEngine.IBehaviour.Start
+  nameWithType: Behaviour.IBehaviour.Start
+  nameWithType.vb: Behaviour.KokoEngine.IBehaviour.Start
+- uid: KokoEngine.Behaviour.OnDisable
+  name: OnDisable()
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_OnDisable
+  commentId: M:KokoEngine.Behaviour.OnDisable
+  fullName: KokoEngine.Behaviour.OnDisable()
+  nameWithType: Behaviour.OnDisable()
+- uid: KokoEngine.Behaviour.OnDisable*
+  name: OnDisable
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_OnDisable_
+  commentId: Overload:KokoEngine.Behaviour.OnDisable
+  fullName: KokoEngine.Behaviour.OnDisable
+  nameWithType: Behaviour.OnDisable
+- uid: KokoEngine.Behaviour.OnEnable
+  name: OnEnable()
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_OnEnable
+  commentId: M:KokoEngine.Behaviour.OnEnable
+  fullName: KokoEngine.Behaviour.OnEnable()
+  nameWithType: Behaviour.OnEnable()
+- uid: KokoEngine.Behaviour.OnEnable*
+  name: OnEnable
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_OnEnable_
+  commentId: Overload:KokoEngine.Behaviour.OnEnable
+  fullName: KokoEngine.Behaviour.OnEnable
+  nameWithType: Behaviour.OnEnable
+- uid: KokoEngine.Behaviour.Start
+  name: Start()
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_Start
+  commentId: M:KokoEngine.Behaviour.Start
+  fullName: KokoEngine.Behaviour.Start()
+  nameWithType: Behaviour.Start()
+- uid: KokoEngine.Behaviour.Start*
+  name: Start
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_Start_
+  commentId: Overload:KokoEngine.Behaviour.Start
+  fullName: KokoEngine.Behaviour.Start
+  nameWithType: Behaviour.Start
 - uid: KokoEngine.BoxCollider
   name: BoxCollider
   href: api/KokoEngine.BoxCollider.html
@@ -145,6 +579,24 @@ references:
   commentId: Overload:KokoEngine.Collider.IsColliding
   fullName: KokoEngine.Collider.IsColliding
   nameWithType: Collider.IsColliding
+- uid: KokoEngine.CollisionManager
+  name: CollisionManager
+  href: api/KokoEngine.CollisionManager.html
+  commentId: T:KokoEngine.CollisionManager
+  fullName: KokoEngine.CollisionManager
+  nameWithType: CollisionManager
+- uid: KokoEngine.CollisionManager.CheckCollisions(KokoEngine.IScene)
+  name: CheckCollisions(IScene)
+  href: api/KokoEngine.CollisionManager.html#KokoEngine_CollisionManager_CheckCollisions_KokoEngine_IScene_
+  commentId: M:KokoEngine.CollisionManager.CheckCollisions(KokoEngine.IScene)
+  fullName: KokoEngine.CollisionManager.CheckCollisions(KokoEngine.IScene)
+  nameWithType: CollisionManager.CheckCollisions(IScene)
+- uid: KokoEngine.CollisionManager.CheckCollisions*
+  name: CheckCollisions
+  href: api/KokoEngine.CollisionManager.html#KokoEngine_CollisionManager_CheckCollisions_
+  commentId: Overload:KokoEngine.CollisionManager.CheckCollisions
+  fullName: KokoEngine.CollisionManager.CheckCollisions
+  nameWithType: CollisionManager.CheckCollisions
 - uid: KokoEngine.Color
   name: Color
   href: api/KokoEngine.Color.html
@@ -247,30 +699,6 @@ references:
   commentId: T:KokoEngine.Component
   fullName: KokoEngine.Component
   nameWithType: Component
-- uid: KokoEngine.Component.Awake
-  name: Awake()
-  href: api/KokoEngine.Component.html#KokoEngine_Component_Awake
-  commentId: M:KokoEngine.Component.Awake
-  fullName: KokoEngine.Component.Awake()
-  nameWithType: Component.Awake()
-- uid: KokoEngine.Component.Awake*
-  name: Awake
-  href: api/KokoEngine.Component.html#KokoEngine_Component_Awake_
-  commentId: Overload:KokoEngine.Component.Awake
-  fullName: KokoEngine.Component.Awake
-  nameWithType: Component.Awake
-- uid: KokoEngine.Component.End
-  name: End()
-  href: api/KokoEngine.Component.html#KokoEngine_Component_End
-  commentId: M:KokoEngine.Component.End
-  fullName: KokoEngine.Component.End()
-  nameWithType: Component.End()
-- uid: KokoEngine.Component.End*
-  name: End
-  href: api/KokoEngine.Component.html#KokoEngine_Component_End_
-  commentId: Overload:KokoEngine.Component.End
-  fullName: KokoEngine.Component.End
-  nameWithType: Component.End
 - uid: KokoEngine.Component.GameObject
   name: GameObject
   href: api/KokoEngine.Component.html#KokoEngine_Component_GameObject
@@ -322,18 +750,6 @@ references:
   commentId: Overload:KokoEngine.Component.Name
   fullName: KokoEngine.Component.Name
   nameWithType: Component.Name
-- uid: KokoEngine.Component.Start
-  name: Start()
-  href: api/KokoEngine.Component.html#KokoEngine_Component_Start
-  commentId: M:KokoEngine.Component.Start
-  fullName: KokoEngine.Component.Start()
-  nameWithType: Component.Start()
-- uid: KokoEngine.Component.Start*
-  name: Start
-  href: api/KokoEngine.Component.html#KokoEngine_Component_Start_
-  commentId: Overload:KokoEngine.Component.Start
-  fullName: KokoEngine.Component.Start
-  nameWithType: Component.Start
 - uid: KokoEngine.Component.Transform
   name: Transform
   href: api/KokoEngine.Component.html#KokoEngine_Component_Transform
@@ -358,6 +774,48 @@ references:
   commentId: Overload:KokoEngine.Component.Update
   fullName: KokoEngine.Component.Update
   nameWithType: Component.Update
+- uid: KokoEngine.Engine
+  name: Engine
+  href: api/KokoEngine.Engine.html
+  commentId: T:KokoEngine.Engine
+  fullName: KokoEngine.Engine
+  nameWithType: Engine
+- uid: KokoEngine.Engine.#ctor
+  name: Engine()
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine__ctor
+  commentId: M:KokoEngine.Engine.#ctor
+  fullName: KokoEngine.Engine.Engine()
+  nameWithType: Engine.Engine()
+- uid: KokoEngine.Engine.#ctor*
+  name: Engine
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine__ctor_
+  commentId: Overload:KokoEngine.Engine.#ctor
+  fullName: KokoEngine.Engine.Engine
+  nameWithType: Engine.Engine
+- uid: KokoEngine.Engine.GraphicsFramework
+  name: GraphicsFramework
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_GraphicsFramework
+  commentId: P:KokoEngine.Engine.GraphicsFramework
+  fullName: KokoEngine.Engine.GraphicsFramework
+  nameWithType: Engine.GraphicsFramework
+- uid: KokoEngine.Engine.GraphicsFramework*
+  name: GraphicsFramework
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_GraphicsFramework_
+  commentId: Overload:KokoEngine.Engine.GraphicsFramework
+  fullName: KokoEngine.Engine.GraphicsFramework
+  nameWithType: Engine.GraphicsFramework
+- uid: KokoEngine.Engine.GraphicsFrameworks
+  name: Engine.GraphicsFrameworks
+  href: api/KokoEngine.Engine.GraphicsFrameworks.html
+  commentId: T:KokoEngine.Engine.GraphicsFrameworks
+  fullName: KokoEngine.Engine.GraphicsFrameworks
+  nameWithType: Engine.GraphicsFrameworks
+- uid: KokoEngine.Engine.GraphicsFrameworks.MonoGame
+  name: MonoGame
+  href: api/KokoEngine.Engine.GraphicsFrameworks.html#KokoEngine_Engine_GraphicsFrameworks_MonoGame
+  commentId: F:KokoEngine.Engine.GraphicsFrameworks.MonoGame
+  fullName: KokoEngine.Engine.GraphicsFrameworks.MonoGame
+  nameWithType: Engine.GraphicsFrameworks.MonoGame
 - uid: KokoEngine.Entity
   name: Entity
   href: api/KokoEngine.Entity.html
@@ -400,6 +858,105 @@ references:
   commentId: Overload:KokoEngine.Entity.ToString
   fullName: KokoEngine.Entity.ToString
   nameWithType: Entity.ToString
+- uid: KokoEngine.Flee
+  name: Flee
+  href: api/KokoEngine.Flee.html
+  commentId: T:KokoEngine.Flee
+  fullName: KokoEngine.Flee
+  nameWithType: Flee
+- uid: KokoEngine.Flee.Calculate(KokoEngine.IVehicle)
+  name: Calculate(IVehicle)
+  href: api/KokoEngine.Flee.html#KokoEngine_Flee_Calculate_KokoEngine_IVehicle_
+  commentId: M:KokoEngine.Flee.Calculate(KokoEngine.IVehicle)
+  fullName: KokoEngine.Flee.Calculate(KokoEngine.IVehicle)
+  nameWithType: Flee.Calculate(IVehicle)
+- uid: KokoEngine.Flee.Calculate*
+  name: Calculate
+  href: api/KokoEngine.Flee.html#KokoEngine_Flee_Calculate_
+  commentId: Overload:KokoEngine.Flee.Calculate
+  fullName: KokoEngine.Flee.Calculate
+  nameWithType: Flee.Calculate
+- uid: KokoEngine.Flee.target
+  name: target
+  href: api/KokoEngine.Flee.html#KokoEngine_Flee_target
+  commentId: F:KokoEngine.Flee.target
+  fullName: KokoEngine.Flee.target
+  nameWithType: Flee.target
+- uid: KokoEngine.FSM
+  name: FSM
+  href: api/KokoEngine.FSM.html
+  commentId: T:KokoEngine.FSM
+  fullName: KokoEngine.FSM
+  nameWithType: FSM
+- uid: KokoEngine.FSM.Awake
+  name: Awake()
+  href: api/KokoEngine.FSM.html#KokoEngine_FSM_Awake
+  commentId: M:KokoEngine.FSM.Awake
+  fullName: KokoEngine.FSM.Awake()
+  nameWithType: FSM.Awake()
+- uid: KokoEngine.FSM.Awake*
+  name: Awake
+  href: api/KokoEngine.FSM.html#KokoEngine_FSM_Awake_
+  commentId: Overload:KokoEngine.FSM.Awake
+  fullName: KokoEngine.FSM.Awake
+  nameWithType: FSM.Awake
+- uid: KokoEngine.FSM.LoadState*
+  name: LoadState
+  href: api/KokoEngine.FSM.html#KokoEngine_FSM_LoadState_
+  commentId: Overload:KokoEngine.FSM.LoadState
+  fullName: KokoEngine.FSM.LoadState
+  nameWithType: FSM.LoadState
+- uid: KokoEngine.FSM.LoadState``1
+  name: LoadState<T>()
+  href: api/KokoEngine.FSM.html#KokoEngine_FSM_LoadState__1
+  commentId: M:KokoEngine.FSM.LoadState``1
+  name.vb: LoadState(Of T)()
+  fullName: KokoEngine.FSM.LoadState<T>()
+  fullName.vb: KokoEngine.FSM.LoadState(Of T)()
+  nameWithType: FSM.LoadState<T>()
+  nameWithType.vb: FSM.LoadState(Of T)()
+- uid: KokoEngine.FSM.SetGlobalState*
+  name: SetGlobalState
+  href: api/KokoEngine.FSM.html#KokoEngine_FSM_SetGlobalState_
+  commentId: Overload:KokoEngine.FSM.SetGlobalState
+  fullName: KokoEngine.FSM.SetGlobalState
+  nameWithType: FSM.SetGlobalState
+- uid: KokoEngine.FSM.SetGlobalState``1
+  name: SetGlobalState<T>()
+  href: api/KokoEngine.FSM.html#KokoEngine_FSM_SetGlobalState__1
+  commentId: M:KokoEngine.FSM.SetGlobalState``1
+  name.vb: SetGlobalState(Of T)()
+  fullName: KokoEngine.FSM.SetGlobalState<T>()
+  fullName.vb: KokoEngine.FSM.SetGlobalState(Of T)()
+  nameWithType: FSM.SetGlobalState<T>()
+  nameWithType.vb: FSM.SetGlobalState(Of T)()
+- uid: KokoEngine.FSM.SetState*
+  name: SetState
+  href: api/KokoEngine.FSM.html#KokoEngine_FSM_SetState_
+  commentId: Overload:KokoEngine.FSM.SetState
+  fullName: KokoEngine.FSM.SetState
+  nameWithType: FSM.SetState
+- uid: KokoEngine.FSM.SetState``1
+  name: SetState<T>()
+  href: api/KokoEngine.FSM.html#KokoEngine_FSM_SetState__1
+  commentId: M:KokoEngine.FSM.SetState``1
+  name.vb: SetState(Of T)()
+  fullName: KokoEngine.FSM.SetState<T>()
+  fullName.vb: KokoEngine.FSM.SetState(Of T)()
+  nameWithType: FSM.SetState<T>()
+  nameWithType.vb: FSM.SetState(Of T)()
+- uid: KokoEngine.FSM.Update(System.Single)
+  name: Update(Single)
+  href: api/KokoEngine.FSM.html#KokoEngine_FSM_Update_System_Single_
+  commentId: M:KokoEngine.FSM.Update(System.Single)
+  fullName: KokoEngine.FSM.Update(System.Single)
+  nameWithType: FSM.Update(Single)
+- uid: KokoEngine.FSM.Update*
+  name: Update
+  href: api/KokoEngine.FSM.html#KokoEngine_FSM_Update_
+  commentId: Overload:KokoEngine.FSM.Update
+  fullName: KokoEngine.FSM.Update
+  nameWithType: FSM.Update
 - uid: KokoEngine.GameObject
   name: GameObject
   href: api/KokoEngine.GameObject.html
@@ -502,6 +1059,264 @@ references:
   commentId: Overload:KokoEngine.GameObject.Transform
   fullName: KokoEngine.GameObject.Transform
   nameWithType: GameObject.Transform
+- uid: KokoEngine.Graph
+  name: Graph
+  href: api/KokoEngine.Graph.html
+  commentId: T:KokoEngine.Graph
+  fullName: KokoEngine.Graph
+  nameWithType: Graph
+- uid: KokoEngine.Graph.#ctor(System.Boolean)
+  name: Graph(Boolean)
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph__ctor_System_Boolean_
+  commentId: M:KokoEngine.Graph.#ctor(System.Boolean)
+  fullName: KokoEngine.Graph.Graph(System.Boolean)
+  nameWithType: Graph.Graph(Boolean)
+- uid: KokoEngine.Graph.#ctor*
+  name: Graph
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph__ctor_
+  commentId: Overload:KokoEngine.Graph.#ctor
+  fullName: KokoEngine.Graph.Graph
+  nameWithType: Graph.Graph
+- uid: KokoEngine.Graph.AddEdge(KokoEngine.GraphEdge)
+  name: AddEdge(GraphEdge)
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_AddEdge_KokoEngine_GraphEdge_
+  commentId: M:KokoEngine.Graph.AddEdge(KokoEngine.GraphEdge)
+  fullName: KokoEngine.Graph.AddEdge(KokoEngine.GraphEdge)
+  nameWithType: Graph.AddEdge(GraphEdge)
+- uid: KokoEngine.Graph.AddEdge*
+  name: AddEdge
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_AddEdge_
+  commentId: Overload:KokoEngine.Graph.AddEdge
+  fullName: KokoEngine.Graph.AddEdge
+  nameWithType: Graph.AddEdge
+- uid: KokoEngine.Graph.AddNode(KokoEngine.IGraphNode)
+  name: AddNode(IGraphNode)
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_AddNode_KokoEngine_IGraphNode_
+  commentId: M:KokoEngine.Graph.AddNode(KokoEngine.IGraphNode)
+  fullName: KokoEngine.Graph.AddNode(KokoEngine.IGraphNode)
+  nameWithType: Graph.AddNode(IGraphNode)
+- uid: KokoEngine.Graph.AddNode*
+  name: AddNode
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_AddNode_
+  commentId: Overload:KokoEngine.Graph.AddNode
+  fullName: KokoEngine.Graph.AddNode
+  nameWithType: Graph.AddNode
+- uid: KokoEngine.Graph.edges
+  name: edges
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_edges
+  commentId: F:KokoEngine.Graph.edges
+  fullName: KokoEngine.Graph.edges
+  nameWithType: Graph.edges
+- uid: KokoEngine.Graph.GetFrontier(KokoEngine.IGraphNode)
+  name: GetFrontier(IGraphNode)
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_GetFrontier_KokoEngine_IGraphNode_
+  commentId: M:KokoEngine.Graph.GetFrontier(KokoEngine.IGraphNode)
+  fullName: KokoEngine.Graph.GetFrontier(KokoEngine.IGraphNode)
+  nameWithType: Graph.GetFrontier(IGraphNode)
+- uid: KokoEngine.Graph.GetFrontier*
+  name: GetFrontier
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_GetFrontier_
+  commentId: Overload:KokoEngine.Graph.GetFrontier
+  fullName: KokoEngine.Graph.GetFrontier
+  nameWithType: Graph.GetFrontier
+- uid: KokoEngine.Graph.GetNode(System.Int32)
+  name: GetNode(Int32)
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_GetNode_System_Int32_
+  commentId: M:KokoEngine.Graph.GetNode(System.Int32)
+  fullName: KokoEngine.Graph.GetNode(System.Int32)
+  nameWithType: Graph.GetNode(Int32)
+- uid: KokoEngine.Graph.GetNode*
+  name: GetNode
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_GetNode_
+  commentId: Overload:KokoEngine.Graph.GetNode
+  fullName: KokoEngine.Graph.GetNode
+  nameWithType: Graph.GetNode
+- uid: KokoEngine.Graph.nodeFrontiers
+  name: nodeFrontiers
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_nodeFrontiers
+  commentId: F:KokoEngine.Graph.nodeFrontiers
+  fullName: KokoEngine.Graph.nodeFrontiers
+  nameWithType: Graph.nodeFrontiers
+- uid: KokoEngine.Graph.nodes
+  name: nodes
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_nodes
+  commentId: F:KokoEngine.Graph.nodes
+  fullName: KokoEngine.Graph.nodes
+  nameWithType: Graph.nodes
+- uid: KokoEngine.Graph.RemoveEdge(KokoEngine.GraphEdge)
+  name: RemoveEdge(GraphEdge)
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_RemoveEdge_KokoEngine_GraphEdge_
+  commentId: M:KokoEngine.Graph.RemoveEdge(KokoEngine.GraphEdge)
+  fullName: KokoEngine.Graph.RemoveEdge(KokoEngine.GraphEdge)
+  nameWithType: Graph.RemoveEdge(GraphEdge)
+- uid: KokoEngine.Graph.RemoveEdge*
+  name: RemoveEdge
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_RemoveEdge_
+  commentId: Overload:KokoEngine.Graph.RemoveEdge
+  fullName: KokoEngine.Graph.RemoveEdge
+  nameWithType: Graph.RemoveEdge
+- uid: KokoEngine.Graph.RemoveNode(KokoEngine.IGraphNode)
+  name: RemoveNode(IGraphNode)
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_RemoveNode_KokoEngine_IGraphNode_
+  commentId: M:KokoEngine.Graph.RemoveNode(KokoEngine.IGraphNode)
+  fullName: KokoEngine.Graph.RemoveNode(KokoEngine.IGraphNode)
+  nameWithType: Graph.RemoveNode(IGraphNode)
+- uid: KokoEngine.Graph.RemoveNode*
+  name: RemoveNode
+  href: api/KokoEngine.Graph.html#KokoEngine_Graph_RemoveNode_
+  commentId: Overload:KokoEngine.Graph.RemoveNode
+  fullName: KokoEngine.Graph.RemoveNode
+  nameWithType: Graph.RemoveNode
+- uid: KokoEngine.GraphEdge
+  name: GraphEdge
+  href: api/KokoEngine.GraphEdge.html
+  commentId: T:KokoEngine.GraphEdge
+  fullName: KokoEngine.GraphEdge
+  nameWithType: GraphEdge
+- uid: KokoEngine.GraphEdge.#ctor(KokoEngine.IGraphNode,KokoEngine.IGraphNode,System.Single)
+  name: GraphEdge(IGraphNode, IGraphNode, Single)
+  href: api/KokoEngine.GraphEdge.html#KokoEngine_GraphEdge__ctor_KokoEngine_IGraphNode_KokoEngine_IGraphNode_System_Single_
+  commentId: M:KokoEngine.GraphEdge.#ctor(KokoEngine.IGraphNode,KokoEngine.IGraphNode,System.Single)
+  fullName: KokoEngine.GraphEdge.GraphEdge(KokoEngine.IGraphNode, KokoEngine.IGraphNode, System.Single)
+  nameWithType: GraphEdge.GraphEdge(IGraphNode, IGraphNode, Single)
+- uid: KokoEngine.GraphEdge.#ctor*
+  name: GraphEdge
+  href: api/KokoEngine.GraphEdge.html#KokoEngine_GraphEdge__ctor_
+  commentId: Overload:KokoEngine.GraphEdge.#ctor
+  fullName: KokoEngine.GraphEdge.GraphEdge
+  nameWithType: GraphEdge.GraphEdge
+- uid: KokoEngine.GraphEdge.cost
+  name: cost
+  href: api/KokoEngine.GraphEdge.html#KokoEngine_GraphEdge_cost
+  commentId: F:KokoEngine.GraphEdge.cost
+  fullName: KokoEngine.GraphEdge.cost
+  nameWithType: GraphEdge.cost
+- uid: KokoEngine.GraphEdge.from
+  name: from
+  href: api/KokoEngine.GraphEdge.html#KokoEngine_GraphEdge_from
+  commentId: F:KokoEngine.GraphEdge.from
+  fullName: KokoEngine.GraphEdge.from
+  nameWithType: GraphEdge.from
+- uid: KokoEngine.GraphEdge.to
+  name: to
+  href: api/KokoEngine.GraphEdge.html#KokoEngine_GraphEdge_to
+  commentId: F:KokoEngine.GraphEdge.to
+  fullName: KokoEngine.GraphEdge.to
+  nameWithType: GraphEdge.to
+- uid: KokoEngine.IAnimationClip
+  name: IAnimationClip
+  href: api/KokoEngine.IAnimationClip.html
+  commentId: T:KokoEngine.IAnimationClip
+  fullName: KokoEngine.IAnimationClip
+  nameWithType: IAnimationClip
+- uid: KokoEngine.IAnimationClip.NumFrames
+  name: NumFrames
+  href: api/KokoEngine.IAnimationClip.html#KokoEngine_IAnimationClip_NumFrames
+  commentId: P:KokoEngine.IAnimationClip.NumFrames
+  fullName: KokoEngine.IAnimationClip.NumFrames
+  nameWithType: IAnimationClip.NumFrames
+- uid: KokoEngine.IAnimationClip.NumFrames*
+  name: NumFrames
+  href: api/KokoEngine.IAnimationClip.html#KokoEngine_IAnimationClip_NumFrames_
+  commentId: Overload:KokoEngine.IAnimationClip.NumFrames
+  fullName: KokoEngine.IAnimationClip.NumFrames
+  nameWithType: IAnimationClip.NumFrames
+- uid: KokoEngine.IAnimationClip.Sprites
+  name: Sprites
+  href: api/KokoEngine.IAnimationClip.html#KokoEngine_IAnimationClip_Sprites
+  commentId: P:KokoEngine.IAnimationClip.Sprites
+  fullName: KokoEngine.IAnimationClip.Sprites
+  nameWithType: IAnimationClip.Sprites
+- uid: KokoEngine.IAnimationClip.Sprites*
+  name: Sprites
+  href: api/KokoEngine.IAnimationClip.html#KokoEngine_IAnimationClip_Sprites_
+  commentId: Overload:KokoEngine.IAnimationClip.Sprites
+  fullName: KokoEngine.IAnimationClip.Sprites
+  nameWithType: IAnimationClip.Sprites
+- uid: KokoEngine.IAnimator
+  name: IAnimator
+  href: api/KokoEngine.IAnimator.html
+  commentId: T:KokoEngine.IAnimator
+  fullName: KokoEngine.IAnimator
+  nameWithType: IAnimator
+- uid: KokoEngine.IAnimator.AddAnimation(System.String,KokoEngine.IAnimationClip)
+  name: AddAnimation(String, IAnimationClip)
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_AddAnimation_System_String_KokoEngine_IAnimationClip_
+  commentId: M:KokoEngine.IAnimator.AddAnimation(System.String,KokoEngine.IAnimationClip)
+  fullName: KokoEngine.IAnimator.AddAnimation(System.String, KokoEngine.IAnimationClip)
+  nameWithType: IAnimator.AddAnimation(String, IAnimationClip)
+- uid: KokoEngine.IAnimator.AddAnimation*
+  name: AddAnimation
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_AddAnimation_
+  commentId: Overload:KokoEngine.IAnimator.AddAnimation
+  fullName: KokoEngine.IAnimator.AddAnimation
+  nameWithType: IAnimator.AddAnimation
+- uid: KokoEngine.IAnimator.IsPlaying
+  name: IsPlaying
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_IsPlaying
+  commentId: P:KokoEngine.IAnimator.IsPlaying
+  fullName: KokoEngine.IAnimator.IsPlaying
+  nameWithType: IAnimator.IsPlaying
+- uid: KokoEngine.IAnimator.IsPlaying*
+  name: IsPlaying
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_IsPlaying_
+  commentId: Overload:KokoEngine.IAnimator.IsPlaying
+  fullName: KokoEngine.IAnimator.IsPlaying
+  nameWithType: IAnimator.IsPlaying
+- uid: KokoEngine.IAnimator.Looping
+  name: Looping
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_Looping
+  commentId: P:KokoEngine.IAnimator.Looping
+  fullName: KokoEngine.IAnimator.Looping
+  nameWithType: IAnimator.Looping
+- uid: KokoEngine.IAnimator.Looping*
+  name: Looping
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_Looping_
+  commentId: Overload:KokoEngine.IAnimator.Looping
+  fullName: KokoEngine.IAnimator.Looping
+  nameWithType: IAnimator.Looping
+- uid: KokoEngine.IAnimator.Play(System.String)
+  name: Play(String)
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_Play_System_String_
+  commentId: M:KokoEngine.IAnimator.Play(System.String)
+  fullName: KokoEngine.IAnimator.Play(System.String)
+  nameWithType: IAnimator.Play(String)
+- uid: KokoEngine.IAnimator.Play(System.String,System.Single)
+  name: Play(String, Single)
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_Play_System_String_System_Single_
+  commentId: M:KokoEngine.IAnimator.Play(System.String,System.Single)
+  fullName: KokoEngine.IAnimator.Play(System.String, System.Single)
+  nameWithType: IAnimator.Play(String, Single)
+- uid: KokoEngine.IAnimator.Play*
+  name: Play
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_Play_
+  commentId: Overload:KokoEngine.IAnimator.Play
+  fullName: KokoEngine.IAnimator.Play
+  nameWithType: IAnimator.Play
+- uid: KokoEngine.IAnimator.Speed
+  name: Speed
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_Speed
+  commentId: P:KokoEngine.IAnimator.Speed
+  fullName: KokoEngine.IAnimator.Speed
+  nameWithType: IAnimator.Speed
+- uid: KokoEngine.IAnimator.Speed*
+  name: Speed
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_Speed_
+  commentId: Overload:KokoEngine.IAnimator.Speed
+  fullName: KokoEngine.IAnimator.Speed
+  nameWithType: IAnimator.Speed
+- uid: KokoEngine.IAnimator.Stop
+  name: Stop()
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_Stop
+  commentId: M:KokoEngine.IAnimator.Stop
+  fullName: KokoEngine.IAnimator.Stop()
+  nameWithType: IAnimator.Stop()
+- uid: KokoEngine.IAnimator.Stop*
+  name: Stop
+  href: api/KokoEngine.IAnimator.html#KokoEngine_IAnimator_Stop_
+  commentId: Overload:KokoEngine.IAnimator.Stop
+  fullName: KokoEngine.IAnimator.Stop
+  nameWithType: IAnimator.Stop
 - uid: KokoEngine.IAsset
   name: IAsset
   href: api/KokoEngine.IAsset.html
@@ -556,12 +1371,90 @@ references:
   fullName.vb: KokoEngine.IAssetManager.GetAsset(Of T)(System.String)
   nameWithType: IAssetManager.GetAsset<T>(String)
   nameWithType.vb: IAssetManager.GetAsset(Of T)(String)
+- uid: KokoEngine.IAudioSource
+  name: IAudioSource
+  href: api/KokoEngine.IAudioSource.html
+  commentId: T:KokoEngine.IAudioSource
+  fullName: KokoEngine.IAudioSource
+  nameWithType: IAudioSource
+- uid: KokoEngine.IAudioSource.AudioClip
+  name: AudioClip
+  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_AudioClip
+  commentId: P:KokoEngine.IAudioSource.AudioClip
+  fullName: KokoEngine.IAudioSource.AudioClip
+  nameWithType: IAudioSource.AudioClip
+- uid: KokoEngine.IAudioSource.AudioClip*
+  name: AudioClip
+  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_AudioClip_
+  commentId: Overload:KokoEngine.IAudioSource.AudioClip
+  fullName: KokoEngine.IAudioSource.AudioClip
+  nameWithType: IAudioSource.AudioClip
+- uid: KokoEngine.IAudioSource.Pan
+  name: Pan
+  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_Pan
+  commentId: P:KokoEngine.IAudioSource.Pan
+  fullName: KokoEngine.IAudioSource.Pan
+  nameWithType: IAudioSource.Pan
+- uid: KokoEngine.IAudioSource.Pan*
+  name: Pan
+  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_Pan_
+  commentId: Overload:KokoEngine.IAudioSource.Pan
+  fullName: KokoEngine.IAudioSource.Pan
+  nameWithType: IAudioSource.Pan
+- uid: KokoEngine.IAudioSource.Pitch
+  name: Pitch
+  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_Pitch
+  commentId: P:KokoEngine.IAudioSource.Pitch
+  fullName: KokoEngine.IAudioSource.Pitch
+  nameWithType: IAudioSource.Pitch
+- uid: KokoEngine.IAudioSource.Pitch*
+  name: Pitch
+  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_Pitch_
+  commentId: Overload:KokoEngine.IAudioSource.Pitch
+  fullName: KokoEngine.IAudioSource.Pitch
+  nameWithType: IAudioSource.Pitch
+- uid: KokoEngine.IAudioSource.Play(KokoEngine.AudioClip)
+  name: Play(AudioClip)
+  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_Play_KokoEngine_AudioClip_
+  commentId: M:KokoEngine.IAudioSource.Play(KokoEngine.AudioClip)
+  fullName: KokoEngine.IAudioSource.Play(KokoEngine.AudioClip)
+  nameWithType: IAudioSource.Play(AudioClip)
+- uid: KokoEngine.IAudioSource.Play*
+  name: Play
+  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_Play_
+  commentId: Overload:KokoEngine.IAudioSource.Play
+  fullName: KokoEngine.IAudioSource.Play
+  nameWithType: IAudioSource.Play
+- uid: KokoEngine.IAudioSource.Volume
+  name: Volume
+  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_Volume
+  commentId: P:KokoEngine.IAudioSource.Volume
+  fullName: KokoEngine.IAudioSource.Volume
+  nameWithType: IAudioSource.Volume
+- uid: KokoEngine.IAudioSource.Volume*
+  name: Volume
+  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_Volume_
+  commentId: Overload:KokoEngine.IAudioSource.Volume
+  fullName: KokoEngine.IAudioSource.Volume
+  nameWithType: IAudioSource.Volume
 - uid: KokoEngine.IBehaviour
   name: IBehaviour
   href: api/KokoEngine.IBehaviour.html
   commentId: T:KokoEngine.IBehaviour
   fullName: KokoEngine.IBehaviour
   nameWithType: IBehaviour
+- uid: KokoEngine.IBehaviour.Awake
+  name: Awake()
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_Awake
+  commentId: M:KokoEngine.IBehaviour.Awake
+  fullName: KokoEngine.IBehaviour.Awake()
+  nameWithType: IBehaviour.Awake()
+- uid: KokoEngine.IBehaviour.Awake*
+  name: Awake
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_Awake_
+  commentId: Overload:KokoEngine.IBehaviour.Awake
+  fullName: KokoEngine.IBehaviour.Awake
+  nameWithType: IBehaviour.Awake
 - uid: KokoEngine.IBehaviour.Enabled
   name: Enabled
   href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_Enabled
@@ -574,6 +1467,72 @@ references:
   commentId: Overload:KokoEngine.IBehaviour.Enabled
   fullName: KokoEngine.IBehaviour.Enabled
   nameWithType: IBehaviour.Enabled
+- uid: KokoEngine.IBehaviour.End
+  name: End()
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_End
+  commentId: M:KokoEngine.IBehaviour.End
+  fullName: KokoEngine.IBehaviour.End()
+  nameWithType: IBehaviour.End()
+- uid: KokoEngine.IBehaviour.End*
+  name: End
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_End_
+  commentId: Overload:KokoEngine.IBehaviour.End
+  fullName: KokoEngine.IBehaviour.End
+  nameWithType: IBehaviour.End
+- uid: KokoEngine.IBehaviour.OnDisable
+  name: OnDisable()
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_OnDisable
+  commentId: M:KokoEngine.IBehaviour.OnDisable
+  fullName: KokoEngine.IBehaviour.OnDisable()
+  nameWithType: IBehaviour.OnDisable()
+- uid: KokoEngine.IBehaviour.OnDisable*
+  name: OnDisable
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_OnDisable_
+  commentId: Overload:KokoEngine.IBehaviour.OnDisable
+  fullName: KokoEngine.IBehaviour.OnDisable
+  nameWithType: IBehaviour.OnDisable
+- uid: KokoEngine.IBehaviour.OnEnable
+  name: OnEnable()
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_OnEnable
+  commentId: M:KokoEngine.IBehaviour.OnEnable
+  fullName: KokoEngine.IBehaviour.OnEnable()
+  nameWithType: IBehaviour.OnEnable()
+- uid: KokoEngine.IBehaviour.OnEnable*
+  name: OnEnable
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_OnEnable_
+  commentId: Overload:KokoEngine.IBehaviour.OnEnable
+  fullName: KokoEngine.IBehaviour.OnEnable
+  nameWithType: IBehaviour.OnEnable
+- uid: KokoEngine.IBehaviour.Start
+  name: Start()
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_Start
+  commentId: M:KokoEngine.IBehaviour.Start
+  fullName: KokoEngine.IBehaviour.Start()
+  nameWithType: IBehaviour.Start()
+- uid: KokoEngine.IBehaviour.Start*
+  name: Start
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_Start_
+  commentId: Overload:KokoEngine.IBehaviour.Start
+  fullName: KokoEngine.IBehaviour.Start
+  nameWithType: IBehaviour.Start
+- uid: KokoEngine.ICollisionManager
+  name: ICollisionManager
+  href: api/KokoEngine.ICollisionManager.html
+  commentId: T:KokoEngine.ICollisionManager
+  fullName: KokoEngine.ICollisionManager
+  nameWithType: ICollisionManager
+- uid: KokoEngine.ICollisionManager.CheckCollisions(KokoEngine.IScene)
+  name: CheckCollisions(IScene)
+  href: api/KokoEngine.ICollisionManager.html#KokoEngine_ICollisionManager_CheckCollisions_KokoEngine_IScene_
+  commentId: M:KokoEngine.ICollisionManager.CheckCollisions(KokoEngine.IScene)
+  fullName: KokoEngine.ICollisionManager.CheckCollisions(KokoEngine.IScene)
+  nameWithType: ICollisionManager.CheckCollisions(IScene)
+- uid: KokoEngine.ICollisionManager.CheckCollisions*
+  name: CheckCollisions
+  href: api/KokoEngine.ICollisionManager.html#KokoEngine_ICollisionManager_CheckCollisions_
+  commentId: Overload:KokoEngine.ICollisionManager.CheckCollisions
+  fullName: KokoEngine.ICollisionManager.CheckCollisions
+  nameWithType: ICollisionManager.CheckCollisions
 - uid: KokoEngine.IComponent
   name: IComponent
   href: api/KokoEngine.IComponent.html
@@ -661,6 +1620,42 @@ references:
   commentId: Overload:KokoEngine.IEntity.Name
   fullName: KokoEngine.IEntity.Name
   nameWithType: IEntity.Name
+- uid: KokoEngine.IFSM
+  name: IFSM
+  href: api/KokoEngine.IFSM.html
+  commentId: T:KokoEngine.IFSM
+  fullName: KokoEngine.IFSM
+  nameWithType: IFSM
+- uid: KokoEngine.IFSM.SetGlobalState*
+  name: SetGlobalState
+  href: api/KokoEngine.IFSM.html#KokoEngine_IFSM_SetGlobalState_
+  commentId: Overload:KokoEngine.IFSM.SetGlobalState
+  fullName: KokoEngine.IFSM.SetGlobalState
+  nameWithType: IFSM.SetGlobalState
+- uid: KokoEngine.IFSM.SetGlobalState``1
+  name: SetGlobalState<T>()
+  href: api/KokoEngine.IFSM.html#KokoEngine_IFSM_SetGlobalState__1
+  commentId: M:KokoEngine.IFSM.SetGlobalState``1
+  name.vb: SetGlobalState(Of T)()
+  fullName: KokoEngine.IFSM.SetGlobalState<T>()
+  fullName.vb: KokoEngine.IFSM.SetGlobalState(Of T)()
+  nameWithType: IFSM.SetGlobalState<T>()
+  nameWithType.vb: IFSM.SetGlobalState(Of T)()
+- uid: KokoEngine.IFSM.SetState*
+  name: SetState
+  href: api/KokoEngine.IFSM.html#KokoEngine_IFSM_SetState_
+  commentId: Overload:KokoEngine.IFSM.SetState
+  fullName: KokoEngine.IFSM.SetState
+  nameWithType: IFSM.SetState
+- uid: KokoEngine.IFSM.SetState``1
+  name: SetState<T>()
+  href: api/KokoEngine.IFSM.html#KokoEngine_IFSM_SetState__1
+  commentId: M:KokoEngine.IFSM.SetState``1
+  name.vb: SetState(Of T)()
+  fullName: KokoEngine.IFSM.SetState<T>()
+  fullName.vb: KokoEngine.IFSM.SetState(Of T)()
+  nameWithType: IFSM.SetState<T>()
+  nameWithType.vb: IFSM.SetState(Of T)()
 - uid: KokoEngine.IGameObject
   name: IGameObject
   href: api/KokoEngine.IGameObject.html
@@ -745,6 +1740,54 @@ references:
   commentId: Overload:KokoEngine.IGameObject.Transform
   fullName: KokoEngine.IGameObject.Transform
   nameWithType: IGameObject.Transform
+- uid: KokoEngine.IGraphNode
+  name: IGraphNode
+  href: api/KokoEngine.IGraphNode.html
+  commentId: T:KokoEngine.IGraphNode
+  fullName: KokoEngine.IGraphNode
+  nameWithType: IGraphNode
+- uid: KokoEngine.IGraphNode.realNodeCost
+  name: realNodeCost
+  href: api/KokoEngine.IGraphNode.html#KokoEngine_IGraphNode_realNodeCost
+  commentId: P:KokoEngine.IGraphNode.realNodeCost
+  fullName: KokoEngine.IGraphNode.realNodeCost
+  nameWithType: IGraphNode.realNodeCost
+- uid: KokoEngine.IGraphNode.realNodeCost*
+  name: realNodeCost
+  href: api/KokoEngine.IGraphNode.html#KokoEngine_IGraphNode_realNodeCost_
+  commentId: Overload:KokoEngine.IGraphNode.realNodeCost
+  fullName: KokoEngine.IGraphNode.realNodeCost
+  nameWithType: IGraphNode.realNodeCost
+- uid: KokoEngine.IGraphNode.totalNodeCost
+  name: totalNodeCost
+  href: api/KokoEngine.IGraphNode.html#KokoEngine_IGraphNode_totalNodeCost
+  commentId: P:KokoEngine.IGraphNode.totalNodeCost
+  fullName: KokoEngine.IGraphNode.totalNodeCost
+  nameWithType: IGraphNode.totalNodeCost
+- uid: KokoEngine.IGraphNode.totalNodeCost*
+  name: totalNodeCost
+  href: api/KokoEngine.IGraphNode.html#KokoEngine_IGraphNode_totalNodeCost_
+  commentId: Overload:KokoEngine.IGraphNode.totalNodeCost
+  fullName: KokoEngine.IGraphNode.totalNodeCost
+  nameWithType: IGraphNode.totalNodeCost
+- uid: KokoEngine.IHeuristicCalculator
+  name: IHeuristicCalculator
+  href: api/KokoEngine.IHeuristicCalculator.html
+  commentId: T:KokoEngine.IHeuristicCalculator
+  fullName: KokoEngine.IHeuristicCalculator
+  nameWithType: IHeuristicCalculator
+- uid: KokoEngine.IHeuristicCalculator.Calculate(KokoEngine.IGraphNode,KokoEngine.IGraphNode)
+  name: Calculate(IGraphNode, IGraphNode)
+  href: api/KokoEngine.IHeuristicCalculator.html#KokoEngine_IHeuristicCalculator_Calculate_KokoEngine_IGraphNode_KokoEngine_IGraphNode_
+  commentId: M:KokoEngine.IHeuristicCalculator.Calculate(KokoEngine.IGraphNode,KokoEngine.IGraphNode)
+  fullName: KokoEngine.IHeuristicCalculator.Calculate(KokoEngine.IGraphNode, KokoEngine.IGraphNode)
+  nameWithType: IHeuristicCalculator.Calculate(IGraphNode, IGraphNode)
+- uid: KokoEngine.IHeuristicCalculator.Calculate*
+  name: Calculate
+  href: api/KokoEngine.IHeuristicCalculator.html#KokoEngine_IHeuristicCalculator_Calculate_
+  commentId: Overload:KokoEngine.IHeuristicCalculator.Calculate
+  fullName: KokoEngine.IHeuristicCalculator.Calculate
+  nameWithType: IHeuristicCalculator.Calculate
 - uid: KokoEngine.IRigidbody
   name: IRigidbody
   href: api/KokoEngine.IRigidbody.html
@@ -919,30 +1962,6 @@ references:
   commentId: Overload:KokoEngine.ISceneManager.LoadScene
   fullName: KokoEngine.ISceneManager.LoadScene
   nameWithType: ISceneManager.LoadScene
-- uid: KokoEngine.ISceneManager.OnGameObjectCreated(KokoEngine.IGameObject)
-  name: OnGameObjectCreated(IGameObject)
-  href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_OnGameObjectCreated_KokoEngine_IGameObject_
-  commentId: M:KokoEngine.ISceneManager.OnGameObjectCreated(KokoEngine.IGameObject)
-  fullName: KokoEngine.ISceneManager.OnGameObjectCreated(KokoEngine.IGameObject)
-  nameWithType: ISceneManager.OnGameObjectCreated(IGameObject)
-- uid: KokoEngine.ISceneManager.OnGameObjectCreated*
-  name: OnGameObjectCreated
-  href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_OnGameObjectCreated_
-  commentId: Overload:KokoEngine.ISceneManager.OnGameObjectCreated
-  fullName: KokoEngine.ISceneManager.OnGameObjectCreated
-  nameWithType: ISceneManager.OnGameObjectCreated
-- uid: KokoEngine.ISceneManager.StartScene
-  name: StartScene()
-  href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_StartScene
-  commentId: M:KokoEngine.ISceneManager.StartScene
-  fullName: KokoEngine.ISceneManager.StartScene()
-  nameWithType: ISceneManager.StartScene()
-- uid: KokoEngine.ISceneManager.StartScene*
-  name: StartScene
-  href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_StartScene_
-  commentId: Overload:KokoEngine.ISceneManager.StartScene
-  fullName: KokoEngine.ISceneManager.StartScene
-  nameWithType: ISceneManager.StartScene
 - uid: KokoEngine.ISceneManager.UpdateActiveScene(System.Single)
   name: UpdateActiveScene(Single)
   href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_UpdateActiveScene_System_Single_
@@ -961,18 +1980,30 @@ references:
   commentId: T:KokoEngine.ISprite
   fullName: KokoEngine.ISprite
   nameWithType: ISprite
-- uid: KokoEngine.ISprite.texture
-  name: texture
-  href: api/KokoEngine.ISprite.html#KokoEngine_ISprite_texture
-  commentId: P:KokoEngine.ISprite.texture
-  fullName: KokoEngine.ISprite.texture
-  nameWithType: ISprite.texture
-- uid: KokoEngine.ISprite.texture*
-  name: texture
-  href: api/KokoEngine.ISprite.html#KokoEngine_ISprite_texture_
-  commentId: Overload:KokoEngine.ISprite.texture
-  fullName: KokoEngine.ISprite.texture
-  nameWithType: ISprite.texture
+- uid: KokoEngine.ISprite.SourceRect
+  name: SourceRect
+  href: api/KokoEngine.ISprite.html#KokoEngine_ISprite_SourceRect
+  commentId: P:KokoEngine.ISprite.SourceRect
+  fullName: KokoEngine.ISprite.SourceRect
+  nameWithType: ISprite.SourceRect
+- uid: KokoEngine.ISprite.SourceRect*
+  name: SourceRect
+  href: api/KokoEngine.ISprite.html#KokoEngine_ISprite_SourceRect_
+  commentId: Overload:KokoEngine.ISprite.SourceRect
+  fullName: KokoEngine.ISprite.SourceRect
+  nameWithType: ISprite.SourceRect
+- uid: KokoEngine.ISprite.Texture
+  name: Texture
+  href: api/KokoEngine.ISprite.html#KokoEngine_ISprite_Texture
+  commentId: P:KokoEngine.ISprite.Texture
+  fullName: KokoEngine.ISprite.Texture
+  nameWithType: ISprite.Texture
+- uid: KokoEngine.ISprite.Texture*
+  name: Texture
+  href: api/KokoEngine.ISprite.html#KokoEngine_ISprite_Texture_
+  commentId: Overload:KokoEngine.ISprite.Texture
+  fullName: KokoEngine.ISprite.Texture
+  nameWithType: ISprite.Texture
 - uid: KokoEngine.ISpriteRenderer
   name: ISpriteRenderer
   href: api/KokoEngine.ISpriteRenderer.html
@@ -1003,12 +2034,168 @@ references:
   commentId: Overload:KokoEngine.ISpriteRenderer.sprite
   fullName: KokoEngine.ISpriteRenderer.sprite
   nameWithType: ISpriteRenderer.sprite
+- uid: KokoEngine.IState
+  name: IState
+  href: api/KokoEngine.IState.html
+  commentId: T:KokoEngine.IState
+  fullName: KokoEngine.IState
+  nameWithType: IState
+- uid: KokoEngine.IState.Agent
+  name: Agent
+  href: api/KokoEngine.IState.html#KokoEngine_IState_Agent
+  commentId: P:KokoEngine.IState.Agent
+  fullName: KokoEngine.IState.Agent
+  nameWithType: IState.Agent
+- uid: KokoEngine.IState.Agent*
+  name: Agent
+  href: api/KokoEngine.IState.html#KokoEngine_IState_Agent_
+  commentId: Overload:KokoEngine.IState.Agent
+  fullName: KokoEngine.IState.Agent
+  nameWithType: IState.Agent
+- uid: KokoEngine.IState.FixedUpdateState
+  name: FixedUpdateState()
+  href: api/KokoEngine.IState.html#KokoEngine_IState_FixedUpdateState
+  commentId: M:KokoEngine.IState.FixedUpdateState
+  fullName: KokoEngine.IState.FixedUpdateState()
+  nameWithType: IState.FixedUpdateState()
+- uid: KokoEngine.IState.FixedUpdateState*
+  name: FixedUpdateState
+  href: api/KokoEngine.IState.html#KokoEngine_IState_FixedUpdateState_
+  commentId: Overload:KokoEngine.IState.FixedUpdateState
+  fullName: KokoEngine.IState.FixedUpdateState
+  nameWithType: IState.FixedUpdateState
+- uid: KokoEngine.IState.FSM
+  name: FSM
+  href: api/KokoEngine.IState.html#KokoEngine_IState_FSM
+  commentId: P:KokoEngine.IState.FSM
+  fullName: KokoEngine.IState.FSM
+  nameWithType: IState.FSM
+- uid: KokoEngine.IState.FSM*
+  name: FSM
+  href: api/KokoEngine.IState.html#KokoEngine_IState_FSM_
+  commentId: Overload:KokoEngine.IState.FSM
+  fullName: KokoEngine.IState.FSM
+  nameWithType: IState.FSM
+- uid: KokoEngine.IState.OnEnterState
+  name: OnEnterState()
+  href: api/KokoEngine.IState.html#KokoEngine_IState_OnEnterState
+  commentId: M:KokoEngine.IState.OnEnterState
+  fullName: KokoEngine.IState.OnEnterState()
+  nameWithType: IState.OnEnterState()
+- uid: KokoEngine.IState.OnEnterState*
+  name: OnEnterState
+  href: api/KokoEngine.IState.html#KokoEngine_IState_OnEnterState_
+  commentId: Overload:KokoEngine.IState.OnEnterState
+  fullName: KokoEngine.IState.OnEnterState
+  nameWithType: IState.OnEnterState
+- uid: KokoEngine.IState.OnExitState
+  name: OnExitState()
+  href: api/KokoEngine.IState.html#KokoEngine_IState_OnExitState
+  commentId: M:KokoEngine.IState.OnExitState
+  fullName: KokoEngine.IState.OnExitState()
+  nameWithType: IState.OnExitState()
+- uid: KokoEngine.IState.OnExitState*
+  name: OnExitState
+  href: api/KokoEngine.IState.html#KokoEngine_IState_OnExitState_
+  commentId: Overload:KokoEngine.IState.OnExitState
+  fullName: KokoEngine.IState.OnExitState
+  nameWithType: IState.OnExitState
+- uid: KokoEngine.IState.OnLoad
+  name: OnLoad()
+  href: api/KokoEngine.IState.html#KokoEngine_IState_OnLoad
+  commentId: M:KokoEngine.IState.OnLoad
+  fullName: KokoEngine.IState.OnLoad()
+  nameWithType: IState.OnLoad()
+- uid: KokoEngine.IState.OnLoad*
+  name: OnLoad
+  href: api/KokoEngine.IState.html#KokoEngine_IState_OnLoad_
+  commentId: Overload:KokoEngine.IState.OnLoad
+  fullName: KokoEngine.IState.OnLoad
+  nameWithType: IState.OnLoad
+- uid: KokoEngine.IState.UpdateState
+  name: UpdateState()
+  href: api/KokoEngine.IState.html#KokoEngine_IState_UpdateState
+  commentId: M:KokoEngine.IState.UpdateState
+  fullName: KokoEngine.IState.UpdateState()
+  nameWithType: IState.UpdateState()
+- uid: KokoEngine.IState.UpdateState*
+  name: UpdateState
+  href: api/KokoEngine.IState.html#KokoEngine_IState_UpdateState_
+  commentId: Overload:KokoEngine.IState.UpdateState
+  fullName: KokoEngine.IState.UpdateState
+  nameWithType: IState.UpdateState
+- uid: KokoEngine.ISteeringBehaviour
+  name: ISteeringBehaviour
+  href: api/KokoEngine.ISteeringBehaviour.html
+  commentId: T:KokoEngine.ISteeringBehaviour
+  fullName: KokoEngine.ISteeringBehaviour
+  nameWithType: ISteeringBehaviour
+- uid: KokoEngine.ISteeringBehaviour.Calculate(KokoEngine.IVehicle)
+  name: Calculate(IVehicle)
+  href: api/KokoEngine.ISteeringBehaviour.html#KokoEngine_ISteeringBehaviour_Calculate_KokoEngine_IVehicle_
+  commentId: M:KokoEngine.ISteeringBehaviour.Calculate(KokoEngine.IVehicle)
+  fullName: KokoEngine.ISteeringBehaviour.Calculate(KokoEngine.IVehicle)
+  nameWithType: ISteeringBehaviour.Calculate(IVehicle)
+- uid: KokoEngine.ISteeringBehaviour.Calculate*
+  name: Calculate
+  href: api/KokoEngine.ISteeringBehaviour.html#KokoEngine_ISteeringBehaviour_Calculate_
+  commentId: Overload:KokoEngine.ISteeringBehaviour.Calculate
+  fullName: KokoEngine.ISteeringBehaviour.Calculate
+  nameWithType: ISteeringBehaviour.Calculate
 - uid: KokoEngine.ITransform
   name: ITransform
   href: api/KokoEngine.ITransform.html
   commentId: T:KokoEngine.ITransform
   fullName: KokoEngine.ITransform
   nameWithType: ITransform
+- uid: KokoEngine.ITransform.ChildCount
+  name: ChildCount
+  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_ChildCount
+  commentId: P:KokoEngine.ITransform.ChildCount
+  fullName: KokoEngine.ITransform.ChildCount
+  nameWithType: ITransform.ChildCount
+- uid: KokoEngine.ITransform.ChildCount*
+  name: ChildCount
+  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_ChildCount_
+  commentId: Overload:KokoEngine.ITransform.ChildCount
+  fullName: KokoEngine.ITransform.ChildCount
+  nameWithType: ITransform.ChildCount
+- uid: KokoEngine.ITransform.Children
+  name: Children
+  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_Children
+  commentId: P:KokoEngine.ITransform.Children
+  fullName: KokoEngine.ITransform.Children
+  nameWithType: ITransform.Children
+- uid: KokoEngine.ITransform.Children*
+  name: Children
+  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_Children_
+  commentId: Overload:KokoEngine.ITransform.Children
+  fullName: KokoEngine.ITransform.Children
+  nameWithType: ITransform.Children
+- uid: KokoEngine.ITransform.GetChild(System.Int32)
+  name: GetChild(Int32)
+  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_GetChild_System_Int32_
+  commentId: M:KokoEngine.ITransform.GetChild(System.Int32)
+  fullName: KokoEngine.ITransform.GetChild(System.Int32)
+  nameWithType: ITransform.GetChild(Int32)
+- uid: KokoEngine.ITransform.GetChild*
+  name: GetChild
+  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_GetChild_
+  commentId: Overload:KokoEngine.ITransform.GetChild
+  fullName: KokoEngine.ITransform.GetChild
+  nameWithType: ITransform.GetChild
+- uid: KokoEngine.ITransform.Parent
+  name: Parent
+  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_Parent
+  commentId: P:KokoEngine.ITransform.Parent
+  fullName: KokoEngine.ITransform.Parent
+  nameWithType: ITransform.Parent
+- uid: KokoEngine.ITransform.Parent*
+  name: Parent
+  href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_Parent_
+  commentId: Overload:KokoEngine.ITransform.Parent
+  fullName: KokoEngine.ITransform.Parent
+  nameWithType: ITransform.Parent
 - uid: KokoEngine.ITransform.Position
   name: Position
   href: api/KokoEngine.ITransform.html#KokoEngine_ITransform_Position
@@ -1154,24 +2341,168 @@ references:
   fullName.vb: KokoEngine.ITree(Of T).Parent
   nameWithType: ITree<T>.Parent
   nameWithType.vb: ITree(Of T).Parent
+- uid: KokoEngine.IVehicle
+  name: IVehicle
+  href: api/KokoEngine.IVehicle.html
+  commentId: T:KokoEngine.IVehicle
+  fullName: KokoEngine.IVehicle
+  nameWithType: IVehicle
+- uid: KokoEngine.IVehicle.Behaviours
+  name: Behaviours
+  href: api/KokoEngine.IVehicle.html#KokoEngine_IVehicle_Behaviours
+  commentId: P:KokoEngine.IVehicle.Behaviours
+  fullName: KokoEngine.IVehicle.Behaviours
+  nameWithType: IVehicle.Behaviours
+- uid: KokoEngine.IVehicle.Behaviours*
+  name: Behaviours
+  href: api/KokoEngine.IVehicle.html#KokoEngine_IVehicle_Behaviours_
+  commentId: Overload:KokoEngine.IVehicle.Behaviours
+  fullName: KokoEngine.IVehicle.Behaviours
+  nameWithType: IVehicle.Behaviours
+- uid: KokoEngine.IVehicle.Direction
+  name: Direction
+  href: api/KokoEngine.IVehicle.html#KokoEngine_IVehicle_Direction
+  commentId: P:KokoEngine.IVehicle.Direction
+  fullName: KokoEngine.IVehicle.Direction
+  nameWithType: IVehicle.Direction
+- uid: KokoEngine.IVehicle.Direction*
+  name: Direction
+  href: api/KokoEngine.IVehicle.html#KokoEngine_IVehicle_Direction_
+  commentId: Overload:KokoEngine.IVehicle.Direction
+  fullName: KokoEngine.IVehicle.Direction
+  nameWithType: IVehicle.Direction
+- uid: KokoEngine.IVehicle.MaxSpeed
+  name: MaxSpeed
+  href: api/KokoEngine.IVehicle.html#KokoEngine_IVehicle_MaxSpeed
+  commentId: P:KokoEngine.IVehicle.MaxSpeed
+  fullName: KokoEngine.IVehicle.MaxSpeed
+  nameWithType: IVehicle.MaxSpeed
+- uid: KokoEngine.IVehicle.MaxSpeed*
+  name: MaxSpeed
+  href: api/KokoEngine.IVehicle.html#KokoEngine_IVehicle_MaxSpeed_
+  commentId: Overload:KokoEngine.IVehicle.MaxSpeed
+  fullName: KokoEngine.IVehicle.MaxSpeed
+  nameWithType: IVehicle.MaxSpeed
+- uid: KokoEngine.IVehicle.Position
+  name: Position
+  href: api/KokoEngine.IVehicle.html#KokoEngine_IVehicle_Position
+  commentId: P:KokoEngine.IVehicle.Position
+  fullName: KokoEngine.IVehicle.Position
+  nameWithType: IVehicle.Position
+- uid: KokoEngine.IVehicle.Position*
+  name: Position
+  href: api/KokoEngine.IVehicle.html#KokoEngine_IVehicle_Position_
+  commentId: Overload:KokoEngine.IVehicle.Position
+  fullName: KokoEngine.IVehicle.Position
+  nameWithType: IVehicle.Position
+- uid: KokoEngine.IVehicle.Velocity
+  name: Velocity
+  href: api/KokoEngine.IVehicle.html#KokoEngine_IVehicle_Velocity
+  commentId: P:KokoEngine.IVehicle.Velocity
+  fullName: KokoEngine.IVehicle.Velocity
+  nameWithType: IVehicle.Velocity
+- uid: KokoEngine.IVehicle.Velocity*
+  name: Velocity
+  href: api/KokoEngine.IVehicle.html#KokoEngine_IVehicle_Velocity_
+  commentId: Overload:KokoEngine.IVehicle.Velocity
+  fullName: KokoEngine.IVehicle.Velocity
+  nameWithType: IVehicle.Velocity
+- uid: KokoEngine.Pursuit
+  name: Pursuit
+  href: api/KokoEngine.Pursuit.html
+  commentId: T:KokoEngine.Pursuit
+  fullName: KokoEngine.Pursuit
+  nameWithType: Pursuit
+- uid: KokoEngine.Pursuit.Calculate(KokoEngine.IVehicle)
+  name: Calculate(IVehicle)
+  href: api/KokoEngine.Pursuit.html#KokoEngine_Pursuit_Calculate_KokoEngine_IVehicle_
+  commentId: M:KokoEngine.Pursuit.Calculate(KokoEngine.IVehicle)
+  fullName: KokoEngine.Pursuit.Calculate(KokoEngine.IVehicle)
+  nameWithType: Pursuit.Calculate(IVehicle)
+- uid: KokoEngine.Pursuit.Calculate*
+  name: Calculate
+  href: api/KokoEngine.Pursuit.html#KokoEngine_Pursuit_Calculate_
+  commentId: Overload:KokoEngine.Pursuit.Calculate
+  fullName: KokoEngine.Pursuit.Calculate
+  nameWithType: Pursuit.Calculate
+- uid: KokoEngine.Pursuit.target
+  name: target
+  href: api/KokoEngine.Pursuit.html#KokoEngine_Pursuit_target
+  commentId: F:KokoEngine.Pursuit.target
+  fullName: KokoEngine.Pursuit.target
+  nameWithType: Pursuit.target
+- uid: KokoEngine.Rect
+  name: Rect
+  href: api/KokoEngine.Rect.html
+  commentId: T:KokoEngine.Rect
+  fullName: KokoEngine.Rect
+  nameWithType: Rect
+- uid: KokoEngine.Rect.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Rect(Int32, Int32, Int32, Int32)
+  href: api/KokoEngine.Rect.html#KokoEngine_Rect__ctor_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:KokoEngine.Rect.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: KokoEngine.Rect.Rect(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: Rect.Rect(Int32, Int32, Int32, Int32)
+- uid: KokoEngine.Rect.#ctor*
+  name: Rect
+  href: api/KokoEngine.Rect.html#KokoEngine_Rect__ctor_
+  commentId: Overload:KokoEngine.Rect.#ctor
+  fullName: KokoEngine.Rect.Rect
+  nameWithType: Rect.Rect
+- uid: KokoEngine.Rect.Height
+  name: Height
+  href: api/KokoEngine.Rect.html#KokoEngine_Rect_Height
+  commentId: P:KokoEngine.Rect.Height
+  fullName: KokoEngine.Rect.Height
+  nameWithType: Rect.Height
+- uid: KokoEngine.Rect.Height*
+  name: Height
+  href: api/KokoEngine.Rect.html#KokoEngine_Rect_Height_
+  commentId: Overload:KokoEngine.Rect.Height
+  fullName: KokoEngine.Rect.Height
+  nameWithType: Rect.Height
+- uid: KokoEngine.Rect.Width
+  name: Width
+  href: api/KokoEngine.Rect.html#KokoEngine_Rect_Width
+  commentId: P:KokoEngine.Rect.Width
+  fullName: KokoEngine.Rect.Width
+  nameWithType: Rect.Width
+- uid: KokoEngine.Rect.Width*
+  name: Width
+  href: api/KokoEngine.Rect.html#KokoEngine_Rect_Width_
+  commentId: Overload:KokoEngine.Rect.Width
+  fullName: KokoEngine.Rect.Width
+  nameWithType: Rect.Width
+- uid: KokoEngine.Rect.X
+  name: X
+  href: api/KokoEngine.Rect.html#KokoEngine_Rect_X
+  commentId: P:KokoEngine.Rect.X
+  fullName: KokoEngine.Rect.X
+  nameWithType: Rect.X
+- uid: KokoEngine.Rect.X*
+  name: X
+  href: api/KokoEngine.Rect.html#KokoEngine_Rect_X_
+  commentId: Overload:KokoEngine.Rect.X
+  fullName: KokoEngine.Rect.X
+  nameWithType: Rect.X
+- uid: KokoEngine.Rect.Y
+  name: Y
+  href: api/KokoEngine.Rect.html#KokoEngine_Rect_Y
+  commentId: P:KokoEngine.Rect.Y
+  fullName: KokoEngine.Rect.Y
+  nameWithType: Rect.Y
+- uid: KokoEngine.Rect.Y*
+  name: Y
+  href: api/KokoEngine.Rect.html#KokoEngine_Rect_Y_
+  commentId: Overload:KokoEngine.Rect.Y
+  fullName: KokoEngine.Rect.Y
+  nameWithType: Rect.Y
 - uid: KokoEngine.Rigidbody
   name: Rigidbody
   href: api/KokoEngine.Rigidbody.html
   commentId: T:KokoEngine.Rigidbody
   fullName: KokoEngine.Rigidbody
   nameWithType: Rigidbody
-- uid: KokoEngine.Rigidbody.#ctor
-  name: Rigidbody()
-  href: api/KokoEngine.Rigidbody.html#KokoEngine_Rigidbody__ctor
-  commentId: M:KokoEngine.Rigidbody.#ctor
-  fullName: KokoEngine.Rigidbody.Rigidbody()
-  nameWithType: Rigidbody.Rigidbody()
-- uid: KokoEngine.Rigidbody.#ctor*
-  name: Rigidbody
-  href: api/KokoEngine.Rigidbody.html#KokoEngine_Rigidbody__ctor_
-  commentId: Overload:KokoEngine.Rigidbody.#ctor
-  fullName: KokoEngine.Rigidbody.Rigidbody
-  nameWithType: Rigidbody.Rigidbody
 - uid: KokoEngine.Rigidbody.acceleration
   name: acceleration
   href: api/KokoEngine.Rigidbody.html#KokoEngine_Rigidbody_acceleration
@@ -1196,12 +2527,6 @@ references:
   commentId: Overload:KokoEngine.Rigidbody.AddForce
   fullName: KokoEngine.Rigidbody.AddForce
   nameWithType: Rigidbody.AddForce
-- uid: KokoEngine.Rigidbody.All
-  name: All
-  href: api/KokoEngine.Rigidbody.html#KokoEngine_Rigidbody_All
-  commentId: F:KokoEngine.Rigidbody.All
-  fullName: KokoEngine.Rigidbody.All
-  nameWithType: Rigidbody.All
 - uid: KokoEngine.Rigidbody.Damping
   name: Damping
   href: api/KokoEngine.Rigidbody.html#KokoEngine_Rigidbody_Damping
@@ -1370,30 +2695,6 @@ references:
   commentId: Overload:KokoEngine.SceneManager.LoadScene
   fullName: KokoEngine.SceneManager.LoadScene
   nameWithType: SceneManager.LoadScene
-- uid: KokoEngine.SceneManager.OnGameObjectCreated(KokoEngine.IGameObject)
-  name: OnGameObjectCreated(IGameObject)
-  href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_OnGameObjectCreated_KokoEngine_IGameObject_
-  commentId: M:KokoEngine.SceneManager.OnGameObjectCreated(KokoEngine.IGameObject)
-  fullName: KokoEngine.SceneManager.OnGameObjectCreated(KokoEngine.IGameObject)
-  nameWithType: SceneManager.OnGameObjectCreated(IGameObject)
-- uid: KokoEngine.SceneManager.OnGameObjectCreated*
-  name: OnGameObjectCreated
-  href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_OnGameObjectCreated_
-  commentId: Overload:KokoEngine.SceneManager.OnGameObjectCreated
-  fullName: KokoEngine.SceneManager.OnGameObjectCreated
-  nameWithType: SceneManager.OnGameObjectCreated
-- uid: KokoEngine.SceneManager.StartScene
-  name: StartScene()
-  href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_StartScene
-  commentId: M:KokoEngine.SceneManager.StartScene
-  fullName: KokoEngine.SceneManager.StartScene()
-  nameWithType: SceneManager.StartScene()
-- uid: KokoEngine.SceneManager.StartScene*
-  name: StartScene
-  href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_StartScene_
-  commentId: Overload:KokoEngine.SceneManager.StartScene
-  fullName: KokoEngine.SceneManager.StartScene
-  nameWithType: SceneManager.StartScene
 - uid: KokoEngine.SceneManager.UpdateActiveScene(System.Single)
   name: UpdateActiveScene(Single)
   href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_UpdateActiveScene_System_Single_
@@ -1406,6 +2707,30 @@ references:
   commentId: Overload:KokoEngine.SceneManager.UpdateActiveScene
   fullName: KokoEngine.SceneManager.UpdateActiveScene
   nameWithType: SceneManager.UpdateActiveScene
+- uid: KokoEngine.Seek
+  name: Seek
+  href: api/KokoEngine.Seek.html
+  commentId: T:KokoEngine.Seek
+  fullName: KokoEngine.Seek
+  nameWithType: Seek
+- uid: KokoEngine.Seek.Calculate(KokoEngine.IVehicle)
+  name: Calculate(IVehicle)
+  href: api/KokoEngine.Seek.html#KokoEngine_Seek_Calculate_KokoEngine_IVehicle_
+  commentId: M:KokoEngine.Seek.Calculate(KokoEngine.IVehicle)
+  fullName: KokoEngine.Seek.Calculate(KokoEngine.IVehicle)
+  nameWithType: Seek.Calculate(IVehicle)
+- uid: KokoEngine.Seek.Calculate*
+  name: Calculate
+  href: api/KokoEngine.Seek.html#KokoEngine_Seek_Calculate_
+  commentId: Overload:KokoEngine.Seek.Calculate
+  fullName: KokoEngine.Seek.Calculate
+  nameWithType: Seek.Calculate
+- uid: KokoEngine.Seek.target
+  name: target
+  href: api/KokoEngine.Seek.html#KokoEngine_Seek_target
+  commentId: F:KokoEngine.Seek.target
+  fullName: KokoEngine.Seek.target
+  nameWithType: Seek.target
 - uid: KokoEngine.Sprite
   name: Sprite
   href: api/KokoEngine.Sprite.html
@@ -1418,42 +2743,48 @@ references:
   commentId: M:KokoEngine.Sprite.#ctor(KokoEngine.Texture2D)
   fullName: KokoEngine.Sprite.Sprite(KokoEngine.Texture2D)
   nameWithType: Sprite.Sprite(Texture2D)
+- uid: KokoEngine.Sprite.#ctor(KokoEngine.Texture2D,KokoEngine.Rect)
+  name: Sprite(Texture2D, Rect)
+  href: api/KokoEngine.Sprite.html#KokoEngine_Sprite__ctor_KokoEngine_Texture2D_KokoEngine_Rect_
+  commentId: M:KokoEngine.Sprite.#ctor(KokoEngine.Texture2D,KokoEngine.Rect)
+  fullName: KokoEngine.Sprite.Sprite(KokoEngine.Texture2D, KokoEngine.Rect)
+  nameWithType: Sprite.Sprite(Texture2D, Rect)
 - uid: KokoEngine.Sprite.#ctor*
   name: Sprite
   href: api/KokoEngine.Sprite.html#KokoEngine_Sprite__ctor_
   commentId: Overload:KokoEngine.Sprite.#ctor
   fullName: KokoEngine.Sprite.Sprite
   nameWithType: Sprite.Sprite
-- uid: KokoEngine.Sprite.texture
-  name: texture
-  href: api/KokoEngine.Sprite.html#KokoEngine_Sprite_texture
-  commentId: P:KokoEngine.Sprite.texture
-  fullName: KokoEngine.Sprite.texture
-  nameWithType: Sprite.texture
-- uid: KokoEngine.Sprite.texture*
-  name: texture
-  href: api/KokoEngine.Sprite.html#KokoEngine_Sprite_texture_
-  commentId: Overload:KokoEngine.Sprite.texture
-  fullName: KokoEngine.Sprite.texture
-  nameWithType: Sprite.texture
+- uid: KokoEngine.Sprite.SourceRect
+  name: SourceRect
+  href: api/KokoEngine.Sprite.html#KokoEngine_Sprite_SourceRect
+  commentId: P:KokoEngine.Sprite.SourceRect
+  fullName: KokoEngine.Sprite.SourceRect
+  nameWithType: Sprite.SourceRect
+- uid: KokoEngine.Sprite.SourceRect*
+  name: SourceRect
+  href: api/KokoEngine.Sprite.html#KokoEngine_Sprite_SourceRect_
+  commentId: Overload:KokoEngine.Sprite.SourceRect
+  fullName: KokoEngine.Sprite.SourceRect
+  nameWithType: Sprite.SourceRect
+- uid: KokoEngine.Sprite.Texture
+  name: Texture
+  href: api/KokoEngine.Sprite.html#KokoEngine_Sprite_Texture
+  commentId: P:KokoEngine.Sprite.Texture
+  fullName: KokoEngine.Sprite.Texture
+  nameWithType: Sprite.Texture
+- uid: KokoEngine.Sprite.Texture*
+  name: Texture
+  href: api/KokoEngine.Sprite.html#KokoEngine_Sprite_Texture_
+  commentId: Overload:KokoEngine.Sprite.Texture
+  fullName: KokoEngine.Sprite.Texture
+  nameWithType: Sprite.Texture
 - uid: KokoEngine.SpriteRenderer
   name: SpriteRenderer
   href: api/KokoEngine.SpriteRenderer.html
   commentId: T:KokoEngine.SpriteRenderer
   fullName: KokoEngine.SpriteRenderer
   nameWithType: SpriteRenderer
-- uid: KokoEngine.SpriteRenderer.#ctor
-  name: SpriteRenderer()
-  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer__ctor
-  commentId: M:KokoEngine.SpriteRenderer.#ctor
-  fullName: KokoEngine.SpriteRenderer.SpriteRenderer()
-  nameWithType: SpriteRenderer.SpriteRenderer()
-- uid: KokoEngine.SpriteRenderer.#ctor*
-  name: SpriteRenderer
-  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer__ctor_
-  commentId: Overload:KokoEngine.SpriteRenderer.#ctor
-  fullName: KokoEngine.SpriteRenderer.SpriteRenderer
-  nameWithType: SpriteRenderer.SpriteRenderer
 - uid: KokoEngine.SpriteRenderer.color
   name: color
   href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer_color
@@ -1478,6 +2809,162 @@ references:
   commentId: Overload:KokoEngine.SpriteRenderer.sprite
   fullName: KokoEngine.SpriteRenderer.sprite
   nameWithType: SpriteRenderer.sprite
+- uid: KokoEngine.State
+  name: State
+  href: api/KokoEngine.State.html
+  commentId: T:KokoEngine.State
+  fullName: KokoEngine.State
+  nameWithType: State
+- uid: KokoEngine.State.Agent
+  name: Agent
+  href: api/KokoEngine.State.html#KokoEngine_State_Agent
+  commentId: P:KokoEngine.State.Agent
+  fullName: KokoEngine.State.Agent
+  nameWithType: State.Agent
+- uid: KokoEngine.State.Agent*
+  name: Agent
+  href: api/KokoEngine.State.html#KokoEngine_State_Agent_
+  commentId: Overload:KokoEngine.State.Agent
+  fullName: KokoEngine.State.Agent
+  nameWithType: State.Agent
+- uid: KokoEngine.State.FixedUpdateState
+  name: FixedUpdateState()
+  href: api/KokoEngine.State.html#KokoEngine_State_FixedUpdateState
+  commentId: M:KokoEngine.State.FixedUpdateState
+  fullName: KokoEngine.State.FixedUpdateState()
+  nameWithType: State.FixedUpdateState()
+- uid: KokoEngine.State.FixedUpdateState*
+  name: FixedUpdateState
+  href: api/KokoEngine.State.html#KokoEngine_State_FixedUpdateState_
+  commentId: Overload:KokoEngine.State.FixedUpdateState
+  fullName: KokoEngine.State.FixedUpdateState
+  nameWithType: State.FixedUpdateState
+- uid: KokoEngine.State.FSM
+  name: FSM
+  href: api/KokoEngine.State.html#KokoEngine_State_FSM
+  commentId: P:KokoEngine.State.FSM
+  fullName: KokoEngine.State.FSM
+  nameWithType: State.FSM
+- uid: KokoEngine.State.FSM*
+  name: FSM
+  href: api/KokoEngine.State.html#KokoEngine_State_FSM_
+  commentId: Overload:KokoEngine.State.FSM
+  fullName: KokoEngine.State.FSM
+  nameWithType: State.FSM
+- uid: KokoEngine.State.OnEnterState
+  name: OnEnterState()
+  href: api/KokoEngine.State.html#KokoEngine_State_OnEnterState
+  commentId: M:KokoEngine.State.OnEnterState
+  fullName: KokoEngine.State.OnEnterState()
+  nameWithType: State.OnEnterState()
+- uid: KokoEngine.State.OnEnterState*
+  name: OnEnterState
+  href: api/KokoEngine.State.html#KokoEngine_State_OnEnterState_
+  commentId: Overload:KokoEngine.State.OnEnterState
+  fullName: KokoEngine.State.OnEnterState
+  nameWithType: State.OnEnterState
+- uid: KokoEngine.State.OnExitState
+  name: OnExitState()
+  href: api/KokoEngine.State.html#KokoEngine_State_OnExitState
+  commentId: M:KokoEngine.State.OnExitState
+  fullName: KokoEngine.State.OnExitState()
+  nameWithType: State.OnExitState()
+- uid: KokoEngine.State.OnExitState*
+  name: OnExitState
+  href: api/KokoEngine.State.html#KokoEngine_State_OnExitState_
+  commentId: Overload:KokoEngine.State.OnExitState
+  fullName: KokoEngine.State.OnExitState
+  nameWithType: State.OnExitState
+- uid: KokoEngine.State.OnLoad
+  name: OnLoad()
+  href: api/KokoEngine.State.html#KokoEngine_State_OnLoad
+  commentId: M:KokoEngine.State.OnLoad
+  fullName: KokoEngine.State.OnLoad()
+  nameWithType: State.OnLoad()
+- uid: KokoEngine.State.OnLoad*
+  name: OnLoad
+  href: api/KokoEngine.State.html#KokoEngine_State_OnLoad_
+  commentId: Overload:KokoEngine.State.OnLoad
+  fullName: KokoEngine.State.OnLoad
+  nameWithType: State.OnLoad
+- uid: KokoEngine.State.UpdateState
+  name: UpdateState()
+  href: api/KokoEngine.State.html#KokoEngine_State_UpdateState
+  commentId: M:KokoEngine.State.UpdateState
+  fullName: KokoEngine.State.UpdateState()
+  nameWithType: State.UpdateState()
+- uid: KokoEngine.State.UpdateState*
+  name: UpdateState
+  href: api/KokoEngine.State.html#KokoEngine_State_UpdateState_
+  commentId: Overload:KokoEngine.State.UpdateState
+  fullName: KokoEngine.State.UpdateState
+  nameWithType: State.UpdateState
+- uid: KokoEngine.SteeringBehaviour
+  name: SteeringBehaviour
+  href: api/KokoEngine.SteeringBehaviour.html
+  commentId: T:KokoEngine.SteeringBehaviour
+  fullName: KokoEngine.SteeringBehaviour
+  nameWithType: SteeringBehaviour
+- uid: KokoEngine.SteeringBehaviour.behaviours
+  name: behaviours
+  href: api/KokoEngine.SteeringBehaviour.html#KokoEngine_SteeringBehaviour_behaviours
+  commentId: F:KokoEngine.SteeringBehaviour.behaviours
+  fullName: KokoEngine.SteeringBehaviour.behaviours
+  nameWithType: SteeringBehaviour.behaviours
+- uid: KokoEngine.SteeringBehaviour.Calculate(KokoEngine.IVehicle)
+  name: Calculate(IVehicle)
+  href: api/KokoEngine.SteeringBehaviour.html#KokoEngine_SteeringBehaviour_Calculate_KokoEngine_IVehicle_
+  commentId: M:KokoEngine.SteeringBehaviour.Calculate(KokoEngine.IVehicle)
+  fullName: KokoEngine.SteeringBehaviour.Calculate(KokoEngine.IVehicle)
+  nameWithType: SteeringBehaviour.Calculate(IVehicle)
+- uid: KokoEngine.SteeringBehaviour.Calculate*
+  name: Calculate
+  href: api/KokoEngine.SteeringBehaviour.html#KokoEngine_SteeringBehaviour_Calculate_
+  commentId: Overload:KokoEngine.SteeringBehaviour.Calculate
+  fullName: KokoEngine.SteeringBehaviour.Calculate
+  nameWithType: SteeringBehaviour.Calculate
+- uid: KokoEngine.SteeringBehaviours
+  name: SteeringBehaviours
+  href: api/KokoEngine.SteeringBehaviours.html
+  commentId: T:KokoEngine.SteeringBehaviours
+  fullName: KokoEngine.SteeringBehaviours
+  nameWithType: SteeringBehaviours
+- uid: KokoEngine.SteeringBehaviours.Flee(KokoEngine.Vector3,KokoEngine.IVehicle)
+  name: Flee(Vector3, IVehicle)
+  href: api/KokoEngine.SteeringBehaviours.html#KokoEngine_SteeringBehaviours_Flee_KokoEngine_Vector3_KokoEngine_IVehicle_
+  commentId: M:KokoEngine.SteeringBehaviours.Flee(KokoEngine.Vector3,KokoEngine.IVehicle)
+  fullName: KokoEngine.SteeringBehaviours.Flee(KokoEngine.Vector3, KokoEngine.IVehicle)
+  nameWithType: SteeringBehaviours.Flee(Vector3, IVehicle)
+- uid: KokoEngine.SteeringBehaviours.Flee*
+  name: Flee
+  href: api/KokoEngine.SteeringBehaviours.html#KokoEngine_SteeringBehaviours_Flee_
+  commentId: Overload:KokoEngine.SteeringBehaviours.Flee
+  fullName: KokoEngine.SteeringBehaviours.Flee
+  nameWithType: SteeringBehaviours.Flee
+- uid: KokoEngine.SteeringBehaviours.Pursuit(KokoEngine.IVehicle,KokoEngine.IVehicle)
+  name: Pursuit(IVehicle, IVehicle)
+  href: api/KokoEngine.SteeringBehaviours.html#KokoEngine_SteeringBehaviours_Pursuit_KokoEngine_IVehicle_KokoEngine_IVehicle_
+  commentId: M:KokoEngine.SteeringBehaviours.Pursuit(KokoEngine.IVehicle,KokoEngine.IVehicle)
+  fullName: KokoEngine.SteeringBehaviours.Pursuit(KokoEngine.IVehicle, KokoEngine.IVehicle)
+  nameWithType: SteeringBehaviours.Pursuit(IVehicle, IVehicle)
+- uid: KokoEngine.SteeringBehaviours.Pursuit*
+  name: Pursuit
+  href: api/KokoEngine.SteeringBehaviours.html#KokoEngine_SteeringBehaviours_Pursuit_
+  commentId: Overload:KokoEngine.SteeringBehaviours.Pursuit
+  fullName: KokoEngine.SteeringBehaviours.Pursuit
+  nameWithType: SteeringBehaviours.Pursuit
+- uid: KokoEngine.SteeringBehaviours.Seek(KokoEngine.Vector3,KokoEngine.IVehicle)
+  name: Seek(Vector3, IVehicle)
+  href: api/KokoEngine.SteeringBehaviours.html#KokoEngine_SteeringBehaviours_Seek_KokoEngine_Vector3_KokoEngine_IVehicle_
+  commentId: M:KokoEngine.SteeringBehaviours.Seek(KokoEngine.Vector3,KokoEngine.IVehicle)
+  fullName: KokoEngine.SteeringBehaviours.Seek(KokoEngine.Vector3, KokoEngine.IVehicle)
+  nameWithType: SteeringBehaviours.Seek(Vector3, IVehicle)
+- uid: KokoEngine.SteeringBehaviours.Seek*
+  name: Seek
+  href: api/KokoEngine.SteeringBehaviours.html#KokoEngine_SteeringBehaviours_Seek_
+  commentId: Overload:KokoEngine.SteeringBehaviours.Seek
+  fullName: KokoEngine.SteeringBehaviours.Seek
+  nameWithType: SteeringBehaviours.Seek
 - uid: KokoEngine.Texture2D
   name: Texture2D
   href: api/KokoEngine.Texture2D.html
@@ -1664,6 +3151,24 @@ references:
   commentId: Overload:KokoEngine.Vector2.#ctor
   fullName: KokoEngine.Vector2.Vector2
   nameWithType: Vector2.Vector2
+- uid: KokoEngine.Vector2.Dot(KokoEngine.Vector2)
+  name: Dot(Vector2)
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Dot_KokoEngine_Vector2_
+  commentId: M:KokoEngine.Vector2.Dot(KokoEngine.Vector2)
+  fullName: KokoEngine.Vector2.Dot(KokoEngine.Vector2)
+  nameWithType: Vector2.Dot(Vector2)
+- uid: KokoEngine.Vector2.Dot(KokoEngine.Vector2,KokoEngine.Vector2)
+  name: Dot(Vector2, Vector2)
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Dot_KokoEngine_Vector2_KokoEngine_Vector2_
+  commentId: M:KokoEngine.Vector2.Dot(KokoEngine.Vector2,KokoEngine.Vector2)
+  fullName: KokoEngine.Vector2.Dot(KokoEngine.Vector2, KokoEngine.Vector2)
+  nameWithType: Vector2.Dot(Vector2, Vector2)
+- uid: KokoEngine.Vector2.Dot*
+  name: Dot
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Dot_
+  commentId: Overload:KokoEngine.Vector2.Dot
+  fullName: KokoEngine.Vector2.Dot
+  nameWithType: Vector2.Dot
 - uid: KokoEngine.Vector2.Down
   name: Down
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Down
@@ -1688,18 +3193,36 @@ references:
   commentId: Overload:KokoEngine.Vector2.Left
   fullName: KokoEngine.Vector2.Left
   nameWithType: Vector2.Left
+- uid: KokoEngine.Vector2.magnitude
+  name: magnitude
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_magnitude
+  commentId: P:KokoEngine.Vector2.magnitude
+  fullName: KokoEngine.Vector2.magnitude
+  nameWithType: Vector2.magnitude
 - uid: KokoEngine.Vector2.Magnitude(KokoEngine.Vector2)
   name: Magnitude(Vector2)
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Magnitude_KokoEngine_Vector2_
   commentId: M:KokoEngine.Vector2.Magnitude(KokoEngine.Vector2)
   fullName: KokoEngine.Vector2.Magnitude(KokoEngine.Vector2)
   nameWithType: Vector2.Magnitude(Vector2)
+- uid: KokoEngine.Vector2.magnitude*
+  name: magnitude
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_magnitude_
+  commentId: Overload:KokoEngine.Vector2.magnitude
+  fullName: KokoEngine.Vector2.magnitude
+  nameWithType: Vector2.magnitude
 - uid: KokoEngine.Vector2.Magnitude*
   name: Magnitude
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Magnitude_
   commentId: Overload:KokoEngine.Vector2.Magnitude
   fullName: KokoEngine.Vector2.Magnitude
   nameWithType: Vector2.Magnitude
+- uid: KokoEngine.Vector2.Normalize
+  name: Normalize()
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Normalize
+  commentId: M:KokoEngine.Vector2.Normalize
+  fullName: KokoEngine.Vector2.Normalize()
+  nameWithType: Vector2.Normalize()
 - uid: KokoEngine.Vector2.Normalize(KokoEngine.Vector2)
   name: Normalize(Vector2)
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Normalize_KokoEngine_Vector2_
@@ -1838,18 +3361,42 @@ references:
   commentId: Overload:KokoEngine.Vector2.Right
   fullName: KokoEngine.Vector2.Right
   nameWithType: Vector2.Right
+- uid: KokoEngine.Vector2.sqrMagnitude
+  name: sqrMagnitude
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_sqrMagnitude
+  commentId: P:KokoEngine.Vector2.sqrMagnitude
+  fullName: KokoEngine.Vector2.sqrMagnitude
+  nameWithType: Vector2.sqrMagnitude
 - uid: KokoEngine.Vector2.SqrMagnitude(KokoEngine.Vector2)
   name: SqrMagnitude(Vector2)
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_SqrMagnitude_KokoEngine_Vector2_
   commentId: M:KokoEngine.Vector2.SqrMagnitude(KokoEngine.Vector2)
   fullName: KokoEngine.Vector2.SqrMagnitude(KokoEngine.Vector2)
   nameWithType: Vector2.SqrMagnitude(Vector2)
+- uid: KokoEngine.Vector2.sqrMagnitude*
+  name: sqrMagnitude
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_sqrMagnitude_
+  commentId: Overload:KokoEngine.Vector2.sqrMagnitude
+  fullName: KokoEngine.Vector2.sqrMagnitude
+  nameWithType: Vector2.sqrMagnitude
 - uid: KokoEngine.Vector2.SqrMagnitude*
   name: SqrMagnitude
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_SqrMagnitude_
   commentId: Overload:KokoEngine.Vector2.SqrMagnitude
   fullName: KokoEngine.Vector2.SqrMagnitude
   nameWithType: Vector2.SqrMagnitude
+- uid: KokoEngine.Vector2.ToString
+  name: ToString()
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_ToString
+  commentId: M:KokoEngine.Vector2.ToString
+  fullName: KokoEngine.Vector2.ToString()
+  nameWithType: Vector2.ToString()
+- uid: KokoEngine.Vector2.ToString*
+  name: ToString
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_ToString_
+  commentId: Overload:KokoEngine.Vector2.ToString
+  fullName: KokoEngine.Vector2.ToString
+  nameWithType: Vector2.ToString
 - uid: KokoEngine.Vector2.Up
   name: Up
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Up
@@ -1904,6 +3451,24 @@ references:
   commentId: Overload:KokoEngine.Vector3.#ctor
   fullName: KokoEngine.Vector3.Vector3
   nameWithType: Vector3.Vector3
+- uid: KokoEngine.Vector3.Dot(KokoEngine.Vector3)
+  name: Dot(Vector3)
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Dot_KokoEngine_Vector3_
+  commentId: M:KokoEngine.Vector3.Dot(KokoEngine.Vector3)
+  fullName: KokoEngine.Vector3.Dot(KokoEngine.Vector3)
+  nameWithType: Vector3.Dot(Vector3)
+- uid: KokoEngine.Vector3.Dot(KokoEngine.Vector3,KokoEngine.Vector3)
+  name: Dot(Vector3, Vector3)
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Dot_KokoEngine_Vector3_KokoEngine_Vector3_
+  commentId: M:KokoEngine.Vector3.Dot(KokoEngine.Vector3,KokoEngine.Vector3)
+  fullName: KokoEngine.Vector3.Dot(KokoEngine.Vector3, KokoEngine.Vector3)
+  nameWithType: Vector3.Dot(Vector3, Vector3)
+- uid: KokoEngine.Vector3.Dot*
+  name: Dot
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Dot_
+  commentId: Overload:KokoEngine.Vector3.Dot
+  fullName: KokoEngine.Vector3.Dot
+  nameWithType: Vector3.Dot
 - uid: KokoEngine.Vector3.Forward
   name: Forward
   href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Forward
@@ -1916,18 +3481,36 @@ references:
   commentId: Overload:KokoEngine.Vector3.Forward
   fullName: KokoEngine.Vector3.Forward
   nameWithType: Vector3.Forward
+- uid: KokoEngine.Vector3.magnitude
+  name: magnitude
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_magnitude
+  commentId: P:KokoEngine.Vector3.magnitude
+  fullName: KokoEngine.Vector3.magnitude
+  nameWithType: Vector3.magnitude
 - uid: KokoEngine.Vector3.Magnitude(KokoEngine.Vector3)
   name: Magnitude(Vector3)
   href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Magnitude_KokoEngine_Vector3_
   commentId: M:KokoEngine.Vector3.Magnitude(KokoEngine.Vector3)
   fullName: KokoEngine.Vector3.Magnitude(KokoEngine.Vector3)
   nameWithType: Vector3.Magnitude(Vector3)
+- uid: KokoEngine.Vector3.magnitude*
+  name: magnitude
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_magnitude_
+  commentId: Overload:KokoEngine.Vector3.magnitude
+  fullName: KokoEngine.Vector3.magnitude
+  nameWithType: Vector3.magnitude
 - uid: KokoEngine.Vector3.Magnitude*
   name: Magnitude
   href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Magnitude_
   commentId: Overload:KokoEngine.Vector3.Magnitude
   fullName: KokoEngine.Vector3.Magnitude
   nameWithType: Vector3.Magnitude
+- uid: KokoEngine.Vector3.Normalize
+  name: Normalize()
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Normalize
+  commentId: M:KokoEngine.Vector3.Normalize
+  fullName: KokoEngine.Vector3.Normalize()
+  nameWithType: Vector3.Normalize()
 - uid: KokoEngine.Vector3.Normalize(KokoEngine.Vector3)
   name: Normalize(Vector3)
   href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Normalize_KokoEngine_Vector3_
@@ -2066,12 +3649,24 @@ references:
   commentId: Overload:KokoEngine.Vector3.Right
   fullName: KokoEngine.Vector3.Right
   nameWithType: Vector3.Right
+- uid: KokoEngine.Vector3.sqrMagnitude
+  name: sqrMagnitude
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_sqrMagnitude
+  commentId: P:KokoEngine.Vector3.sqrMagnitude
+  fullName: KokoEngine.Vector3.sqrMagnitude
+  nameWithType: Vector3.sqrMagnitude
 - uid: KokoEngine.Vector3.SqrMagnitude(KokoEngine.Vector3)
   name: SqrMagnitude(Vector3)
   href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_SqrMagnitude_KokoEngine_Vector3_
   commentId: M:KokoEngine.Vector3.SqrMagnitude(KokoEngine.Vector3)
   fullName: KokoEngine.Vector3.SqrMagnitude(KokoEngine.Vector3)
   nameWithType: Vector3.SqrMagnitude(Vector3)
+- uid: KokoEngine.Vector3.sqrMagnitude*
+  name: sqrMagnitude
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_sqrMagnitude_
+  commentId: Overload:KokoEngine.Vector3.sqrMagnitude
+  fullName: KokoEngine.Vector3.sqrMagnitude
+  nameWithType: Vector3.sqrMagnitude
 - uid: KokoEngine.Vector3.SqrMagnitude*
   name: SqrMagnitude
   href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_SqrMagnitude_
@@ -2132,3 +3727,129 @@ references:
   commentId: Overload:KokoEngine.Vector3.Zero
   fullName: KokoEngine.Vector3.Zero
   nameWithType: Vector3.Zero
+- uid: KokoEngine.Vehicle
+  name: Vehicle
+  href: api/KokoEngine.Vehicle.html
+  commentId: T:KokoEngine.Vehicle
+  fullName: KokoEngine.Vehicle
+  nameWithType: Vehicle
+- uid: KokoEngine.Vehicle.Behaviours
+  name: Behaviours
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Behaviours
+  commentId: P:KokoEngine.Vehicle.Behaviours
+  fullName: KokoEngine.Vehicle.Behaviours
+  nameWithType: Vehicle.Behaviours
+- uid: KokoEngine.Vehicle.Behaviours*
+  name: Behaviours
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Behaviours_
+  commentId: Overload:KokoEngine.Vehicle.Behaviours
+  fullName: KokoEngine.Vehicle.Behaviours
+  nameWithType: Vehicle.Behaviours
+- uid: KokoEngine.Vehicle.Direction
+  name: Direction
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Direction
+  commentId: P:KokoEngine.Vehicle.Direction
+  fullName: KokoEngine.Vehicle.Direction
+  nameWithType: Vehicle.Direction
+- uid: KokoEngine.Vehicle.Direction*
+  name: Direction
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Direction_
+  commentId: Overload:KokoEngine.Vehicle.Direction
+  fullName: KokoEngine.Vehicle.Direction
+  nameWithType: Vehicle.Direction
+- uid: KokoEngine.Vehicle.MaxSpeed
+  name: MaxSpeed
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_MaxSpeed
+  commentId: P:KokoEngine.Vehicle.MaxSpeed
+  fullName: KokoEngine.Vehicle.MaxSpeed
+  nameWithType: Vehicle.MaxSpeed
+- uid: KokoEngine.Vehicle.MaxSpeed*
+  name: MaxSpeed
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_MaxSpeed_
+  commentId: Overload:KokoEngine.Vehicle.MaxSpeed
+  fullName: KokoEngine.Vehicle.MaxSpeed
+  nameWithType: Vehicle.MaxSpeed
+- uid: KokoEngine.Vehicle.Position
+  name: Position
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Position
+  commentId: P:KokoEngine.Vehicle.Position
+  fullName: KokoEngine.Vehicle.Position
+  nameWithType: Vehicle.Position
+- uid: KokoEngine.Vehicle.Position*
+  name: Position
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Position_
+  commentId: Overload:KokoEngine.Vehicle.Position
+  fullName: KokoEngine.Vehicle.Position
+  nameWithType: Vehicle.Position
+- uid: KokoEngine.Vehicle.Start
+  name: Start()
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Start
+  commentId: M:KokoEngine.Vehicle.Start
+  fullName: KokoEngine.Vehicle.Start()
+  nameWithType: Vehicle.Start()
+- uid: KokoEngine.Vehicle.Start*
+  name: Start
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Start_
+  commentId: Overload:KokoEngine.Vehicle.Start
+  fullName: KokoEngine.Vehicle.Start
+  nameWithType: Vehicle.Start
+- uid: KokoEngine.Vehicle.Update(System.Single)
+  name: Update(Single)
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Update_System_Single_
+  commentId: M:KokoEngine.Vehicle.Update(System.Single)
+  fullName: KokoEngine.Vehicle.Update(System.Single)
+  nameWithType: Vehicle.Update(Single)
+- uid: KokoEngine.Vehicle.Update*
+  name: Update
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Update_
+  commentId: Overload:KokoEngine.Vehicle.Update
+  fullName: KokoEngine.Vehicle.Update
+  nameWithType: Vehicle.Update
+- uid: KokoEngine.Vehicle.Velocity
+  name: Velocity
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Velocity
+  commentId: P:KokoEngine.Vehicle.Velocity
+  fullName: KokoEngine.Vehicle.Velocity
+  nameWithType: Vehicle.Velocity
+- uid: KokoEngine.Vehicle.Velocity*
+  name: Velocity
+  href: api/KokoEngine.Vehicle.html#KokoEngine_Vehicle_Velocity_
+  commentId: Overload:KokoEngine.Vehicle.Velocity
+  fullName: KokoEngine.Vehicle.Velocity
+  nameWithType: Vehicle.Velocity
+- uid: KokoEngine.Wander
+  name: Wander
+  href: api/KokoEngine.Wander.html
+  commentId: T:KokoEngine.Wander
+  fullName: KokoEngine.Wander
+  nameWithType: Wander
+- uid: KokoEngine.Wander.Calculate(KokoEngine.Vehicle)
+  name: Calculate(Vehicle)
+  href: api/KokoEngine.Wander.html#KokoEngine_Wander_Calculate_KokoEngine_Vehicle_
+  commentId: M:KokoEngine.Wander.Calculate(KokoEngine.Vehicle)
+  fullName: KokoEngine.Wander.Calculate(KokoEngine.Vehicle)
+  nameWithType: Wander.Calculate(Vehicle)
+- uid: KokoEngine.Wander.Calculate*
+  name: Calculate
+  href: api/KokoEngine.Wander.html#KokoEngine_Wander_Calculate_
+  commentId: Overload:KokoEngine.Wander.Calculate
+  fullName: KokoEngine.Wander.Calculate
+  nameWithType: Wander.Calculate
+- uid: KokoEngine.Wander.distance
+  name: distance
+  href: api/KokoEngine.Wander.html#KokoEngine_Wander_distance
+  commentId: F:KokoEngine.Wander.distance
+  fullName: KokoEngine.Wander.distance
+  nameWithType: Wander.distance
+- uid: KokoEngine.Wander.jitter
+  name: jitter
+  href: api/KokoEngine.Wander.html#KokoEngine_Wander_jitter
+  commentId: F:KokoEngine.Wander.jitter
+  fullName: KokoEngine.Wander.jitter
+  nameWithType: Wander.jitter
+- uid: KokoEngine.Wander.radius
+  name: radius
+  href: api/KokoEngine.Wander.html#KokoEngine_Wander_radius
+  commentId: F:KokoEngine.Wander.radius
+  fullName: KokoEngine.Wander.radius
+  nameWithType: Wander.radius
