@@ -5,13 +5,13 @@ namespace KokoEngine
 {
     public class FSM : Behaviour, IFSM
     {
-        private State _activeState;
-        private State _globalState;
-        private Dictionary<Type, State> _states;
+        private IState _activeState;
+        private IState _globalState;
+        private Dictionary<Type, IState> _states;
 
         protected override void Awake()
         {
-            _states = new Dictionary<Type, State>();
+            _states = new Dictionary<Type, IState>();
         }
 
         protected override void Update(float dt)
@@ -23,7 +23,7 @@ namespace KokoEngine
                 _activeState.UpdateState();
         }
 
-        public T LoadState<T>() where T : State, new()
+        public T LoadState<T>() where T : IState, new()
         {
             Type type = typeof(T);
             T state = new T();
@@ -43,7 +43,7 @@ namespace KokoEngine
         public void SetState<T>()
         {
             Type type = typeof(T);
-            State state = _states[type];
+            IState state = _states[type];
 
             // If the state is already active, do nothing
             if (state == _activeState)
@@ -66,7 +66,7 @@ namespace KokoEngine
         public void SetGlobalState<T>()
         {
             Type type = typeof(T);
-            State state = _states[type];
+            IState state = _states[type];
 
             // If the state is already active, do nothing
             if (state == _globalState)

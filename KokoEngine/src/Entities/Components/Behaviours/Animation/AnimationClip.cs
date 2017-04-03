@@ -2,12 +2,12 @@
 
 namespace KokoEngine
 {
-    public class AnimationClip : Entity
+    public class AnimationClip : Entity, IAnimationClip
     {
         public List<ISprite> Sprites { get; } = new List<ISprite>();
         public int NumFrames { get; }
 
-        public AnimationClip(Sprite sprite, int numFrames)
+        public AnimationClip(ISprite sprite, int numFrames)
         {
             NumFrames = numFrames;
 

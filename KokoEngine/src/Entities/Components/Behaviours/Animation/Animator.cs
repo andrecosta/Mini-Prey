@@ -2,14 +2,14 @@
 
 namespace KokoEngine
 {
-    public class Animator : Behaviour
+    public class Animator : Behaviour, IAnimator
     {
         public bool IsPlaying => _isPlaying;
         public float Speed { get; set; } = 1;
         public bool Looping { get; set; } = true;
 
-        private readonly Dictionary<string, AnimationClip> _animationClips = new Dictionary<string, AnimationClip>();
-        private AnimationClip _currentAnimationClip;
+        private readonly Dictionary<string, IAnimationClip> _animationClips = new Dictionary<string, IAnimationClip>();
+        private IAnimationClip _currentAnimationClip;
         private ISpriteRenderer _sr;
         private bool _isPlaying;
         private float _animationTimer;
@@ -42,7 +42,7 @@ namespace KokoEngine
             _sr.sprite = _currentAnimationClip.Sprites[_currentFrame];
         }
 
-        public void AddAnimation(string key, AnimationClip clip)
+        public void AddAnimation(string key, IAnimationClip clip)
         {
             _animationClips.Add(key, clip);
         }

@@ -24,6 +24,7 @@ namespace MiniPreyGame
         private readonly ISceneManager _sceneManager;
         private readonly IAssetManager _assetManager;
 
+        // Global reference to the waypoints controller GameObject
         private IGameObject _waypointsController;
 
 
@@ -40,6 +41,7 @@ namespace MiniPreyGame
             _sceneManager = sceneManager;
             _assetManager = assetManager;
         }
+
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -170,8 +172,7 @@ namespace MiniPreyGame
                 Debug.Track(boid);
             }
 
-            
-
+            // Create the waypoints controller GameObject and add it to the scene
             _waypointsController = new GameObject();
             var wc = _waypointsController.AddComponent<WaypointsController>();
             wc.player = player;
@@ -216,6 +217,7 @@ namespace MiniPreyGame
             _sceneManager.LoadScene(levelScene);
         }
 
+
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
@@ -249,6 +251,7 @@ namespace MiniPreyGame
             _assetManager.AddAsset("player", new Texture2D("player", playerTexture, playerTexture.Width, playerTexture.Height));
         }
 
+
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
         /// game-specific content.
@@ -257,6 +260,7 @@ namespace MiniPreyGame
         {
             // TODO: Unload any non ContentManager content here
         }
+
 
         /// <summary>
         /// Allows the game to run logic such as updating the world,
@@ -281,11 +285,12 @@ namespace MiniPreyGame
             base.Update(gameTime);
         }
 
+
         void PlaySounds(IGameObject rootGameObject)
         {
             foreach (IComponent component in rootGameObject.GetComponents())
             {
-                AudioSource au = component as AudioSource;
+                IAudioSource au = component as IAudioSource;
 
                 // Play MonoGame sound effect
                 if (au?.AudioClip?.RawData != null)
@@ -296,6 +301,7 @@ namespace MiniPreyGame
                 }
             }
         }
+
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -338,11 +344,12 @@ namespace MiniPreyGame
             base.Draw(gameTime);
         }
 
+
         void DrawGameObjects(IGameObject rootGameObject, SpriteBatch sb)
         {
             foreach (IComponent component in rootGameObject.GetComponents())
             {
-                SpriteRenderer sr = component as SpriteRenderer;
+                ISpriteRenderer sr = component as ISpriteRenderer;
                 if (sr == null) continue;
 
                 // Get texture
@@ -368,6 +375,7 @@ namespace MiniPreyGame
             foreach (var child in rootGameObject.Transform.Children)
                 DrawGameObjects(child.GameObject, sb);
         }
+
 
         void DrawLine(Vector2 start, Vector2 end, Microsoft.Xna.Framework.Color color, int size = 1)
         {

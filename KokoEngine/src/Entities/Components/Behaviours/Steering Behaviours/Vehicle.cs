@@ -2,20 +2,20 @@
 
 namespace KokoEngine
 {
-    public class Vehicle : Behaviour
+    public class Vehicle : Behaviour, IVehicle
     {
         public Vector3 Direction => _direction;
         public Vector3 Position => Transform.Position;
         public Vector3 Velocity => _rb.velocity;
         public float MaxSpeed { get; set; } = 50;
-        public List<SteeringBehaviour> Behaviours { get; } = new List<SteeringBehaviour>();
+        public List<ISteeringBehaviour> Behaviours { get; } = new List<ISteeringBehaviour>();
 
         private IRigidbody _rb;
         private Vector3 _direction;
 
         protected override void Start()
         {
-            _rb = GetComponent<Rigidbody>();
+            _rb = GetComponent<IRigidbody>();
             _direction = Transform.Up;
         }
 

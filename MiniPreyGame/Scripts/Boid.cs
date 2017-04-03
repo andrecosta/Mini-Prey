@@ -11,30 +11,30 @@ namespace MiniPreyGame
         public AudioClip FleeSound { get; set; }
         public bool Pursuer { get; set; }
 
-        public Vehicle Vehicle { get; private set; }
+        public IVehicle Vehicle { get; private set; }
         public Seek Seek { get; private set; }
         public Flee Flee { get; private set; }
         public Pursuit Pursuit { get; private set; }
-        public SpriteRenderer SpriteRenderer { get; private set; }
-        public Animator Animator { get; private set; }
-        public AudioSource AudioSource { get; private set; }
+        public ISpriteRenderer SpriteRenderer { get; private set; }
+        public IAnimator Animator { get; private set; }
+        public IAudioSource AudioSource { get; private set; }
 
         private IRigidbody _rb;
         private FSM _fsm;
 
         protected override void Awake()
         {
-            _rb = GetComponent<Rigidbody>();
+            _rb = GetComponent<IRigidbody>();
             _fsm = GetComponent<FSM>();
 
-            Vehicle = GetComponent<Vehicle>();
+            Vehicle = GetComponent<IVehicle>();
             Seek = GetComponent<Seek>();
             Flee = GetComponent<Flee>();
             Pursuit = GetComponent<Pursuit>();
 
-            SpriteRenderer = GetComponent<SpriteRenderer>();
-            Animator = GetComponent<Animator>();
-            AudioSource = GetComponent<AudioSource>();
+            SpriteRenderer = GetComponent<ISpriteRenderer>();
+            Animator = GetComponent<IAnimator>();
+            AudioSource = GetComponent<IAudioSource>();
         }
 
         protected override void Start()
@@ -51,10 +51,12 @@ namespace MiniPreyGame
 
         protected override void Update(float dt)
         {
-            //Vector3 dir = (Target.Transform.Position - Transform.Position).Normalized;
-            //_rb.AddForce(dir * Speed);
-
+            // Rotate object towards its heading
             Transform.Rotation = (float) Math.Atan2(_rb.velocity.X, -_rb.velocity.Y);
+
+
+            // OLD CODE FOR FLOCK SEPARATION
+            // TODO: Should go into its own steering behaviour
 
             /*foreach (Rigidbody rb in Rigidbody.All)
             {

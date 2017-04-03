@@ -45,7 +45,7 @@
     <Compile Include="Components\Debug.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Scripts\Boid.cs" />
-    <Compile Include="Scripts\States\BoidPursuitState.cs" />
+    <Compile Include="Scripts\Boid States\BoidPursuitState.cs" />
     <Compile Include="Scripts\WaypointEuclideanHeuristicCAlculator.cs" />
     <Compile Include="Scripts\WaypointsController.cs" />
     <Compile Include="Scripts\Waypoint.cs" />
@@ -53,8 +53,8 @@
     <Compile Include="Components\InputManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scripts\States\BoidFleeState.cs" />
-    <Compile Include="Scripts\States\BoidSeekState.cs" />
+    <Compile Include="Scripts\Boid States\BoidFleeState.cs" />
+    <Compile Include="Scripts\Boid States\BoidSeekState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

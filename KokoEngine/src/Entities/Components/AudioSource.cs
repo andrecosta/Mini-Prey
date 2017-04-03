@@ -1,6 +1,6 @@
 ﻿namespace KokoEngine
 {
-    public class AudioSource : Component
+    public class AudioSource : Component, IAudioSource
     {
         public AudioClip AudioClip { get; set; }
         public float Volume { get; set; } = 0.5f;

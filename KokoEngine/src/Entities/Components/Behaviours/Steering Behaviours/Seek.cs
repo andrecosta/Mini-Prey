@@ -4,7 +4,7 @@
     {
         public ITransform target;
 
-        public override Vector3 Calculate(Vehicle vehicle)
+        public override Vector3 Calculate(IVehicle vehicle)
         {
             return behaviours.Seek(target.Position, vehicle);
         }

@@ -1,9 +1,9 @@
 ﻿namespace KokoEngine
 {
-    public abstract class State
+    public abstract class State : IState
     {
-        public IGameObject Agent;
-        public IFSM FSM;
+        public IGameObject Agent { get; set; }
+        public IFSM FSM { get; set; }
 
         public virtual void OnLoad()
         {

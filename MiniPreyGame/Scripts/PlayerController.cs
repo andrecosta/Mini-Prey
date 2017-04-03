@@ -8,11 +8,11 @@ namespace MiniPreyGame
     {
         public float Speed { get; set; } = 3;
 
-        private Rigidbody _rb;
+        private IRigidbody _rb;
 
         protected override void Awake()
         {
-            _rb = GetComponent<Rigidbody>();
+            _rb = GetComponent<IRigidbody>();
         }
 
         protected override void Update(float dt)
