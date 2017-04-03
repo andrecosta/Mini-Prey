@@ -72,7 +72,8 @@
               
               <h1 id="KokoEngine_IGameObject" data-uid="KokoEngine.IGameObject">Interface IGameObject
               </h1>
-              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 summary"><p>Base class for all entities used in a Scene. A GameObject is essentially a container for <a class="xref" href="KokoEngine.IComponent.html">IComponent</a>s.</p>
+</div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
@@ -95,7 +96,8 @@
               
               <a id="KokoEngine_IGameObject_Scene_" data-uid="KokoEngine.IGameObject.Scene*"></a>
               <h4 id="KokoEngine_IGameObject_Scene" data-uid="KokoEngine.IGameObject.Scene">Scene</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>The Scene this GameObject belongs to.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -120,7 +122,8 @@
               
               <a id="KokoEngine_IGameObject_Tag_" data-uid="KokoEngine.IGameObject.Tag*"></a>
               <h4 id="KokoEngine_IGameObject_Tag" data-uid="KokoEngine.IGameObject.Tag">Tag</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>The tag of this GameObject.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -145,7 +148,8 @@
               
               <a id="KokoEngine_IGameObject_Transform_" data-uid="KokoEngine.IGameObject.Transform*"></a>
               <h4 id="KokoEngine_IGameObject_Transform" data-uid="KokoEngine.IGameObject.Transform">Transform</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>The transform component attached to this GameObject. Every GameObject has this component by default.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -190,7 +194,8 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td></td>
+                    <td><p>The created component.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -205,7 +210,7 @@
                 <tbody>
                   <tr>
                     <td><span class="parametername">T</span></td>
-                    <td><p>The type of the component to add</p>
+                    <td><p>The type of the component to add.</p>
 </td>
                   </tr>
                 </tbody>
@@ -214,8 +219,8 @@
               
               <a id="KokoEngine_IGameObject_GetComponent_" data-uid="KokoEngine.IGameObject.GetComponent*"></a>
               <h4 id="KokoEngine_IGameObject_GetComponent__1" data-uid="KokoEngine.IGameObject.GetComponent``1">GetComponent&lt;T&gt;()</h4>
-              <div class="markdown level1 summary"><p>Returns the first component of type T associated with this GameObject.
-If one isn&#39;t found, return null.</p>
+              <div class="markdown level1 summary"><p>Returns the first component of type T attached to this GameObject.
+If one isn&#39;t found, returns null.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -233,7 +238,8 @@ If one isn&#39;t found, return null.</p>
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td></td>
+                    <td><p>The found component.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -248,7 +254,7 @@ If one isn&#39;t found, return null.</p>
                 <tbody>
                   <tr>
                     <td><span class="parametername">T</span></td>
-                    <td><p>The type of the component to get</p>
+                    <td><p>The type of the component to find.</p>
 </td>
                   </tr>
                 </tbody>
@@ -257,7 +263,7 @@ If one isn&#39;t found, return null.</p>
               
               <a id="KokoEngine_IGameObject_GetComponents_" data-uid="KokoEngine.IGameObject.GetComponents*"></a>
               <h4 id="KokoEngine_IGameObject_GetComponents" data-uid="KokoEngine.IGameObject.GetComponents">GetComponents()</h4>
-              <div class="markdown level1 summary"><p>Returns all the components associated with this GameObject.</p>
+              <div class="markdown level1 summary"><p>Returns all the components attached to this GameObject.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>

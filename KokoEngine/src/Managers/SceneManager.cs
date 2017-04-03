@@ -9,11 +9,6 @@ namespace KokoEngine
         private Dictionary<string, IScene> _sceneMap = new Dictionary<string, IScene>();
         private IScene _activeScene;
 
-        /// <summary>
-        /// Create a new scene and add it to the scene map.
-        /// </summary>
-        /// <param name="name">The name of the scene to create</param>
-        /// <returns></returns>
         public IScene CreateScene(string name)
         {
             IScene scene = new Scene(name);
@@ -27,10 +22,6 @@ namespace KokoEngine
             return _activeScene;
         }
 
-        /// <summary>
-        /// Load a scene. This will set it as the active scene and Awake all of its GameObjects.
-        /// </summary>
-        /// <param name="sceneName">The name of the scene to load</param>
         public void LoadScene(string sceneName)
         {
             // Get the scene reference from the scene map and set it as active
@@ -40,20 +31,12 @@ namespace KokoEngine
             StartScene();
         }
 
-        /// <summary>
-        /// Load a scene. This will set it as the active scene and Awake all of its GameObjects.
-        /// </summary>
-        /// <param name="sceneIndex">The index of the scene to load</param>
         public void LoadScene(int sceneIndex)
         {
             if (sceneIndex < _sceneMap.Count)
                 LoadScene(_sceneMap.ElementAt(sceneIndex).Key);
         }
 
-        /// <summary>
-        /// Load a scene. This will set it as the active scene and Awake all of its GameObjects.
-        /// </summary>
-        /// <param name="scene">The scene to load</param>
         public void LoadScene(IScene scene)
         {
             foreach (var s in _sceneMap)
@@ -62,10 +45,7 @@ namespace KokoEngine
                     LoadScene(s.Key);
             }
         }
-
-        /// <summary>
-        /// Starts all GameObjects contained in this scene.
-        /// </summary>
+        
         private void StartScene()
         {
             if (_activeScene != null)

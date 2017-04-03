@@ -25,11 +25,7 @@ namespace KokoEngine
         {
             Name = name;
         }
-
-        /// <summary>
-        /// Adds a new component of type T to this GameObject.
-        /// </summary>
-        /// <typeparam name="T">The type of the component to add</typeparam>
+        
         public T AddComponent<T>() where T : IComponent, new()
         {
             // Instantiate the component
@@ -49,20 +45,12 @@ namespace KokoEngine
 
             return component;
         }
-
-        /// <summary>
-        /// Returns the first component of type T associated with this GameObject.
-        /// If one isn't found, return null.
-        /// </summary>
-        /// <typeparam name="T">The type of the component to get</typeparam>
+        
         public T GetComponent<T>() where T : IComponent
         {
             return (T) _components.FirstOrDefault(c => c is T);
         }
-
-        /// <summary>
-        /// Returns all the components associated with this GameObject.
-        /// </summary>
+        
         public List<IComponent> GetComponents() => _components;
     }
 }

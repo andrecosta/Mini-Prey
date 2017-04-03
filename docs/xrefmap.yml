@@ -2052,18 +2052,6 @@ references:
   commentId: Overload:KokoEngine.IState.Agent
   fullName: KokoEngine.IState.Agent
   nameWithType: IState.Agent
-- uid: KokoEngine.IState.FixedUpdateState
-  name: FixedUpdateState()
-  href: api/KokoEngine.IState.html#KokoEngine_IState_FixedUpdateState
-  commentId: M:KokoEngine.IState.FixedUpdateState
-  fullName: KokoEngine.IState.FixedUpdateState()
-  nameWithType: IState.FixedUpdateState()
-- uid: KokoEngine.IState.FixedUpdateState*
-  name: FixedUpdateState
-  href: api/KokoEngine.IState.html#KokoEngine_IState_FixedUpdateState_
-  commentId: Overload:KokoEngine.IState.FixedUpdateState
-  fullName: KokoEngine.IState.FixedUpdateState
-  nameWithType: IState.FixedUpdateState
 - uid: KokoEngine.IState.FSM
   name: FSM
   href: api/KokoEngine.IState.html#KokoEngine_IState_FSM

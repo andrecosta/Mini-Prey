@@ -72,7 +72,7 @@
               
               <h1 id="KokoEngine_IComponent" data-uid="KokoEngine.IComponent">Interface IComponent
               </h1>
-              <div class="markdown level0 summary"><p>Interface that defines a component which can be added to a GameObject</p>
+              <div class="markdown level0 summary"><p>Defines a component which can be added to a GameObject.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritedMembers">
@@ -96,7 +96,7 @@
               
               <a id="KokoEngine_IComponent_GameObject_" data-uid="KokoEngine.IComponent.GameObject*"></a>
               <h4 id="KokoEngine_IComponent_GameObject" data-uid="KokoEngine.IComponent.GameObject">GameObject</h4>
-              <div class="markdown level1 summary"><p>The GameObject to with this component belongs to</p>
+              <div class="markdown level1 summary"><p>The GameObject to which this component is attached.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -122,7 +122,8 @@
               
               <a id="KokoEngine_IComponent_Transform_" data-uid="KokoEngine.IComponent.Transform*"></a>
               <h4 id="KokoEngine_IComponent_Transform" data-uid="KokoEngine.IComponent.Transform">Transform</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>The transform of the GameObject to which this component is attached.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -149,7 +150,8 @@
               
               <a id="KokoEngine_IComponent_GetComponent_" data-uid="KokoEngine.IComponent.GetComponent*"></a>
               <h4 id="KokoEngine_IComponent_GetComponent__1" data-uid="KokoEngine.IComponent.GetComponent``1">GetComponent&lt;T&gt;()</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Proxy method which calls the <a class="xref" href="KokoEngine.IGameObject.html#KokoEngine_IGameObject_GetComponent__1">GetComponent&lt;T&gt;()</a> of the GameObject to which this component is attached.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -166,7 +168,8 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td></td>
+                    <td><p>The component.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -181,7 +184,8 @@
                 <tbody>
                   <tr>
                     <td><span class="parametername">T</span></td>
-                    <td></td>
+                    <td><p>The type of the component to get.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
@@ -189,7 +193,8 @@
               
               <a id="KokoEngine_IComponent_GetComponents_" data-uid="KokoEngine.IComponent.GetComponents*"></a>
               <h4 id="KokoEngine_IComponent_GetComponents" data-uid="KokoEngine.IComponent.GetComponents">GetComponents()</h4>
-              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 summary"><p>Proxy method which calls the <a class="xref" href="KokoEngine.IGameObject.html#KokoEngine_IGameObject_GetComponents">GetComponents()</a> of the GameObject to which this component is attached.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
@@ -206,7 +211,8 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="KokoEngine.IComponent.html">IComponent</a>&gt;</td>
-                    <td></td>
+                    <td><p>The components attached to the GameObject.</p>
+</td>
                   </tr>
                 </tbody>
               </table>
