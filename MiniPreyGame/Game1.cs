@@ -24,6 +24,9 @@ namespace MiniPreyGame
         private readonly ISceneManager _sceneManager;
         private readonly IAssetManager _assetManager;
 
+        private IGameObject _waypointsController;
+
+
         public Game1(ISceneManager sceneManager, IAssetManager assetManager)
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -153,6 +156,46 @@ namespace MiniPreyGame
                 Debug.Track(boid);
             }
 
+            _waypointsController = new GameObject();
+            var wc = _waypointsController.AddComponent<WaypointsController>();
+            wc.player = player;
+            levelScene.AddGameObject(_waypointsController);
+
+            // Create 25 waypoints
+            for (int i = 0; i < 25; i++)
+            {
+                // Create the waypoint GameObject
+                var waypoint = new GameObject();
+
+                // Add some components to the boid GameObject
+                var sr = waypoint.AddComponent<SpriteRenderer>();
+                var a = waypoint.AddComponent<Animator>();
+                var au = waypoint.AddComponent<AudioSource>();
+                var w = waypoint.AddComponent<Waypoint>();
+
+                // Place the boid GameObject on a random location on the screen
+                waypoint.Transform.Position = new Vector3(
+                    r.Next(0, GraphicsDevice.Viewport.Bounds.Width),
+                    r.Next(0, GraphicsDevice.Viewport.Bounds.Height));
+
+                // Create sprites based on the boid textures
+                var waypointSprite = new Sprite(waypointTexture);
+                sr.sprite = waypointSprite;
+
+                // Create animation clips based on the created sprites, with different number of frames
+                var waypointAnimationClip = new AnimationClip(waypointSprite, 6);
+
+                // Add the created animations to the Animator component
+                a.AddAnimation("waypoint", waypointAnimationClip);
+                a.Play("waypoint", 0.1f);
+
+                // Add the waypoint to the controller
+                wc.AddWaypoint(w);
+                
+                // Add the boid GameObject to the scene
+                levelScene.AddGameObject(waypoint);
+            }
+
             // Load the scene
             _sceneManager.LoadScene(levelScene);
         }
@@ -250,6 +293,29 @@ namespace MiniPreyGame
             GraphicsDevice.Clear(new Microsoft.Xna.Framework.Color(29, 29, 29));
             _spriteBatch.Begin();
 
+            // Draw graph edges
+            List<GraphEdge> edges = _waypointsController.GetComponent<WaypointsController>().graph.edges;
+            for (int i = 0; i < edges.Count; i++)
+            {
+                GraphEdge e = edges[i];
+                Waypoint t1 = e.from as Waypoint;
+                Waypoint t2 = e.to as Waypoint;
+                DrawLine(new Vector2(t1.Transform.Position.X, t1.Transform.Position.Y),
+                    new Vector2(t2.Transform.Position.X, t2.Transform.Position.Y), Microsoft.Xna.Framework.Color.DimGray);
+            }
+
+            // Draw shortest path
+            List<IGraphNode> spEdges = _waypointsController.GetComponent<WaypointsController>().shortestPath;
+            for (int i = 0; i < spEdges.Count-1; i++)
+            {
+                IGraphNode n = spEdges[i];
+                Waypoint t1 = n as Waypoint;
+                Waypoint t2 = spEdges[i+1] as Waypoint;
+
+                DrawLine(new Vector2(t1.Transform.Position.X, t1.Transform.Position.Y),
+                    new Vector2(t2.Transform.Position.X, t2.Transform.Position.Y), Microsoft.Xna.Framework.Color.Red, 5);
+            }
+
             // Draw the active scene's game objects which contain renderable components
             foreach (var rootGameObject in _sceneManager.GetActiveScene().GetRootGameObjects())
                 DrawGameObjects(rootGameObject, _spriteBatch);
@@ -288,6 +354,17 @@ namespace MiniPreyGame
             // Recursive call for all children GameObjects
             foreach (var child in rootGameObject.Transform.Children)
                 DrawGameObjects(child.GameObject, sb);
+        }
+
+        void DrawLine(Vector2 start, Vector2 end, Microsoft.Xna.Framework.Color color, int size = 1)
+        {
+            Vector2 edge = end - start;
+            float angle = (float)Math.Atan2(edge.Y, edge.X);
+
+            var t = _assetManager.GetAsset<Texture2D>("dummy").RawData as Microsoft.Xna.Framework.Graphics.Texture2D;
+
+            _spriteBatch.Draw(t, new Rectangle((int) start.X, (int) start.Y, (int) edge.Length(), size), null,
+                color, angle, new Vector2(0, 0), SpriteEffects.None, 0);
         }
     }
 }

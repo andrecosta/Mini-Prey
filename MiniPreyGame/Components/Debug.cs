@@ -1,6 +1,5 @@
 ﻿using InputManager;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -19,7 +18,7 @@ namespace MiniPreyGame
     // +==============+
     //
     // Press F12 to toggle the in-game debug console
-    // Press F11 to toggle player test mode (pauses enemies and gives immunity)
+    // Press F11 to toggle vector position labels
     //
     // To output some message to the console use:
     //   Debug.Log(<message>)
@@ -28,7 +27,7 @@ namespace MiniPreyGame
     class Debug : DrawableGameComponent
     {
         public static bool IsOpen { get; set; }
-        public static bool PlayerTestMode { get; set; }
+        public static bool ShowVectorPositionLabels { get; set; } = true;
         private static List<string> _messageLog;
         private static List<IGameObject> _tracking;
         private SpriteBatch spriteBatch;
@@ -74,7 +73,7 @@ namespace MiniPreyGame
 
             // F11 Toggle
             if (Input.IsKeyPressed(Keys.F11))
-                PlayerTestMode = !PlayerTestMode;
+                ShowVectorPositionLabels = !ShowVectorPositionLabels;
 
             _fps = (int)Math.Round(1 / time);
 
@@ -97,10 +96,10 @@ namespace MiniPreyGame
                     new Vector2(_consoleBounds.Right - 70, _consoleBounds.Top + 10), Color.Red, 0,
                     Vector2.Zero, 1, SpriteEffects.None, 0);
 
-                // Draw playerTestMode tag
-                spriteBatch.DrawString(_spriteFont, "[F11] Player Test Mode: " + (PlayerTestMode ? "ON" : "OFF"),
+                // Draw toggle position labels tag
+                spriteBatch.DrawString(_spriteFont, "[F11] Vector Position Labels: " + (ShowVectorPositionLabels ? "ON" : "OFF"),
                     new Vector2(_consoleBounds.Center.X - 150, _consoleBounds.Top + 10),
-                    PlayerTestMode ? Color.LimeGreen : Color.Red, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
+                    ShowVectorPositionLabels ? Color.LimeGreen : Color.Red, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
 
                 // Draw log messages
                 for (int i = 0; i < _messageLog.Count; i++)
@@ -134,26 +133,27 @@ namespace MiniPreyGame
                     Color color = new Color(hash[0], hash[1], hash[2]);
 
                     // Draw text and background highlight
-                    spriteBatch.Draw(_consoleWindow, new Rectangle((int)textPos.X, (int)textPos.Y,
-                        (int)_spriteFont.MeasureString(text).X, (int)_spriteFont.MeasureString(text).Y),
-                        null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.0001f);
-                    spriteBatch.DrawString(_spriteFont, text, textPos, color, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
-
-                    // Change rectangle color if object is colliding with player
-                    //if (_tracking[i].CollidesWith(Player.CurrentPlayer)) color = Color.Red;
+                    if (ShowVectorPositionLabels)
+                    {
+                        spriteBatch.Draw(_consoleWindow, new Rectangle((int)textPos.X, (int)textPos.Y,
+                            (int)_spriteFont.MeasureString(text).X, (int)_spriteFont.MeasureString(text).Y),
+                            null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.0001f);
+                        spriteBatch.DrawString(_spriteFont, text, textPos, color, 0, Vector2.Zero, 1, SpriteEffects.None, 0);
+                    }
 
                     // Draw bounding box of object
                     var srr = _tracking[i].GetComponent<SpriteRenderer>();
                     DrawBoundingBox(spriteBatch,
-                        new Rectangle((int) ((int) srr.Transform.Position.X-srr.sprite.Texture.Width/2f*srr.Transform.Scale.X), (int) ((int) srr.Transform.Position.Y-srr.sprite.Texture.Height/2f*srr.Transform.Scale.Y),
-                            (int) (srr.sprite.Texture.Width * srr.Transform.Scale.X),
-                            (int) (srr.sprite.Texture.Height * srr.Transform.Scale.Y)), 1, color);
+                        new Rectangle(
+                            (int)
+                            ((int) srr.Transform.Position.X - srr.sprite.SourceRect.Width / 2f * srr.Transform.Scale.X),
+                            (int)
+                            ((int) srr.Transform.Position.Y - srr.sprite.SourceRect.Height / 2f * srr.Transform.Scale.Y),
+                            (int) (srr.sprite.SourceRect.Width * srr.Transform.Scale.X),
+                            (int) (srr.sprite.SourceRect.Height * srr.Transform.Scale.Y)), 1, color);
 
                     // Draw vector line
                     DrawVector(spriteBatch, _tracking[i], 1, Color.Gold);
-
-                    // Draw parabolic trajectory
-                    //DrawTrajectory(spriteBatch, _tracking[i], 1, Color.White, (float)gameTime.ElapsedGameTime.TotalSeconds);
                 }
             }
             spriteBatch.End();
@@ -200,29 +200,16 @@ namespace MiniPreyGame
 
             // Draw vector line and component values
             spriteBatch.Draw(_pixel, r, null, borderColor, angle, Vector2.Zero, SpriteEffects.None, 0.0002f);
-            spriteBatch.DrawString(_spriteFont, "X:" + (int)vv.X, new Vector2(textSize.X + 2, end.Y - 12), Color.White, 0, Vector2.Zero, 1f, SpriteEffects.None, 0);
-            spriteBatch.DrawString(_spriteFont, "Y:" + (int)vv.Y, new Vector2(textSize.X + 2, end.Y - 2), Color.White, 0, Vector2.Zero, 1f, SpriteEffects.None, 0);
 
-            // Draw text background
-            spriteBatch.Draw(_consoleWindow, textSize, null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.0001f);
-        }
-
-        /*private void DrawTrajectory(SpriteBatch spriteBatch, Sprite sprite, int borderSize, Color borderColor, float time)
-        {
-            if (sprite is Weapon && sprite.Velocity.Length() > 0)
+            if (ShowVectorPositionLabels)
             {
-                Vector2 initialPosition = ((Weapon)sprite).ThrowInitialPosition;
-                Vector2 position = sprite.Position;
-                Vector2 velocity = sprite.Velocity;
-                while (position.Y <= initialPosition.Y)
-                {
-                    velocity.Y += 9.8f * 50 * time;
-                    position += velocity * time;
-                    Rectangle r = new Rectangle((int)position.X, (int)position.Y, 2, 2);
-                    spriteBatch.Draw(_pixel, r, null, borderColor, 0, Vector2.Zero, SpriteEffects.None, 0);
-                }
+                spriteBatch.DrawString(_spriteFont, "X:" + (int)vv.X, new Vector2(textSize.X + 2, end.Y - 12), Color.White, 0, Vector2.Zero, 1f, SpriteEffects.None, 0);
+                spriteBatch.DrawString(_spriteFont, "Y:" + (int)vv.Y, new Vector2(textSize.X + 2, end.Y - 2), Color.White, 0, Vector2.Zero, 1f, SpriteEffects.None, 0);
+
+                // Draw text background
+                spriteBatch.Draw(_consoleWindow, textSize, null, Color.White, 0, Vector2.Zero, SpriteEffects.None, 0.0001f);
             }
-        }*/
+        }
 
         /// <summary>
         /// 

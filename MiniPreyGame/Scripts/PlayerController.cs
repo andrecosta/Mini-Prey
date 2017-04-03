@@ -32,8 +32,6 @@ namespace MiniPreyGame
                 dir += Vector3.Right;
 
             _rb.AddForce(dir * Speed);
-
-            
         }
     }
 }

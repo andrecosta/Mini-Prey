@@ -45,6 +45,9 @@
     <Compile Include="Components\Debug.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Scripts\Boid.cs" />
+    <Compile Include="Scripts\WaypointEuclideanHeuristicCAlculator.cs" />
+    <Compile Include="Scripts\WaypointsController.cs" />
+    <Compile Include="Scripts\Waypoint.cs" />
     <Compile Include="Scripts\PlayerController.cs" />
     <Compile Include="Components\InputManager.cs" />
     <Compile Include="Program.cs" />

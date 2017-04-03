@@ -96,6 +96,12 @@
     <Compile Include="src\Core\Structs\Vector3.cs" />
     <Compile Include="src\Entities\Components\Behaviours\FSM\State.cs" />
     <Compile Include="src\Entities\Components\Behaviours\Steering Behaviours\SteeringBehaviours.cs" />
+    <Compile Include="src\Pathfinding\AStarGraphSearch.cs" />
+    <Compile Include="src\Pathfinding\Graph.cs" />
+    <Compile Include="src\Pathfinding\GraphEdge.cs" />
+    <Compile Include="src\Pathfinding\GraphNodePriorityQueue.cs" />
+    <Compile Include="src\Pathfinding\IGraphNode.cs" />
+    <Compile Include="src\Pathfinding\IHeuristicCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="api\index.md" />

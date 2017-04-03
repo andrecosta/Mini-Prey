@@ -29,7 +29,7 @@ namespace MiniPreyGame
 
             // Play seek animation
             _boid.Animator.Play("seek");
-            _boid.Transform.Scale = Vector3.One * 0.05f;
+            _boid.Transform.Scale = Vector3.One * 0.03f;
 
             // Play seek sound
             _boid.AudioSource.Play(_boid.SeekSound);

@@ -28,8 +28,8 @@ namespace MiniPreyGame
             _boid.SpriteRenderer.color = Color.White;
 
             // Play flee animation
-            _boid.Animator.Play("flee", 0.1f);
-            _boid.Transform.Scale = Vector3.One;
+            _boid.Animator.Play("flee", 0.15f);
+            _boid.Transform.Scale = Vector3.One*0.7f;
 
             // Play flee sound
             _boid.AudioSource.Play(_boid.FleeSound);
