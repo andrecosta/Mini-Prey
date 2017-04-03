@@ -1,7 +1,7 @@
 ﻿namespace KokoEngine
 {
     /// <summary>
-    /// Renders a sprite.
+    /// Provides sprite rendering capability to a GameObject.
     /// </summary>
     public interface ISpriteRenderer : IComponent
     {

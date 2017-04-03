@@ -3,7 +3,7 @@
 namespace KokoEngine
 {
     /// <summary>
-    /// Defines a component which can be added to a GameObject.
+    /// Defines a component which can be attached to a GameObject.
     /// </summary>
     public interface IComponent : IEntity
     {
