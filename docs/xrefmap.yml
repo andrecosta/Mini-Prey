@@ -187,6 +187,18 @@ references:
   commentId: T:KokoEngine.Asset
   fullName: KokoEngine.Asset
   nameWithType: Asset
+- uid: KokoEngine.Asset.Filename
+  name: Filename
+  href: api/KokoEngine.Asset.html#KokoEngine_Asset_Filename
+  commentId: P:KokoEngine.Asset.Filename
+  fullName: KokoEngine.Asset.Filename
+  nameWithType: Asset.Filename
+- uid: KokoEngine.Asset.Filename*
+  name: Filename
+  href: api/KokoEngine.Asset.html#KokoEngine_Asset_Filename_
+  commentId: Overload:KokoEngine.Asset.Filename
+  fullName: KokoEngine.Asset.Filename
+  nameWithType: Asset.Filename
 - uid: KokoEngine.Asset.RawData
   name: RawData
   href: api/KokoEngine.Asset.html#KokoEngine_Asset_RawData
@@ -199,27 +211,36 @@ references:
   commentId: Overload:KokoEngine.Asset.RawData
   fullName: KokoEngine.Asset.RawData
   nameWithType: Asset.RawData
+- uid: KokoEngine.Asset.SetData(System.Object)
+  name: SetData(Object)
+  href: api/KokoEngine.Asset.html#KokoEngine_Asset_SetData_System_Object_
+  commentId: M:KokoEngine.Asset.SetData(System.Object)
+  fullName: KokoEngine.Asset.SetData(System.Object)
+  nameWithType: Asset.SetData(Object)
+- uid: KokoEngine.Asset.SetData*
+  name: SetData
+  href: api/KokoEngine.Asset.html#KokoEngine_Asset_SetData_
+  commentId: Overload:KokoEngine.Asset.SetData
+  fullName: KokoEngine.Asset.SetData
+  nameWithType: Asset.SetData
 - uid: KokoEngine.AssetManager
   name: AssetManager
   href: api/KokoEngine.AssetManager.html
   commentId: T:KokoEngine.AssetManager
   fullName: KokoEngine.AssetManager
   nameWithType: AssetManager
-- uid: KokoEngine.AssetManager.AddAsset*
-  name: AddAsset
-  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_AddAsset_
-  commentId: Overload:KokoEngine.AssetManager.AddAsset
-  fullName: KokoEngine.AssetManager.AddAsset
-  nameWithType: AssetManager.AddAsset
-- uid: KokoEngine.AssetManager.AddAsset``1(System.String,``0)
-  name: AddAsset<T>(String, T)
-  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_AddAsset__1_System_String___0_
-  commentId: M:KokoEngine.AssetManager.AddAsset``1(System.String,``0)
-  name.vb: AddAsset(Of T)(String, T)
-  fullName: KokoEngine.AssetManager.AddAsset<T>(System.String, T)
-  fullName.vb: KokoEngine.AssetManager.AddAsset(Of T)(System.String, T)
-  nameWithType: AssetManager.AddAsset<T>(String, T)
-  nameWithType.vb: AssetManager.AddAsset(Of T)(String, T)
+- uid: KokoEngine.AssetManager.AssetMap
+  name: AssetMap
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_AssetMap
+  commentId: P:KokoEngine.AssetManager.AssetMap
+  fullName: KokoEngine.AssetManager.AssetMap
+  nameWithType: AssetManager.AssetMap
+- uid: KokoEngine.AssetManager.AssetMap*
+  name: AssetMap
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_AssetMap_
+  commentId: Overload:KokoEngine.AssetManager.AssetMap
+  fullName: KokoEngine.AssetManager.AssetMap
+  nameWithType: AssetManager.AssetMap
 - uid: KokoEngine.AssetManager.GetAsset*
   name: GetAsset
   href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_GetAsset_
@@ -235,6 +256,30 @@ references:
   fullName.vb: KokoEngine.AssetManager.GetAsset(Of T)(System.String)
   nameWithType: AssetManager.GetAsset<T>(String)
   nameWithType.vb: AssetManager.GetAsset(Of T)(String)
+- uid: KokoEngine.AssetManager.LoadAsset*
+  name: LoadAsset
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadAsset_
+  commentId: Overload:KokoEngine.AssetManager.LoadAsset
+  fullName: KokoEngine.AssetManager.LoadAsset
+  nameWithType: AssetManager.LoadAsset
+- uid: KokoEngine.AssetManager.LoadAsset``1(System.String)
+  name: LoadAsset<T>(String)
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadAsset__1_System_String_
+  commentId: M:KokoEngine.AssetManager.LoadAsset``1(System.String)
+  name.vb: LoadAsset(Of T)(String)
+  fullName: KokoEngine.AssetManager.LoadAsset<T>(System.String)
+  fullName.vb: KokoEngine.AssetManager.LoadAsset(Of T)(System.String)
+  nameWithType: AssetManager.LoadAsset<T>(String)
+  nameWithType.vb: AssetManager.LoadAsset(Of T)(String)
+- uid: KokoEngine.AssetManager.LoadAsset``1(System.String,``0)
+  name: LoadAsset<T>(String, T)
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadAsset__1_System_String___0_
+  commentId: M:KokoEngine.AssetManager.LoadAsset``1(System.String,``0)
+  name.vb: LoadAsset(Of T)(String, T)
+  fullName: KokoEngine.AssetManager.LoadAsset<T>(System.String, T)
+  fullName.vb: KokoEngine.AssetManager.LoadAsset(Of T)(System.String, T)
+  nameWithType: AssetManager.LoadAsset<T>(String, T)
+  nameWithType.vb: AssetManager.LoadAsset(Of T)(String, T)
 - uid: KokoEngine.AStarGraphSearch
   name: AStarGraphSearch
   href: api/KokoEngine.AStarGraphSearch.html
@@ -277,18 +322,30 @@ references:
   commentId: T:KokoEngine.AudioClip
   fullName: KokoEngine.AudioClip
   nameWithType: AudioClip
-- uid: KokoEngine.AudioClip.#ctor(System.Object)
-  name: AudioClip(Object)
-  href: api/KokoEngine.AudioClip.html#KokoEngine_AudioClip__ctor_System_Object_
-  commentId: M:KokoEngine.AudioClip.#ctor(System.Object)
-  fullName: KokoEngine.AudioClip.AudioClip(System.Object)
-  nameWithType: AudioClip.AudioClip(Object)
-- uid: KokoEngine.AudioClip.#ctor*
-  name: AudioClip
-  href: api/KokoEngine.AudioClip.html#KokoEngine_AudioClip__ctor_
-  commentId: Overload:KokoEngine.AudioClip.#ctor
-  fullName: KokoEngine.AudioClip.AudioClip
-  nameWithType: AudioClip.AudioClip
+- uid: KokoEngine.AudioClip.Duration
+  name: Duration
+  href: api/KokoEngine.AudioClip.html#KokoEngine_AudioClip_Duration
+  commentId: P:KokoEngine.AudioClip.Duration
+  fullName: KokoEngine.AudioClip.Duration
+  nameWithType: AudioClip.Duration
+- uid: KokoEngine.AudioClip.Duration*
+  name: Duration
+  href: api/KokoEngine.AudioClip.html#KokoEngine_AudioClip_Duration_
+  commentId: Overload:KokoEngine.AudioClip.Duration
+  fullName: KokoEngine.AudioClip.Duration
+  nameWithType: AudioClip.Duration
+- uid: KokoEngine.AudioClip.SetData(System.Object,System.TimeSpan)
+  name: SetData(Object, TimeSpan)
+  href: api/KokoEngine.AudioClip.html#KokoEngine_AudioClip_SetData_System_Object_System_TimeSpan_
+  commentId: M:KokoEngine.AudioClip.SetData(System.Object,System.TimeSpan)
+  fullName: KokoEngine.AudioClip.SetData(System.Object, System.TimeSpan)
+  nameWithType: AudioClip.SetData(Object, TimeSpan)
+- uid: KokoEngine.AudioClip.SetData*
+  name: SetData
+  href: api/KokoEngine.AudioClip.html#KokoEngine_AudioClip_SetData_
+  commentId: Overload:KokoEngine.AudioClip.SetData
+  fullName: KokoEngine.AudioClip.SetData
+  nameWithType: AudioClip.SetData
 - uid: KokoEngine.AudioSource
   name: AudioSource
   href: api/KokoEngine.AudioSource.html
@@ -774,36 +831,54 @@ references:
   commentId: Overload:KokoEngine.Component.Update
   fullName: KokoEngine.Component.Update
   nameWithType: Component.Update
+- uid: KokoEngine.Debug
+  name: Debug
+  href: api/KokoEngine.Debug.html
+  commentId: T:KokoEngine.Debug
+  fullName: KokoEngine.Debug
+  nameWithType: Debug
+- uid: KokoEngine.Debug.Log(System.String)
+  name: Log(String)
+  href: api/KokoEngine.Debug.html#KokoEngine_Debug_Log_System_String_
+  commentId: M:KokoEngine.Debug.Log(System.String)
+  fullName: KokoEngine.Debug.Log(System.String)
+  nameWithType: Debug.Log(String)
+- uid: KokoEngine.Debug.Log*
+  name: Log
+  href: api/KokoEngine.Debug.html#KokoEngine_Debug_Log_
+  commentId: Overload:KokoEngine.Debug.Log
+  fullName: KokoEngine.Debug.Log
+  nameWithType: Debug.Log
 - uid: KokoEngine.Engine
   name: Engine
   href: api/KokoEngine.Engine.html
   commentId: T:KokoEngine.Engine
   fullName: KokoEngine.Engine
   nameWithType: Engine
-- uid: KokoEngine.Engine.#ctor
-  name: Engine()
-  href: api/KokoEngine.Engine.html#KokoEngine_Engine__ctor
-  commentId: M:KokoEngine.Engine.#ctor
-  fullName: KokoEngine.Engine.Engine()
-  nameWithType: Engine.Engine()
+- uid: KokoEngine.Engine.#ctor(KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.ISceneManager)
+  name: Engine(IAssetManager, IInputManager, ISceneManager)
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine__ctor_KokoEngine_IAssetManager_KokoEngine_IInputManager_KokoEngine_ISceneManager_
+  commentId: M:KokoEngine.Engine.#ctor(KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.ISceneManager)
+  fullName: KokoEngine.Engine.Engine(KokoEngine.IAssetManager, KokoEngine.IInputManager, KokoEngine.ISceneManager)
+  nameWithType: Engine.Engine(IAssetManager, IInputManager, ISceneManager)
 - uid: KokoEngine.Engine.#ctor*
   name: Engine
   href: api/KokoEngine.Engine.html#KokoEngine_Engine__ctor_
   commentId: Overload:KokoEngine.Engine.#ctor
   fullName: KokoEngine.Engine.Engine
   nameWithType: Engine.Engine
-- uid: KokoEngine.Engine.GraphicsFramework
-  name: GraphicsFramework
-  href: api/KokoEngine.Engine.html#KokoEngine_Engine_GraphicsFramework
-  commentId: P:KokoEngine.Engine.GraphicsFramework
-  fullName: KokoEngine.Engine.GraphicsFramework
-  nameWithType: Engine.GraphicsFramework
-- uid: KokoEngine.Engine.GraphicsFramework*
-  name: GraphicsFramework
-  href: api/KokoEngine.Engine.html#KokoEngine_Engine_GraphicsFramework_
-  commentId: Overload:KokoEngine.Engine.GraphicsFramework
-  fullName: KokoEngine.Engine.GraphicsFramework
-  nameWithType: Engine.GraphicsFramework
+- uid: KokoEngine.Engine.AssetManager
+  name: AssetManager
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_AssetManager
+  commentId: P:KokoEngine.Engine.AssetManager
+  fullName: KokoEngine.Engine.AssetManager
+  nameWithType: Engine.AssetManager
+- uid: KokoEngine.Engine.AssetManager*
+  name: AssetManager
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_AssetManager_
+  commentId: Overload:KokoEngine.Engine.AssetManager
+  fullName: KokoEngine.Engine.AssetManager
+  nameWithType: Engine.AssetManager
 - uid: KokoEngine.Engine.GraphicsFrameworks
   name: Engine.GraphicsFrameworks
   href: api/KokoEngine.Engine.GraphicsFrameworks.html
@@ -816,6 +891,54 @@ references:
   commentId: F:KokoEngine.Engine.GraphicsFrameworks.MonoGame
   fullName: KokoEngine.Engine.GraphicsFrameworks.MonoGame
   nameWithType: Engine.GraphicsFrameworks.MonoGame
+- uid: KokoEngine.Engine.Initialize
+  name: Initialize()
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_Initialize
+  commentId: M:KokoEngine.Engine.Initialize
+  fullName: KokoEngine.Engine.Initialize()
+  nameWithType: Engine.Initialize()
+- uid: KokoEngine.Engine.Initialize*
+  name: Initialize
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_Initialize_
+  commentId: Overload:KokoEngine.Engine.Initialize
+  fullName: KokoEngine.Engine.Initialize
+  nameWithType: Engine.Initialize
+- uid: KokoEngine.Engine.InputManager
+  name: InputManager
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_InputManager
+  commentId: P:KokoEngine.Engine.InputManager
+  fullName: KokoEngine.Engine.InputManager
+  nameWithType: Engine.InputManager
+- uid: KokoEngine.Engine.InputManager*
+  name: InputManager
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_InputManager_
+  commentId: Overload:KokoEngine.Engine.InputManager
+  fullName: KokoEngine.Engine.InputManager
+  nameWithType: Engine.InputManager
+- uid: KokoEngine.Engine.SceneManager
+  name: SceneManager
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_SceneManager
+  commentId: P:KokoEngine.Engine.SceneManager
+  fullName: KokoEngine.Engine.SceneManager
+  nameWithType: Engine.SceneManager
+- uid: KokoEngine.Engine.SceneManager*
+  name: SceneManager
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_SceneManager_
+  commentId: Overload:KokoEngine.Engine.SceneManager
+  fullName: KokoEngine.Engine.SceneManager
+  nameWithType: Engine.SceneManager
+- uid: KokoEngine.Engine.Update(System.Single)
+  name: Update(Single)
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_Update_System_Single_
+  commentId: M:KokoEngine.Engine.Update(System.Single)
+  fullName: KokoEngine.Engine.Update(System.Single)
+  nameWithType: Engine.Update(Single)
+- uid: KokoEngine.Engine.Update*
+  name: Update
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_Update_
+  commentId: Overload:KokoEngine.Engine.Update
+  fullName: KokoEngine.Engine.Update
+  nameWithType: Engine.Update
 - uid: KokoEngine.Entity
   name: Entity
   href: api/KokoEngine.Entity.html
@@ -882,6 +1005,12 @@ references:
   commentId: F:KokoEngine.Flee.target
   fullName: KokoEngine.Flee.target
   nameWithType: Flee.target
+- uid: KokoEngine.Font
+  name: Font
+  href: api/KokoEngine.Font.html
+  commentId: T:KokoEngine.Font
+  fullName: KokoEngine.Font
+  nameWithType: Font
 - uid: KokoEngine.FSM
   name: FSM
   href: api/KokoEngine.FSM.html
@@ -1323,6 +1452,18 @@ references:
   commentId: T:KokoEngine.IAsset
   fullName: KokoEngine.IAsset
   nameWithType: IAsset
+- uid: KokoEngine.IAsset.Filename
+  name: Filename
+  href: api/KokoEngine.IAsset.html#KokoEngine_IAsset_Filename
+  commentId: P:KokoEngine.IAsset.Filename
+  fullName: KokoEngine.IAsset.Filename
+  nameWithType: IAsset.Filename
+- uid: KokoEngine.IAsset.Filename*
+  name: Filename
+  href: api/KokoEngine.IAsset.html#KokoEngine_IAsset_Filename_
+  commentId: Overload:KokoEngine.IAsset.Filename
+  fullName: KokoEngine.IAsset.Filename
+  nameWithType: IAsset.Filename
 - uid: KokoEngine.IAsset.RawData
   name: RawData
   href: api/KokoEngine.IAsset.html#KokoEngine_IAsset_RawData
@@ -1341,21 +1482,18 @@ references:
   commentId: T:KokoEngine.IAssetManager
   fullName: KokoEngine.IAssetManager
   nameWithType: IAssetManager
-- uid: KokoEngine.IAssetManager.AddAsset*
-  name: AddAsset
-  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_AddAsset_
-  commentId: Overload:KokoEngine.IAssetManager.AddAsset
-  fullName: KokoEngine.IAssetManager.AddAsset
-  nameWithType: IAssetManager.AddAsset
-- uid: KokoEngine.IAssetManager.AddAsset``1(System.String,``0)
-  name: AddAsset<T>(String, T)
-  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_AddAsset__1_System_String___0_
-  commentId: M:KokoEngine.IAssetManager.AddAsset``1(System.String,``0)
-  name.vb: AddAsset(Of T)(String, T)
-  fullName: KokoEngine.IAssetManager.AddAsset<T>(System.String, T)
-  fullName.vb: KokoEngine.IAssetManager.AddAsset(Of T)(System.String, T)
-  nameWithType: IAssetManager.AddAsset<T>(String, T)
-  nameWithType.vb: IAssetManager.AddAsset(Of T)(String, T)
+- uid: KokoEngine.IAssetManager.AssetMap
+  name: AssetMap
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_AssetMap
+  commentId: P:KokoEngine.IAssetManager.AssetMap
+  fullName: KokoEngine.IAssetManager.AssetMap
+  nameWithType: IAssetManager.AssetMap
+- uid: KokoEngine.IAssetManager.AssetMap*
+  name: AssetMap
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_AssetMap_
+  commentId: Overload:KokoEngine.IAssetManager.AssetMap
+  fullName: KokoEngine.IAssetManager.AssetMap
+  nameWithType: IAssetManager.AssetMap
 - uid: KokoEngine.IAssetManager.GetAsset*
   name: GetAsset
   href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_GetAsset_
@@ -1371,6 +1509,30 @@ references:
   fullName.vb: KokoEngine.IAssetManager.GetAsset(Of T)(System.String)
   nameWithType: IAssetManager.GetAsset<T>(String)
   nameWithType.vb: IAssetManager.GetAsset(Of T)(String)
+- uid: KokoEngine.IAssetManager.LoadAsset*
+  name: LoadAsset
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadAsset_
+  commentId: Overload:KokoEngine.IAssetManager.LoadAsset
+  fullName: KokoEngine.IAssetManager.LoadAsset
+  nameWithType: IAssetManager.LoadAsset
+- uid: KokoEngine.IAssetManager.LoadAsset``1(System.String)
+  name: LoadAsset<T>(String)
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadAsset__1_System_String_
+  commentId: M:KokoEngine.IAssetManager.LoadAsset``1(System.String)
+  name.vb: LoadAsset(Of T)(String)
+  fullName: KokoEngine.IAssetManager.LoadAsset<T>(System.String)
+  fullName.vb: KokoEngine.IAssetManager.LoadAsset(Of T)(System.String)
+  nameWithType: IAssetManager.LoadAsset<T>(String)
+  nameWithType.vb: IAssetManager.LoadAsset(Of T)(String)
+- uid: KokoEngine.IAssetManager.LoadAsset``1(System.String,``0)
+  name: LoadAsset<T>(String, T)
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadAsset__1_System_String___0_
+  commentId: M:KokoEngine.IAssetManager.LoadAsset``1(System.String,``0)
+  name.vb: LoadAsset(Of T)(String, T)
+  fullName: KokoEngine.IAssetManager.LoadAsset<T>(System.String, T)
+  fullName.vb: KokoEngine.IAssetManager.LoadAsset(Of T)(System.String, T)
+  nameWithType: IAssetManager.LoadAsset<T>(String, T)
+  nameWithType.vb: IAssetManager.LoadAsset(Of T)(String, T)
 - uid: KokoEngine.IAudioSource
   name: IAudioSource
   href: api/KokoEngine.IAudioSource.html
@@ -1788,6 +1950,501 @@ references:
   commentId: Overload:KokoEngine.IHeuristicCalculator.Calculate
   fullName: KokoEngine.IHeuristicCalculator.Calculate
   nameWithType: IHeuristicCalculator.Calculate
+- uid: KokoEngine.IInputManager
+  name: IInputManager
+  href: api/KokoEngine.IInputManager.html
+  commentId: T:KokoEngine.IInputManager
+  fullName: KokoEngine.IInputManager
+  nameWithType: IInputManager
+- uid: KokoEngine.IInputManager.ActionBindings
+  name: ActionBindings
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_ActionBindings
+  commentId: P:KokoEngine.IInputManager.ActionBindings
+  fullName: KokoEngine.IInputManager.ActionBindings
+  nameWithType: IInputManager.ActionBindings
+- uid: KokoEngine.IInputManager.ActionBindings*
+  name: ActionBindings
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_ActionBindings_
+  commentId: Overload:KokoEngine.IInputManager.ActionBindings
+  fullName: KokoEngine.IInputManager.ActionBindings
+  nameWithType: IInputManager.ActionBindings
+- uid: KokoEngine.IInputManager.AddActionBinding(System.String,System.String[])
+  name: AddActionBinding(String, String[])
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_AddActionBinding_System_String_System_String___
+  commentId: M:KokoEngine.IInputManager.AddActionBinding(System.String,System.String[])
+  name.vb: AddActionBinding(String, String())
+  fullName: KokoEngine.IInputManager.AddActionBinding(System.String, System.String[])
+  fullName.vb: KokoEngine.IInputManager.AddActionBinding(System.String, System.String())
+  nameWithType: IInputManager.AddActionBinding(String, String[])
+  nameWithType.vb: IInputManager.AddActionBinding(String, String())
+- uid: KokoEngine.IInputManager.AddActionBinding*
+  name: AddActionBinding
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_AddActionBinding_
+  commentId: Overload:KokoEngine.IInputManager.AddActionBinding
+  fullName: KokoEngine.IInputManager.AddActionBinding
+  nameWithType: IInputManager.AddActionBinding
+- uid: KokoEngine.IInputManager.AddAxisBinding(System.String,System.String,System.String,System.Single,System.Single)
+  name: AddAxisBinding(String, String, String, Single, Single)
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_AddAxisBinding_System_String_System_String_System_String_System_Single_System_Single_
+  commentId: M:KokoEngine.IInputManager.AddAxisBinding(System.String,System.String,System.String,System.Single,System.Single)
+  fullName: KokoEngine.IInputManager.AddAxisBinding(System.String, System.String, System.String, System.Single, System.Single)
+  nameWithType: IInputManager.AddAxisBinding(String, String, String, Single, Single)
+- uid: KokoEngine.IInputManager.AddAxisBinding*
+  name: AddAxisBinding
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_AddAxisBinding_
+  commentId: Overload:KokoEngine.IInputManager.AddAxisBinding
+  fullName: KokoEngine.IInputManager.AddAxisBinding
+  nameWithType: IInputManager.AddAxisBinding
+- uid: KokoEngine.IInputManager.GetAction(System.String)
+  name: GetAction(String)
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetAction_System_String_
+  commentId: M:KokoEngine.IInputManager.GetAction(System.String)
+  fullName: KokoEngine.IInputManager.GetAction(System.String)
+  nameWithType: IInputManager.GetAction(String)
+- uid: KokoEngine.IInputManager.GetAction*
+  name: GetAction
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetAction_
+  commentId: Overload:KokoEngine.IInputManager.GetAction
+  fullName: KokoEngine.IInputManager.GetAction
+  nameWithType: IInputManager.GetAction
+- uid: KokoEngine.IInputManager.GetActionDown(System.String)
+  name: GetActionDown(String)
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetActionDown_System_String_
+  commentId: M:KokoEngine.IInputManager.GetActionDown(System.String)
+  fullName: KokoEngine.IInputManager.GetActionDown(System.String)
+  nameWithType: IInputManager.GetActionDown(String)
+- uid: KokoEngine.IInputManager.GetActionDown*
+  name: GetActionDown
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetActionDown_
+  commentId: Overload:KokoEngine.IInputManager.GetActionDown
+  fullName: KokoEngine.IInputManager.GetActionDown
+  nameWithType: IInputManager.GetActionDown
+- uid: KokoEngine.IInputManager.GetActionUp(System.String)
+  name: GetActionUp(String)
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetActionUp_System_String_
+  commentId: M:KokoEngine.IInputManager.GetActionUp(System.String)
+  fullName: KokoEngine.IInputManager.GetActionUp(System.String)
+  nameWithType: IInputManager.GetActionUp(String)
+- uid: KokoEngine.IInputManager.GetActionUp*
+  name: GetActionUp
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetActionUp_
+  commentId: Overload:KokoEngine.IInputManager.GetActionUp
+  fullName: KokoEngine.IInputManager.GetActionUp
+  nameWithType: IInputManager.GetActionUp
+- uid: KokoEngine.IInputManager.GetAxis(System.String)
+  name: GetAxis(String)
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetAxis_System_String_
+  commentId: M:KokoEngine.IInputManager.GetAxis(System.String)
+  fullName: KokoEngine.IInputManager.GetAxis(System.String)
+  nameWithType: IInputManager.GetAxis(String)
+- uid: KokoEngine.IInputManager.GetAxis*
+  name: GetAxis
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetAxis_
+  commentId: Overload:KokoEngine.IInputManager.GetAxis
+  fullName: KokoEngine.IInputManager.GetAxis
+  nameWithType: IInputManager.GetAxis
+- uid: KokoEngine.IInputManager.MousePosition
+  name: MousePosition
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_MousePosition
+  commentId: P:KokoEngine.IInputManager.MousePosition
+  fullName: KokoEngine.IInputManager.MousePosition
+  nameWithType: IInputManager.MousePosition
+- uid: KokoEngine.IInputManager.MousePosition*
+  name: MousePosition
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_MousePosition_
+  commentId: Overload:KokoEngine.IInputManager.MousePosition
+  fullName: KokoEngine.IInputManager.MousePosition
+  nameWithType: IInputManager.MousePosition
+- uid: KokoEngine.IInputManager.TrackedKeys
+  name: TrackedKeys
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_TrackedKeys
+  commentId: P:KokoEngine.IInputManager.TrackedKeys
+  fullName: KokoEngine.IInputManager.TrackedKeys
+  nameWithType: IInputManager.TrackedKeys
+- uid: KokoEngine.IInputManager.TrackedKeys*
+  name: TrackedKeys
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_TrackedKeys_
+  commentId: Overload:KokoEngine.IInputManager.TrackedKeys
+  fullName: KokoEngine.IInputManager.TrackedKeys
+  nameWithType: IInputManager.TrackedKeys
+- uid: KokoEngine.IInputManager.Update(System.Single)
+  name: Update(Single)
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_Update_System_Single_
+  commentId: M:KokoEngine.IInputManager.Update(System.Single)
+  fullName: KokoEngine.IInputManager.Update(System.Single)
+  nameWithType: IInputManager.Update(Single)
+- uid: KokoEngine.IInputManager.Update*
+  name: Update
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_Update_
+  commentId: Overload:KokoEngine.IInputManager.Update
+  fullName: KokoEngine.IInputManager.Update
+  nameWithType: IInputManager.Update
+- uid: KokoEngine.Input
+  name: Input
+  href: api/KokoEngine.Input.html
+  commentId: T:KokoEngine.Input
+  fullName: KokoEngine.Input
+  nameWithType: Input
+- uid: KokoEngine.Input.GetAction(System.String)
+  name: GetAction(String)
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetAction_System_String_
+  commentId: M:KokoEngine.Input.GetAction(System.String)
+  fullName: KokoEngine.Input.GetAction(System.String)
+  nameWithType: Input.GetAction(String)
+- uid: KokoEngine.Input.GetAction*
+  name: GetAction
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetAction_
+  commentId: Overload:KokoEngine.Input.GetAction
+  fullName: KokoEngine.Input.GetAction
+  nameWithType: Input.GetAction
+- uid: KokoEngine.Input.GetActionDown(System.String)
+  name: GetActionDown(String)
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetActionDown_System_String_
+  commentId: M:KokoEngine.Input.GetActionDown(System.String)
+  fullName: KokoEngine.Input.GetActionDown(System.String)
+  nameWithType: Input.GetActionDown(String)
+- uid: KokoEngine.Input.GetActionDown*
+  name: GetActionDown
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetActionDown_
+  commentId: Overload:KokoEngine.Input.GetActionDown
+  fullName: KokoEngine.Input.GetActionDown
+  nameWithType: Input.GetActionDown
+- uid: KokoEngine.Input.GetActionUp(System.String)
+  name: GetActionUp(String)
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetActionUp_System_String_
+  commentId: M:KokoEngine.Input.GetActionUp(System.String)
+  fullName: KokoEngine.Input.GetActionUp(System.String)
+  nameWithType: Input.GetActionUp(String)
+- uid: KokoEngine.Input.GetActionUp*
+  name: GetActionUp
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetActionUp_
+  commentId: Overload:KokoEngine.Input.GetActionUp
+  fullName: KokoEngine.Input.GetActionUp
+  nameWithType: Input.GetActionUp
+- uid: KokoEngine.Input.GetAxis(System.String)
+  name: GetAxis(String)
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetAxis_System_String_
+  commentId: M:KokoEngine.Input.GetAxis(System.String)
+  fullName: KokoEngine.Input.GetAxis(System.String)
+  nameWithType: Input.GetAxis(String)
+- uid: KokoEngine.Input.GetAxis*
+  name: GetAxis
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetAxis_
+  commentId: Overload:KokoEngine.Input.GetAxis
+  fullName: KokoEngine.Input.GetAxis
+  nameWithType: Input.GetAxis
+- uid: KokoEngine.Input.Init(KokoEngine.IInputManager)
+  name: Init(IInputManager)
+  href: api/KokoEngine.Input.html#KokoEngine_Input_Init_KokoEngine_IInputManager_
+  commentId: M:KokoEngine.Input.Init(KokoEngine.IInputManager)
+  fullName: KokoEngine.Input.Init(KokoEngine.IInputManager)
+  nameWithType: Input.Init(IInputManager)
+- uid: KokoEngine.Input.Init*
+  name: Init
+  href: api/KokoEngine.Input.html#KokoEngine_Input_Init_
+  commentId: Overload:KokoEngine.Input.Init
+  fullName: KokoEngine.Input.Init
+  nameWithType: Input.Init
+- uid: KokoEngine.InputAction
+  name: InputAction
+  href: api/KokoEngine.InputAction.html
+  commentId: T:KokoEngine.InputAction
+  fullName: KokoEngine.InputAction
+  nameWithType: InputAction
+- uid: KokoEngine.InputAction.#ctor(System.String,System.Collections.Generic.List{KokoEngine.Key})
+  name: InputAction(String, List<Key>)
+  href: api/KokoEngine.InputAction.html#KokoEngine_InputAction__ctor_System_String_System_Collections_Generic_List_KokoEngine_Key__
+  commentId: M:KokoEngine.InputAction.#ctor(System.String,System.Collections.Generic.List{KokoEngine.Key})
+  name.vb: InputAction(String, List(Of Key))
+  fullName: KokoEngine.InputAction.InputAction(System.String, System.Collections.Generic.List<KokoEngine.Key>)
+  fullName.vb: KokoEngine.InputAction.InputAction(System.String, System.Collections.Generic.List(Of KokoEngine.Key))
+  nameWithType: InputAction.InputAction(String, List<Key>)
+  nameWithType.vb: InputAction.InputAction(String, List(Of Key))
+- uid: KokoEngine.InputAction.#ctor*
+  name: InputAction
+  href: api/KokoEngine.InputAction.html#KokoEngine_InputAction__ctor_
+  commentId: Overload:KokoEngine.InputAction.#ctor
+  fullName: KokoEngine.InputAction.InputAction
+  nameWithType: InputAction.InputAction
+- uid: KokoEngine.InputAction.Keys
+  name: Keys
+  href: api/KokoEngine.InputAction.html#KokoEngine_InputAction_Keys
+  commentId: P:KokoEngine.InputAction.Keys
+  fullName: KokoEngine.InputAction.Keys
+  nameWithType: InputAction.Keys
+- uid: KokoEngine.InputAction.Keys*
+  name: Keys
+  href: api/KokoEngine.InputAction.html#KokoEngine_InputAction_Keys_
+  commentId: Overload:KokoEngine.InputAction.Keys
+  fullName: KokoEngine.InputAction.Keys
+  nameWithType: InputAction.Keys
+- uid: KokoEngine.InputAction.Name
+  name: Name
+  href: api/KokoEngine.InputAction.html#KokoEngine_InputAction_Name
+  commentId: P:KokoEngine.InputAction.Name
+  fullName: KokoEngine.InputAction.Name
+  nameWithType: InputAction.Name
+- uid: KokoEngine.InputAction.Name*
+  name: Name
+  href: api/KokoEngine.InputAction.html#KokoEngine_InputAction_Name_
+  commentId: Overload:KokoEngine.InputAction.Name
+  fullName: KokoEngine.InputAction.Name
+  nameWithType: InputAction.Name
+- uid: KokoEngine.InputAxis
+  name: InputAxis
+  href: api/KokoEngine.InputAxis.html
+  commentId: T:KokoEngine.InputAxis
+  fullName: KokoEngine.InputAxis
+  nameWithType: InputAxis
+- uid: KokoEngine.InputAxis.#ctor(System.String,KokoEngine.Key,KokoEngine.Key,System.Single,System.Single)
+  name: InputAxis(String, Key, Key, Single, Single)
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis__ctor_System_String_KokoEngine_Key_KokoEngine_Key_System_Single_System_Single_
+  commentId: M:KokoEngine.InputAxis.#ctor(System.String,KokoEngine.Key,KokoEngine.Key,System.Single,System.Single)
+  fullName: KokoEngine.InputAxis.InputAxis(System.String, KokoEngine.Key, KokoEngine.Key, System.Single, System.Single)
+  nameWithType: InputAxis.InputAxis(String, Key, Key, Single, Single)
+- uid: KokoEngine.InputAxis.#ctor*
+  name: InputAxis
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis__ctor_
+  commentId: Overload:KokoEngine.InputAxis.#ctor
+  fullName: KokoEngine.InputAxis.InputAxis
+  nameWithType: InputAxis.InputAxis
+- uid: KokoEngine.InputAxis.Gravity
+  name: Gravity
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_Gravity
+  commentId: P:KokoEngine.InputAxis.Gravity
+  fullName: KokoEngine.InputAxis.Gravity
+  nameWithType: InputAxis.Gravity
+- uid: KokoEngine.InputAxis.Gravity*
+  name: Gravity
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_Gravity_
+  commentId: Overload:KokoEngine.InputAxis.Gravity
+  fullName: KokoEngine.InputAxis.Gravity
+  nameWithType: InputAxis.Gravity
+- uid: KokoEngine.InputAxis.Name
+  name: Name
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_Name
+  commentId: P:KokoEngine.InputAxis.Name
+  fullName: KokoEngine.InputAxis.Name
+  nameWithType: InputAxis.Name
+- uid: KokoEngine.InputAxis.Name*
+  name: Name
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_Name_
+  commentId: Overload:KokoEngine.InputAxis.Name
+  fullName: KokoEngine.InputAxis.Name
+  nameWithType: InputAxis.Name
+- uid: KokoEngine.InputAxis.NegativeKey
+  name: NegativeKey
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_NegativeKey
+  commentId: P:KokoEngine.InputAxis.NegativeKey
+  fullName: KokoEngine.InputAxis.NegativeKey
+  nameWithType: InputAxis.NegativeKey
+- uid: KokoEngine.InputAxis.NegativeKey*
+  name: NegativeKey
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_NegativeKey_
+  commentId: Overload:KokoEngine.InputAxis.NegativeKey
+  fullName: KokoEngine.InputAxis.NegativeKey
+  nameWithType: InputAxis.NegativeKey
+- uid: KokoEngine.InputAxis.PositiveKey
+  name: PositiveKey
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_PositiveKey
+  commentId: P:KokoEngine.InputAxis.PositiveKey
+  fullName: KokoEngine.InputAxis.PositiveKey
+  nameWithType: InputAxis.PositiveKey
+- uid: KokoEngine.InputAxis.PositiveKey*
+  name: PositiveKey
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_PositiveKey_
+  commentId: Overload:KokoEngine.InputAxis.PositiveKey
+  fullName: KokoEngine.InputAxis.PositiveKey
+  nameWithType: InputAxis.PositiveKey
+- uid: KokoEngine.InputAxis.Sensitivity
+  name: Sensitivity
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_Sensitivity
+  commentId: P:KokoEngine.InputAxis.Sensitivity
+  fullName: KokoEngine.InputAxis.Sensitivity
+  nameWithType: InputAxis.Sensitivity
+- uid: KokoEngine.InputAxis.Sensitivity*
+  name: Sensitivity
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_Sensitivity_
+  commentId: Overload:KokoEngine.InputAxis.Sensitivity
+  fullName: KokoEngine.InputAxis.Sensitivity
+  nameWithType: InputAxis.Sensitivity
+- uid: KokoEngine.InputAxis.Timestamp
+  name: Timestamp
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_Timestamp
+  commentId: P:KokoEngine.InputAxis.Timestamp
+  fullName: KokoEngine.InputAxis.Timestamp
+  nameWithType: InputAxis.Timestamp
+- uid: KokoEngine.InputAxis.Timestamp*
+  name: Timestamp
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_Timestamp_
+  commentId: Overload:KokoEngine.InputAxis.Timestamp
+  fullName: KokoEngine.InputAxis.Timestamp
+  nameWithType: InputAxis.Timestamp
+- uid: KokoEngine.InputAxis.Value
+  name: Value
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_Value
+  commentId: P:KokoEngine.InputAxis.Value
+  fullName: KokoEngine.InputAxis.Value
+  nameWithType: InputAxis.Value
+- uid: KokoEngine.InputAxis.Value*
+  name: Value
+  href: api/KokoEngine.InputAxis.html#KokoEngine_InputAxis_Value_
+  commentId: Overload:KokoEngine.InputAxis.Value
+  fullName: KokoEngine.InputAxis.Value
+  nameWithType: InputAxis.Value
+- uid: KokoEngine.InputManager
+  name: InputManager
+  href: api/KokoEngine.InputManager.html
+  commentId: T:KokoEngine.InputManager
+  fullName: KokoEngine.InputManager
+  nameWithType: InputManager
+- uid: KokoEngine.InputManager.ActionBindings
+  name: ActionBindings
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_ActionBindings
+  commentId: P:KokoEngine.InputManager.ActionBindings
+  fullName: KokoEngine.InputManager.ActionBindings
+  nameWithType: InputManager.ActionBindings
+- uid: KokoEngine.InputManager.ActionBindings*
+  name: ActionBindings
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_ActionBindings_
+  commentId: Overload:KokoEngine.InputManager.ActionBindings
+  fullName: KokoEngine.InputManager.ActionBindings
+  nameWithType: InputManager.ActionBindings
+- uid: KokoEngine.InputManager.AddActionBinding(System.String,System.String[])
+  name: AddActionBinding(String, String[])
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_AddActionBinding_System_String_System_String___
+  commentId: M:KokoEngine.InputManager.AddActionBinding(System.String,System.String[])
+  name.vb: AddActionBinding(String, String())
+  fullName: KokoEngine.InputManager.AddActionBinding(System.String, System.String[])
+  fullName.vb: KokoEngine.InputManager.AddActionBinding(System.String, System.String())
+  nameWithType: InputManager.AddActionBinding(String, String[])
+  nameWithType.vb: InputManager.AddActionBinding(String, String())
+- uid: KokoEngine.InputManager.AddActionBinding*
+  name: AddActionBinding
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_AddActionBinding_
+  commentId: Overload:KokoEngine.InputManager.AddActionBinding
+  fullName: KokoEngine.InputManager.AddActionBinding
+  nameWithType: InputManager.AddActionBinding
+- uid: KokoEngine.InputManager.AddAxisBinding(System.String,System.String,System.String,System.Single,System.Single)
+  name: AddAxisBinding(String, String, String, Single, Single)
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_AddAxisBinding_System_String_System_String_System_String_System_Single_System_Single_
+  commentId: M:KokoEngine.InputManager.AddAxisBinding(System.String,System.String,System.String,System.Single,System.Single)
+  fullName: KokoEngine.InputManager.AddAxisBinding(System.String, System.String, System.String, System.Single, System.Single)
+  nameWithType: InputManager.AddAxisBinding(String, String, String, Single, Single)
+- uid: KokoEngine.InputManager.AddAxisBinding*
+  name: AddAxisBinding
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_AddAxisBinding_
+  commentId: Overload:KokoEngine.InputManager.AddAxisBinding
+  fullName: KokoEngine.InputManager.AddAxisBinding
+  nameWithType: InputManager.AddAxisBinding
+- uid: KokoEngine.InputManager.AxisBindings
+  name: AxisBindings
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_AxisBindings
+  commentId: P:KokoEngine.InputManager.AxisBindings
+  fullName: KokoEngine.InputManager.AxisBindings
+  nameWithType: InputManager.AxisBindings
+- uid: KokoEngine.InputManager.AxisBindings*
+  name: AxisBindings
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_AxisBindings_
+  commentId: Overload:KokoEngine.InputManager.AxisBindings
+  fullName: KokoEngine.InputManager.AxisBindings
+  nameWithType: InputManager.AxisBindings
+- uid: KokoEngine.InputManager.GetAction(System.String)
+  name: GetAction(String)
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetAction_System_String_
+  commentId: M:KokoEngine.InputManager.GetAction(System.String)
+  fullName: KokoEngine.InputManager.GetAction(System.String)
+  nameWithType: InputManager.GetAction(String)
+- uid: KokoEngine.InputManager.GetAction*
+  name: GetAction
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetAction_
+  commentId: Overload:KokoEngine.InputManager.GetAction
+  fullName: KokoEngine.InputManager.GetAction
+  nameWithType: InputManager.GetAction
+- uid: KokoEngine.InputManager.GetActionDown(System.String)
+  name: GetActionDown(String)
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetActionDown_System_String_
+  commentId: M:KokoEngine.InputManager.GetActionDown(System.String)
+  fullName: KokoEngine.InputManager.GetActionDown(System.String)
+  nameWithType: InputManager.GetActionDown(String)
+- uid: KokoEngine.InputManager.GetActionDown*
+  name: GetActionDown
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetActionDown_
+  commentId: Overload:KokoEngine.InputManager.GetActionDown
+  fullName: KokoEngine.InputManager.GetActionDown
+  nameWithType: InputManager.GetActionDown
+- uid: KokoEngine.InputManager.GetActionUp(System.String)
+  name: GetActionUp(String)
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetActionUp_System_String_
+  commentId: M:KokoEngine.InputManager.GetActionUp(System.String)
+  fullName: KokoEngine.InputManager.GetActionUp(System.String)
+  nameWithType: InputManager.GetActionUp(String)
+- uid: KokoEngine.InputManager.GetActionUp*
+  name: GetActionUp
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetActionUp_
+  commentId: Overload:KokoEngine.InputManager.GetActionUp
+  fullName: KokoEngine.InputManager.GetActionUp
+  nameWithType: InputManager.GetActionUp
+- uid: KokoEngine.InputManager.GetAxis(System.String)
+  name: GetAxis(String)
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetAxis_System_String_
+  commentId: M:KokoEngine.InputManager.GetAxis(System.String)
+  fullName: KokoEngine.InputManager.GetAxis(System.String)
+  nameWithType: InputManager.GetAxis(String)
+- uid: KokoEngine.InputManager.GetAxis*
+  name: GetAxis
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetAxis_
+  commentId: Overload:KokoEngine.InputManager.GetAxis
+  fullName: KokoEngine.InputManager.GetAxis
+  nameWithType: InputManager.GetAxis
+- uid: KokoEngine.InputManager.GetMousePosition
+  name: GetMousePosition()
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetMousePosition
+  commentId: M:KokoEngine.InputManager.GetMousePosition
+  fullName: KokoEngine.InputManager.GetMousePosition()
+  nameWithType: InputManager.GetMousePosition()
+- uid: KokoEngine.InputManager.GetMousePosition*
+  name: GetMousePosition
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetMousePosition_
+  commentId: Overload:KokoEngine.InputManager.GetMousePosition
+  fullName: KokoEngine.InputManager.GetMousePosition
+  nameWithType: InputManager.GetMousePosition
+- uid: KokoEngine.InputManager.MousePosition
+  name: MousePosition
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_MousePosition
+  commentId: P:KokoEngine.InputManager.MousePosition
+  fullName: KokoEngine.InputManager.MousePosition
+  nameWithType: InputManager.MousePosition
+- uid: KokoEngine.InputManager.MousePosition*
+  name: MousePosition
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_MousePosition_
+  commentId: Overload:KokoEngine.InputManager.MousePosition
+  fullName: KokoEngine.InputManager.MousePosition
+  nameWithType: InputManager.MousePosition
+- uid: KokoEngine.InputManager.TrackedKeys
+  name: TrackedKeys
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_TrackedKeys
+  commentId: P:KokoEngine.InputManager.TrackedKeys
+  fullName: KokoEngine.InputManager.TrackedKeys
+  nameWithType: InputManager.TrackedKeys
+- uid: KokoEngine.InputManager.TrackedKeys*
+  name: TrackedKeys
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_TrackedKeys_
+  commentId: Overload:KokoEngine.InputManager.TrackedKeys
+  fullName: KokoEngine.InputManager.TrackedKeys
+  nameWithType: InputManager.TrackedKeys
+- uid: KokoEngine.InputManager.Update(System.Single)
+  name: Update(Single)
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_Update_System_Single_
+  commentId: M:KokoEngine.InputManager.Update(System.Single)
+  fullName: KokoEngine.InputManager.Update(System.Single)
+  nameWithType: InputManager.Update(Single)
+- uid: KokoEngine.InputManager.Update*
+  name: Update
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_Update_
+  commentId: Overload:KokoEngine.InputManager.Update
+  fullName: KokoEngine.InputManager.Update
+  nameWithType: InputManager.Update
 - uid: KokoEngine.IRigidbody
   name: IRigidbody
   href: api/KokoEngine.IRigidbody.html
@@ -2395,6 +3052,60 @@ references:
   commentId: Overload:KokoEngine.IVehicle.Velocity
   fullName: KokoEngine.IVehicle.Velocity
   nameWithType: IVehicle.Velocity
+- uid: KokoEngine.Key
+  name: Key
+  href: api/KokoEngine.Key.html
+  commentId: T:KokoEngine.Key
+  fullName: KokoEngine.Key
+  nameWithType: Key
+- uid: KokoEngine.Key.#ctor(System.String)
+  name: Key(String)
+  href: api/KokoEngine.Key.html#KokoEngine_Key__ctor_System_String_
+  commentId: M:KokoEngine.Key.#ctor(System.String)
+  fullName: KokoEngine.Key.Key(System.String)
+  nameWithType: Key.Key(String)
+- uid: KokoEngine.Key.#ctor*
+  name: Key
+  href: api/KokoEngine.Key.html#KokoEngine_Key__ctor_
+  commentId: Overload:KokoEngine.Key.#ctor
+  fullName: KokoEngine.Key.Key
+  nameWithType: Key.Key
+- uid: KokoEngine.Key.CurrentState
+  name: CurrentState
+  href: api/KokoEngine.Key.html#KokoEngine_Key_CurrentState
+  commentId: F:KokoEngine.Key.CurrentState
+  fullName: KokoEngine.Key.CurrentState
+  nameWithType: Key.CurrentState
+- uid: KokoEngine.Key.Name
+  name: Name
+  href: api/KokoEngine.Key.html#KokoEngine_Key_Name
+  commentId: F:KokoEngine.Key.Name
+  fullName: KokoEngine.Key.Name
+  nameWithType: Key.Name
+- uid: KokoEngine.Key.PreviousState
+  name: PreviousState
+  href: api/KokoEngine.Key.html#KokoEngine_Key_PreviousState
+  commentId: F:KokoEngine.Key.PreviousState
+  fullName: KokoEngine.Key.PreviousState
+  nameWithType: Key.PreviousState
+- uid: KokoEngine.Key.State
+  name: Key.State
+  href: api/KokoEngine.Key.State.html
+  commentId: T:KokoEngine.Key.State
+  fullName: KokoEngine.Key.State
+  nameWithType: Key.State
+- uid: KokoEngine.Key.State.Down
+  name: Down
+  href: api/KokoEngine.Key.State.html#KokoEngine_Key_State_Down
+  commentId: F:KokoEngine.Key.State.Down
+  fullName: KokoEngine.Key.State.Down
+  nameWithType: Key.State.Down
+- uid: KokoEngine.Key.State.Up
+  name: Up
+  href: api/KokoEngine.Key.State.html#KokoEngine_Key_State_Up
+  commentId: F:KokoEngine.Key.State.Up
+  fullName: KokoEngine.Key.State.Up
+  nameWithType: Key.State.Up
 - uid: KokoEngine.Pursuit
   name: Pursuit
   href: api/KokoEngine.Pursuit.html
@@ -2581,18 +3292,6 @@ references:
   commentId: T:KokoEngine.Scene
   fullName: KokoEngine.Scene
   nameWithType: Scene
-- uid: KokoEngine.Scene.#ctor(System.String)
-  name: Scene(String)
-  href: api/KokoEngine.Scene.html#KokoEngine_Scene__ctor_System_String_
-  commentId: M:KokoEngine.Scene.#ctor(System.String)
-  fullName: KokoEngine.Scene.Scene(System.String)
-  nameWithType: Scene.Scene(String)
-- uid: KokoEngine.Scene.#ctor*
-  name: Scene
-  href: api/KokoEngine.Scene.html#KokoEngine_Scene__ctor_
-  commentId: Overload:KokoEngine.Scene.#ctor
-  fullName: KokoEngine.Scene.Scene
-  nameWithType: Scene.Scene
 - uid: KokoEngine.Scene.AddGameObject(KokoEngine.IGameObject)
   name: AddGameObject(IGameObject)
   href: api/KokoEngine.Scene.html#KokoEngine_Scene_AddGameObject_KokoEngine_IGameObject_
@@ -2695,6 +3394,48 @@ references:
   commentId: Overload:KokoEngine.SceneManager.UpdateActiveScene
   fullName: KokoEngine.SceneManager.UpdateActiveScene
   nameWithType: SceneManager.UpdateActiveScene
+- uid: KokoEngine.Screen
+  name: Screen
+  href: api/KokoEngine.Screen.html
+  commentId: T:KokoEngine.Screen
+  fullName: KokoEngine.Screen
+  nameWithType: Screen
+- uid: KokoEngine.Screen.Height
+  name: Height
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_Height
+  commentId: P:KokoEngine.Screen.Height
+  fullName: KokoEngine.Screen.Height
+  nameWithType: Screen.Height
+- uid: KokoEngine.Screen.Height*
+  name: Height
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_Height_
+  commentId: Overload:KokoEngine.Screen.Height
+  fullName: KokoEngine.Screen.Height
+  nameWithType: Screen.Height
+- uid: KokoEngine.Screen.SetResolution(System.Int32,System.Int32)
+  name: SetResolution(Int32, Int32)
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_SetResolution_System_Int32_System_Int32_
+  commentId: M:KokoEngine.Screen.SetResolution(System.Int32,System.Int32)
+  fullName: KokoEngine.Screen.SetResolution(System.Int32, System.Int32)
+  nameWithType: Screen.SetResolution(Int32, Int32)
+- uid: KokoEngine.Screen.SetResolution*
+  name: SetResolution
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_SetResolution_
+  commentId: Overload:KokoEngine.Screen.SetResolution
+  fullName: KokoEngine.Screen.SetResolution
+  nameWithType: Screen.SetResolution
+- uid: KokoEngine.Screen.Width
+  name: Width
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_Width
+  commentId: P:KokoEngine.Screen.Width
+  fullName: KokoEngine.Screen.Width
+  nameWithType: Screen.Width
+- uid: KokoEngine.Screen.Width*
+  name: Width
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_Width_
+  commentId: Overload:KokoEngine.Screen.Width
+  fullName: KokoEngine.Screen.Width
+  nameWithType: Screen.Width
 - uid: KokoEngine.Seek
   name: Seek
   href: api/KokoEngine.Seek.html
@@ -2959,18 +3700,6 @@ references:
   commentId: T:KokoEngine.Texture2D
   fullName: KokoEngine.Texture2D
   nameWithType: Texture2D
-- uid: KokoEngine.Texture2D.#ctor(System.String,System.Object,System.Int32,System.Int32)
-  name: Texture2D(String, Object, Int32, Int32)
-  href: api/KokoEngine.Texture2D.html#KokoEngine_Texture2D__ctor_System_String_System_Object_System_Int32_System_Int32_
-  commentId: M:KokoEngine.Texture2D.#ctor(System.String,System.Object,System.Int32,System.Int32)
-  fullName: KokoEngine.Texture2D.Texture2D(System.String, System.Object, System.Int32, System.Int32)
-  nameWithType: Texture2D.Texture2D(String, Object, Int32, Int32)
-- uid: KokoEngine.Texture2D.#ctor*
-  name: Texture2D
-  href: api/KokoEngine.Texture2D.html#KokoEngine_Texture2D__ctor_
-  commentId: Overload:KokoEngine.Texture2D.#ctor
-  fullName: KokoEngine.Texture2D.Texture2D
-  nameWithType: Texture2D.Texture2D
 - uid: KokoEngine.Texture2D.Height
   name: Height
   href: api/KokoEngine.Texture2D.html#KokoEngine_Texture2D_Height
@@ -2983,6 +3712,18 @@ references:
   commentId: Overload:KokoEngine.Texture2D.Height
   fullName: KokoEngine.Texture2D.Height
   nameWithType: Texture2D.Height
+- uid: KokoEngine.Texture2D.SetData(System.Object,System.Int32,System.Int32)
+  name: SetData(Object, Int32, Int32)
+  href: api/KokoEngine.Texture2D.html#KokoEngine_Texture2D_SetData_System_Object_System_Int32_System_Int32_
+  commentId: M:KokoEngine.Texture2D.SetData(System.Object,System.Int32,System.Int32)
+  fullName: KokoEngine.Texture2D.SetData(System.Object, System.Int32, System.Int32)
+  nameWithType: Texture2D.SetData(Object, Int32, Int32)
+- uid: KokoEngine.Texture2D.SetData*
+  name: SetData
+  href: api/KokoEngine.Texture2D.html#KokoEngine_Texture2D_SetData_
+  commentId: Overload:KokoEngine.Texture2D.SetData
+  fullName: KokoEngine.Texture2D.SetData
+  nameWithType: Texture2D.SetData
 - uid: KokoEngine.Texture2D.Width
   name: Width
   href: api/KokoEngine.Texture2D.html#KokoEngine_Texture2D_Width
@@ -2995,6 +3736,48 @@ references:
   commentId: Overload:KokoEngine.Texture2D.Width
   fullName: KokoEngine.Texture2D.Width
   nameWithType: Texture2D.Width
+- uid: KokoEngine.Time
+  name: Time
+  href: api/KokoEngine.Time.html
+  commentId: T:KokoEngine.Time
+  fullName: KokoEngine.Time
+  nameWithType: Time
+- uid: KokoEngine.Time.DeltaTime
+  name: DeltaTime
+  href: api/KokoEngine.Time.html#KokoEngine_Time_DeltaTime
+  commentId: P:KokoEngine.Time.DeltaTime
+  fullName: KokoEngine.Time.DeltaTime
+  nameWithType: Time.DeltaTime
+- uid: KokoEngine.Time.DeltaTime*
+  name: DeltaTime
+  href: api/KokoEngine.Time.html#KokoEngine_Time_DeltaTime_
+  commentId: Overload:KokoEngine.Time.DeltaTime
+  fullName: KokoEngine.Time.DeltaTime
+  nameWithType: Time.DeltaTime
+- uid: KokoEngine.Time.TimeScale
+  name: TimeScale
+  href: api/KokoEngine.Time.html#KokoEngine_Time_TimeScale
+  commentId: P:KokoEngine.Time.TimeScale
+  fullName: KokoEngine.Time.TimeScale
+  nameWithType: Time.TimeScale
+- uid: KokoEngine.Time.TimeScale*
+  name: TimeScale
+  href: api/KokoEngine.Time.html#KokoEngine_Time_TimeScale_
+  commentId: Overload:KokoEngine.Time.TimeScale
+  fullName: KokoEngine.Time.TimeScale
+  nameWithType: Time.TimeScale
+- uid: KokoEngine.Time.TotalTime
+  name: TotalTime
+  href: api/KokoEngine.Time.html#KokoEngine_Time_TotalTime
+  commentId: P:KokoEngine.Time.TotalTime
+  fullName: KokoEngine.Time.TotalTime
+  nameWithType: Time.TotalTime
+- uid: KokoEngine.Time.TotalTime*
+  name: TotalTime
+  href: api/KokoEngine.Time.html#KokoEngine_Time_TotalTime_
+  commentId: Overload:KokoEngine.Time.TotalTime
+  fullName: KokoEngine.Time.TotalTime
+  nameWithType: Time.TotalTime
 - uid: KokoEngine.Transform
   name: Transform
   href: api/KokoEngine.Transform.html
@@ -3139,12 +3922,18 @@ references:
   commentId: Overload:KokoEngine.Vector2.#ctor
   fullName: KokoEngine.Vector2.Vector2
   nameWithType: Vector2.Vector2
-- uid: KokoEngine.Vector2.Dot(KokoEngine.Vector2)
-  name: Dot(Vector2)
-  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Dot_KokoEngine_Vector2_
-  commentId: M:KokoEngine.Vector2.Dot(KokoEngine.Vector2)
-  fullName: KokoEngine.Vector2.Dot(KokoEngine.Vector2)
-  nameWithType: Vector2.Dot(Vector2)
+- uid: KokoEngine.Vector2.Distance(KokoEngine.Vector2,KokoEngine.Vector2)
+  name: Distance(Vector2, Vector2)
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Distance_KokoEngine_Vector2_KokoEngine_Vector2_
+  commentId: M:KokoEngine.Vector2.Distance(KokoEngine.Vector2,KokoEngine.Vector2)
+  fullName: KokoEngine.Vector2.Distance(KokoEngine.Vector2, KokoEngine.Vector2)
+  nameWithType: Vector2.Distance(Vector2, Vector2)
+- uid: KokoEngine.Vector2.Distance*
+  name: Distance
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Distance_
+  commentId: Overload:KokoEngine.Vector2.Distance
+  fullName: KokoEngine.Vector2.Distance
+  nameWithType: Vector2.Distance
 - uid: KokoEngine.Vector2.Dot(KokoEngine.Vector2,KokoEngine.Vector2)
   name: Dot(Vector2, Vector2)
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Dot_KokoEngine_Vector2_KokoEngine_Vector2_
@@ -3181,36 +3970,18 @@ references:
   commentId: Overload:KokoEngine.Vector2.Left
   fullName: KokoEngine.Vector2.Left
   nameWithType: Vector2.Left
-- uid: KokoEngine.Vector2.magnitude
-  name: magnitude
-  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_magnitude
-  commentId: P:KokoEngine.Vector2.magnitude
-  fullName: KokoEngine.Vector2.magnitude
-  nameWithType: Vector2.magnitude
-- uid: KokoEngine.Vector2.Magnitude(KokoEngine.Vector2)
-  name: Magnitude(Vector2)
-  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Magnitude_KokoEngine_Vector2_
-  commentId: M:KokoEngine.Vector2.Magnitude(KokoEngine.Vector2)
-  fullName: KokoEngine.Vector2.Magnitude(KokoEngine.Vector2)
-  nameWithType: Vector2.Magnitude(Vector2)
-- uid: KokoEngine.Vector2.magnitude*
-  name: magnitude
-  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_magnitude_
-  commentId: Overload:KokoEngine.Vector2.magnitude
-  fullName: KokoEngine.Vector2.magnitude
-  nameWithType: Vector2.magnitude
+- uid: KokoEngine.Vector2.Magnitude
+  name: Magnitude
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Magnitude
+  commentId: P:KokoEngine.Vector2.Magnitude
+  fullName: KokoEngine.Vector2.Magnitude
+  nameWithType: Vector2.Magnitude
 - uid: KokoEngine.Vector2.Magnitude*
   name: Magnitude
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Magnitude_
   commentId: Overload:KokoEngine.Vector2.Magnitude
   fullName: KokoEngine.Vector2.Magnitude
   nameWithType: Vector2.Magnitude
-- uid: KokoEngine.Vector2.Normalize
-  name: Normalize()
-  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Normalize
-  commentId: M:KokoEngine.Vector2.Normalize
-  fullName: KokoEngine.Vector2.Normalize()
-  nameWithType: Vector2.Normalize()
 - uid: KokoEngine.Vector2.Normalize(KokoEngine.Vector2)
   name: Normalize(Vector2)
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_Normalize_KokoEngine_Vector2_
@@ -3283,6 +4054,24 @@ references:
   commentId: Overload:KokoEngine.Vector2.op_Equality
   fullName: KokoEngine.Vector2.Equality
   nameWithType: Vector2.Equality
+- uid: KokoEngine.Vector2.op_Implicit(KokoEngine.Vector3)~KokoEngine.Vector2
+  name: Implicit(Vector3 to Vector2)
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_op_Implicit_KokoEngine_Vector3__KokoEngine_Vector2
+  commentId: M:KokoEngine.Vector2.op_Implicit(KokoEngine.Vector3)~KokoEngine.Vector2
+  name.vb: Widening(Vector3 to Vector2)
+  fullName: KokoEngine.Vector2.Implicit(KokoEngine.Vector3 to KokoEngine.Vector2)
+  fullName.vb: KokoEngine.Vector2.Widening(KokoEngine.Vector3 to KokoEngine.Vector2)
+  nameWithType: Vector2.Implicit(Vector3 to Vector2)
+  nameWithType.vb: Vector2.Widening(Vector3 to Vector2)
+- uid: KokoEngine.Vector2.op_Implicit*
+  name: Implicit
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_op_Implicit_
+  commentId: Overload:KokoEngine.Vector2.op_Implicit
+  name.vb: Widening
+  fullName: KokoEngine.Vector2.Implicit
+  fullName.vb: KokoEngine.Vector2.Widening
+  nameWithType: Vector2.Implicit
+  nameWithType.vb: Vector2.Widening
 - uid: KokoEngine.Vector2.op_Inequality(KokoEngine.Vector2,KokoEngine.Vector2)
   name: Inequality(Vector2, Vector2)
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_op_Inequality_KokoEngine_Vector2_KokoEngine_Vector2_
@@ -3349,24 +4138,12 @@ references:
   commentId: Overload:KokoEngine.Vector2.Right
   fullName: KokoEngine.Vector2.Right
   nameWithType: Vector2.Right
-- uid: KokoEngine.Vector2.sqrMagnitude
-  name: sqrMagnitude
-  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_sqrMagnitude
-  commentId: P:KokoEngine.Vector2.sqrMagnitude
-  fullName: KokoEngine.Vector2.sqrMagnitude
-  nameWithType: Vector2.sqrMagnitude
-- uid: KokoEngine.Vector2.SqrMagnitude(KokoEngine.Vector2)
-  name: SqrMagnitude(Vector2)
-  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_SqrMagnitude_KokoEngine_Vector2_
-  commentId: M:KokoEngine.Vector2.SqrMagnitude(KokoEngine.Vector2)
-  fullName: KokoEngine.Vector2.SqrMagnitude(KokoEngine.Vector2)
-  nameWithType: Vector2.SqrMagnitude(Vector2)
-- uid: KokoEngine.Vector2.sqrMagnitude*
-  name: sqrMagnitude
-  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_sqrMagnitude_
-  commentId: Overload:KokoEngine.Vector2.sqrMagnitude
-  fullName: KokoEngine.Vector2.sqrMagnitude
-  nameWithType: Vector2.sqrMagnitude
+- uid: KokoEngine.Vector2.SqrMagnitude
+  name: SqrMagnitude
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_SqrMagnitude
+  commentId: P:KokoEngine.Vector2.SqrMagnitude
+  fullName: KokoEngine.Vector2.SqrMagnitude
+  nameWithType: Vector2.SqrMagnitude
 - uid: KokoEngine.Vector2.SqrMagnitude*
   name: SqrMagnitude
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_SqrMagnitude_
@@ -3439,12 +4216,18 @@ references:
   commentId: Overload:KokoEngine.Vector3.#ctor
   fullName: KokoEngine.Vector3.Vector3
   nameWithType: Vector3.Vector3
-- uid: KokoEngine.Vector3.Dot(KokoEngine.Vector3)
-  name: Dot(Vector3)
-  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Dot_KokoEngine_Vector3_
-  commentId: M:KokoEngine.Vector3.Dot(KokoEngine.Vector3)
-  fullName: KokoEngine.Vector3.Dot(KokoEngine.Vector3)
-  nameWithType: Vector3.Dot(Vector3)
+- uid: KokoEngine.Vector3.Distance(KokoEngine.Vector3,KokoEngine.Vector3)
+  name: Distance(Vector3, Vector3)
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Distance_KokoEngine_Vector3_KokoEngine_Vector3_
+  commentId: M:KokoEngine.Vector3.Distance(KokoEngine.Vector3,KokoEngine.Vector3)
+  fullName: KokoEngine.Vector3.Distance(KokoEngine.Vector3, KokoEngine.Vector3)
+  nameWithType: Vector3.Distance(Vector3, Vector3)
+- uid: KokoEngine.Vector3.Distance*
+  name: Distance
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Distance_
+  commentId: Overload:KokoEngine.Vector3.Distance
+  fullName: KokoEngine.Vector3.Distance
+  nameWithType: Vector3.Distance
 - uid: KokoEngine.Vector3.Dot(KokoEngine.Vector3,KokoEngine.Vector3)
   name: Dot(Vector3, Vector3)
   href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Dot_KokoEngine_Vector3_KokoEngine_Vector3_
@@ -3469,36 +4252,18 @@ references:
   commentId: Overload:KokoEngine.Vector3.Forward
   fullName: KokoEngine.Vector3.Forward
   nameWithType: Vector3.Forward
-- uid: KokoEngine.Vector3.magnitude
-  name: magnitude
-  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_magnitude
-  commentId: P:KokoEngine.Vector3.magnitude
-  fullName: KokoEngine.Vector3.magnitude
-  nameWithType: Vector3.magnitude
-- uid: KokoEngine.Vector3.Magnitude(KokoEngine.Vector3)
-  name: Magnitude(Vector3)
-  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Magnitude_KokoEngine_Vector3_
-  commentId: M:KokoEngine.Vector3.Magnitude(KokoEngine.Vector3)
-  fullName: KokoEngine.Vector3.Magnitude(KokoEngine.Vector3)
-  nameWithType: Vector3.Magnitude(Vector3)
-- uid: KokoEngine.Vector3.magnitude*
-  name: magnitude
-  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_magnitude_
-  commentId: Overload:KokoEngine.Vector3.magnitude
-  fullName: KokoEngine.Vector3.magnitude
-  nameWithType: Vector3.magnitude
+- uid: KokoEngine.Vector3.Magnitude
+  name: Magnitude
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Magnitude
+  commentId: P:KokoEngine.Vector3.Magnitude
+  fullName: KokoEngine.Vector3.Magnitude
+  nameWithType: Vector3.Magnitude
 - uid: KokoEngine.Vector3.Magnitude*
   name: Magnitude
   href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Magnitude_
   commentId: Overload:KokoEngine.Vector3.Magnitude
   fullName: KokoEngine.Vector3.Magnitude
   nameWithType: Vector3.Magnitude
-- uid: KokoEngine.Vector3.Normalize
-  name: Normalize()
-  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Normalize
-  commentId: M:KokoEngine.Vector3.Normalize
-  fullName: KokoEngine.Vector3.Normalize()
-  nameWithType: Vector3.Normalize()
 - uid: KokoEngine.Vector3.Normalize(KokoEngine.Vector3)
   name: Normalize(Vector3)
   href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_Normalize_KokoEngine_Vector3_
@@ -3571,6 +4336,24 @@ references:
   commentId: Overload:KokoEngine.Vector3.op_Equality
   fullName: KokoEngine.Vector3.Equality
   nameWithType: Vector3.Equality
+- uid: KokoEngine.Vector3.op_Implicit(KokoEngine.Vector2)~KokoEngine.Vector3
+  name: Implicit(Vector2 to Vector3)
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_op_Implicit_KokoEngine_Vector2__KokoEngine_Vector3
+  commentId: M:KokoEngine.Vector3.op_Implicit(KokoEngine.Vector2)~KokoEngine.Vector3
+  name.vb: Widening(Vector2 to Vector3)
+  fullName: KokoEngine.Vector3.Implicit(KokoEngine.Vector2 to KokoEngine.Vector3)
+  fullName.vb: KokoEngine.Vector3.Widening(KokoEngine.Vector2 to KokoEngine.Vector3)
+  nameWithType: Vector3.Implicit(Vector2 to Vector3)
+  nameWithType.vb: Vector3.Widening(Vector2 to Vector3)
+- uid: KokoEngine.Vector3.op_Implicit*
+  name: Implicit
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_op_Implicit_
+  commentId: Overload:KokoEngine.Vector3.op_Implicit
+  name.vb: Widening
+  fullName: KokoEngine.Vector3.Implicit
+  fullName.vb: KokoEngine.Vector3.Widening
+  nameWithType: Vector3.Implicit
+  nameWithType.vb: Vector3.Widening
 - uid: KokoEngine.Vector3.op_Inequality(KokoEngine.Vector3,KokoEngine.Vector3)
   name: Inequality(Vector3, Vector3)
   href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_op_Inequality_KokoEngine_Vector3_KokoEngine_Vector3_
@@ -3637,24 +4420,12 @@ references:
   commentId: Overload:KokoEngine.Vector3.Right
   fullName: KokoEngine.Vector3.Right
   nameWithType: Vector3.Right
-- uid: KokoEngine.Vector3.sqrMagnitude
-  name: sqrMagnitude
-  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_sqrMagnitude
-  commentId: P:KokoEngine.Vector3.sqrMagnitude
-  fullName: KokoEngine.Vector3.sqrMagnitude
-  nameWithType: Vector3.sqrMagnitude
-- uid: KokoEngine.Vector3.SqrMagnitude(KokoEngine.Vector3)
-  name: SqrMagnitude(Vector3)
-  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_SqrMagnitude_KokoEngine_Vector3_
-  commentId: M:KokoEngine.Vector3.SqrMagnitude(KokoEngine.Vector3)
-  fullName: KokoEngine.Vector3.SqrMagnitude(KokoEngine.Vector3)
-  nameWithType: Vector3.SqrMagnitude(Vector3)
-- uid: KokoEngine.Vector3.sqrMagnitude*
-  name: sqrMagnitude
-  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_sqrMagnitude_
-  commentId: Overload:KokoEngine.Vector3.sqrMagnitude
-  fullName: KokoEngine.Vector3.sqrMagnitude
-  nameWithType: Vector3.sqrMagnitude
+- uid: KokoEngine.Vector3.SqrMagnitude
+  name: SqrMagnitude
+  href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_SqrMagnitude
+  commentId: P:KokoEngine.Vector3.SqrMagnitude
+  fullName: KokoEngine.Vector3.SqrMagnitude
+  nameWithType: Vector3.SqrMagnitude
 - uid: KokoEngine.Vector3.SqrMagnitude*
   name: SqrMagnitude
   href: api/KokoEngine.Vector3.html#KokoEngine_Vector3_SqrMagnitude_

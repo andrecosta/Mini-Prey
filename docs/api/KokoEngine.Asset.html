@@ -80,6 +80,7 @@
                   <div class="level1"><a class="xref" href="KokoEngine.Entity.html">Entity</a></div>
                   <div class="level2"><span class="xref">Asset</span></div>
                   <div class="level3"><a class="xref" href="KokoEngine.AudioClip.html">AudioClip</a></div>
+                  <div class="level3"><a class="xref" href="KokoEngine.Font.html">Font</a></div>
                   <div class="level3"><a class="xref" href="KokoEngine.Texture2D.html">Texture2D</a></div>
               </div>
               <div class="inheritedMembers">
@@ -116,10 +117,37 @@
               <h6><strong>Assembly</strong>:KokoEngine.dll</h6>
               <h5 id="KokoEngine_Asset_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public abstract class Asset : Entity, IAsset, IEntity</code></pre>
+                <pre><code class="lang-csharp hljs">public abstract class Asset : Entity, IAssetInternal, IAsset, IEntity</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
+              
+              
+              <a id="KokoEngine_Asset_Filename_" data-uid="KokoEngine.Asset.Filename*"></a>
+              <h4 id="KokoEngine_Asset_Filename" data-uid="KokoEngine.Asset.Filename">Filename</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public string Filename { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="KokoEngine.IAsset.html#KokoEngine_IAsset_Filename">IAsset.Filename</a></div>
               
               
               <a id="KokoEngine_Asset_RawData_" data-uid="KokoEngine.Asset.RawData*"></a>
@@ -128,7 +156,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public object RawData { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public object RawData { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -147,6 +175,35 @@
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="KokoEngine.IAsset.html#KokoEngine_IAsset_RawData">IAsset.RawData</a></div>
+              <h3 id="methods">Methods
+              </h3>
+              
+              
+              <a id="KokoEngine_Asset_SetData_" data-uid="KokoEngine.Asset.SetData*"></a>
+              <h4 id="KokoEngine_Asset_SetData_System_Object_" data-uid="KokoEngine.Asset.SetData(System.Object)">SetData(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void SetData(object rawData)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">rawData</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
                         </article>
           </div>
           

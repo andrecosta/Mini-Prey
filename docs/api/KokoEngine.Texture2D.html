@@ -84,7 +84,13 @@
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
                 <div>
+                  <a class="xref" href="KokoEngine.Asset.html#KokoEngine_Asset_Filename">Asset.Filename</a>
+                </div>
+                <div>
                   <a class="xref" href="KokoEngine.Asset.html#KokoEngine_Asset_RawData">Asset.RawData</a>
+                </div>
+                <div>
+                  <a class="xref" href="KokoEngine.Asset.html#KokoEngine_Asset_SetData_System_Object_">Asset.SetData(Object)</a>
                 </div>
                 <div>
                   <a class="xref" href="KokoEngine.Entity.html#KokoEngine_Entity_Guid">Entity.Guid</a>
@@ -118,52 +124,8 @@
               <h6><strong>Assembly</strong>:KokoEngine.dll</h6>
               <h5 id="KokoEngine_Texture2D_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public sealed class Texture2D : Asset, IAsset, IEntity</code></pre>
+                <pre><code class="lang-csharp hljs">public sealed class Texture2D : Asset, IAssetInternal, IAsset, IEntity</code></pre>
               </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              
-              
-              <a id="KokoEngine_Texture2D__ctor_" data-uid="KokoEngine.Texture2D.#ctor*"></a>
-              <h4 id="KokoEngine_Texture2D__ctor_System_String_System_Object_System_Int32_System_Int32_" data-uid="KokoEngine.Texture2D.#ctor(System.String,System.Object,System.Int32,System.Int32)">Texture2D(String, Object, Int32, Int32)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Texture2D(string name, object rawData, int width, int height)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">name</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Object</span></td>
-                    <td><span class="parametername">rawData</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td><span class="parametername">width</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Int32</span></td>
-                    <td><span class="parametername">height</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
               <h3 id="properties">Properties
               </h3>
               
@@ -212,6 +174,45 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              
+              
+              <a id="KokoEngine_Texture2D_SetData_" data-uid="KokoEngine.Texture2D.SetData*"></a>
+              <h4 id="KokoEngine_Texture2D_SetData_System_Object_System_Int32_System_Int32_" data-uid="KokoEngine.Texture2D.SetData(System.Object,System.Int32,System.Int32)">SetData(Object, Int32, Int32)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void SetData(object rawData, int width, int height)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">rawData</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">width</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">height</span></td>
                     <td></td>
                   </tr>
                 </tbody>

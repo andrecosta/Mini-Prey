@@ -109,57 +109,37 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public class AssetManager : IAssetManager</code></pre>
               </div>
-              <h3 id="methods">Methods
+              <h3 id="properties">Properties
               </h3>
               
               
-              <a id="KokoEngine_AssetManager_AddAsset_" data-uid="KokoEngine.AssetManager.AddAsset*"></a>
-              <h4 id="KokoEngine_AssetManager_AddAsset__1_System_String___0_" data-uid="KokoEngine.AssetManager.AddAsset``1(System.String,``0)">AddAsset&lt;T&gt;(String, T)</h4>
+              <a id="KokoEngine_AssetManager_AssetMap_" data-uid="KokoEngine.AssetManager.AssetMap*"></a>
+              <h4 id="KokoEngine_AssetManager_AssetMap" data-uid="KokoEngine.AssetManager.AssetMap">AssetMap</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void AddAsset&lt;T&gt;(string key, T asset)where T : IAsset</code></pre>
+                <pre><code class="lang-csharp hljs">public Dictionary&lt;string, IAsset&gt; AssetMap { get; }</code></pre>
               </div>
-              <h5 class="parameters">Parameters</h5>
+              <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
                     <th>Type</th>
-                    <th>Name</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.String</span></td>
-                    <td><span class="parametername">key</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">T</span></td>
-                    <td><span class="parametername">asset</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="typeParameters">Type Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="parametername">T</span></td>
+                    <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <a class="xref" href="KokoEngine.IAsset.html">IAsset</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_AddAsset__1_System_String___0_">IAssetManager.AddAsset&lt;T&gt;(String, T)</a></div>
+                  <div><a class="xref" href="KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_AssetMap">IAssetManager.AssetMap</a></div>
+              <h3 id="methods">Methods
+              </h3>
               
               
               <a id="KokoEngine_AssetManager_GetAsset_" data-uid="KokoEngine.AssetManager.GetAsset*"></a>
@@ -219,6 +199,129 @@
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_GetAsset__1_System_String_">IAssetManager.GetAsset&lt;T&gt;(String)</a></div>
+              
+              
+              <a id="KokoEngine_AssetManager_LoadAsset_" data-uid="KokoEngine.AssetManager.LoadAsset*"></a>
+              <h4 id="KokoEngine_AssetManager_LoadAsset__1_System_String_" data-uid="KokoEngine.AssetManager.LoadAsset``1(System.String)">LoadAsset&lt;T&gt;(String)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public T LoadAsset&lt;T&gt;(string filename)where T : IAsset, new ()</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">filename</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadAsset__1_System_String_">IAssetManager.LoadAsset&lt;T&gt;(String)</a></div>
+              
+              
+              <a id="KokoEngine_AssetManager_LoadAsset_" data-uid="KokoEngine.AssetManager.LoadAsset*"></a>
+              <h4 id="KokoEngine_AssetManager_LoadAsset__1_System_String___0_" data-uid="KokoEngine.AssetManager.LoadAsset``1(System.String,``0)">LoadAsset&lt;T&gt;(String, T)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public T LoadAsset&lt;T&gt;(string key, T asset)where T : IAsset</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">key</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><span class="parametername">asset</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadAsset__1_System_String___0_">IAssetManager.LoadAsset&lt;T&gt;(String, T)</a></div>
                         </article>
           </div>
           
