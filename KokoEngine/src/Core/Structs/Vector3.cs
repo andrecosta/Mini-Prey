@@ -8,17 +8,6 @@ namespace KokoEngine
         public float Y;
         public float Z;
 
-        public static Vector3 Up => new Vector3(0, 1, 0);
-        public static Vector3 Right => new Vector3(1, 0, 0);
-        public static Vector3 Forward => new Vector3(1, 0, 1);
-        public static Vector3 One => new Vector3(1, 1, 1);
-        public static Vector3 Zero => new Vector3(0, 0, 0);
-        public Vector3 Normalized => Normalize(this);
-        public float magnitude => Magnitude(this);
-        public float sqrMagnitude => SqrMagnitude(this);
-        public void Normalize() => Normalize(this);
-        public float Dot(Vector3 b) => Dot(this, b);
-
         public Vector3(float x, float y, float z = 0)
         {
             this.X = x;
@@ -26,69 +15,40 @@ namespace KokoEngine
             this.Z = z;
         }
 
-        public static Vector3 operator +(Vector3 a, Vector3 b)
-        {
-            return new Vector3(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
-        }
+        #region Static Properties
+        public static Vector3 Up => new Vector3(0, 1, 0);
+        public static Vector3 Right => new Vector3(1, 0, 0);
+        public static Vector3 Forward => new Vector3(1, 0, 1);
+        public static Vector3 One => new Vector3(1, 1, 1);
+        public static Vector3 Zero => new Vector3(0, 0, 0);
+        #endregion
 
-        public static Vector3 operator -(Vector3 a, Vector3 b)
-        {
-            return new Vector3(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
-        }
+        #region Instance Properties
+        public float Magnitude => (float)Math.Sqrt(SqrMagnitude);
+        public Vector3 Normalized => Normalize(this);
+        public float SqrMagnitude => X * X + Y * Y + Z * Z;
+        #endregion
 
-        public static Vector3 operator -(Vector3 a)
-        {
-            return new Vector3(-a.X, -a.Y, -a.Z);
-        }
+        #region Static Methods
+        public static float Dot(Vector3 a, Vector3 b) => a.X * b.X + a.Y * b.Y + a.Z * b.Z;
+        public static float Distance(Vector3 a, Vector3 b) => (a - b).Magnitude;
+        public static Vector3 Normalize(Vector3 a) => a / a.Magnitude;
+        #endregion
 
-        public static Vector3 operator *(Vector3 a, float d)
-        {
-            return new Vector3(a.X * d, a.Y * d, a.Z * d);
-        }
+        #region Operators
+        public static Vector3 operator +(Vector3 a, Vector3 b) => new Vector3(a.X + b.X, a.Y + b.Y, a.Z + b.Z);
+        public static Vector3 operator -(Vector3 a, Vector3 b) => new Vector3(a.X - b.X, a.Y - b.Y, a.Z - b.Z);
+        public static Vector3 operator -(Vector3 a) => new Vector3(-a.X, -a.Y, -a.Z);
+        public static Vector3 operator *(Vector3 a, float d) => new Vector3(a.X * d, a.Y * d, a.Z * d);
+        public static Vector3 operator *(float d, Vector3 a) => new Vector3(a.X * d, a.Y * d, a.Z * d);
+        public static Vector3 operator /(Vector3 a, float d) => new Vector3(a.X / d, a.Y / d, a.Z / d);
+        public static bool operator ==(Vector3 a, Vector3 b) => (a - b).SqrMagnitude < 9.9E-11;
+        public static bool operator !=(Vector3 a, Vector3 b) => !(a == b);
+        public static implicit operator Vector3(Vector2 v) => new Vector3(v.X, v.Y);
+        #endregion
 
-        public static Vector3 operator *(float d, Vector3 a)
-        {
-            return new Vector3(a.X * d, a.Y * d, a.Z * d);
-        }
-
-        public static Vector3 operator /(Vector3 a, float d)
-        {
-            return new Vector3(a.X / d, a.Y / d, a.Z / d);
-        }
-
-        public static bool operator ==(Vector3 lhs, Vector3 rhs)
-        {
-            return SqrMagnitude(lhs - rhs) < 9.99999943962493E-11;
-        }
-
-        public static bool operator !=(Vector3 lhs, Vector3 rhs)
-        {
-            return !(lhs == rhs);
-        }
-
-        public static float Magnitude(Vector3 a)
-        {
-            return (float) Math.Sqrt(SqrMagnitude(a));
-        }
-
-        public static float SqrMagnitude(Vector3 a)
-        {
-            return a.X * a.X + a.Y * a.Y + a.Z * a.Z;
-        }
-
-        public static Vector3 Normalize(Vector3 a)
-        {
-            return a / Magnitude(a);
-        }
-
-        public static float Dot(Vector3 a, Vector3 b)
-        {
-            return a.X * b.X + a.Y * b.Y + a.Z * b.Z;
-        }
-
-        public override string ToString()
-        {
-            return $"Vector3 ({X}, {Y}, {Z})";
-        }
+        #region Overrides
+        public override string ToString() => $"Vector3 ({X}, {Y}, {Z})";
+        #endregion
     }
 }

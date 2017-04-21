@@ -39,7 +39,7 @@ namespace MiniPreyGame
         {
             base.UpdateState();
 
-            if (Vector3.SqrMagnitude(_boid.Target.Position - _boid.Transform.Position) > 300*300)
+            if ((_boid.Target.Position - _boid.Transform.Position).SqrMagnitude > 300*300)
             {
                 if (_boid.Pursuer)
                     FSM.SetState<BoidPursuitState>();

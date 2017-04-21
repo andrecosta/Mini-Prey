@@ -1,4 +1,4 @@
-﻿namespace KokoEngine
+namespace KokoEngine
 {
     internal interface IGameObjectInternal : IGameObject
     {

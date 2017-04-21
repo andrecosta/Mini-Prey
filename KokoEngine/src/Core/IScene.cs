@@ -16,7 +16,7 @@ namespace KokoEngine
         /// Adds a GameObject to the scene.
         /// </summary>
         /// <param name="go">The GameObject to add.</param>
-        void AddGameObject(IGameObject go);
+        IGameObject AddGameObject(IGameObject go);
 
         /// <summary>
         /// Returns all the root GameObjects contained in the scene.

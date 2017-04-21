@@ -43,7 +43,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Components\Debug.cs" />
+    <Compile Include="ConversionExtensions.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="SetupScene.cs" />
     <Compile Include="Scripts\Boid.cs" />
     <Compile Include="Scripts\Boid States\BoidPursuitState.cs" />
     <Compile Include="Scripts\WaypointEuclideanHeuristicCAlculator.cs" />
@@ -64,8 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\boid.png" />
-    <Content Include="Content\boid_rainbow.png" />
+    <Content Include="Content\boid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\boid_rainbow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\fleeSound.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -75,7 +81,9 @@
     <Content Include="Content\seekSound.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\waypoint_red.png" />
+    <Content Include="Content\waypoint_red.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -90,7 +98,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <Content Include="Content\debug.spritefont">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

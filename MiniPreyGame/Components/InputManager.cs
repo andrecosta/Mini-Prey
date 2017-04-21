@@ -2,12 +2,12 @@
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-
+/*
 namespace InputManager
 {
     public class Input : GameComponent
     {
-        private static KeyboardState currentKeyboardState;
+        /*private static KeyboardState currentKeyboardState;
         private static KeyboardState previousKeyboardState;
         private static MouseState currentMouseState;
         private static MouseState previousMouseState;
@@ -109,3 +109,4 @@ namespace InputManager
         #endregion
     }
 }
+*/

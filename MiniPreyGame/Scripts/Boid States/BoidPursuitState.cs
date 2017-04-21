@@ -39,7 +39,7 @@ namespace MiniPreyGame
         {
             base.UpdateState();
 
-            if (Vector3.SqrMagnitude(_boid.Target.Position - _boid.Transform.Position) < 10*10)
+            if ((_boid.Target.Position - _boid.Transform.Position).SqrMagnitude < 10*10)
             {
                 FSM.SetState<BoidFleeState>();
             }

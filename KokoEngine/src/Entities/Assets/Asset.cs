@@ -1,7 +1,25 @@
-﻿namespace KokoEngine
+﻿using System;
+using System.IO;
+
+namespace KokoEngine
 {
-    public abstract class Asset : Entity, IAsset
+    public abstract class Asset : Entity, IAssetInternal
     {
-        public object RawData { get; set; }
+        public string Filename { get; private set; }
+        public object RawData { get; private set; }
+
+        internal Asset() { }
+
+        public void SetData(object rawData)
+        {
+            if (RawData == null)
+                RawData = rawData;
+        }
+
+        void IAssetInternal.SetName(string filename)
+        {
+            Filename = filename;
+            Name = Path.GetFileNameWithoutExtension(filename);
+        }
     }
 }

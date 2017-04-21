@@ -1,40 +1,28 @@
-﻿using InputManager;
-using KokoEngine;
-using Microsoft.Xna.Framework.Input;
+﻿using KokoEngine;
 
-namespace MiniPreyGame
+class PlayerController : Behaviour
 {
-    class PlayerController : Behaviour
+    public float Speed { get; set; } = 3;
+
+    private IRigidbody _rb;
+
+    protected override void Awake()
     {
-        public float Speed { get; set; } = 3;
+        _rb = GetComponent<IRigidbody>();
+    }
 
-        private IRigidbody _rb;
+    protected override void Update(float dt)
+    {
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
 
-        protected override void Awake()
-        {
-            _rb = GetComponent<IRigidbody>();
-        }
+        Vector2 dir = new Vector2(-x, -y);
+        
+        //_rb.AddForce(dir * Speed);
+        Transform.Position += new Vector3(dir.X, dir.Y) * 3;
 
-        protected override void Update(float dt)
-        {
-            Vector3 dir = Vector3.Zero;
-
-            if (Input.IsKeyDown(Keys.W))
-                dir = -Vector3.Up;
-
-            if (Input.IsKeyDown(Keys.S))
-                dir = Vector3.Up;
-
-            if (Input.IsKeyDown(Keys.A))
-                dir += -Vector3.Right;
-
-            if (Input.IsKeyDown(Keys.D))
-                dir += Vector3.Right;
-
-            _rb.AddForce(dir * Speed);
-
-            // Continuous rotation
-            Transform.Rotation += dt;
-        }
+        // Continuous rotation effect
+        if (Input.GetAction("Fire"))
+        Transform.Rotation += dt;
     }
 }

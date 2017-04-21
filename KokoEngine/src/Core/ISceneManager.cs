@@ -35,10 +35,6 @@ namespace KokoEngine
         /// <param name="scene">The scene to load.</param>
         void LoadScene(IScene scene);
 
-        /// <summary>
-        /// Updates the currently active scene.
-        /// </summary>
-        /// <param name="dt">Time delta.</param>
         void UpdateActiveScene(float dt);
     }
 }

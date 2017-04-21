@@ -1,19 +1,36 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace KokoEngine
 {
     public class AssetManager : IAssetManager
     {
-        private readonly Dictionary<string, IAsset> _assetMap = new Dictionary<string, IAsset>();
+        public Dictionary<string, IAsset> AssetMap { get; } = new Dictionary<string, IAsset>();
 
-        public void AddAsset<T>(string key, T asset) where T : IAsset
+        public T LoadAsset<T>(string filename) where T : IAsset, new()
         {
-            _assetMap.Add(key, asset);
+            T asset = new T();
+
+            // Cast to internal to set name
+            IAssetInternal assetInternal = asset as IAssetInternal;
+            assetInternal?.SetName(filename);
+
+            string key = asset.Name;
+
+            return LoadAsset(key, asset);
+        }
+
+        public T LoadAsset<T>(string key, T asset) where T : IAsset
+        {
+            AssetMap.Add(key, asset);
+
+            return asset;
         }
 
         public T GetAsset<T>(string key) where T : IAsset
         {
-            return (T)_assetMap[key];
+            return (T)AssetMap[key];
         }
     }
 }

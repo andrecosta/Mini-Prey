@@ -1,5 +1,4 @@
 ﻿using System;
-using InputManager;
 using KokoEngine;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +34,7 @@ namespace MiniPreyGame
                 int i = 0;
 
                 List<IGraphNode> sortedWaypoints =
-                    graph.nodes.OrderBy(x => Vector3.SqrMagnitude((x as Waypoint).Transform.Position - (n as Waypoint).Transform.Position))
+                    graph.nodes.OrderBy(x => ((x as Waypoint).Transform.Position - (n as Waypoint).Transform.Position).SqrMagnitude)
                         .ToList();
 
                 foreach (IGraphNode w in sortedWaypoints)
@@ -80,7 +79,7 @@ namespace MiniPreyGame
             foreach (IGraphNode n in graph.nodes)
             {
                 var w = n as Waypoint;
-                if (Vector3.Magnitude(player.Transform.Position - w.Transform.Position) < 40 && _randomWaypoint != w)
+                if ((player.Transform.Position - w.Transform.Position).SqrMagnitude < 40 && _randomWaypoint != w)
                 {
                     FindPath(w, _randomWaypoint);
                 }

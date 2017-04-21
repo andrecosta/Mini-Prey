@@ -1,4 +1,4 @@
-﻿using InputManager;
+﻿//using InputManager;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -24,7 +24,7 @@ namespace MiniPreyGame
     //   Debug.Log(<message>)
     //
 
-    class Debug : DrawableGameComponent
+    /*class Debug : DrawableGameComponent
     {
         public static bool IsOpen { get; set; }
         public static bool ShowVectorPositionLabels { get; set; } = true;
@@ -228,5 +228,5 @@ namespace MiniPreyGame
         {
             _tracking.Add(obj);
         }
-    }
+    }*/
 }
