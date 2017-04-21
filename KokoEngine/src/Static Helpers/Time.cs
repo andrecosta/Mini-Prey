@@ -2,8 +2,14 @@
 {
     public static class Time
     {
-        public static float DeltaTime { get; internal set; }
-        public static double TotalTime { get; internal set; }
-        public static float TimeScale { get; set; }
+        internal static Engine ManagerInstance { private get; set; }
+
+        public static float DeltaTime => ManagerInstance.DeltaTime;
+        public static double TotalTime => ManagerInstance.TotalTime;
+        public static float TimeScale
+        {
+            get { return ManagerInstance.TimeScale; }
+            set { ManagerInstance.TimeScale = value; }
+        }
     }
 }

@@ -3,7 +3,7 @@
 namespace MiniPreyGame
 {
     /// <summary>
-    /// Conversion extensions between formats common between MonoGame and KokoEngine
+    /// Extensions to convert between formats common to MonoGame and KokoEngine
     /// </summary>
     public static class ConversionExtensions
     {

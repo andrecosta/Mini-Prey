@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Core\Structs\Resolution.cs" />
     <Compile Include="src\Entities\Assets\Font.cs" />
+    <Compile Include="src\Input\IInputManagerInternal.cs" />
     <Compile Include="src\Input\InputAxis.cs" />
     <Compile Include="src\Input\InputManager.cs" />
     <Compile Include="src\Input\Key.cs" />
@@ -55,9 +57,10 @@
     <Compile Include="src\Engine.cs" />
     <Compile Include="src\Input\IInputManager.cs" />
     <Compile Include="src\Input\InputAction.cs" />
+    <Compile Include="src\Managers\IScreenManager.cs" />
+    <Compile Include="src\Managers\ScreenManager.cs" />
     <Compile Include="src\Static Helpers\Debug.cs" />
     <Compile Include="src\Static Helpers\Input.cs" />
-    <Compile Include="src\Static Helpers\Screen.cs" />
     <Compile Include="src\Static Helpers\Time.cs" />
     <Compile Include="src\Core\Structs\Rect.cs" />
     <Compile Include="src\Core\Components\IRigidbody.cs" />

@@ -1,15 +1,14 @@
-﻿// Here, only engine interfaces will be used!
+﻿// MonoGame main purpose is to READ/ACCESS the engine's state and REACT to it, not SET/CHANGE things inside it
 
 using System;
-using System.IO;
-using KokoEngine;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Color = Microsoft.Xna.Framework.Color;
 using Texture2D = Microsoft.Xna.Framework.Graphics.Texture2D;
 using Vector2 = Microsoft.Xna.Framework.Vector2;
+using Color = Microsoft.Xna.Framework.Color;
+using KokoEngine;
 
 namespace MiniPreyGame
 {
@@ -23,19 +22,22 @@ namespace MiniPreyGame
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-
         public Game1(Engine engine)
         {
-            // Store the injected engine dependency
+            // Store the injected engine reference
             _engine = engine;
+
+            // Binds
+            _engine.InputManager.GetUpdatedKeyState += UpdateKeyState;
+            _engine.InputManager.GetUpdatedMouseState += UpdateMouseState;
 
             // -----------------------------------------------------------------------------
 
+            // Set graphics options
             _graphics = new GraphicsDeviceManager(this);
-            
-            // Set resolution
-            _graphics.PreferredBackBufferWidth = Screen.Width;
-            _graphics.PreferredBackBufferHeight = Screen.Height;
+            _graphics.PreferredBackBufferWidth = _engine.ScreenManager.CurrentResolution.Width;
+            _graphics.PreferredBackBufferHeight = _engine.ScreenManager.CurrentResolution.Width;
+            _graphics.IsFullScreen = _engine.ScreenManager.IsFullscreen;
 
             Content.RootDirectory = "Content";
         }
@@ -115,7 +117,7 @@ namespace MiniPreyGame
 
             // Load dummy texture (1x1) for line and panel drawing
             Texture2D dummyTexture = new Texture2D(GraphicsDevice, 1, 1);
-            dummyTexture.SetData(new[] { Color.White });
+            dummyTexture.SetData(new[] {Color.White});
             var t = new KokoEngine.Texture2D();
             t.SetData(dummyTexture, 1, 1);
             _engine.AssetManager.LoadAsset("dummy", t);
@@ -143,10 +145,7 @@ namespace MiniPreyGame
             //    Exit();
 
             // Gets the number of elapsed seconds since the last update (for use in all movement calculations)
-            float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            // Update the engine's tracked input state
-            InputTracking();
+            float dt = (float) gameTime.ElapsedGameTime.TotalSeconds;
 
             // Update the engine
             _engine.Update(dt);
@@ -154,21 +153,18 @@ namespace MiniPreyGame
             base.Update(gameTime);
         }
 
-        void InputTracking()
+        bool UpdateKeyState(string keyName)
         {
-            // Update key states
-            foreach (var key in _engine.InputManager.TrackedKeys)
-            {
-                Keys k;
-                if (!Enum.TryParse(key.Name, true, out k)) continue;
+            Keys k;
+            if (Enum.TryParse(keyName, true, out k))
+                return Keyboard.GetState().IsKeyDown(k);
 
-                key.PreviousState = key.CurrentState;
-                key.CurrentState = Keyboard.GetState().IsKeyDown(k) ? Key.State.Down : Key.State.Up;
-            }
+            return false;
+        }
 
-            // Update mouse state
-            var mousePos = Mouse.GetState().Position;
-            _engine.InputManager.MousePosition = mousePos.ToKokoVector2();
+        KokoEngine.Vector2 UpdateMouseState()
+        {
+            return Mouse.GetState().Position.ToKokoVector2();
         }
 
         void PlaySounds(IGameObject rootGameObject)
@@ -240,7 +236,7 @@ namespace MiniPreyGame
             {
                 ISpriteRenderer sr = component as ISpriteRenderer;
                 if (sr == null) continue;
-                
+
                 // Convert engine data types to MonoGame for use in the Draw call
                 Texture2D texture = sr.sprite.Texture.RawData as Texture2D;
                 Color color = sr.color.ToMonoColor();
@@ -248,13 +244,16 @@ namespace MiniPreyGame
                     sr.sprite.SourceRect.Width, sr.sprite.SourceRect.Height);
 
                 // Additional draw parameters
-                Rectangle destinationRectangle = new Rectangle((int) sr.Transform.Position.X, (int) sr.Transform.Position.Y,
-                    (int) (sourceRectangle.Width * sr.Transform.Scale.X), (int) (sourceRectangle.Height * sr.Transform.Scale.Y));
+                Rectangle destinationRectangle = new Rectangle((int) sr.Transform.Position.X,
+                    (int) sr.Transform.Position.Y,
+                    (int) (sourceRectangle.Width * sr.Transform.Scale.X),
+                    (int) (sourceRectangle.Height * sr.Transform.Scale.Y));
 
                 Vector2 origin = new Vector2(sourceRectangle.Width / 2f, sourceRectangle.Height / 2f);
 
                 // DRAW IT
-                sb.Draw(texture, destinationRectangle, sourceRectangle, color, sr.Transform.Rotation, origin, SpriteEffects.None, 0);
+                sb.Draw(texture, destinationRectangle, sourceRectangle, color, sr.Transform.Rotation, origin,
+                    SpriteEffects.None, 0);
             }
 
             // Recursive call for all children GameObjects
@@ -265,7 +264,7 @@ namespace MiniPreyGame
         void DrawLine(Vector2 start, Vector2 end, Color color, int size = 1)
         {
             Vector2 edge = end - start;
-            float angle = (float)Math.Atan2(edge.Y, edge.X);
+            float angle = (float) Math.Atan2(edge.Y, edge.X);
 
             var t = _engine.AssetManager.GetAsset<KokoEngine.Texture2D>("dummy").RawData as Texture2D;
 

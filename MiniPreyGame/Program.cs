@@ -19,22 +19,24 @@ namespace MiniPreyGame
              * INITIAL ENGINE CONFIG
              * -------------------------------------------------------------------------------------------------
              * Here we will instantiate the concrete implementations that the engine needs in order to function.
-             * This will also be where we will hook it all up.
+             * This will also be where we will configure them and hook everything up.
              * -------------------------------------------------------------------------------------------------
              * Implementations of the following interfaces are needed:
              * - IAssetManager
              * - IInputManager
+             * - IScreenManager
              * - ISceneManager
              * 
-             * NOTE: THESE CONFIGURATIONS COULD COME FROM A FILE OR AN EDITOR!
+             * TODO: THESE CONFIGURATIONS COULD COME FROM A FILE OR AN EDITOR IN THE ENGINE STARTUP STAGE!
              */
 
             // Instantiate the managers
             IAssetManager assetManager = new AssetManager();
             IInputManager inputManager = new InputManager();
+            IScreenManager screenManager = new ScreenManager();
             ISceneManager sceneManager = new SceneManager();
 
-            // Setup assets to load
+            // Setup the asset manager
             assetManager.LoadAsset<Texture2D>("boid.png");
             assetManager.LoadAsset<Texture2D>("boid_rainbow.png");
             assetManager.LoadAsset<Texture2D>("waypoint_red.png");
@@ -43,7 +45,7 @@ namespace MiniPreyGame
             assetManager.LoadAsset<AudioClip>("fleeSound.wav");
             assetManager.LoadAsset<Font>("debug.spritefont");
 
-            // Setup input bindings
+            // Setup the input manager
             inputManager.AddActionBinding("Jump", "Space");
             inputManager.AddActionBinding("Fire", "F", "X", "C", "V");
             inputManager.AddAxisBinding("Horizontal", "A", "D", 10);
@@ -51,12 +53,16 @@ namespace MiniPreyGame
             inputManager.AddAxisBinding("Horizontal", "Left", "Right", 10);
             inputManager.AddAxisBinding("Vertical", "Up", "Down", 10);
 
+            // Setup the screen manager
+            screenManager.AddSupportedResolution(1280, 720);
+            screenManager.IsFullscreen = false;
+
             // Setup the scenes that will be usable in the game
             // Load .scene files
             //SetupScene(assetManager, sceneManager);
 
             // Instantiate the engine and set it up
-            Engine engine = new Engine(assetManager, inputManager, sceneManager);
+            Engine engine = new Engine(assetManager, inputManager, screenManager, sceneManager);
 
             // Start MonoGame
             // MonoGame will load the resources and bind call the engine's update method

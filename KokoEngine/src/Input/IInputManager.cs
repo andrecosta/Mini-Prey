@@ -5,19 +5,19 @@ namespace KokoEngine
 {
     public interface IInputManager
     {
-        Vector2 MousePosition { get; set; }
-        List<Key> TrackedKeys { get; }
+        // HOOKS FOR MONOGAME
+        Func<string, bool> GetUpdatedKeyState { get; set; }
+        Func<Vector2> GetUpdatedMouseState { get; set; }
 
-        List<InputAction> ActionBindings { get; }
-
+        // Initial setup
         void AddActionBinding(string name, params string[] keys);
         void AddAxisBinding(string name, string positiveKey, string negativeKey, float sensitivity = 1, float gravity = 1);
 
+        // Runtime
         bool GetAction(string actionName);
         bool GetActionDown(string actionName);
         bool GetActionUp(string actionName);
         float GetAxis(string axisName);
-
-        void Update(float dt);
+        Vector2 GetMousePosition();
     }
 }
