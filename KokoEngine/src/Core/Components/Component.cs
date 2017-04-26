@@ -8,8 +8,9 @@ namespace KokoEngine
         public IGameObject GameObject { get; private set; }
         IGameObject IComponentInternal.GameObject { set { GameObject = value; } }
         public ITransform Transform => GameObject.Transform;
-        protected IInputManager Input => (GameObject as IGameObjectInternal).InputManager;
-        protected IScreenManager Screen => (GameObject as IGameObjectInternal).ScreenManager;
+        protected IInputManager Input => Engine.Instance.InputManager;
+        protected IScreenManager Screen => Engine.Instance.ScreenManager;
+        protected ITimeManager Time => Engine.Instance.TimeManager;
 
         internal Component() { }
 
@@ -18,7 +19,7 @@ namespace KokoEngine
         public List<IComponent> GetComponents() => GameObject.GetComponents();
         
         // Update
-        protected virtual void Update(float dt) { }
-        void IComponentInternal.Update(float dt) => Update(dt);
+        protected virtual void Update() { }
+        void IComponentInternal.Update() => Update();
     }
 }

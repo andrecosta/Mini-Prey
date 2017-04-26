@@ -12,6 +12,13 @@ namespace KokoEngine
         private readonly ISceneManager _sceneManager;
         private readonly IRenderManager _renderManager;
 
+        // TODO: Create in internal interface!
+        internal IInputManager InputManager => _inputManager;
+        internal IScreenManager ScreenManager => _screenManager;
+        internal ITimeManager TimeManager => _timeManager;
+
+        internal static Engine Instance { get; private set; }
+
         // Constructor
         public Engine(IAssetManager assetManager, IInputManager inputManager, IScreenManager screenManager,
             ITimeManager timeManager, ISceneManager sceneManager, IRenderManager renderManager)
@@ -23,6 +30,8 @@ namespace KokoEngine
             _timeManager = timeManager;
             _sceneManager = sceneManager;
             _renderManager = renderManager;
+
+            Instance = this;
         }
 
         // Callbacks
@@ -42,9 +51,10 @@ namespace KokoEngine
         public void Update(float dt)
         {
             // Update all the dynamic subsystems
+            // TODO: IManager internal?
             (_inputManager as IInputManagerInternal)?.Update(dt);
             (_timeManager as ITimeManagerInternal)?.Update(dt);
-            (_sceneManager as ISceneManagerInternal)?.Update(dt);
+            (_sceneManager as ISceneManagerInternal)?.Update(); // TODO: ?? weird
 
             // Draw the active scene's game objects which contain renderable components
             //foreach (var rootGameObject in _sceneManager.GetActiveScene().GetRootGameObjects())

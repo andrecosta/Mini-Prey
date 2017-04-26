@@ -19,7 +19,7 @@ namespace KokoEngine
             _direction = Transform.Up;
         }
 
-        protected override void Update(float dt)
+        protected override void Update()
         {
             Vector3 forces = Vector3.Zero;
             foreach (var b in Behaviours)

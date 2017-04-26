@@ -14,5 +14,15 @@
         {
             return $"{Name} [GUID={Guid}]";
         }
+
+        public static bool operator true(Entity e)
+        {
+            return e != null;
+        }
+
+        public static bool operator false(Entity e)
+        {
+            return e == null;
+        }
     }
 }

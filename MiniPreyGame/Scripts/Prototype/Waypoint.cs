@@ -1,5 +1,6 @@
 ﻿using System;
 using KokoEngine;
+using Random = KokoEngine.Random;
 
 namespace MiniPreyGame
 {
@@ -7,12 +8,11 @@ namespace MiniPreyGame
     {
         public float totalNodeCost { get; set; }
         public float realNodeCost { get; set; }
-        static Random r = new Random();
 
         protected override void Awake()
         {
             // Place the waypoint on a random location on the screen
-            Transform.Position = new Vector3(r.Next(0, Screen.Width), r.Next(0, Screen.Height));
+            Transform.Position = new Vector3(Random.Range(0, Screen.Width), Random.Range(0, Screen.Height));
         }
 
         protected override void Start()
@@ -21,7 +21,7 @@ namespace MiniPreyGame
             GetComponent<Animator>().Play("waypoint", 0.1f);
         }
 
-        protected override void Update(float dt)
+        protected override void Update()
         {
         }
     }

@@ -13,13 +13,9 @@ namespace KokoEngine
             Name = name;
         }
 
-        public IGameObject AddGameObject(IGameObject go)
+        public IGameObject CreateGameObject(string name)
         {
-            var gameObjectInternal = go as IGameObjectInternal;
-            if (gameObjectInternal == null) return null;
-
-            gameObjectInternal.Scene = this;
-
+            GameObject go = new GameObject(name, this);
             _rootGameObjects.Add(go);
 
             return go;

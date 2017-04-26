@@ -54,7 +54,7 @@ namespace MiniPreyGame
                 _fsm.SetState<BoidSeekState>();
         }
 
-        protected override void Update(float dt)
+        protected override void Update()
         {
             // Rotate object towards its heading
             Transform.Rotation = (float) Math.Atan2(_rb.velocity.X, -_rb.velocity.Y);

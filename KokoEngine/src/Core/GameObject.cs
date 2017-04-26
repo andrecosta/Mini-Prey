@@ -13,22 +13,15 @@ namespace KokoEngine
             set { Scene = value; }
         }
 
-        IInputManager IGameObjectInternal.InputManager { get; set; }
-        IScreenManager IGameObjectInternal.ScreenManager { get; set; }
-
         private readonly List<IComponent> _components = new List<IComponent>();
 
-        public GameObject()
-        {
-            // Every GameObject will always have a Transform component by default
-            Transform = AddComponent<Transform>();
-        }
-
-        public GameObject(string name, IInputManager inputManager, IScreenManager screenManager) : this()
+        internal GameObject(string name, IScene scene)
         {
             Name = name;
-            (this as IGameObjectInternal).InputManager = inputManager;
-            (this as IGameObjectInternal).ScreenManager = screenManager;
+            (this as IGameObjectInternal).Scene = scene;
+
+            // Every GameObject will always have a Transform component by default
+            Transform = AddComponent<Transform>();
         }
         
         public T AddComponent<T>() where T : IComponent, new()

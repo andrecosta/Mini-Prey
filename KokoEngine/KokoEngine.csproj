@@ -47,9 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Asset Management\IAssetInternal.cs" />
     <Compile Include="src\Asset Management\IAssetManagerInternal.cs" />
     <Compile Include="src\Core\Interfaces\Components\Behaviours\Animation\IAnimationClipInternal.cs" />
-    <Compile Include="src\Core\Interfaces\Structs\Resolution.cs" />
+    <Compile Include="src\Core\Structs\Resolution.cs" />
     <Compile Include="src\Asset Management\Font.cs" />
     <Compile Include="src\IEngine.cs" />
     <Compile Include="src\Input Management\IInputManagerInternal.cs" />
@@ -66,9 +67,8 @@
     <Compile Include="src\Scene Management\ISceneManagerInternal.cs" />
     <Compile Include="src\Screen Management\IScreenManager.cs" />
     <Compile Include="src\Screen Management\ScreenManager.cs" />
-    <Compile Include="src\Static Helpers\Debug.cs" />
-    <Compile Include="src\Static Helpers\Time.cs" />
-    <Compile Include="src\Core\Interfaces\Structs\Rect.cs" />
+    <Compile Include="src\Debug System\Debug.cs" />
+    <Compile Include="src\Core\Structs\Rect.cs" />
     <Compile Include="src\Core\Interfaces\Components\IRigidbody.cs" />
     <Compile Include="src\Core\Interfaces\Components\ISpriteRenderer.cs" />
     <Compile Include="src\Core\Interfaces\Components\IComponentInternal.cs" />
@@ -78,7 +78,7 @@
     <Compile Include="src\Core\Components\Behaviours\Animation\AnimationClip.cs" />
     <Compile Include="src\Asset Management\Asset.cs" />
     <Compile Include="src\Asset Management\IAsset.cs" />
-    <Compile Include="src\Core\Interfaces\Structs\Color.cs" />
+    <Compile Include="src\Core\Structs\Color.cs" />
     <Compile Include="src\Asset Management\AudioClip.cs" />
     <Compile Include="src\Core\Components\Behaviour.cs" />
     <Compile Include="src\Core\Components\Behaviours\Animation\Animator.cs" />
@@ -117,8 +117,8 @@
     <Compile Include="src\Scene Management\SceneManager.cs" />
     <Compile Include="src\Core\Sprite.cs" />
     <Compile Include="src\Asset Management\Texture2D.cs" />
-    <Compile Include="src\Core\Interfaces\Structs\Vector2.cs" />
-    <Compile Include="src\Core\Interfaces\Structs\Vector3.cs" />
+    <Compile Include="src\Core\Structs\Vector2.cs" />
+    <Compile Include="src\Core\Structs\Vector3.cs" />
     <Compile Include="src\Core\Components\Behaviours\FSM\State.cs" />
     <Compile Include="src\Core\Components\Behaviours\Steering Behaviours\SteeringBehaviours.cs" />
     <Compile Include="src\Core\Pathfinding\AStarGraphSearch.cs" />
@@ -130,6 +130,7 @@
     <Compile Include="src\Time Management\ITimeManagerInternal.cs" />
     <Compile Include="src\Time Management\ITimeManager.cs" />
     <Compile Include="src\Time Management\TimeManager.cs" />
+    <Compile Include="src\Utility\Random.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="api\index.md" />
@@ -140,9 +141,7 @@
     <None Include="packages.config" />
     <None Include="toc.yml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\Debug System\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\docfx.console.2.15.2\build\docfx.console.targets" Condition="Exists('..\packages\docfx.console.2.15.2\build\docfx.console.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

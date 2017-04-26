@@ -2,6 +2,7 @@
 using KokoEngine;
 using System.Collections.Generic;
 using System.Linq;
+using Random = KokoEngine.Random;
 
 namespace MiniPreyGame
 {
@@ -26,8 +27,6 @@ namespace MiniPreyGame
                 graph.AddNode(w);
             }
 
-            Random r = new Random();
-
             // Add edges
             foreach (IGraphNode n in graph.nodes)
             {
@@ -51,7 +50,7 @@ namespace MiniPreyGame
                 }
             }
 
-            _randomWaypoint = graph.nodes[r.Next(0, graph.nodes.Count)];
+            _randomWaypoint = graph.nodes[Random.Range(0, graph.nodes.Count)];
             (_randomWaypoint as Waypoint).GetComponent<SpriteRenderer>().Color = Color.Green;
         }
 
@@ -74,7 +73,7 @@ namespace MiniPreyGame
             }
         }
 
-        protected override void Update(float dt)
+        protected override void Update()
         {
             foreach (IGraphNode n in graph.nodes)
             {

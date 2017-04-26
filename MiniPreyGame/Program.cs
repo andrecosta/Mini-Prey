@@ -28,7 +28,7 @@ namespace MiniPreyGame
              * - ITimeManager
              * - ISceneManager
              * 
-             * TODO: THESE CONFIGURATIONS COULD COME FROM A FILE OR AN EDITOR IN THE ENGINE STARTUP STAGE!
+             * TODO: IN THE FUTURE, THESE CONFIGURATIONS COULD COME FROM A FILE OR AN EDITOR IN THE ENGINE STARTUP STAGE!
              */
 
             // Instantiate the managers
@@ -59,14 +59,16 @@ namespace MiniPreyGame
 
             // Setup the screen manager
             screenManager.AddSupportedResolution(1280, 720);
+            // TODO: set resolution!
             screenManager.IsFullscreen = false;
 
             // Setup the time manager
             timeManager.TimeScale = 1;
 
             // Setup the scenes that will be usable in the game
-            IScene scene = SetupScene(assetManager, sceneManager, inputManager, screenManager);
-            sceneManager.AddScene(scene);
+            //IScene myScene = SetupScenePrototype(assetManager);
+            IScene myScene = SetupScene(assetManager);
+            sceneManager.AddScene(myScene);
 
             // Instantiate the engine with the settings created above
             IEngine engine = new Engine(assetManager, inputManager, screenManager, timeManager, sceneManager, renderManager);

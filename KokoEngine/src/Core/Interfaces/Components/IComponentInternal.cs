@@ -4,6 +4,6 @@
     {
         IGameObject GameObject { set; }
 
-        void Update(float dt);
+        void Update();
     }
 }

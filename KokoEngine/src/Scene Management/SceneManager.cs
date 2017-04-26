@@ -6,17 +6,9 @@ namespace KokoEngine
 {
     public class SceneManager : ISceneManagerInternal
     {
-        private Dictionary<string, IScene> _sceneMap = new Dictionary<string, IScene>();
+        private readonly Dictionary<string, IScene> _sceneMap = new Dictionary<string, IScene>();
         private IScene _activeScene;
-
-        /*public IScene CreateScene(string name)
-        {
-            IScene scene = new Scene(name);
-            _sceneMap.Add(name, scene);
-
-            return scene;
-        }*/
-
+        
         // TODO: Build-time!
         public void AddScene(IScene scene)
         {
@@ -104,21 +96,21 @@ namespace KokoEngine
             LoadScene(0);
         }
 
-        void ISceneManagerInternal.Update(float dt)
+        void ISceneManagerInternal.Update()
         {
             foreach(var rootGameObject in _activeScene.GetRootGameObjects())
-                UpdateGameObjects(rootGameObject, dt);
+                UpdateGameObjects(rootGameObject);
         }
 
-        private void UpdateGameObjects(IGameObject rootGameObject, float dt)
+        private void UpdateGameObjects(IGameObject rootGameObject)
         {
             // Call the attached GameObject components' internal Update method
             foreach (IComponent c in rootGameObject.GetComponents())
-                ((IComponentInternal) c).Update(dt);
+                ((IComponentInternal) c).Update();
 
             // Recursively update all children GameObjects
             foreach (ITransform child in rootGameObject.Transform.Children)
-                UpdateGameObjects(child.GameObject, dt);
+                UpdateGameObjects(child.GameObject);
         }
     }
 }

@@ -24,9 +24,4 @@ namespace KokoEngine
 
         bool IsLoaded { get; }
     }
-
-    internal interface IAssetInternal : IAsset
-    {
-        void SetName(string filename);
-    }
 }

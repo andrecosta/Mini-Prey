@@ -26,12 +26,12 @@ namespace KokoEngine
             }
         }
 
-        protected override void Update(float dt)
+        protected override void Update()
         {
             if (_currentAnimationClip == null || !_isPlaying)
                 return;
 
-            _animationTimer += dt;
+            _animationTimer += Time.DeltaTime;
 
             if (_animationTimer > Speed)
             {

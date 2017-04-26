@@ -16,14 +16,14 @@ namespace KokoEngine
 
         private List<Vector3> _forces = new List<Vector3>();
 
-        protected override void Update(float dt)
+        protected override void Update()
         {
             foreach (Vector3 force in _forces)
                 acceleration += force * (1/mass);
 
             velocity *= Damping;
             velocity += acceleration;
-            Transform.Translate(velocity * dt);
+            Transform.Translate(velocity * Time.DeltaTime);
 
             acceleration = Gravity;
             _forces.Clear();

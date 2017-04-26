@@ -52,9 +52,6 @@ namespace KokoEngine
                     LoadAudioClipHandler?.Invoke(asset as AudioClip);
                 else if (asset is Font)
                     LoadFontHandler?.Invoke(asset as Font);
-
-                // TODO: Move to asset?
-                asset.OnLoaded?.Invoke();
             }
         }
     }

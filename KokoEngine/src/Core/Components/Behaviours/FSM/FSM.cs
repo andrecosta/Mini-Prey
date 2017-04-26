@@ -14,7 +14,7 @@ namespace KokoEngine
             _states = new Dictionary<Type, IState>();
         }
 
-        protected override void Update(float dt)
+        protected override void Update()
         {
             if (_globalState != null)
                 _globalState.UpdateState();

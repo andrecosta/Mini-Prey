@@ -5,37 +5,32 @@ namespace MiniPreyGame
 {
     public static partial class Program
     {
-        static IScene SetupScene(IAssetManager assetManager)
+        static IScene SetupScenePrototype(IAssetManager assetManager)
         {
             // Create scene
-            IScene scene = new Scene("Game");
+            IScene scene = new Scene("Prototype");
 
-            // Create the GameController GameObject
-            IGameObject gameControllerObject = scene.CreateGameObject("GameController");
+            // Create the player GameObject
+            IGameObject player = scene.CreateGameObject("Player");
             {
                 // Add some components to the player GameObject
-                var gc = gameControllerObject.AddComponent<GameController>();
-            }
+                var sr = player.AddComponent<SpriteRenderer>();
+                var rb = player.AddComponent<Rigidbody>();
+                var cc = player.AddComponent<BoxCollider>();
+                var pc = player.AddComponent<PlayerController>();
+                var v = player.AddComponent<Vehicle>();
+                
+                // Create a sprite based on the player texture and store it on the player's SpriteRenderer component
+                var playerTexture = assetManager.GetAsset<Texture2D>("player");
+                var sprite = new Sprite(playerTexture);
+                sr.Sprite = sprite;
 
-            // Create the GameController GameObject
-            IGameObject playerControllerObject = scene.CreateGameObject("GameController");
-            {
-                // Add some components to the player GameObject
-                var gc = gameControllerObject.AddComponent<GameController>();
-            }
+                // Set the BoxCollider component's bounds based on the player texture's dimensions
+                cc.Width = sprite.Texture.Height;
+                cc.Height = sprite.Texture.Height;
 
-            // Create the GameController GameObject
-            IGameObject gameControllerObject = scene.CreateGameObject("GameController");
-            {
-                // Add some components to the player GameObject
-                var gc = gameControllerObject.AddComponent<GameController>();
-            }
-
-            // Create the GameController GameObject
-            IGameObject gameControllerObject = scene.CreateGameObject("GameController");
-            {
-                // Add some components to the player GameObject
-                var gc = gameControllerObject.AddComponent<GameController>();
+                // Set the Vehicle component's maximum speed
+                v.MaxSpeed = 100;
             }
 
             Stack<IGameObject> boids = new Stack<IGameObject>();

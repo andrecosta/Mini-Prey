@@ -45,18 +45,25 @@
     <Compile Include="Components\Debug.cs" />
     <Compile Include="ConversionExtensions.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="SetupScene.cs" />
-    <Compile Include="Scripts\Boid.cs" />
-    <Compile Include="Scripts\Boid States\BoidPursuitState.cs" />
-    <Compile Include="Scripts\WaypointEuclideanHeuristicCAlculator.cs" />
-    <Compile Include="Scripts\WaypointsController.cs" />
-    <Compile Include="Scripts\Waypoint.cs" />
+    <Compile Include="Scripts\AIController.cs" />
+    <Compile Include="Scripts\Player.cs" />
+    <Compile Include="Scripts\Citizen.cs" />
+    <Compile Include="Scripts\GameController.cs" />
     <Compile Include="Scripts\PlayerController.cs" />
+    <Compile Include="Scripts\Structure.cs" />
+    <Compile Include="SetupScenePrototype.cs" />
+    <Compile Include="SetupScene.cs" />
+    <Compile Include="Scripts\Prototype\Boid.cs" />
+    <Compile Include="Scripts\Prototype\Boid States\BoidPursuitState.cs" />
+    <Compile Include="Scripts\Prototype\WaypointEuclideanHeuristicCAlculator.cs" />
+    <Compile Include="Scripts\Prototype\WaypointsController.cs" />
+    <Compile Include="Scripts\Prototype\Waypoint.cs" />
+    <Compile Include="Scripts\Prototype\PlayerController.cs" />
     <Compile Include="Components\InputManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scripts\Boid States\BoidFleeState.cs" />
-    <Compile Include="Scripts\Boid States\BoidSeekState.cs" />
+    <Compile Include="Scripts\Prototype\Boid States\BoidFleeState.cs" />
+    <Compile Include="Scripts\Prototype\Boid States\BoidSeekState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
