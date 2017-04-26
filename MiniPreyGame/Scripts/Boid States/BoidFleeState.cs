@@ -25,7 +25,7 @@ namespace MiniPreyGame
             _boid.Vehicle.MaxSpeed = 50;
 
             // Change color
-            _boid.SpriteRenderer.color = Color.White;
+            _boid.SpriteRenderer.Color = Color.White;
 
             // Play flee animation
             _boid.Animator.Play("flee", 0.15f);

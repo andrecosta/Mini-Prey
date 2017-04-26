@@ -25,7 +25,7 @@ namespace MiniPreyGame
             //_boid.Vehicle.MaxSpeed = 2;
 
             // Change color
-            _boid.SpriteRenderer.color = Color.White;
+            _boid.SpriteRenderer.Color = Color.White;
 
             // Play seek animation
             _boid.Animator.Play("defend");

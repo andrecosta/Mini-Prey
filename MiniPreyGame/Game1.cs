@@ -17,30 +17,22 @@ namespace MiniPreyGame
     /// </summary>
     public partial class Game1 : Game
     {
-        private readonly Engine _engine;
+        private readonly IEngine _engine;
 
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private Texture2D _dummyTexture;
 
-        public Game1(Engine engine)
+        public Game1(IEngine engine)
         {
             // Store the injected engine reference
             _engine = engine;
 
-            // Binds
-            _engine.InputManager.GetUpdatedKeyState += UpdateKeyState;
-            _engine.InputManager.GetUpdatedMouseState += UpdateMouseState;
-
-            // -----------------------------------------------------------------------------
-
-            // Set graphics options
-            _graphics = new GraphicsDeviceManager(this);
-            _graphics.PreferredBackBufferWidth = _engine.ScreenManager.CurrentResolution.Width;
-            _graphics.PreferredBackBufferHeight = _engine.ScreenManager.CurrentResolution.Width;
-            _graphics.IsFullScreen = _engine.ScreenManager.IsFullscreen;
-
-            Content.RootDirectory = "Content";
+            // Setup the engine
+            _engine.Setup(SetupCallback);
         }
+
+        #region MonoGame Methods
 
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
@@ -51,37 +43,8 @@ namespace MiniPreyGame
         protected override void Initialize()
         {
             base.Initialize();
-
-            // Setup the scene and all its objects
-            SetupScene();
-
             _engine.Initialize();
         }
-
-        /*
-        void LoadTexture2D(KokoEngine.Texture2D texture)
-        {
-            if (texture.Name == "dummy") return;
-            
-            FileStream fileStream = new FileStream("Content/" + texture.Name, FileMode.Open);
-
-            var t = Texture2D.FromStream(GraphicsDevice, fileStream);
-            texture.RawData = t;
-            texture.Width = t.Width;
-            texture.Height = t.Height;
-
-            fileStream.Dispose();
-        }
-
-        void LoadSoundEffect(KokoEngine.AudioClip audio)
-        {
-            FileStream fileStream = new FileStream("Content/" + audio.Name, FileMode.Open);
-
-            var a = SoundEffect.FromStream(fileStream);
-            audio.RawData = a;
-
-            fileStream.Dispose();
-        }*/
 
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -92,37 +55,10 @@ namespace MiniPreyGame
             // Create a new SpriteBatch, which can be used to draw textures.
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // LOAD ASSETS
-            foreach (var assetEntry in _engine.AssetManager.AssetMap)
-            {
-                string filename = assetEntry.Key;
-                IAsset asset = assetEntry.Value;
-
-                if (asset is KokoEngine.Texture2D)
-                {
-                    Texture2D texture = Content.Load<Texture2D>(filename);
-                    (asset as KokoEngine.Texture2D).SetData(texture, texture.Width, texture.Height);
-                }
-                else if (asset is KokoEngine.AudioClip)
-                {
-                    SoundEffect sound = Content.Load<SoundEffect>(filename);
-                    (asset as KokoEngine.AudioClip).SetData(sound, sound.Duration);
-                }
-                else if (asset is KokoEngine.Font)
-                {
-                    SpriteFont font = Content.Load<SpriteFont>(filename);
-                    (asset as KokoEngine.Font).SetData(font);
-                }
-            }
-
             // Load dummy texture (1x1) for line and panel drawing
-            Texture2D dummyTexture = new Texture2D(GraphicsDevice, 1, 1);
-            dummyTexture.SetData(new[] {Color.White});
-            var t = new KokoEngine.Texture2D();
-            t.SetData(dummyTexture, 1, 1);
-            _engine.AssetManager.LoadAsset("dummy", t);
+            _dummyTexture = new Texture2D(GraphicsDevice, 1, 1);
+            _dummyTexture.SetData(new[] { Color.White });
         }
-
 
         /// <summary>
         /// UnloadContent will be called once per game and is the place to unload
@@ -133,7 +69,6 @@ namespace MiniPreyGame
             // TODO: Unload any non ContentManager content here
         }
 
-
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -141,48 +76,9 @@ namespace MiniPreyGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            //if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-            //    Exit();
-
-            // Gets the number of elapsed seconds since the last update (for use in all movement calculations)
-            float dt = (float) gameTime.ElapsedGameTime.TotalSeconds;
-
-            // Update the engine
-            _engine.Update(dt);
-
+            _engine.Update((float) gameTime.ElapsedGameTime.TotalSeconds);
             base.Update(gameTime);
         }
-
-        bool UpdateKeyState(string keyName)
-        {
-            Keys k;
-            if (Enum.TryParse(keyName, true, out k))
-                return Keyboard.GetState().IsKeyDown(k);
-
-            return false;
-        }
-
-        KokoEngine.Vector2 UpdateMouseState()
-        {
-            return Mouse.GetState().Position.ToKokoVector2();
-        }
-
-        void PlaySounds(IGameObject rootGameObject)
-        {
-            /*foreach (IComponent component in rootGameObject.GetComponents())
-            {
-                IAudioSource au = component as IAudioSource;
-
-                // Play MonoGame sound effect
-                if (au?.AudioClip?.RawData != null)
-                {
-                    var soundEffect = au.AudioClip.RawData as SoundEffect;
-                    soundEffect?.Play(au.Volume, au.Pitch, au.Pan);
-                    au.AudioClip = null;
-                }
-            }*/
-        }
-
 
         /// <summary>
         /// This is called when the game should draw itself.
@@ -193,16 +89,85 @@ namespace MiniPreyGame
             GraphicsDevice.Clear(new Color(29, 29, 29));
             _spriteBatch.Begin();
 
-            // DRAW ENGINE OBJECTS (SPRITES)
-            // Draw the active scene's game objects which contain renderable components
-            foreach (var rootGameObject in _engine.SceneManager.GetActiveScene().GetRootGameObjects())
-                DrawGameObjects(rootGameObject, _spriteBatch);
+            _engine.Render();
 
-            // DRAW DEBUG
-            // ...
+            _spriteBatch.End();
+            base.Draw(gameTime);
+        }
+
+        #endregion
+
+        #region Hooks
+
+        void SetupCallback(IScreenManager screenManager, IAssetManager assetManager, IInputManager inputManager, IRenderManager renderManager)
+        {
+            // Setup specific manager callbacks
+            inputManager.GetUpdatedKeyState += GetKeyDownState;
+            inputManager.GetUpdatedMouseState += GetMousePosition;
+            assetManager.LoadTextureHandler += LoadTexture;
+            assetManager.LoadAudioClipHandler += LoadSoundEffect;
+            assetManager.LoadFontHandler += LoadSpriteFont;
+            renderManager.RenderSpriteHandler += DrawSprite;
+            //renderManager.RenderLineHandler += DrawLine;
+            //renderManager.RenderRectangleHandler += DrawRectangle;
+
+            // ------ MonoGame options ------
+
+            // Set graphics options
+            _graphics = new GraphicsDeviceManager(this);
+            _graphics.PreferredBackBufferWidth = screenManager.CurrentResolution.Width;
+            _graphics.PreferredBackBufferHeight = screenManager.CurrentResolution.Height;
+            _graphics.IsFullScreen = screenManager.IsFullscreen;
+
+            // Set content root directory
+            Content.RootDirectory = assetManager.RootDirectory;
+        }
+
+        #endregion
+
+        void LoadTexture(KokoEngine.Texture2D asset)
+        {
+            Texture2D texture = Content.Load<Texture2D>(asset.Name);
+            asset.SetData(texture, texture.Width, texture.Height);
+        }
+
+        void LoadSoundEffect(KokoEngine.AudioClip asset)
+        {
+            SoundEffect sound = Content.Load<SoundEffect>(asset.Name);
+            asset.SetData(sound, sound.Duration);
+        }
+
+        void LoadSpriteFont(KokoEngine.Font asset)
+        {
+            SpriteFont font = Content.Load<SpriteFont>(asset.Name);
+            asset.SetData(font);
+        }
+
+        void DrawSprite(ISpriteRenderer sr)
+        {
+            // Parameters of draw call
+            Texture2D texture = sr.Sprite.Texture.ToMonoTexture2D() ?? _dummyTexture; // If no texture exists, use dummy texture
+            Rectangle sourceRectangle = sr.Sprite.SourceRect.ToMonoRectangle();
+            Rectangle destinationRectangle = new Rectangle((int) sr.Transform.Position.X, (int) sr.Transform.Position.Y,
+                (int) (sourceRectangle.Width * sr.Transform.Scale.X),
+                (int) (sourceRectangle.Height * sr.Transform.Scale.Y));
+            Color color = sr.Color.ToMonoColor();
+            float rotation = sr.Transform.Rotation;
+            Vector2 origin = new Vector2(sourceRectangle.Width / 2f, sourceRectangle.Height / 2f);
+            float layerDepth = sr.Layer;
+
+            // Draw call
+            _spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, color, rotation, origin, SpriteEffects.None, layerDepth);
+        }
+
+        /*void RenderCallback(ISceneManager sceneManager)
+        {
+            
+
+            
 
             // Draw graph edges
-            /*List<GraphEdge> edges = _waypointsController.GetComponent<WaypointsController>().graph.edges;
+            /List<GraphEdge> edges = _waypointsController.GetComponent<WaypointsController>().graph.edges;
             for (int i = 0; i < edges.Count; i++)
             {
                 GraphEdge e = edges[i];
@@ -222,46 +187,11 @@ namespace MiniPreyGame
 
                 DrawLine(new Vector2(t1.Transform.Position.X, t1.Transform.Position.Y),
                     new Vector2(t2.Transform.Position.X, t2.Transform.Position.Y), Microsoft.Xna.Framework.Color.Red, 5);
-            }*/
-
-
-            _spriteBatch.End();
-
-            base.Draw(gameTime);
-        }
-
-        void DrawGameObjects(IGameObject rootGameObject, SpriteBatch sb)
-        {
-            foreach (IComponent component in rootGameObject.GetComponents())
-            {
-                ISpriteRenderer sr = component as ISpriteRenderer;
-                if (sr == null) continue;
-
-                // Convert engine data types to MonoGame for use in the Draw call
-                Texture2D texture = sr.sprite.Texture.RawData as Texture2D;
-                Color color = sr.color.ToMonoColor();
-                Rectangle sourceRectangle = new Rectangle(sr.sprite.SourceRect.X, sr.sprite.SourceRect.Y,
-                    sr.sprite.SourceRect.Width, sr.sprite.SourceRect.Height);
-
-                // Additional draw parameters
-                Rectangle destinationRectangle = new Rectangle((int) sr.Transform.Position.X,
-                    (int) sr.Transform.Position.Y,
-                    (int) (sourceRectangle.Width * sr.Transform.Scale.X),
-                    (int) (sourceRectangle.Height * sr.Transform.Scale.Y));
-
-                Vector2 origin = new Vector2(sourceRectangle.Width / 2f, sourceRectangle.Height / 2f);
-
-                // DRAW IT
-                sb.Draw(texture, destinationRectangle, sourceRectangle, color, sr.Transform.Rotation, origin,
-                    SpriteEffects.None, 0);
             }
 
-            // Recursive call for all children GameObjects
-            foreach (var child in rootGameObject.Transform.Children)
-                DrawGameObjects(child.GameObject, sb);
-        }
+        }*/
 
-        void DrawLine(Vector2 start, Vector2 end, Color color, int size = 1)
+        /*void DrawLine(Vector2 start, Vector2 end, Color color, int size = 1)
         {
             Vector2 edge = end - start;
             float angle = (float) Math.Atan2(edge.Y, edge.X);
@@ -270,6 +200,37 @@ namespace MiniPreyGame
 
             _spriteBatch.Draw(t, new Rectangle((int) start.X, (int) start.Y, (int) edge.Length(), size), null,
                 color, angle, new Vector2(0, 0), SpriteEffects.None, 0);
+        }*/
+
+
+        private bool GetKeyDownState(string keyName)
+        {
+            Keys k;
+            if (Enum.TryParse(keyName, true, out k))
+                return Keyboard.GetState().IsKeyDown(k);
+
+            return false;
+        }
+
+        private KokoEngine.Vector2 GetMousePosition()
+        {
+            return Mouse.GetState().Position.ToKokoVector2();
+        }
+
+        void PlaySounds(IGameObject rootGameObject)
+        {
+            /*foreach (IComponent component in rootGameObject.GetComponents())
+            {
+                IAudioSource au = component as IAudioSource;
+
+                // Play MonoGame sound effect
+                if (au?.AudioClip?.RawData != null)
+                {
+                    var soundEffect = au.AudioClip.RawData as SoundEffect;
+                    soundEffect?.Play(au.Volume, au.Pitch, au.Pan);
+                    au.AudioClip = null;
+                }
+            }*/
         }
     }
 }

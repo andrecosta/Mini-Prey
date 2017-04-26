@@ -7,6 +7,8 @@ namespace KokoEngine
         public Resolution CurrentResolution { get; private set; }
         public List<Resolution> SupportedResolutions { get; } = new List<Resolution>();
         public bool IsFullscreen { get; set; }
+        public int Width => CurrentResolution.Width;
+        public int Height => CurrentResolution.Height;
 
         public bool SetResolution(int width, int height) => SetResolution(new Resolution(width, height));
         public bool SetResolution(Resolution resolution)

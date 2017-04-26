@@ -13,6 +13,9 @@ namespace KokoEngine
             set { Scene = value; }
         }
 
+        IInputManager IGameObjectInternal.InputManager { get; set; }
+        IScreenManager IGameObjectInternal.ScreenManager { get; set; }
+
         private readonly List<IComponent> _components = new List<IComponent>();
 
         public GameObject()
@@ -21,9 +24,11 @@ namespace KokoEngine
             Transform = AddComponent<Transform>();
         }
 
-        public GameObject(string name) : this()
+        public GameObject(string name, IInputManager inputManager, IScreenManager screenManager) : this()
         {
             Name = name;
+            (this as IGameObjectInternal).InputManager = inputManager;
+            (this as IGameObjectInternal).ScreenManager = screenManager;
         }
         
         public T AddComponent<T>() where T : IComponent, new()
@@ -34,11 +39,7 @@ namespace KokoEngine
             // Set the component's GameObject property to the current GameObject
             IComponentInternal componentInternal = component as IComponentInternal;
             if (componentInternal != null)
-            {
                 componentInternal.GameObject = this;
-                IBehaviour behaviour = componentInternal as IBehaviour;
-                behaviour?.Awake();
-            }
 
             // Add the instantiated component to the GameObject's component list
             _components.Add(component);

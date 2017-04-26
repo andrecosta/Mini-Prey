@@ -10,7 +10,7 @@ namespace KokoEngine
         /// </summary>
         /// <param name="name">The name of the scene to create.</param>
         /// <returns>The created scene.</returns>
-        IScene CreateScene(string name);
+        //IScene CreateScene(string name);
 
         /// <summary>
         /// Returns the currently active scene.
@@ -35,6 +35,6 @@ namespace KokoEngine
         /// <param name="scene">The scene to load.</param>
         void LoadScene(IScene scene);
 
-        void UpdateActiveScene(float dt);
+        void AddScene(IScene scene);
     }
 }

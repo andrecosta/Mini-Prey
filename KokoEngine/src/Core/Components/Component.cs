@@ -8,6 +8,8 @@ namespace KokoEngine
         public IGameObject GameObject { get; private set; }
         IGameObject IComponentInternal.GameObject { set { GameObject = value; } }
         public ITransform Transform => GameObject.Transform;
+        protected IInputManager Input => (GameObject as IGameObjectInternal).InputManager;
+        protected IScreenManager Screen => (GameObject as IGameObjectInternal).ScreenManager;
 
         internal Component() { }
 

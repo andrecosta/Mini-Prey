@@ -8,23 +8,27 @@ namespace KokoEngine
     /// </summary>
     public interface IAssetManager
     {
-        Dictionary<string, IAsset> AssetMap { get; }
+        string RootDirectory { get; set; }
+
+        Action<Texture2D> LoadTextureHandler { get; set; }
+        Action<AudioClip> LoadAudioClipHandler { get; set; }
+        Action<Font> LoadFontHandler { get; set; }
 
         /// <summary>
-        /// Loads an asset of type T.
+        /// Adds an asset of type T.
         /// </summary>
         /// <typeparam name="T">The type of the asset.</typeparam>
         /// <param name="filename">The filename of the asset to load. This will be used as the key for retrieval.</param>
-        T LoadAsset<T>(string filename) where T : IAsset, new();
+        T AddAsset<T>(string filename) where T : IAsset, new();
 
         /// <summary>
-        /// Loads a pre-created asset.
+        /// Adds a pre-created asset.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="name"></param>
         /// <param name="asset"></param>
         /// <returns></returns>
-        T LoadAsset<T>(string key, T asset) where T : IAsset;
+        T AddAsset<T>(string key, T asset) where T : IAsset;
 
         /// <summary>
         /// Returns an asset of type T.

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace KokoEngine
 {
@@ -9,7 +10,7 @@ namespace KokoEngine
         public bool Looping { get; set; } = true;
 
         private readonly Dictionary<string, IAnimationClip> _animationClips = new Dictionary<string, IAnimationClip>();
-        private IAnimationClip _currentAnimationClip;
+        private IAnimationClipInternal _currentAnimationClip;
         private ISpriteRenderer _sr;
         private bool _isPlaying;
         private float _animationTimer;
@@ -18,6 +19,11 @@ namespace KokoEngine
         protected override void Awake()
         {
             _sr = GetComponent<ISpriteRenderer>();
+
+            foreach (var animationClip in _animationClips.Values)
+            {
+                (animationClip as IAnimationClipInternal)?.CreateSpritesheet();
+            }
         }
 
         protected override void Update(float dt)
@@ -39,7 +45,7 @@ namespace KokoEngine
                 _animationTimer = 0;
             }
 
-            _sr.sprite = _currentAnimationClip.Sprites[_currentFrame];
+            _sr.Sprite = _currentAnimationClip.Sprites[_currentFrame];
         }
 
         public void AddAnimation(string key, IAnimationClip clip)
@@ -50,8 +56,8 @@ namespace KokoEngine
         public void Play(string animationName)
         {
             Stop();
-            _currentAnimationClip = _animationClips[animationName];
-            _sr.sprite = _currentAnimationClip.Sprites[_currentFrame];
+            _currentAnimationClip = _animationClips[animationName] as IAnimationClipInternal;
+            _sr.Sprite = _currentAnimationClip?.Sprites[_currentFrame];
             _isPlaying = true;
         }
 

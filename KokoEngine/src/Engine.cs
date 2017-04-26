@@ -1,56 +1,61 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace KokoEngine
 {
-    public class Engine
+    public class Engine : IEngine
     {
-        // Managers
-        public IAssetManager AssetManager { get; }
-        public IInputManager InputManager { get; }
-        public IScreenManager ScreenManager { get; }
-        public ISceneManager SceneManager { get; }
-        public ITimeManager TimeManager { get; }
+        // Manager references
+        private readonly IAssetManager _assetManager;
+        private readonly IInputManager _inputManager;
+        private readonly IScreenManager _screenManager;
+        private readonly ITimeManager _timeManager;
+        private readonly ISceneManager _sceneManager;
+        private readonly IRenderManager _renderManager;
 
-        // Time tracking and control
-        internal float DeltaTime { get; private set; }
-        internal double TotalTime { get; private set; }
-        internal float TimeScale { get; set; } = 1;
-
-        public Engine(IAssetManager assetManager, IInputManager inputManager, IScreenManager screenManager, ISceneManager sceneManager)
+        // Constructor
+        public Engine(IAssetManager assetManager, IInputManager inputManager, IScreenManager screenManager,
+            ITimeManager timeManager, ISceneManager sceneManager, IRenderManager renderManager)
         {
             // Managers
-            AssetManager = assetManager;
-            InputManager = inputManager;
-            ScreenManager = screenManager;
-            SceneManager = sceneManager;
+            _assetManager = assetManager;
+            _inputManager = inputManager;
+            _screenManager = screenManager;
+            _timeManager = timeManager;
+            _sceneManager = sceneManager;
+            _renderManager = renderManager;
+        }
 
-            // Default options
-
-            // Setup the static helper classes
-            //Screen.ManagerInstance = screenManager;
-            //Time.ManagerInstance = timeManager;
-            //Input.ManagerInstance = inputManager;
+        // Callbacks
+        public void Setup(Action<IScreenManager, IAssetManager, IInputManager, IRenderManager> callback)
+        {
+            _screenManager.SetResolution(1280, 720);
+            callback?.Invoke(_screenManager, _assetManager, _inputManager, _renderManager);
         }
 
         public void Initialize()
         {
-            // Load the first scene
-            SceneManager.LoadScene(0);
+            // Initialize subsystems
+            (_assetManager as IAssetManagerInternal)?.Initialize();
+            (_sceneManager as ISceneManagerInternal)?.Initialize();
         }
 
         public void Update(float dt)
         {
-            dt *= Time.TimeScale;
-            DeltaTime = dt;
-            TotalTime += dt;
-
-            (InputManager as IInputManagerInternal)?.Update(dt);
-            (SceneManager as ISceneManagerInternal)?.UpdateActiveScene(dt);
+            // Update all the dynamic subsystems
+            (_inputManager as IInputManagerInternal)?.Update(dt);
+            (_timeManager as ITimeManagerInternal)?.Update(dt);
+            (_sceneManager as ISceneManagerInternal)?.Update(dt);
 
             // Draw the active scene's game objects which contain renderable components
             //foreach (var rootGameObject in _sceneManager.GetActiveScene().GetRootGameObjects())
             //    PlaySounds(rootGameObject);
+        }
+
+        public void Render()
+        {
+            (_renderManager as IRenderManagerInternal)?.RenderScene(_sceneManager.GetActiveScene());
+
+            //callback?.Invoke(_sceneManager);
         }
     }
 }

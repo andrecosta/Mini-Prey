@@ -98,7 +98,7 @@ namespace KokoEngine
                 {
                     // If positive key is pressed, increase axis value (modified by sensitivity) until it reaches 1
                     axis.Value = Math.Min(axis.Value + dt * axis.Sensitivity, 1);
-                    axis.Timestamp = Time.TotalTime;
+                    axis.Timestamp = DateTime.Now.Subtract(DateTime.MinValue.AddYears(1969)).TotalMilliseconds;
                 }
                 else if (axis.Value > 0)
                     // If positive key is not pressed, progressively return axis value to 0 (modified by gravity)
@@ -108,7 +108,7 @@ namespace KokoEngine
                 {
                     // If negative key is pressed, decrease axis value (modified by sensitivity) until it reaches -1
                     axis.Value = Math.Max(axis.Value - dt * axis.Sensitivity, -1);
-                    axis.Timestamp = Time.TotalTime;
+                    axis.Timestamp = DateTime.Now.Subtract(DateTime.MinValue.AddYears(1969)).TotalMilliseconds;
                 }
                 else if (axis.Value < 0)
                     // If negative key is not pressed, progressively return axis value to 0 (modified by gravity)

@@ -16,6 +16,13 @@ namespace KokoEngine
         /// The raw data of the asset. This can be cast to any native format used by the client application using the engine.
         /// </summary>
         object RawData { get; }
+
+        /// <summary>
+        /// Called when the asset's data is loaded
+        /// </summary>
+        Action OnLoaded { get; set; }
+
+        bool IsLoaded { get; }
     }
 
     internal interface IAssetInternal : IAsset

@@ -25,6 +25,7 @@ namespace MiniPreyGame
              * - IAssetManager
              * - IInputManager
              * - IScreenManager
+             * - ITimeManager
              * - ISceneManager
              * 
              * TODO: THESE CONFIGURATIONS COULD COME FROM A FILE OR AN EDITOR IN THE ENGINE STARTUP STAGE!
@@ -34,16 +35,19 @@ namespace MiniPreyGame
             IAssetManager assetManager = new AssetManager();
             IInputManager inputManager = new InputManager();
             IScreenManager screenManager = new ScreenManager();
+            ITimeManager timeManager = new TimeManager();
             ISceneManager sceneManager = new SceneManager();
+            IRenderManager renderManager = new RenderManager();
 
             // Setup the asset manager
-            assetManager.LoadAsset<Texture2D>("boid.png");
-            assetManager.LoadAsset<Texture2D>("boid_rainbow.png");
-            assetManager.LoadAsset<Texture2D>("waypoint_red.png");
-            assetManager.LoadAsset<Texture2D>("player.png");
-            assetManager.LoadAsset<AudioClip>("seekSound.wav");
-            assetManager.LoadAsset<AudioClip>("fleeSound.wav");
-            assetManager.LoadAsset<Font>("debug.spritefont");
+            assetManager.RootDirectory = "Content";
+            assetManager.AddAsset<Texture2D>("boid.png");
+            assetManager.AddAsset<Texture2D>("boid_rainbow.png");
+            assetManager.AddAsset<Texture2D>("waypoint_red.png");
+            assetManager.AddAsset<Texture2D>("player.png");
+            assetManager.AddAsset<AudioClip>("seekSound.wav");
+            assetManager.AddAsset<AudioClip>("fleeSound.wav");
+            assetManager.AddAsset<Font>("debug.spritefont");
 
             // Setup the input manager
             inputManager.AddActionBinding("Jump", "Space");
@@ -57,15 +61,18 @@ namespace MiniPreyGame
             screenManager.AddSupportedResolution(1280, 720);
             screenManager.IsFullscreen = false;
 
-            // Setup the scenes that will be usable in the game
-            // Load .scene files
-            //SetupScene(assetManager, sceneManager);
+            // Setup the time manager
+            timeManager.TimeScale = 1;
 
-            // Instantiate the engine and set it up
-            Engine engine = new Engine(assetManager, inputManager, screenManager, sceneManager);
+            // Setup the scenes that will be usable in the game
+            IScene scene = SetupScene(assetManager, sceneManager, inputManager, screenManager);
+            sceneManager.AddScene(scene);
+
+            // Instantiate the engine with the settings created above
+            IEngine engine = new Engine(assetManager, inputManager, screenManager, timeManager, sceneManager, renderManager);
 
             // Start MonoGame
-            // MonoGame will load the resources and bind call the engine's update method
+            // MonoGame will load the resources and call the engine's update method
             using (var game = new Game1(engine))
                 game.Run();
         }

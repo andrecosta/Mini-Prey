@@ -1,6 +1,6 @@
 ﻿namespace KokoEngine
 {
-    public static class Time
+    /*public static class Time
     {
         internal static Engine ManagerInstance { private get; set; }
 
@@ -11,5 +11,5 @@
             get { return ManagerInstance.TimeScale; }
             set { ManagerInstance.TimeScale = value; }
         }
-    }
+    }*/
 }

@@ -4,11 +4,17 @@ using System.IO;
 
 namespace KokoEngine
 {
-    public class AssetManager : IAssetManager
+    public class AssetManager : IAssetManagerInternal
     {
-        public Dictionary<string, IAsset> AssetMap { get; } = new Dictionary<string, IAsset>();
+        public Action<Texture2D> LoadTextureHandler { get; set; }
+        public Action<AudioClip> LoadAudioClipHandler { get; set; }
+        public Action<Font> LoadFontHandler { get; set; }
 
-        public T LoadAsset<T>(string filename) where T : IAsset, new()
+        public string RootDirectory { get; set; }
+
+        private readonly Dictionary<string, IAsset> _assetMap = new Dictionary<string, IAsset>();
+
+        public T AddAsset<T>(string filename) where T : IAsset, new()
         {
             T asset = new T();
 
@@ -18,19 +24,38 @@ namespace KokoEngine
 
             string key = asset.Name;
 
-            return LoadAsset(key, asset);
+            return AddAsset(key, asset);
         }
 
-        public T LoadAsset<T>(string key, T asset) where T : IAsset
+        public T AddAsset<T>(string key, T asset) where T : IAsset
         {
-            AssetMap.Add(key, asset);
+            _assetMap.Add(key, asset);
 
             return asset;
         }
 
         public T GetAsset<T>(string key) where T : IAsset
         {
-            return (T)AssetMap[key];
+            return (T)_assetMap[key];
+        }
+
+        void IAssetManagerInternal.Initialize()
+        {
+            // Load assets
+            foreach (var assetEntry in _assetMap)
+            {
+                IAsset asset = assetEntry.Value;
+
+                if (asset is Texture2D)
+                    LoadTextureHandler?.Invoke(asset as Texture2D);
+                else if (asset is AudioClip)
+                    LoadAudioClipHandler?.Invoke(asset as AudioClip);
+                else if (asset is Font)
+                    LoadFontHandler?.Invoke(asset as Font);
+
+                // TODO: Move to asset?
+                asset.OnLoaded?.Invoke();
+            }
         }
     }
 }

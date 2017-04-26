@@ -7,6 +7,8 @@ namespace KokoEngine
     {
         public string Filename { get; private set; }
         public object RawData { get; private set; }
+        public Action OnLoaded { get; set; }
+        public bool IsLoaded => RawData != null;
 
         internal Asset() { }
 

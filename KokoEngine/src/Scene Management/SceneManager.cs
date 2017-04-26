@@ -4,17 +4,23 @@ using System.Linq;
 
 namespace KokoEngine
 {
-    public class SceneManager : ISceneManager
+    public class SceneManager : ISceneManagerInternal
     {
         private Dictionary<string, IScene> _sceneMap = new Dictionary<string, IScene>();
         private IScene _activeScene;
 
-        public IScene CreateScene(string name)
+        /*public IScene CreateScene(string name)
         {
             IScene scene = new Scene(name);
             _sceneMap.Add(name, scene);
 
             return scene;
+        }*/
+
+        // TODO: Build-time!
+        public void AddScene(IScene scene)
+        {
+            _sceneMap.Add(scene.Name, scene);
         }
 
         public IScene GetActiveScene()
@@ -27,7 +33,10 @@ namespace KokoEngine
             // Get the scene reference from the scene map and set it as active
             _sceneMap.TryGetValue(sceneName, out _activeScene);
 
-            // Start the scene scripts
+            // Call the Awake method for every scene component
+            AwakeScene();
+
+            // Call the Start method for every scene component
             StartScene();
         }
 
@@ -45,7 +54,26 @@ namespace KokoEngine
                     LoadScene(s.Key);
             }
         }
-        
+
+        private void AwakeScene()
+        {
+            if (_activeScene != null)
+                foreach (IGameObject rootGameObject in _activeScene.GetRootGameObjects())
+                    AwakeGameObjects(rootGameObject);
+        }
+
+        private void AwakeGameObjects(IGameObject rootGameObject)
+        {
+            foreach (IComponent component in rootGameObject.GetComponents())
+            {
+                (component as IBehaviour)?.Awake();
+            }
+
+            // Recursively start all children GameObjects
+            foreach (var child in rootGameObject.Transform.Children)
+                AwakeGameObjects(child.GameObject);
+        }
+
         private void StartScene()
         {
             if (_activeScene != null)
@@ -70,7 +98,13 @@ namespace KokoEngine
                 StartGameObjects(child.GameObject);
         }
 
-        public void UpdateActiveScene(float dt)
+        void ISceneManagerInternal.Initialize()
+        {
+            // Load the first scene
+            LoadScene(0);
+        }
+
+        void ISceneManagerInternal.Update(float dt)
         {
             foreach(var rootGameObject in _activeScene.GetRootGameObjects())
                 UpdateGameObjects(rootGameObject, dt);

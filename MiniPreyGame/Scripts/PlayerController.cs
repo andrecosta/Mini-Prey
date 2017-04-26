@@ -9,6 +9,9 @@ class PlayerController : Behaviour
     protected override void Awake()
     {
         _rb = GetComponent<IRigidbody>();
+
+        // Set the player's position to the centre of the screen
+        Transform.Position = new Vector3(Screen.Width / 2f, Screen.Height / 2f);
     }
 
     protected override void Update(float dt)

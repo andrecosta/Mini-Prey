@@ -14,8 +14,8 @@ namespace KokoEngine
         int NumFrames { get; }
 
         /// <summary>
-        /// The sprites composing this animation clip.
+        /// The sprite used as a base for this animation clip.
         /// </summary>
-        List<ISprite> Sprites { get; }
+        ISprite Sprite { get; }
     }
 }

@@ -52,7 +52,7 @@ namespace MiniPreyGame
             }
 
             _randomWaypoint = graph.nodes[r.Next(0, graph.nodes.Count)];
-            (_randomWaypoint as Waypoint).GetComponent<SpriteRenderer>().color = Color.Green;
+            (_randomWaypoint as Waypoint).GetComponent<SpriteRenderer>().Color = Color.Green;
         }
 
         public void AddWaypoint(IGraphNode w)

@@ -8,7 +8,7 @@ namespace KokoEngine
 
         private readonly List<IGameObject> _rootGameObjects = new List<IGameObject>();
 
-        internal Scene(string name)
+        public Scene(string name)
         {
             Name = name;
         }

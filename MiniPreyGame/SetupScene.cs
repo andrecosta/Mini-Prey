@@ -3,18 +3,15 @@ using KokoEngine;
 
 namespace MiniPreyGame
 {
-    public partial class Game1
+    public static partial class Program
     {
-        void SetupScene()
+        static IScene SetupScene(IAssetManager assetManager, ISceneManager sceneManager, IInputManager inputManager, IScreenManager screenManager)
         {
-            ISceneManager sceneManager = _engine.SceneManager;
-            IAssetManager assetManager = _engine.AssetManager;
-
             // Create scene
-            IScene scene = sceneManager.CreateScene("Level 1");
+            IScene scene = new Scene("Level 1");//sceneManager.CreateScene("Level 1");
 
             // Create the player GameObject
-            IGameObject player = new GameObject();
+            IGameObject player = new GameObject("", inputManager, screenManager);
             {
                 // Add some components to the player GameObject
                 var sr = player.AddComponent<SpriteRenderer>();
@@ -22,17 +19,14 @@ namespace MiniPreyGame
                 var cc = player.AddComponent<BoxCollider>();
                 var pc = player.AddComponent<PlayerController>();
                 var v = player.AddComponent<Vehicle>();
-
-                // Set the player's position to the centre of the screen
-                player.Transform.Position = new Vector3(Screen.Width / 2f, Screen.Height / 2f);
-
+                
                 // Set the scale of the player's Transform component
                 //player.Transform.Scale = new Vector3(0.05f, 0.05f, 0.05f);
 
                 // Create a sprite based on the player texture and store it on the player's SpriteRenderer component
                 var playerTexture = assetManager.GetAsset<Texture2D>("player");
                 var sprite = new Sprite(playerTexture);
-                sr.sprite = sprite;
+                sr.Sprite = sprite;
 
                 // Set the BoxCollider component's bounds based on the player texture's dimensions
                 cc.Width = sprite.Texture.Height;
@@ -53,7 +47,7 @@ namespace MiniPreyGame
             for (int i = 0; i < 20; i++)
             {
                 // Create the boid GameObject
-                var boid = new GameObject();
+                var boid = new GameObject("", inputManager, screenManager);
 
                 // Add some components to the boid GameObject
                 var sr = boid.AddComponent<SpriteRenderer>();
@@ -121,7 +115,7 @@ namespace MiniPreyGame
             }
 
             // Create the waypoints controller GameObject and add it to the scene
-            var waypointsController = new GameObject();
+            var waypointsController = new GameObject("", inputManager, screenManager);
             var wc = waypointsController.AddComponent<WaypointsController>();
             wc.player = player;
             scene.AddGameObject(waypointsController);
@@ -130,7 +124,7 @@ namespace MiniPreyGame
             for (int i = 0; i < 25; i++)
             {
                 // Create the waypoint GameObject
-                var waypoint = new GameObject();
+                var waypoint = new GameObject("", inputManager, screenManager);
 
                 // Add some components to the boid GameObject
                 var sr = waypoint.AddComponent<SpriteRenderer>();
@@ -141,14 +135,13 @@ namespace MiniPreyGame
                 // Create sprites based on the boid textures
                 var waypointTexture = assetManager.GetAsset<Texture2D>("waypoint_red");
                 var waypointSprite = new Sprite(waypointTexture);
-                sr.sprite = waypointSprite;
+                sr.Sprite = waypointSprite;
 
                 // Create animation clips based on the created sprites, with different number of frames
                 var waypointAnimationClip = new AnimationClip(waypointSprite, 6);
 
                 // Add the created animations to the Animator component
                 a.AddAnimation("waypoint", waypointAnimationClip);
-                a.Play("waypoint", 0.1f);
 
                 // Add the waypoint to the controller
                 wc.AddWaypoint(w);
@@ -156,6 +149,8 @@ namespace MiniPreyGame
                 // Add the boid GameObject to the scene
                 scene.AddGameObject(waypoint);
             }
+
+            return scene;
         }
     }
 }

@@ -7,6 +7,8 @@ namespace KokoEngine
         Resolution CurrentResolution { get; }
         List<Resolution> SupportedResolutions { get; }
         bool IsFullscreen { get; set; }
+        int Width { get; }
+        int Height { get; }
 
         bool SetResolution(int width, int height);
         bool SetResolution(Resolution resolution);

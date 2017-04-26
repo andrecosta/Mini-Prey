@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MiniPreyGame
 {
@@ -39,6 +40,17 @@ namespace MiniPreyGame
         {
             return new Color(input.R, input.G, input.B);
         }
+
+        public static Texture2D ToMonoTexture2D(this KokoEngine.Texture2D input)
+        {
+            return input.RawData as Texture2D;
+        }
+
+        public static Rectangle ToMonoRectangle(this KokoEngine.Rect input)
+        {
+            return new Rectangle(input.X, input.Y, input.Width, input.Height);
+        }
+
         #endregion
     }
 }

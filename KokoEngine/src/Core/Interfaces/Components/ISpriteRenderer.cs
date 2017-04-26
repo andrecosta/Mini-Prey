@@ -8,11 +8,16 @@
         /// <summary>
         /// The color to apply on the sprite.
         /// </summary>
-        Color color { get; set; }
+        Color Color { get; set; }
 
         /// <summary>
         /// The sprite asset.
         /// </summary>
-        ISprite sprite { get; set; }
+        ISprite Sprite { get; set; }
+
+        /// <summary>
+        /// The depth layer to render the sprite on.
+        /// </summary>
+        float Layer { get; set; }
     }
 }

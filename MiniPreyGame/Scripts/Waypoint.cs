@@ -15,6 +15,12 @@ namespace MiniPreyGame
             Transform.Position = new Vector3(r.Next(0, Screen.Width), r.Next(0, Screen.Height));
         }
 
+        protected override void Start()
+        {
+            // Play animation
+            GetComponent<Animator>().Play("waypoint", 0.1f);
+        }
+
         protected override void Update(float dt)
         {
         }

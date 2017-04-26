@@ -37,18 +37,18 @@ references:
   commentId: Overload:KokoEngine.AnimationClip.NumFrames
   fullName: KokoEngine.AnimationClip.NumFrames
   nameWithType: AnimationClip.NumFrames
-- uid: KokoEngine.AnimationClip.Sprites
-  name: Sprites
-  href: api/KokoEngine.AnimationClip.html#KokoEngine_AnimationClip_Sprites
-  commentId: P:KokoEngine.AnimationClip.Sprites
-  fullName: KokoEngine.AnimationClip.Sprites
-  nameWithType: AnimationClip.Sprites
-- uid: KokoEngine.AnimationClip.Sprites*
-  name: Sprites
-  href: api/KokoEngine.AnimationClip.html#KokoEngine_AnimationClip_Sprites_
-  commentId: Overload:KokoEngine.AnimationClip.Sprites
-  fullName: KokoEngine.AnimationClip.Sprites
-  nameWithType: AnimationClip.Sprites
+- uid: KokoEngine.AnimationClip.Sprite
+  name: Sprite
+  href: api/KokoEngine.AnimationClip.html#KokoEngine_AnimationClip_Sprite
+  commentId: P:KokoEngine.AnimationClip.Sprite
+  fullName: KokoEngine.AnimationClip.Sprite
+  nameWithType: AnimationClip.Sprite
+- uid: KokoEngine.AnimationClip.Sprite*
+  name: Sprite
+  href: api/KokoEngine.AnimationClip.html#KokoEngine_AnimationClip_Sprite_
+  commentId: Overload:KokoEngine.AnimationClip.Sprite
+  fullName: KokoEngine.AnimationClip.Sprite
+  nameWithType: AnimationClip.Sprite
 - uid: KokoEngine.Animator
   name: Animator
   href: api/KokoEngine.Animator.html
@@ -199,6 +199,30 @@ references:
   commentId: Overload:KokoEngine.Asset.Filename
   fullName: KokoEngine.Asset.Filename
   nameWithType: Asset.Filename
+- uid: KokoEngine.Asset.IsLoaded
+  name: IsLoaded
+  href: api/KokoEngine.Asset.html#KokoEngine_Asset_IsLoaded
+  commentId: P:KokoEngine.Asset.IsLoaded
+  fullName: KokoEngine.Asset.IsLoaded
+  nameWithType: Asset.IsLoaded
+- uid: KokoEngine.Asset.IsLoaded*
+  name: IsLoaded
+  href: api/KokoEngine.Asset.html#KokoEngine_Asset_IsLoaded_
+  commentId: Overload:KokoEngine.Asset.IsLoaded
+  fullName: KokoEngine.Asset.IsLoaded
+  nameWithType: Asset.IsLoaded
+- uid: KokoEngine.Asset.OnLoaded
+  name: OnLoaded
+  href: api/KokoEngine.Asset.html#KokoEngine_Asset_OnLoaded
+  commentId: P:KokoEngine.Asset.OnLoaded
+  fullName: KokoEngine.Asset.OnLoaded
+  nameWithType: Asset.OnLoaded
+- uid: KokoEngine.Asset.OnLoaded*
+  name: OnLoaded
+  href: api/KokoEngine.Asset.html#KokoEngine_Asset_OnLoaded_
+  commentId: Overload:KokoEngine.Asset.OnLoaded
+  fullName: KokoEngine.Asset.OnLoaded
+  nameWithType: Asset.OnLoaded
 - uid: KokoEngine.Asset.RawData
   name: RawData
   href: api/KokoEngine.Asset.html#KokoEngine_Asset_RawData
@@ -229,18 +253,30 @@ references:
   commentId: T:KokoEngine.AssetManager
   fullName: KokoEngine.AssetManager
   nameWithType: AssetManager
-- uid: KokoEngine.AssetManager.AssetMap
-  name: AssetMap
-  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_AssetMap
-  commentId: P:KokoEngine.AssetManager.AssetMap
-  fullName: KokoEngine.AssetManager.AssetMap
-  nameWithType: AssetManager.AssetMap
-- uid: KokoEngine.AssetManager.AssetMap*
-  name: AssetMap
-  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_AssetMap_
-  commentId: Overload:KokoEngine.AssetManager.AssetMap
-  fullName: KokoEngine.AssetManager.AssetMap
-  nameWithType: AssetManager.AssetMap
+- uid: KokoEngine.AssetManager.AddAsset*
+  name: AddAsset
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_AddAsset_
+  commentId: Overload:KokoEngine.AssetManager.AddAsset
+  fullName: KokoEngine.AssetManager.AddAsset
+  nameWithType: AssetManager.AddAsset
+- uid: KokoEngine.AssetManager.AddAsset``1(System.String)
+  name: AddAsset<T>(String)
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_AddAsset__1_System_String_
+  commentId: M:KokoEngine.AssetManager.AddAsset``1(System.String)
+  name.vb: AddAsset(Of T)(String)
+  fullName: KokoEngine.AssetManager.AddAsset<T>(System.String)
+  fullName.vb: KokoEngine.AssetManager.AddAsset(Of T)(System.String)
+  nameWithType: AssetManager.AddAsset<T>(String)
+  nameWithType.vb: AssetManager.AddAsset(Of T)(String)
+- uid: KokoEngine.AssetManager.AddAsset``1(System.String,``0)
+  name: AddAsset<T>(String, T)
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_AddAsset__1_System_String___0_
+  commentId: M:KokoEngine.AssetManager.AddAsset``1(System.String,``0)
+  name.vb: AddAsset(Of T)(String, T)
+  fullName: KokoEngine.AssetManager.AddAsset<T>(System.String, T)
+  fullName.vb: KokoEngine.AssetManager.AddAsset(Of T)(System.String, T)
+  nameWithType: AssetManager.AddAsset<T>(String, T)
+  nameWithType.vb: AssetManager.AddAsset(Of T)(String, T)
 - uid: KokoEngine.AssetManager.GetAsset*
   name: GetAsset
   href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_GetAsset_
@@ -256,30 +292,54 @@ references:
   fullName.vb: KokoEngine.AssetManager.GetAsset(Of T)(System.String)
   nameWithType: AssetManager.GetAsset<T>(String)
   nameWithType.vb: AssetManager.GetAsset(Of T)(String)
-- uid: KokoEngine.AssetManager.LoadAsset*
-  name: LoadAsset
-  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadAsset_
-  commentId: Overload:KokoEngine.AssetManager.LoadAsset
-  fullName: KokoEngine.AssetManager.LoadAsset
-  nameWithType: AssetManager.LoadAsset
-- uid: KokoEngine.AssetManager.LoadAsset``1(System.String)
-  name: LoadAsset<T>(String)
-  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadAsset__1_System_String_
-  commentId: M:KokoEngine.AssetManager.LoadAsset``1(System.String)
-  name.vb: LoadAsset(Of T)(String)
-  fullName: KokoEngine.AssetManager.LoadAsset<T>(System.String)
-  fullName.vb: KokoEngine.AssetManager.LoadAsset(Of T)(System.String)
-  nameWithType: AssetManager.LoadAsset<T>(String)
-  nameWithType.vb: AssetManager.LoadAsset(Of T)(String)
-- uid: KokoEngine.AssetManager.LoadAsset``1(System.String,``0)
-  name: LoadAsset<T>(String, T)
-  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadAsset__1_System_String___0_
-  commentId: M:KokoEngine.AssetManager.LoadAsset``1(System.String,``0)
-  name.vb: LoadAsset(Of T)(String, T)
-  fullName: KokoEngine.AssetManager.LoadAsset<T>(System.String, T)
-  fullName.vb: KokoEngine.AssetManager.LoadAsset(Of T)(System.String, T)
-  nameWithType: AssetManager.LoadAsset<T>(String, T)
-  nameWithType.vb: AssetManager.LoadAsset(Of T)(String, T)
+- uid: KokoEngine.AssetManager.LoadAudioClipHandler
+  name: LoadAudioClipHandler
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadAudioClipHandler
+  commentId: P:KokoEngine.AssetManager.LoadAudioClipHandler
+  fullName: KokoEngine.AssetManager.LoadAudioClipHandler
+  nameWithType: AssetManager.LoadAudioClipHandler
+- uid: KokoEngine.AssetManager.LoadAudioClipHandler*
+  name: LoadAudioClipHandler
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadAudioClipHandler_
+  commentId: Overload:KokoEngine.AssetManager.LoadAudioClipHandler
+  fullName: KokoEngine.AssetManager.LoadAudioClipHandler
+  nameWithType: AssetManager.LoadAudioClipHandler
+- uid: KokoEngine.AssetManager.LoadFontHandler
+  name: LoadFontHandler
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadFontHandler
+  commentId: P:KokoEngine.AssetManager.LoadFontHandler
+  fullName: KokoEngine.AssetManager.LoadFontHandler
+  nameWithType: AssetManager.LoadFontHandler
+- uid: KokoEngine.AssetManager.LoadFontHandler*
+  name: LoadFontHandler
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadFontHandler_
+  commentId: Overload:KokoEngine.AssetManager.LoadFontHandler
+  fullName: KokoEngine.AssetManager.LoadFontHandler
+  nameWithType: AssetManager.LoadFontHandler
+- uid: KokoEngine.AssetManager.LoadTextureHandler
+  name: LoadTextureHandler
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadTextureHandler
+  commentId: P:KokoEngine.AssetManager.LoadTextureHandler
+  fullName: KokoEngine.AssetManager.LoadTextureHandler
+  nameWithType: AssetManager.LoadTextureHandler
+- uid: KokoEngine.AssetManager.LoadTextureHandler*
+  name: LoadTextureHandler
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_LoadTextureHandler_
+  commentId: Overload:KokoEngine.AssetManager.LoadTextureHandler
+  fullName: KokoEngine.AssetManager.LoadTextureHandler
+  nameWithType: AssetManager.LoadTextureHandler
+- uid: KokoEngine.AssetManager.RootDirectory
+  name: RootDirectory
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_RootDirectory
+  commentId: P:KokoEngine.AssetManager.RootDirectory
+  fullName: KokoEngine.AssetManager.RootDirectory
+  nameWithType: AssetManager.RootDirectory
+- uid: KokoEngine.AssetManager.RootDirectory*
+  name: RootDirectory
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_RootDirectory_
+  commentId: Overload:KokoEngine.AssetManager.RootDirectory
+  fullName: KokoEngine.AssetManager.RootDirectory
+  nameWithType: AssetManager.RootDirectory
 - uid: KokoEngine.AStarGraphSearch
   name: AStarGraphSearch
   href: api/KokoEngine.AStarGraphSearch.html
@@ -795,6 +855,18 @@ references:
   commentId: Overload:KokoEngine.Component.GetComponents
   fullName: KokoEngine.Component.GetComponents
   nameWithType: Component.GetComponents
+- uid: KokoEngine.Component.Input
+  name: Input
+  href: api/KokoEngine.Component.html#KokoEngine_Component_Input
+  commentId: P:KokoEngine.Component.Input
+  fullName: KokoEngine.Component.Input
+  nameWithType: Component.Input
+- uid: KokoEngine.Component.Input*
+  name: Input
+  href: api/KokoEngine.Component.html#KokoEngine_Component_Input_
+  commentId: Overload:KokoEngine.Component.Input
+  fullName: KokoEngine.Component.Input
+  nameWithType: Component.Input
 - uid: KokoEngine.Component.Name
   name: Name
   href: api/KokoEngine.Component.html#KokoEngine_Component_Name
@@ -807,6 +879,18 @@ references:
   commentId: Overload:KokoEngine.Component.Name
   fullName: KokoEngine.Component.Name
   nameWithType: Component.Name
+- uid: KokoEngine.Component.Screen
+  name: Screen
+  href: api/KokoEngine.Component.html#KokoEngine_Component_Screen
+  commentId: P:KokoEngine.Component.Screen
+  fullName: KokoEngine.Component.Screen
+  nameWithType: Component.Screen
+- uid: KokoEngine.Component.Screen*
+  name: Screen
+  href: api/KokoEngine.Component.html#KokoEngine_Component_Screen_
+  commentId: Overload:KokoEngine.Component.Screen
+  fullName: KokoEngine.Component.Screen
+  nameWithType: Component.Screen
 - uid: KokoEngine.Component.Transform
   name: Transform
   href: api/KokoEngine.Component.html#KokoEngine_Component_Transform
@@ -855,30 +939,18 @@ references:
   commentId: T:KokoEngine.Engine
   fullName: KokoEngine.Engine
   nameWithType: Engine
-- uid: KokoEngine.Engine.#ctor(KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.ISceneManager)
-  name: Engine(IAssetManager, IInputManager, ISceneManager)
-  href: api/KokoEngine.Engine.html#KokoEngine_Engine__ctor_KokoEngine_IAssetManager_KokoEngine_IInputManager_KokoEngine_ISceneManager_
-  commentId: M:KokoEngine.Engine.#ctor(KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.ISceneManager)
-  fullName: KokoEngine.Engine.Engine(KokoEngine.IAssetManager, KokoEngine.IInputManager, KokoEngine.ISceneManager)
-  nameWithType: Engine.Engine(IAssetManager, IInputManager, ISceneManager)
+- uid: KokoEngine.Engine.#ctor(KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.IScreenManager,KokoEngine.ITimeManager,KokoEngine.ISceneManager,KokoEngine.IRenderManager)
+  name: Engine(IAssetManager, IInputManager, IScreenManager, ITimeManager, ISceneManager, IRenderManager)
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine__ctor_KokoEngine_IAssetManager_KokoEngine_IInputManager_KokoEngine_IScreenManager_KokoEngine_ITimeManager_KokoEngine_ISceneManager_KokoEngine_IRenderManager_
+  commentId: M:KokoEngine.Engine.#ctor(KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.IScreenManager,KokoEngine.ITimeManager,KokoEngine.ISceneManager,KokoEngine.IRenderManager)
+  fullName: KokoEngine.Engine.Engine(KokoEngine.IAssetManager, KokoEngine.IInputManager, KokoEngine.IScreenManager, KokoEngine.ITimeManager, KokoEngine.ISceneManager, KokoEngine.IRenderManager)
+  nameWithType: Engine.Engine(IAssetManager, IInputManager, IScreenManager, ITimeManager, ISceneManager, IRenderManager)
 - uid: KokoEngine.Engine.#ctor*
   name: Engine
   href: api/KokoEngine.Engine.html#KokoEngine_Engine__ctor_
   commentId: Overload:KokoEngine.Engine.#ctor
   fullName: KokoEngine.Engine.Engine
   nameWithType: Engine.Engine
-- uid: KokoEngine.Engine.AssetManager
-  name: AssetManager
-  href: api/KokoEngine.Engine.html#KokoEngine_Engine_AssetManager
-  commentId: P:KokoEngine.Engine.AssetManager
-  fullName: KokoEngine.Engine.AssetManager
-  nameWithType: Engine.AssetManager
-- uid: KokoEngine.Engine.AssetManager*
-  name: AssetManager
-  href: api/KokoEngine.Engine.html#KokoEngine_Engine_AssetManager_
-  commentId: Overload:KokoEngine.Engine.AssetManager
-  fullName: KokoEngine.Engine.AssetManager
-  nameWithType: Engine.AssetManager
 - uid: KokoEngine.Engine.GraphicsFrameworks
   name: Engine.GraphicsFrameworks
   href: api/KokoEngine.Engine.GraphicsFrameworks.html
@@ -903,30 +975,33 @@ references:
   commentId: Overload:KokoEngine.Engine.Initialize
   fullName: KokoEngine.Engine.Initialize
   nameWithType: Engine.Initialize
-- uid: KokoEngine.Engine.InputManager
-  name: InputManager
-  href: api/KokoEngine.Engine.html#KokoEngine_Engine_InputManager
-  commentId: P:KokoEngine.Engine.InputManager
-  fullName: KokoEngine.Engine.InputManager
-  nameWithType: Engine.InputManager
-- uid: KokoEngine.Engine.InputManager*
-  name: InputManager
-  href: api/KokoEngine.Engine.html#KokoEngine_Engine_InputManager_
-  commentId: Overload:KokoEngine.Engine.InputManager
-  fullName: KokoEngine.Engine.InputManager
-  nameWithType: Engine.InputManager
-- uid: KokoEngine.Engine.SceneManager
-  name: SceneManager
-  href: api/KokoEngine.Engine.html#KokoEngine_Engine_SceneManager
-  commentId: P:KokoEngine.Engine.SceneManager
-  fullName: KokoEngine.Engine.SceneManager
-  nameWithType: Engine.SceneManager
-- uid: KokoEngine.Engine.SceneManager*
-  name: SceneManager
-  href: api/KokoEngine.Engine.html#KokoEngine_Engine_SceneManager_
-  commentId: Overload:KokoEngine.Engine.SceneManager
-  fullName: KokoEngine.Engine.SceneManager
-  nameWithType: Engine.SceneManager
+- uid: KokoEngine.Engine.Render
+  name: Render()
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_Render
+  commentId: M:KokoEngine.Engine.Render
+  fullName: KokoEngine.Engine.Render()
+  nameWithType: Engine.Render()
+- uid: KokoEngine.Engine.Render*
+  name: Render
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_Render_
+  commentId: Overload:KokoEngine.Engine.Render
+  fullName: KokoEngine.Engine.Render
+  nameWithType: Engine.Render
+- uid: KokoEngine.Engine.Setup(System.Action{KokoEngine.IScreenManager,KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.IRenderManager})
+  name: Setup(Action<IScreenManager, IAssetManager, IInputManager, IRenderManager>)
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_Setup_System_Action_KokoEngine_IScreenManager_KokoEngine_IAssetManager_KokoEngine_IInputManager_KokoEngine_IRenderManager__
+  commentId: M:KokoEngine.Engine.Setup(System.Action{KokoEngine.IScreenManager,KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.IRenderManager})
+  name.vb: Setup(Action(Of IScreenManager, IAssetManager, IInputManager, IRenderManager))
+  fullName: KokoEngine.Engine.Setup(System.Action<KokoEngine.IScreenManager, KokoEngine.IAssetManager, KokoEngine.IInputManager, KokoEngine.IRenderManager>)
+  fullName.vb: KokoEngine.Engine.Setup(System.Action(Of KokoEngine.IScreenManager, KokoEngine.IAssetManager, KokoEngine.IInputManager, KokoEngine.IRenderManager))
+  nameWithType: Engine.Setup(Action<IScreenManager, IAssetManager, IInputManager, IRenderManager>)
+  nameWithType.vb: Engine.Setup(Action(Of IScreenManager, IAssetManager, IInputManager, IRenderManager))
+- uid: KokoEngine.Engine.Setup*
+  name: Setup
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine_Setup_
+  commentId: Overload:KokoEngine.Engine.Setup
+  fullName: KokoEngine.Engine.Setup
+  nameWithType: Engine.Setup
 - uid: KokoEngine.Engine.Update(System.Single)
   name: Update(Single)
   href: api/KokoEngine.Engine.html#KokoEngine_Engine_Update_System_Single_
@@ -1098,12 +1173,12 @@ references:
   commentId: M:KokoEngine.GameObject.#ctor
   fullName: KokoEngine.GameObject.GameObject()
   nameWithType: GameObject.GameObject()
-- uid: KokoEngine.GameObject.#ctor(System.String)
-  name: GameObject(String)
-  href: api/KokoEngine.GameObject.html#KokoEngine_GameObject__ctor_System_String_
-  commentId: M:KokoEngine.GameObject.#ctor(System.String)
-  fullName: KokoEngine.GameObject.GameObject(System.String)
-  nameWithType: GameObject.GameObject(String)
+- uid: KokoEngine.GameObject.#ctor(System.String,KokoEngine.IInputManager,KokoEngine.IScreenManager)
+  name: GameObject(String, IInputManager, IScreenManager)
+  href: api/KokoEngine.GameObject.html#KokoEngine_GameObject__ctor_System_String_KokoEngine_IInputManager_KokoEngine_IScreenManager_
+  commentId: M:KokoEngine.GameObject.#ctor(System.String,KokoEngine.IInputManager,KokoEngine.IScreenManager)
+  fullName: KokoEngine.GameObject.GameObject(System.String, KokoEngine.IInputManager, KokoEngine.IScreenManager)
+  nameWithType: GameObject.GameObject(String, IInputManager, IScreenManager)
 - uid: KokoEngine.GameObject.#ctor*
   name: GameObject
   href: api/KokoEngine.GameObject.html#KokoEngine_GameObject__ctor_
@@ -1350,18 +1425,18 @@ references:
   commentId: Overload:KokoEngine.IAnimationClip.NumFrames
   fullName: KokoEngine.IAnimationClip.NumFrames
   nameWithType: IAnimationClip.NumFrames
-- uid: KokoEngine.IAnimationClip.Sprites
-  name: Sprites
-  href: api/KokoEngine.IAnimationClip.html#KokoEngine_IAnimationClip_Sprites
-  commentId: P:KokoEngine.IAnimationClip.Sprites
-  fullName: KokoEngine.IAnimationClip.Sprites
-  nameWithType: IAnimationClip.Sprites
-- uid: KokoEngine.IAnimationClip.Sprites*
-  name: Sprites
-  href: api/KokoEngine.IAnimationClip.html#KokoEngine_IAnimationClip_Sprites_
-  commentId: Overload:KokoEngine.IAnimationClip.Sprites
-  fullName: KokoEngine.IAnimationClip.Sprites
-  nameWithType: IAnimationClip.Sprites
+- uid: KokoEngine.IAnimationClip.Sprite
+  name: Sprite
+  href: api/KokoEngine.IAnimationClip.html#KokoEngine_IAnimationClip_Sprite
+  commentId: P:KokoEngine.IAnimationClip.Sprite
+  fullName: KokoEngine.IAnimationClip.Sprite
+  nameWithType: IAnimationClip.Sprite
+- uid: KokoEngine.IAnimationClip.Sprite*
+  name: Sprite
+  href: api/KokoEngine.IAnimationClip.html#KokoEngine_IAnimationClip_Sprite_
+  commentId: Overload:KokoEngine.IAnimationClip.Sprite
+  fullName: KokoEngine.IAnimationClip.Sprite
+  nameWithType: IAnimationClip.Sprite
 - uid: KokoEngine.IAnimator
   name: IAnimator
   href: api/KokoEngine.IAnimator.html
@@ -1464,6 +1539,30 @@ references:
   commentId: Overload:KokoEngine.IAsset.Filename
   fullName: KokoEngine.IAsset.Filename
   nameWithType: IAsset.Filename
+- uid: KokoEngine.IAsset.IsLoaded
+  name: IsLoaded
+  href: api/KokoEngine.IAsset.html#KokoEngine_IAsset_IsLoaded
+  commentId: P:KokoEngine.IAsset.IsLoaded
+  fullName: KokoEngine.IAsset.IsLoaded
+  nameWithType: IAsset.IsLoaded
+- uid: KokoEngine.IAsset.IsLoaded*
+  name: IsLoaded
+  href: api/KokoEngine.IAsset.html#KokoEngine_IAsset_IsLoaded_
+  commentId: Overload:KokoEngine.IAsset.IsLoaded
+  fullName: KokoEngine.IAsset.IsLoaded
+  nameWithType: IAsset.IsLoaded
+- uid: KokoEngine.IAsset.OnLoaded
+  name: OnLoaded
+  href: api/KokoEngine.IAsset.html#KokoEngine_IAsset_OnLoaded
+  commentId: P:KokoEngine.IAsset.OnLoaded
+  fullName: KokoEngine.IAsset.OnLoaded
+  nameWithType: IAsset.OnLoaded
+- uid: KokoEngine.IAsset.OnLoaded*
+  name: OnLoaded
+  href: api/KokoEngine.IAsset.html#KokoEngine_IAsset_OnLoaded_
+  commentId: Overload:KokoEngine.IAsset.OnLoaded
+  fullName: KokoEngine.IAsset.OnLoaded
+  nameWithType: IAsset.OnLoaded
 - uid: KokoEngine.IAsset.RawData
   name: RawData
   href: api/KokoEngine.IAsset.html#KokoEngine_IAsset_RawData
@@ -1482,18 +1581,30 @@ references:
   commentId: T:KokoEngine.IAssetManager
   fullName: KokoEngine.IAssetManager
   nameWithType: IAssetManager
-- uid: KokoEngine.IAssetManager.AssetMap
-  name: AssetMap
-  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_AssetMap
-  commentId: P:KokoEngine.IAssetManager.AssetMap
-  fullName: KokoEngine.IAssetManager.AssetMap
-  nameWithType: IAssetManager.AssetMap
-- uid: KokoEngine.IAssetManager.AssetMap*
-  name: AssetMap
-  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_AssetMap_
-  commentId: Overload:KokoEngine.IAssetManager.AssetMap
-  fullName: KokoEngine.IAssetManager.AssetMap
-  nameWithType: IAssetManager.AssetMap
+- uid: KokoEngine.IAssetManager.AddAsset*
+  name: AddAsset
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_AddAsset_
+  commentId: Overload:KokoEngine.IAssetManager.AddAsset
+  fullName: KokoEngine.IAssetManager.AddAsset
+  nameWithType: IAssetManager.AddAsset
+- uid: KokoEngine.IAssetManager.AddAsset``1(System.String)
+  name: AddAsset<T>(String)
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_AddAsset__1_System_String_
+  commentId: M:KokoEngine.IAssetManager.AddAsset``1(System.String)
+  name.vb: AddAsset(Of T)(String)
+  fullName: KokoEngine.IAssetManager.AddAsset<T>(System.String)
+  fullName.vb: KokoEngine.IAssetManager.AddAsset(Of T)(System.String)
+  nameWithType: IAssetManager.AddAsset<T>(String)
+  nameWithType.vb: IAssetManager.AddAsset(Of T)(String)
+- uid: KokoEngine.IAssetManager.AddAsset``1(System.String,``0)
+  name: AddAsset<T>(String, T)
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_AddAsset__1_System_String___0_
+  commentId: M:KokoEngine.IAssetManager.AddAsset``1(System.String,``0)
+  name.vb: AddAsset(Of T)(String, T)
+  fullName: KokoEngine.IAssetManager.AddAsset<T>(System.String, T)
+  fullName.vb: KokoEngine.IAssetManager.AddAsset(Of T)(System.String, T)
+  nameWithType: IAssetManager.AddAsset<T>(String, T)
+  nameWithType.vb: IAssetManager.AddAsset(Of T)(String, T)
 - uid: KokoEngine.IAssetManager.GetAsset*
   name: GetAsset
   href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_GetAsset_
@@ -1509,30 +1620,54 @@ references:
   fullName.vb: KokoEngine.IAssetManager.GetAsset(Of T)(System.String)
   nameWithType: IAssetManager.GetAsset<T>(String)
   nameWithType.vb: IAssetManager.GetAsset(Of T)(String)
-- uid: KokoEngine.IAssetManager.LoadAsset*
-  name: LoadAsset
-  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadAsset_
-  commentId: Overload:KokoEngine.IAssetManager.LoadAsset
-  fullName: KokoEngine.IAssetManager.LoadAsset
-  nameWithType: IAssetManager.LoadAsset
-- uid: KokoEngine.IAssetManager.LoadAsset``1(System.String)
-  name: LoadAsset<T>(String)
-  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadAsset__1_System_String_
-  commentId: M:KokoEngine.IAssetManager.LoadAsset``1(System.String)
-  name.vb: LoadAsset(Of T)(String)
-  fullName: KokoEngine.IAssetManager.LoadAsset<T>(System.String)
-  fullName.vb: KokoEngine.IAssetManager.LoadAsset(Of T)(System.String)
-  nameWithType: IAssetManager.LoadAsset<T>(String)
-  nameWithType.vb: IAssetManager.LoadAsset(Of T)(String)
-- uid: KokoEngine.IAssetManager.LoadAsset``1(System.String,``0)
-  name: LoadAsset<T>(String, T)
-  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadAsset__1_System_String___0_
-  commentId: M:KokoEngine.IAssetManager.LoadAsset``1(System.String,``0)
-  name.vb: LoadAsset(Of T)(String, T)
-  fullName: KokoEngine.IAssetManager.LoadAsset<T>(System.String, T)
-  fullName.vb: KokoEngine.IAssetManager.LoadAsset(Of T)(System.String, T)
-  nameWithType: IAssetManager.LoadAsset<T>(String, T)
-  nameWithType.vb: IAssetManager.LoadAsset(Of T)(String, T)
+- uid: KokoEngine.IAssetManager.LoadAudioClipHandler
+  name: LoadAudioClipHandler
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadAudioClipHandler
+  commentId: P:KokoEngine.IAssetManager.LoadAudioClipHandler
+  fullName: KokoEngine.IAssetManager.LoadAudioClipHandler
+  nameWithType: IAssetManager.LoadAudioClipHandler
+- uid: KokoEngine.IAssetManager.LoadAudioClipHandler*
+  name: LoadAudioClipHandler
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadAudioClipHandler_
+  commentId: Overload:KokoEngine.IAssetManager.LoadAudioClipHandler
+  fullName: KokoEngine.IAssetManager.LoadAudioClipHandler
+  nameWithType: IAssetManager.LoadAudioClipHandler
+- uid: KokoEngine.IAssetManager.LoadFontHandler
+  name: LoadFontHandler
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadFontHandler
+  commentId: P:KokoEngine.IAssetManager.LoadFontHandler
+  fullName: KokoEngine.IAssetManager.LoadFontHandler
+  nameWithType: IAssetManager.LoadFontHandler
+- uid: KokoEngine.IAssetManager.LoadFontHandler*
+  name: LoadFontHandler
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadFontHandler_
+  commentId: Overload:KokoEngine.IAssetManager.LoadFontHandler
+  fullName: KokoEngine.IAssetManager.LoadFontHandler
+  nameWithType: IAssetManager.LoadFontHandler
+- uid: KokoEngine.IAssetManager.LoadTextureHandler
+  name: LoadTextureHandler
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadTextureHandler
+  commentId: P:KokoEngine.IAssetManager.LoadTextureHandler
+  fullName: KokoEngine.IAssetManager.LoadTextureHandler
+  nameWithType: IAssetManager.LoadTextureHandler
+- uid: KokoEngine.IAssetManager.LoadTextureHandler*
+  name: LoadTextureHandler
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_LoadTextureHandler_
+  commentId: Overload:KokoEngine.IAssetManager.LoadTextureHandler
+  fullName: KokoEngine.IAssetManager.LoadTextureHandler
+  nameWithType: IAssetManager.LoadTextureHandler
+- uid: KokoEngine.IAssetManager.RootDirectory
+  name: RootDirectory
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_RootDirectory
+  commentId: P:KokoEngine.IAssetManager.RootDirectory
+  fullName: KokoEngine.IAssetManager.RootDirectory
+  nameWithType: IAssetManager.RootDirectory
+- uid: KokoEngine.IAssetManager.RootDirectory*
+  name: RootDirectory
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_RootDirectory_
+  commentId: Overload:KokoEngine.IAssetManager.RootDirectory
+  fullName: KokoEngine.IAssetManager.RootDirectory
+  nameWithType: IAssetManager.RootDirectory
 - uid: KokoEngine.IAudioSource
   name: IAudioSource
   href: api/KokoEngine.IAudioSource.html
@@ -1752,6 +1887,63 @@ references:
   commentId: Overload:KokoEngine.IComponent.Transform
   fullName: KokoEngine.IComponent.Transform
   nameWithType: IComponent.Transform
+- uid: KokoEngine.IEngine
+  name: IEngine
+  href: api/KokoEngine.IEngine.html
+  commentId: T:KokoEngine.IEngine
+  fullName: KokoEngine.IEngine
+  nameWithType: IEngine
+- uid: KokoEngine.IEngine.Initialize
+  name: Initialize()
+  href: api/KokoEngine.IEngine.html#KokoEngine_IEngine_Initialize
+  commentId: M:KokoEngine.IEngine.Initialize
+  fullName: KokoEngine.IEngine.Initialize()
+  nameWithType: IEngine.Initialize()
+- uid: KokoEngine.IEngine.Initialize*
+  name: Initialize
+  href: api/KokoEngine.IEngine.html#KokoEngine_IEngine_Initialize_
+  commentId: Overload:KokoEngine.IEngine.Initialize
+  fullName: KokoEngine.IEngine.Initialize
+  nameWithType: IEngine.Initialize
+- uid: KokoEngine.IEngine.Render
+  name: Render()
+  href: api/KokoEngine.IEngine.html#KokoEngine_IEngine_Render
+  commentId: M:KokoEngine.IEngine.Render
+  fullName: KokoEngine.IEngine.Render()
+  nameWithType: IEngine.Render()
+- uid: KokoEngine.IEngine.Render*
+  name: Render
+  href: api/KokoEngine.IEngine.html#KokoEngine_IEngine_Render_
+  commentId: Overload:KokoEngine.IEngine.Render
+  fullName: KokoEngine.IEngine.Render
+  nameWithType: IEngine.Render
+- uid: KokoEngine.IEngine.Setup(System.Action{KokoEngine.IScreenManager,KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.IRenderManager})
+  name: Setup(Action<IScreenManager, IAssetManager, IInputManager, IRenderManager>)
+  href: api/KokoEngine.IEngine.html#KokoEngine_IEngine_Setup_System_Action_KokoEngine_IScreenManager_KokoEngine_IAssetManager_KokoEngine_IInputManager_KokoEngine_IRenderManager__
+  commentId: M:KokoEngine.IEngine.Setup(System.Action{KokoEngine.IScreenManager,KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.IRenderManager})
+  name.vb: Setup(Action(Of IScreenManager, IAssetManager, IInputManager, IRenderManager))
+  fullName: KokoEngine.IEngine.Setup(System.Action<KokoEngine.IScreenManager, KokoEngine.IAssetManager, KokoEngine.IInputManager, KokoEngine.IRenderManager>)
+  fullName.vb: KokoEngine.IEngine.Setup(System.Action(Of KokoEngine.IScreenManager, KokoEngine.IAssetManager, KokoEngine.IInputManager, KokoEngine.IRenderManager))
+  nameWithType: IEngine.Setup(Action<IScreenManager, IAssetManager, IInputManager, IRenderManager>)
+  nameWithType.vb: IEngine.Setup(Action(Of IScreenManager, IAssetManager, IInputManager, IRenderManager))
+- uid: KokoEngine.IEngine.Setup*
+  name: Setup
+  href: api/KokoEngine.IEngine.html#KokoEngine_IEngine_Setup_
+  commentId: Overload:KokoEngine.IEngine.Setup
+  fullName: KokoEngine.IEngine.Setup
+  nameWithType: IEngine.Setup
+- uid: KokoEngine.IEngine.Update(System.Single)
+  name: Update(Single)
+  href: api/KokoEngine.IEngine.html#KokoEngine_IEngine_Update_System_Single_
+  commentId: M:KokoEngine.IEngine.Update(System.Single)
+  fullName: KokoEngine.IEngine.Update(System.Single)
+  nameWithType: IEngine.Update(Single)
+- uid: KokoEngine.IEngine.Update*
+  name: Update
+  href: api/KokoEngine.IEngine.html#KokoEngine_IEngine_Update_
+  commentId: Overload:KokoEngine.IEngine.Update
+  fullName: KokoEngine.IEngine.Update
+  nameWithType: IEngine.Update
 - uid: KokoEngine.IEntity
   name: IEntity
   href: api/KokoEngine.IEntity.html
@@ -1956,18 +2148,6 @@ references:
   commentId: T:KokoEngine.IInputManager
   fullName: KokoEngine.IInputManager
   nameWithType: IInputManager
-- uid: KokoEngine.IInputManager.ActionBindings
-  name: ActionBindings
-  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_ActionBindings
-  commentId: P:KokoEngine.IInputManager.ActionBindings
-  fullName: KokoEngine.IInputManager.ActionBindings
-  nameWithType: IInputManager.ActionBindings
-- uid: KokoEngine.IInputManager.ActionBindings*
-  name: ActionBindings
-  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_ActionBindings_
-  commentId: Overload:KokoEngine.IInputManager.ActionBindings
-  fullName: KokoEngine.IInputManager.ActionBindings
-  nameWithType: IInputManager.ActionBindings
 - uid: KokoEngine.IInputManager.AddActionBinding(System.String,System.String[])
   name: AddActionBinding(String, String[])
   href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_AddActionBinding_System_String_System_String___
@@ -2043,42 +2223,42 @@ references:
   commentId: Overload:KokoEngine.IInputManager.GetAxis
   fullName: KokoEngine.IInputManager.GetAxis
   nameWithType: IInputManager.GetAxis
-- uid: KokoEngine.IInputManager.MousePosition
-  name: MousePosition
-  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_MousePosition
-  commentId: P:KokoEngine.IInputManager.MousePosition
-  fullName: KokoEngine.IInputManager.MousePosition
-  nameWithType: IInputManager.MousePosition
-- uid: KokoEngine.IInputManager.MousePosition*
-  name: MousePosition
-  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_MousePosition_
-  commentId: Overload:KokoEngine.IInputManager.MousePosition
-  fullName: KokoEngine.IInputManager.MousePosition
-  nameWithType: IInputManager.MousePosition
-- uid: KokoEngine.IInputManager.TrackedKeys
-  name: TrackedKeys
-  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_TrackedKeys
-  commentId: P:KokoEngine.IInputManager.TrackedKeys
-  fullName: KokoEngine.IInputManager.TrackedKeys
-  nameWithType: IInputManager.TrackedKeys
-- uid: KokoEngine.IInputManager.TrackedKeys*
-  name: TrackedKeys
-  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_TrackedKeys_
-  commentId: Overload:KokoEngine.IInputManager.TrackedKeys
-  fullName: KokoEngine.IInputManager.TrackedKeys
-  nameWithType: IInputManager.TrackedKeys
-- uid: KokoEngine.IInputManager.Update(System.Single)
-  name: Update(Single)
-  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_Update_System_Single_
-  commentId: M:KokoEngine.IInputManager.Update(System.Single)
-  fullName: KokoEngine.IInputManager.Update(System.Single)
-  nameWithType: IInputManager.Update(Single)
-- uid: KokoEngine.IInputManager.Update*
-  name: Update
-  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_Update_
-  commentId: Overload:KokoEngine.IInputManager.Update
-  fullName: KokoEngine.IInputManager.Update
-  nameWithType: IInputManager.Update
+- uid: KokoEngine.IInputManager.GetMousePosition
+  name: GetMousePosition()
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetMousePosition
+  commentId: M:KokoEngine.IInputManager.GetMousePosition
+  fullName: KokoEngine.IInputManager.GetMousePosition()
+  nameWithType: IInputManager.GetMousePosition()
+- uid: KokoEngine.IInputManager.GetMousePosition*
+  name: GetMousePosition
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetMousePosition_
+  commentId: Overload:KokoEngine.IInputManager.GetMousePosition
+  fullName: KokoEngine.IInputManager.GetMousePosition
+  nameWithType: IInputManager.GetMousePosition
+- uid: KokoEngine.IInputManager.GetUpdatedKeyState
+  name: GetUpdatedKeyState
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetUpdatedKeyState
+  commentId: P:KokoEngine.IInputManager.GetUpdatedKeyState
+  fullName: KokoEngine.IInputManager.GetUpdatedKeyState
+  nameWithType: IInputManager.GetUpdatedKeyState
+- uid: KokoEngine.IInputManager.GetUpdatedKeyState*
+  name: GetUpdatedKeyState
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetUpdatedKeyState_
+  commentId: Overload:KokoEngine.IInputManager.GetUpdatedKeyState
+  fullName: KokoEngine.IInputManager.GetUpdatedKeyState
+  nameWithType: IInputManager.GetUpdatedKeyState
+- uid: KokoEngine.IInputManager.GetUpdatedMouseState
+  name: GetUpdatedMouseState
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetUpdatedMouseState
+  commentId: P:KokoEngine.IInputManager.GetUpdatedMouseState
+  fullName: KokoEngine.IInputManager.GetUpdatedMouseState
+  nameWithType: IInputManager.GetUpdatedMouseState
+- uid: KokoEngine.IInputManager.GetUpdatedMouseState*
+  name: GetUpdatedMouseState
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetUpdatedMouseState_
+  commentId: Overload:KokoEngine.IInputManager.GetUpdatedMouseState
+  fullName: KokoEngine.IInputManager.GetUpdatedMouseState
+  nameWithType: IInputManager.GetUpdatedMouseState
 - uid: KokoEngine.Input
   name: Input
   href: api/KokoEngine.Input.html
@@ -2298,18 +2478,6 @@ references:
   commentId: T:KokoEngine.InputManager
   fullName: KokoEngine.InputManager
   nameWithType: InputManager
-- uid: KokoEngine.InputManager.ActionBindings
-  name: ActionBindings
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_ActionBindings
-  commentId: P:KokoEngine.InputManager.ActionBindings
-  fullName: KokoEngine.InputManager.ActionBindings
-  nameWithType: InputManager.ActionBindings
-- uid: KokoEngine.InputManager.ActionBindings*
-  name: ActionBindings
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_ActionBindings_
-  commentId: Overload:KokoEngine.InputManager.ActionBindings
-  fullName: KokoEngine.InputManager.ActionBindings
-  nameWithType: InputManager.ActionBindings
 - uid: KokoEngine.InputManager.AddActionBinding(System.String,System.String[])
   name: AddActionBinding(String, String[])
   href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_AddActionBinding_System_String_System_String___
@@ -2337,18 +2505,6 @@ references:
   commentId: Overload:KokoEngine.InputManager.AddAxisBinding
   fullName: KokoEngine.InputManager.AddAxisBinding
   nameWithType: InputManager.AddAxisBinding
-- uid: KokoEngine.InputManager.AxisBindings
-  name: AxisBindings
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_AxisBindings
-  commentId: P:KokoEngine.InputManager.AxisBindings
-  fullName: KokoEngine.InputManager.AxisBindings
-  nameWithType: InputManager.AxisBindings
-- uid: KokoEngine.InputManager.AxisBindings*
-  name: AxisBindings
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_AxisBindings_
-  commentId: Overload:KokoEngine.InputManager.AxisBindings
-  fullName: KokoEngine.InputManager.AxisBindings
-  nameWithType: InputManager.AxisBindings
 - uid: KokoEngine.InputManager.GetAction(System.String)
   name: GetAction(String)
   href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetAction_System_String_
@@ -2409,42 +2565,96 @@ references:
   commentId: Overload:KokoEngine.InputManager.GetMousePosition
   fullName: KokoEngine.InputManager.GetMousePosition
   nameWithType: InputManager.GetMousePosition
-- uid: KokoEngine.InputManager.MousePosition
-  name: MousePosition
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_MousePosition
-  commentId: P:KokoEngine.InputManager.MousePosition
-  fullName: KokoEngine.InputManager.MousePosition
-  nameWithType: InputManager.MousePosition
-- uid: KokoEngine.InputManager.MousePosition*
-  name: MousePosition
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_MousePosition_
-  commentId: Overload:KokoEngine.InputManager.MousePosition
-  fullName: KokoEngine.InputManager.MousePosition
-  nameWithType: InputManager.MousePosition
-- uid: KokoEngine.InputManager.TrackedKeys
-  name: TrackedKeys
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_TrackedKeys
-  commentId: P:KokoEngine.InputManager.TrackedKeys
-  fullName: KokoEngine.InputManager.TrackedKeys
-  nameWithType: InputManager.TrackedKeys
-- uid: KokoEngine.InputManager.TrackedKeys*
-  name: TrackedKeys
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_TrackedKeys_
-  commentId: Overload:KokoEngine.InputManager.TrackedKeys
-  fullName: KokoEngine.InputManager.TrackedKeys
-  nameWithType: InputManager.TrackedKeys
-- uid: KokoEngine.InputManager.Update(System.Single)
-  name: Update(Single)
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_Update_System_Single_
-  commentId: M:KokoEngine.InputManager.Update(System.Single)
-  fullName: KokoEngine.InputManager.Update(System.Single)
-  nameWithType: InputManager.Update(Single)
-- uid: KokoEngine.InputManager.Update*
-  name: Update
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_Update_
-  commentId: Overload:KokoEngine.InputManager.Update
-  fullName: KokoEngine.InputManager.Update
-  nameWithType: InputManager.Update
+- uid: KokoEngine.InputManager.GetUpdatedKeyState
+  name: GetUpdatedKeyState
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetUpdatedKeyState
+  commentId: P:KokoEngine.InputManager.GetUpdatedKeyState
+  fullName: KokoEngine.InputManager.GetUpdatedKeyState
+  nameWithType: InputManager.GetUpdatedKeyState
+- uid: KokoEngine.InputManager.GetUpdatedKeyState*
+  name: GetUpdatedKeyState
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetUpdatedKeyState_
+  commentId: Overload:KokoEngine.InputManager.GetUpdatedKeyState
+  fullName: KokoEngine.InputManager.GetUpdatedKeyState
+  nameWithType: InputManager.GetUpdatedKeyState
+- uid: KokoEngine.InputManager.GetUpdatedMouseState
+  name: GetUpdatedMouseState
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetUpdatedMouseState
+  commentId: P:KokoEngine.InputManager.GetUpdatedMouseState
+  fullName: KokoEngine.InputManager.GetUpdatedMouseState
+  nameWithType: InputManager.GetUpdatedMouseState
+- uid: KokoEngine.InputManager.GetUpdatedMouseState*
+  name: GetUpdatedMouseState
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetUpdatedMouseState_
+  commentId: Overload:KokoEngine.InputManager.GetUpdatedMouseState
+  fullName: KokoEngine.InputManager.GetUpdatedMouseState
+  nameWithType: InputManager.GetUpdatedMouseState
+- uid: KokoEngine.IRenderManager
+  name: IRenderManager
+  href: api/KokoEngine.IRenderManager.html
+  commentId: T:KokoEngine.IRenderManager
+  fullName: KokoEngine.IRenderManager
+  nameWithType: IRenderManager
+- uid: KokoEngine.IRenderManager.RenderCircleHandler
+  name: RenderCircleHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderCircleHandler
+  commentId: P:KokoEngine.IRenderManager.RenderCircleHandler
+  fullName: KokoEngine.IRenderManager.RenderCircleHandler
+  nameWithType: IRenderManager.RenderCircleHandler
+- uid: KokoEngine.IRenderManager.RenderCircleHandler*
+  name: RenderCircleHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderCircleHandler_
+  commentId: Overload:KokoEngine.IRenderManager.RenderCircleHandler
+  fullName: KokoEngine.IRenderManager.RenderCircleHandler
+  nameWithType: IRenderManager.RenderCircleHandler
+- uid: KokoEngine.IRenderManager.RenderLineHandler
+  name: RenderLineHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderLineHandler
+  commentId: P:KokoEngine.IRenderManager.RenderLineHandler
+  fullName: KokoEngine.IRenderManager.RenderLineHandler
+  nameWithType: IRenderManager.RenderLineHandler
+- uid: KokoEngine.IRenderManager.RenderLineHandler*
+  name: RenderLineHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderLineHandler_
+  commentId: Overload:KokoEngine.IRenderManager.RenderLineHandler
+  fullName: KokoEngine.IRenderManager.RenderLineHandler
+  nameWithType: IRenderManager.RenderLineHandler
+- uid: KokoEngine.IRenderManager.RenderRayHandler
+  name: RenderRayHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderRayHandler
+  commentId: P:KokoEngine.IRenderManager.RenderRayHandler
+  fullName: KokoEngine.IRenderManager.RenderRayHandler
+  nameWithType: IRenderManager.RenderRayHandler
+- uid: KokoEngine.IRenderManager.RenderRayHandler*
+  name: RenderRayHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderRayHandler_
+  commentId: Overload:KokoEngine.IRenderManager.RenderRayHandler
+  fullName: KokoEngine.IRenderManager.RenderRayHandler
+  nameWithType: IRenderManager.RenderRayHandler
+- uid: KokoEngine.IRenderManager.RenderRectangleHandler
+  name: RenderRectangleHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderRectangleHandler
+  commentId: P:KokoEngine.IRenderManager.RenderRectangleHandler
+  fullName: KokoEngine.IRenderManager.RenderRectangleHandler
+  nameWithType: IRenderManager.RenderRectangleHandler
+- uid: KokoEngine.IRenderManager.RenderRectangleHandler*
+  name: RenderRectangleHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderRectangleHandler_
+  commentId: Overload:KokoEngine.IRenderManager.RenderRectangleHandler
+  fullName: KokoEngine.IRenderManager.RenderRectangleHandler
+  nameWithType: IRenderManager.RenderRectangleHandler
+- uid: KokoEngine.IRenderManager.RenderSpriteHandler
+  name: RenderSpriteHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderSpriteHandler
+  commentId: P:KokoEngine.IRenderManager.RenderSpriteHandler
+  fullName: KokoEngine.IRenderManager.RenderSpriteHandler
+  nameWithType: IRenderManager.RenderSpriteHandler
+- uid: KokoEngine.IRenderManager.RenderSpriteHandler*
+  name: RenderSpriteHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderSpriteHandler_
+  commentId: Overload:KokoEngine.IRenderManager.RenderSpriteHandler
+  fullName: KokoEngine.IRenderManager.RenderSpriteHandler
+  nameWithType: IRenderManager.RenderSpriteHandler
 - uid: KokoEngine.IRigidbody
   name: IRigidbody
   href: api/KokoEngine.IRigidbody.html
@@ -2571,18 +2781,18 @@ references:
   commentId: T:KokoEngine.ISceneManager
   fullName: KokoEngine.ISceneManager
   nameWithType: ISceneManager
-- uid: KokoEngine.ISceneManager.CreateScene(System.String)
-  name: CreateScene(String)
-  href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_CreateScene_System_String_
-  commentId: M:KokoEngine.ISceneManager.CreateScene(System.String)
-  fullName: KokoEngine.ISceneManager.CreateScene(System.String)
-  nameWithType: ISceneManager.CreateScene(String)
-- uid: KokoEngine.ISceneManager.CreateScene*
-  name: CreateScene
-  href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_CreateScene_
-  commentId: Overload:KokoEngine.ISceneManager.CreateScene
-  fullName: KokoEngine.ISceneManager.CreateScene
-  nameWithType: ISceneManager.CreateScene
+- uid: KokoEngine.ISceneManager.AddScene(KokoEngine.IScene)
+  name: AddScene(IScene)
+  href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_AddScene_KokoEngine_IScene_
+  commentId: M:KokoEngine.ISceneManager.AddScene(KokoEngine.IScene)
+  fullName: KokoEngine.ISceneManager.AddScene(KokoEngine.IScene)
+  nameWithType: ISceneManager.AddScene(IScene)
+- uid: KokoEngine.ISceneManager.AddScene*
+  name: AddScene
+  href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_AddScene_
+  commentId: Overload:KokoEngine.ISceneManager.AddScene
+  fullName: KokoEngine.ISceneManager.AddScene
+  nameWithType: ISceneManager.AddScene
 - uid: KokoEngine.ISceneManager.GetActiveScene
   name: GetActiveScene()
   href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_GetActiveScene
@@ -2619,18 +2829,102 @@ references:
   commentId: Overload:KokoEngine.ISceneManager.LoadScene
   fullName: KokoEngine.ISceneManager.LoadScene
   nameWithType: ISceneManager.LoadScene
-- uid: KokoEngine.ISceneManager.UpdateActiveScene(System.Single)
-  name: UpdateActiveScene(Single)
-  href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_UpdateActiveScene_System_Single_
-  commentId: M:KokoEngine.ISceneManager.UpdateActiveScene(System.Single)
-  fullName: KokoEngine.ISceneManager.UpdateActiveScene(System.Single)
-  nameWithType: ISceneManager.UpdateActiveScene(Single)
-- uid: KokoEngine.ISceneManager.UpdateActiveScene*
-  name: UpdateActiveScene
-  href: api/KokoEngine.ISceneManager.html#KokoEngine_ISceneManager_UpdateActiveScene_
-  commentId: Overload:KokoEngine.ISceneManager.UpdateActiveScene
-  fullName: KokoEngine.ISceneManager.UpdateActiveScene
-  nameWithType: ISceneManager.UpdateActiveScene
+- uid: KokoEngine.IScreenManager
+  name: IScreenManager
+  href: api/KokoEngine.IScreenManager.html
+  commentId: T:KokoEngine.IScreenManager
+  fullName: KokoEngine.IScreenManager
+  nameWithType: IScreenManager
+- uid: KokoEngine.IScreenManager.AddSupportedResolution(System.Int32,System.Int32)
+  name: AddSupportedResolution(Int32, Int32)
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_AddSupportedResolution_System_Int32_System_Int32_
+  commentId: M:KokoEngine.IScreenManager.AddSupportedResolution(System.Int32,System.Int32)
+  fullName: KokoEngine.IScreenManager.AddSupportedResolution(System.Int32, System.Int32)
+  nameWithType: IScreenManager.AddSupportedResolution(Int32, Int32)
+- uid: KokoEngine.IScreenManager.AddSupportedResolution*
+  name: AddSupportedResolution
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_AddSupportedResolution_
+  commentId: Overload:KokoEngine.IScreenManager.AddSupportedResolution
+  fullName: KokoEngine.IScreenManager.AddSupportedResolution
+  nameWithType: IScreenManager.AddSupportedResolution
+- uid: KokoEngine.IScreenManager.CurrentResolution
+  name: CurrentResolution
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_CurrentResolution
+  commentId: P:KokoEngine.IScreenManager.CurrentResolution
+  fullName: KokoEngine.IScreenManager.CurrentResolution
+  nameWithType: IScreenManager.CurrentResolution
+- uid: KokoEngine.IScreenManager.CurrentResolution*
+  name: CurrentResolution
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_CurrentResolution_
+  commentId: Overload:KokoEngine.IScreenManager.CurrentResolution
+  fullName: KokoEngine.IScreenManager.CurrentResolution
+  nameWithType: IScreenManager.CurrentResolution
+- uid: KokoEngine.IScreenManager.Height
+  name: Height
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_Height
+  commentId: P:KokoEngine.IScreenManager.Height
+  fullName: KokoEngine.IScreenManager.Height
+  nameWithType: IScreenManager.Height
+- uid: KokoEngine.IScreenManager.Height*
+  name: Height
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_Height_
+  commentId: Overload:KokoEngine.IScreenManager.Height
+  fullName: KokoEngine.IScreenManager.Height
+  nameWithType: IScreenManager.Height
+- uid: KokoEngine.IScreenManager.IsFullscreen
+  name: IsFullscreen
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_IsFullscreen
+  commentId: P:KokoEngine.IScreenManager.IsFullscreen
+  fullName: KokoEngine.IScreenManager.IsFullscreen
+  nameWithType: IScreenManager.IsFullscreen
+- uid: KokoEngine.IScreenManager.IsFullscreen*
+  name: IsFullscreen
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_IsFullscreen_
+  commentId: Overload:KokoEngine.IScreenManager.IsFullscreen
+  fullName: KokoEngine.IScreenManager.IsFullscreen
+  nameWithType: IScreenManager.IsFullscreen
+- uid: KokoEngine.IScreenManager.SetResolution(KokoEngine.Resolution)
+  name: SetResolution(Resolution)
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_SetResolution_KokoEngine_Resolution_
+  commentId: M:KokoEngine.IScreenManager.SetResolution(KokoEngine.Resolution)
+  fullName: KokoEngine.IScreenManager.SetResolution(KokoEngine.Resolution)
+  nameWithType: IScreenManager.SetResolution(Resolution)
+- uid: KokoEngine.IScreenManager.SetResolution(System.Int32,System.Int32)
+  name: SetResolution(Int32, Int32)
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_SetResolution_System_Int32_System_Int32_
+  commentId: M:KokoEngine.IScreenManager.SetResolution(System.Int32,System.Int32)
+  fullName: KokoEngine.IScreenManager.SetResolution(System.Int32, System.Int32)
+  nameWithType: IScreenManager.SetResolution(Int32, Int32)
+- uid: KokoEngine.IScreenManager.SetResolution*
+  name: SetResolution
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_SetResolution_
+  commentId: Overload:KokoEngine.IScreenManager.SetResolution
+  fullName: KokoEngine.IScreenManager.SetResolution
+  nameWithType: IScreenManager.SetResolution
+- uid: KokoEngine.IScreenManager.SupportedResolutions
+  name: SupportedResolutions
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_SupportedResolutions
+  commentId: P:KokoEngine.IScreenManager.SupportedResolutions
+  fullName: KokoEngine.IScreenManager.SupportedResolutions
+  nameWithType: IScreenManager.SupportedResolutions
+- uid: KokoEngine.IScreenManager.SupportedResolutions*
+  name: SupportedResolutions
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_SupportedResolutions_
+  commentId: Overload:KokoEngine.IScreenManager.SupportedResolutions
+  fullName: KokoEngine.IScreenManager.SupportedResolutions
+  nameWithType: IScreenManager.SupportedResolutions
+- uid: KokoEngine.IScreenManager.Width
+  name: Width
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_Width
+  commentId: P:KokoEngine.IScreenManager.Width
+  fullName: KokoEngine.IScreenManager.Width
+  nameWithType: IScreenManager.Width
+- uid: KokoEngine.IScreenManager.Width*
+  name: Width
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_Width_
+  commentId: Overload:KokoEngine.IScreenManager.Width
+  fullName: KokoEngine.IScreenManager.Width
+  nameWithType: IScreenManager.Width
 - uid: KokoEngine.ISprite
   name: ISprite
   href: api/KokoEngine.ISprite.html
@@ -2667,30 +2961,42 @@ references:
   commentId: T:KokoEngine.ISpriteRenderer
   fullName: KokoEngine.ISpriteRenderer
   nameWithType: ISpriteRenderer
-- uid: KokoEngine.ISpriteRenderer.color
-  name: color
-  href: api/KokoEngine.ISpriteRenderer.html#KokoEngine_ISpriteRenderer_color
-  commentId: P:KokoEngine.ISpriteRenderer.color
-  fullName: KokoEngine.ISpriteRenderer.color
-  nameWithType: ISpriteRenderer.color
-- uid: KokoEngine.ISpriteRenderer.color*
-  name: color
-  href: api/KokoEngine.ISpriteRenderer.html#KokoEngine_ISpriteRenderer_color_
-  commentId: Overload:KokoEngine.ISpriteRenderer.color
-  fullName: KokoEngine.ISpriteRenderer.color
-  nameWithType: ISpriteRenderer.color
-- uid: KokoEngine.ISpriteRenderer.sprite
-  name: sprite
-  href: api/KokoEngine.ISpriteRenderer.html#KokoEngine_ISpriteRenderer_sprite
-  commentId: P:KokoEngine.ISpriteRenderer.sprite
-  fullName: KokoEngine.ISpriteRenderer.sprite
-  nameWithType: ISpriteRenderer.sprite
-- uid: KokoEngine.ISpriteRenderer.sprite*
-  name: sprite
-  href: api/KokoEngine.ISpriteRenderer.html#KokoEngine_ISpriteRenderer_sprite_
-  commentId: Overload:KokoEngine.ISpriteRenderer.sprite
-  fullName: KokoEngine.ISpriteRenderer.sprite
-  nameWithType: ISpriteRenderer.sprite
+- uid: KokoEngine.ISpriteRenderer.Color
+  name: Color
+  href: api/KokoEngine.ISpriteRenderer.html#KokoEngine_ISpriteRenderer_Color
+  commentId: P:KokoEngine.ISpriteRenderer.Color
+  fullName: KokoEngine.ISpriteRenderer.Color
+  nameWithType: ISpriteRenderer.Color
+- uid: KokoEngine.ISpriteRenderer.Color*
+  name: Color
+  href: api/KokoEngine.ISpriteRenderer.html#KokoEngine_ISpriteRenderer_Color_
+  commentId: Overload:KokoEngine.ISpriteRenderer.Color
+  fullName: KokoEngine.ISpriteRenderer.Color
+  nameWithType: ISpriteRenderer.Color
+- uid: KokoEngine.ISpriteRenderer.Layer
+  name: Layer
+  href: api/KokoEngine.ISpriteRenderer.html#KokoEngine_ISpriteRenderer_Layer
+  commentId: P:KokoEngine.ISpriteRenderer.Layer
+  fullName: KokoEngine.ISpriteRenderer.Layer
+  nameWithType: ISpriteRenderer.Layer
+- uid: KokoEngine.ISpriteRenderer.Layer*
+  name: Layer
+  href: api/KokoEngine.ISpriteRenderer.html#KokoEngine_ISpriteRenderer_Layer_
+  commentId: Overload:KokoEngine.ISpriteRenderer.Layer
+  fullName: KokoEngine.ISpriteRenderer.Layer
+  nameWithType: ISpriteRenderer.Layer
+- uid: KokoEngine.ISpriteRenderer.Sprite
+  name: Sprite
+  href: api/KokoEngine.ISpriteRenderer.html#KokoEngine_ISpriteRenderer_Sprite
+  commentId: P:KokoEngine.ISpriteRenderer.Sprite
+  fullName: KokoEngine.ISpriteRenderer.Sprite
+  nameWithType: ISpriteRenderer.Sprite
+- uid: KokoEngine.ISpriteRenderer.Sprite*
+  name: Sprite
+  href: api/KokoEngine.ISpriteRenderer.html#KokoEngine_ISpriteRenderer_Sprite_
+  commentId: Overload:KokoEngine.ISpriteRenderer.Sprite
+  fullName: KokoEngine.ISpriteRenderer.Sprite
+  nameWithType: ISpriteRenderer.Sprite
 - uid: KokoEngine.IState
   name: IState
   href: api/KokoEngine.IState.html
@@ -2787,6 +3093,48 @@ references:
   commentId: Overload:KokoEngine.ISteeringBehaviour.Calculate
   fullName: KokoEngine.ISteeringBehaviour.Calculate
   nameWithType: ISteeringBehaviour.Calculate
+- uid: KokoEngine.ITimeManager
+  name: ITimeManager
+  href: api/KokoEngine.ITimeManager.html
+  commentId: T:KokoEngine.ITimeManager
+  fullName: KokoEngine.ITimeManager
+  nameWithType: ITimeManager
+- uid: KokoEngine.ITimeManager.DeltaTime
+  name: DeltaTime
+  href: api/KokoEngine.ITimeManager.html#KokoEngine_ITimeManager_DeltaTime
+  commentId: P:KokoEngine.ITimeManager.DeltaTime
+  fullName: KokoEngine.ITimeManager.DeltaTime
+  nameWithType: ITimeManager.DeltaTime
+- uid: KokoEngine.ITimeManager.DeltaTime*
+  name: DeltaTime
+  href: api/KokoEngine.ITimeManager.html#KokoEngine_ITimeManager_DeltaTime_
+  commentId: Overload:KokoEngine.ITimeManager.DeltaTime
+  fullName: KokoEngine.ITimeManager.DeltaTime
+  nameWithType: ITimeManager.DeltaTime
+- uid: KokoEngine.ITimeManager.TimeScale
+  name: TimeScale
+  href: api/KokoEngine.ITimeManager.html#KokoEngine_ITimeManager_TimeScale
+  commentId: P:KokoEngine.ITimeManager.TimeScale
+  fullName: KokoEngine.ITimeManager.TimeScale
+  nameWithType: ITimeManager.TimeScale
+- uid: KokoEngine.ITimeManager.TimeScale*
+  name: TimeScale
+  href: api/KokoEngine.ITimeManager.html#KokoEngine_ITimeManager_TimeScale_
+  commentId: Overload:KokoEngine.ITimeManager.TimeScale
+  fullName: KokoEngine.ITimeManager.TimeScale
+  nameWithType: ITimeManager.TimeScale
+- uid: KokoEngine.ITimeManager.TotalTime
+  name: TotalTime
+  href: api/KokoEngine.ITimeManager.html#KokoEngine_ITimeManager_TotalTime
+  commentId: P:KokoEngine.ITimeManager.TotalTime
+  fullName: KokoEngine.ITimeManager.TotalTime
+  nameWithType: ITimeManager.TotalTime
+- uid: KokoEngine.ITimeManager.TotalTime*
+  name: TotalTime
+  href: api/KokoEngine.ITimeManager.html#KokoEngine_ITimeManager_TotalTime_
+  commentId: Overload:KokoEngine.ITimeManager.TotalTime
+  fullName: KokoEngine.ITimeManager.TotalTime
+  nameWithType: ITimeManager.TotalTime
 - uid: KokoEngine.ITransform
   name: ITransform
   href: api/KokoEngine.ITransform.html
@@ -3196,6 +3544,114 @@ references:
   commentId: Overload:KokoEngine.Rect.Y
   fullName: KokoEngine.Rect.Y
   nameWithType: Rect.Y
+- uid: KokoEngine.RenderManager
+  name: RenderManager
+  href: api/KokoEngine.RenderManager.html
+  commentId: T:KokoEngine.RenderManager
+  fullName: KokoEngine.RenderManager
+  nameWithType: RenderManager
+- uid: KokoEngine.RenderManager.RenderCircleHandler
+  name: RenderCircleHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderCircleHandler
+  commentId: P:KokoEngine.RenderManager.RenderCircleHandler
+  fullName: KokoEngine.RenderManager.RenderCircleHandler
+  nameWithType: RenderManager.RenderCircleHandler
+- uid: KokoEngine.RenderManager.RenderCircleHandler*
+  name: RenderCircleHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderCircleHandler_
+  commentId: Overload:KokoEngine.RenderManager.RenderCircleHandler
+  fullName: KokoEngine.RenderManager.RenderCircleHandler
+  nameWithType: RenderManager.RenderCircleHandler
+- uid: KokoEngine.RenderManager.RenderLineHandler
+  name: RenderLineHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderLineHandler
+  commentId: P:KokoEngine.RenderManager.RenderLineHandler
+  fullName: KokoEngine.RenderManager.RenderLineHandler
+  nameWithType: RenderManager.RenderLineHandler
+- uid: KokoEngine.RenderManager.RenderLineHandler*
+  name: RenderLineHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderLineHandler_
+  commentId: Overload:KokoEngine.RenderManager.RenderLineHandler
+  fullName: KokoEngine.RenderManager.RenderLineHandler
+  nameWithType: RenderManager.RenderLineHandler
+- uid: KokoEngine.RenderManager.RenderRayHandler
+  name: RenderRayHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderRayHandler
+  commentId: P:KokoEngine.RenderManager.RenderRayHandler
+  fullName: KokoEngine.RenderManager.RenderRayHandler
+  nameWithType: RenderManager.RenderRayHandler
+- uid: KokoEngine.RenderManager.RenderRayHandler*
+  name: RenderRayHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderRayHandler_
+  commentId: Overload:KokoEngine.RenderManager.RenderRayHandler
+  fullName: KokoEngine.RenderManager.RenderRayHandler
+  nameWithType: RenderManager.RenderRayHandler
+- uid: KokoEngine.RenderManager.RenderRectangleHandler
+  name: RenderRectangleHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderRectangleHandler
+  commentId: P:KokoEngine.RenderManager.RenderRectangleHandler
+  fullName: KokoEngine.RenderManager.RenderRectangleHandler
+  nameWithType: RenderManager.RenderRectangleHandler
+- uid: KokoEngine.RenderManager.RenderRectangleHandler*
+  name: RenderRectangleHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderRectangleHandler_
+  commentId: Overload:KokoEngine.RenderManager.RenderRectangleHandler
+  fullName: KokoEngine.RenderManager.RenderRectangleHandler
+  nameWithType: RenderManager.RenderRectangleHandler
+- uid: KokoEngine.RenderManager.RenderSpriteHandler
+  name: RenderSpriteHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderSpriteHandler
+  commentId: P:KokoEngine.RenderManager.RenderSpriteHandler
+  fullName: KokoEngine.RenderManager.RenderSpriteHandler
+  nameWithType: RenderManager.RenderSpriteHandler
+- uid: KokoEngine.RenderManager.RenderSpriteHandler*
+  name: RenderSpriteHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderSpriteHandler_
+  commentId: Overload:KokoEngine.RenderManager.RenderSpriteHandler
+  fullName: KokoEngine.RenderManager.RenderSpriteHandler
+  nameWithType: RenderManager.RenderSpriteHandler
+- uid: KokoEngine.Resolution
+  name: Resolution
+  href: api/KokoEngine.Resolution.html
+  commentId: T:KokoEngine.Resolution
+  fullName: KokoEngine.Resolution
+  nameWithType: Resolution
+- uid: KokoEngine.Resolution.#ctor(System.Int32,System.Int32)
+  name: Resolution(Int32, Int32)
+  href: api/KokoEngine.Resolution.html#KokoEngine_Resolution__ctor_System_Int32_System_Int32_
+  commentId: M:KokoEngine.Resolution.#ctor(System.Int32,System.Int32)
+  fullName: KokoEngine.Resolution.Resolution(System.Int32, System.Int32)
+  nameWithType: Resolution.Resolution(Int32, Int32)
+- uid: KokoEngine.Resolution.#ctor*
+  name: Resolution
+  href: api/KokoEngine.Resolution.html#KokoEngine_Resolution__ctor_
+  commentId: Overload:KokoEngine.Resolution.#ctor
+  fullName: KokoEngine.Resolution.Resolution
+  nameWithType: Resolution.Resolution
+- uid: KokoEngine.Resolution.Height
+  name: Height
+  href: api/KokoEngine.Resolution.html#KokoEngine_Resolution_Height
+  commentId: P:KokoEngine.Resolution.Height
+  fullName: KokoEngine.Resolution.Height
+  nameWithType: Resolution.Height
+- uid: KokoEngine.Resolution.Height*
+  name: Height
+  href: api/KokoEngine.Resolution.html#KokoEngine_Resolution_Height_
+  commentId: Overload:KokoEngine.Resolution.Height
+  fullName: KokoEngine.Resolution.Height
+  nameWithType: Resolution.Height
+- uid: KokoEngine.Resolution.Width
+  name: Width
+  href: api/KokoEngine.Resolution.html#KokoEngine_Resolution_Width
+  commentId: P:KokoEngine.Resolution.Width
+  fullName: KokoEngine.Resolution.Width
+  nameWithType: Resolution.Width
+- uid: KokoEngine.Resolution.Width*
+  name: Width
+  href: api/KokoEngine.Resolution.html#KokoEngine_Resolution_Width_
+  commentId: Overload:KokoEngine.Resolution.Width
+  fullName: KokoEngine.Resolution.Width
+  nameWithType: Resolution.Width
 - uid: KokoEngine.Rigidbody
   name: Rigidbody
   href: api/KokoEngine.Rigidbody.html
@@ -3292,6 +3748,18 @@ references:
   commentId: T:KokoEngine.Scene
   fullName: KokoEngine.Scene
   nameWithType: Scene
+- uid: KokoEngine.Scene.#ctor(System.String)
+  name: Scene(String)
+  href: api/KokoEngine.Scene.html#KokoEngine_Scene__ctor_System_String_
+  commentId: M:KokoEngine.Scene.#ctor(System.String)
+  fullName: KokoEngine.Scene.Scene(System.String)
+  nameWithType: Scene.Scene(String)
+- uid: KokoEngine.Scene.#ctor*
+  name: Scene
+  href: api/KokoEngine.Scene.html#KokoEngine_Scene__ctor_
+  commentId: Overload:KokoEngine.Scene.#ctor
+  fullName: KokoEngine.Scene.Scene
+  nameWithType: Scene.Scene
 - uid: KokoEngine.Scene.AddGameObject(KokoEngine.IGameObject)
   name: AddGameObject(IGameObject)
   href: api/KokoEngine.Scene.html#KokoEngine_Scene_AddGameObject_KokoEngine_IGameObject_
@@ -3334,18 +3802,18 @@ references:
   commentId: T:KokoEngine.SceneManager
   fullName: KokoEngine.SceneManager
   nameWithType: SceneManager
-- uid: KokoEngine.SceneManager.CreateScene(System.String)
-  name: CreateScene(String)
-  href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_CreateScene_System_String_
-  commentId: M:KokoEngine.SceneManager.CreateScene(System.String)
-  fullName: KokoEngine.SceneManager.CreateScene(System.String)
-  nameWithType: SceneManager.CreateScene(String)
-- uid: KokoEngine.SceneManager.CreateScene*
-  name: CreateScene
-  href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_CreateScene_
-  commentId: Overload:KokoEngine.SceneManager.CreateScene
-  fullName: KokoEngine.SceneManager.CreateScene
-  nameWithType: SceneManager.CreateScene
+- uid: KokoEngine.SceneManager.AddScene(KokoEngine.IScene)
+  name: AddScene(IScene)
+  href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_AddScene_KokoEngine_IScene_
+  commentId: M:KokoEngine.SceneManager.AddScene(KokoEngine.IScene)
+  fullName: KokoEngine.SceneManager.AddScene(KokoEngine.IScene)
+  nameWithType: SceneManager.AddScene(IScene)
+- uid: KokoEngine.SceneManager.AddScene*
+  name: AddScene
+  href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_AddScene_
+  commentId: Overload:KokoEngine.SceneManager.AddScene
+  fullName: KokoEngine.SceneManager.AddScene
+  nameWithType: SceneManager.AddScene
 - uid: KokoEngine.SceneManager.GetActiveScene
   name: GetActiveScene()
   href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_GetActiveScene
@@ -3382,18 +3850,6 @@ references:
   commentId: Overload:KokoEngine.SceneManager.LoadScene
   fullName: KokoEngine.SceneManager.LoadScene
   nameWithType: SceneManager.LoadScene
-- uid: KokoEngine.SceneManager.UpdateActiveScene(System.Single)
-  name: UpdateActiveScene(Single)
-  href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_UpdateActiveScene_System_Single_
-  commentId: M:KokoEngine.SceneManager.UpdateActiveScene(System.Single)
-  fullName: KokoEngine.SceneManager.UpdateActiveScene(System.Single)
-  nameWithType: SceneManager.UpdateActiveScene(Single)
-- uid: KokoEngine.SceneManager.UpdateActiveScene*
-  name: UpdateActiveScene
-  href: api/KokoEngine.SceneManager.html#KokoEngine_SceneManager_UpdateActiveScene_
-  commentId: Overload:KokoEngine.SceneManager.UpdateActiveScene
-  fullName: KokoEngine.SceneManager.UpdateActiveScene
-  nameWithType: SceneManager.UpdateActiveScene
 - uid: KokoEngine.Screen
   name: Screen
   href: api/KokoEngine.Screen.html
@@ -3436,6 +3892,102 @@ references:
   commentId: Overload:KokoEngine.Screen.Width
   fullName: KokoEngine.Screen.Width
   nameWithType: Screen.Width
+- uid: KokoEngine.ScreenManager
+  name: ScreenManager
+  href: api/KokoEngine.ScreenManager.html
+  commentId: T:KokoEngine.ScreenManager
+  fullName: KokoEngine.ScreenManager
+  nameWithType: ScreenManager
+- uid: KokoEngine.ScreenManager.AddSupportedResolution(System.Int32,System.Int32)
+  name: AddSupportedResolution(Int32, Int32)
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_AddSupportedResolution_System_Int32_System_Int32_
+  commentId: M:KokoEngine.ScreenManager.AddSupportedResolution(System.Int32,System.Int32)
+  fullName: KokoEngine.ScreenManager.AddSupportedResolution(System.Int32, System.Int32)
+  nameWithType: ScreenManager.AddSupportedResolution(Int32, Int32)
+- uid: KokoEngine.ScreenManager.AddSupportedResolution*
+  name: AddSupportedResolution
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_AddSupportedResolution_
+  commentId: Overload:KokoEngine.ScreenManager.AddSupportedResolution
+  fullName: KokoEngine.ScreenManager.AddSupportedResolution
+  nameWithType: ScreenManager.AddSupportedResolution
+- uid: KokoEngine.ScreenManager.CurrentResolution
+  name: CurrentResolution
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_CurrentResolution
+  commentId: P:KokoEngine.ScreenManager.CurrentResolution
+  fullName: KokoEngine.ScreenManager.CurrentResolution
+  nameWithType: ScreenManager.CurrentResolution
+- uid: KokoEngine.ScreenManager.CurrentResolution*
+  name: CurrentResolution
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_CurrentResolution_
+  commentId: Overload:KokoEngine.ScreenManager.CurrentResolution
+  fullName: KokoEngine.ScreenManager.CurrentResolution
+  nameWithType: ScreenManager.CurrentResolution
+- uid: KokoEngine.ScreenManager.Height
+  name: Height
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_Height
+  commentId: P:KokoEngine.ScreenManager.Height
+  fullName: KokoEngine.ScreenManager.Height
+  nameWithType: ScreenManager.Height
+- uid: KokoEngine.ScreenManager.Height*
+  name: Height
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_Height_
+  commentId: Overload:KokoEngine.ScreenManager.Height
+  fullName: KokoEngine.ScreenManager.Height
+  nameWithType: ScreenManager.Height
+- uid: KokoEngine.ScreenManager.IsFullscreen
+  name: IsFullscreen
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_IsFullscreen
+  commentId: P:KokoEngine.ScreenManager.IsFullscreen
+  fullName: KokoEngine.ScreenManager.IsFullscreen
+  nameWithType: ScreenManager.IsFullscreen
+- uid: KokoEngine.ScreenManager.IsFullscreen*
+  name: IsFullscreen
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_IsFullscreen_
+  commentId: Overload:KokoEngine.ScreenManager.IsFullscreen
+  fullName: KokoEngine.ScreenManager.IsFullscreen
+  nameWithType: ScreenManager.IsFullscreen
+- uid: KokoEngine.ScreenManager.SetResolution(KokoEngine.Resolution)
+  name: SetResolution(Resolution)
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_SetResolution_KokoEngine_Resolution_
+  commentId: M:KokoEngine.ScreenManager.SetResolution(KokoEngine.Resolution)
+  fullName: KokoEngine.ScreenManager.SetResolution(KokoEngine.Resolution)
+  nameWithType: ScreenManager.SetResolution(Resolution)
+- uid: KokoEngine.ScreenManager.SetResolution(System.Int32,System.Int32)
+  name: SetResolution(Int32, Int32)
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_SetResolution_System_Int32_System_Int32_
+  commentId: M:KokoEngine.ScreenManager.SetResolution(System.Int32,System.Int32)
+  fullName: KokoEngine.ScreenManager.SetResolution(System.Int32, System.Int32)
+  nameWithType: ScreenManager.SetResolution(Int32, Int32)
+- uid: KokoEngine.ScreenManager.SetResolution*
+  name: SetResolution
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_SetResolution_
+  commentId: Overload:KokoEngine.ScreenManager.SetResolution
+  fullName: KokoEngine.ScreenManager.SetResolution
+  nameWithType: ScreenManager.SetResolution
+- uid: KokoEngine.ScreenManager.SupportedResolutions
+  name: SupportedResolutions
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_SupportedResolutions
+  commentId: P:KokoEngine.ScreenManager.SupportedResolutions
+  fullName: KokoEngine.ScreenManager.SupportedResolutions
+  nameWithType: ScreenManager.SupportedResolutions
+- uid: KokoEngine.ScreenManager.SupportedResolutions*
+  name: SupportedResolutions
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_SupportedResolutions_
+  commentId: Overload:KokoEngine.ScreenManager.SupportedResolutions
+  fullName: KokoEngine.ScreenManager.SupportedResolutions
+  nameWithType: ScreenManager.SupportedResolutions
+- uid: KokoEngine.ScreenManager.Width
+  name: Width
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_Width
+  commentId: P:KokoEngine.ScreenManager.Width
+  fullName: KokoEngine.ScreenManager.Width
+  nameWithType: ScreenManager.Width
+- uid: KokoEngine.ScreenManager.Width*
+  name: Width
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_Width_
+  commentId: Overload:KokoEngine.ScreenManager.Width
+  fullName: KokoEngine.ScreenManager.Width
+  nameWithType: ScreenManager.Width
 - uid: KokoEngine.Seek
   name: Seek
   href: api/KokoEngine.Seek.html
@@ -3514,30 +4066,42 @@ references:
   commentId: T:KokoEngine.SpriteRenderer
   fullName: KokoEngine.SpriteRenderer
   nameWithType: SpriteRenderer
-- uid: KokoEngine.SpriteRenderer.color
-  name: color
-  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer_color
-  commentId: P:KokoEngine.SpriteRenderer.color
-  fullName: KokoEngine.SpriteRenderer.color
-  nameWithType: SpriteRenderer.color
-- uid: KokoEngine.SpriteRenderer.color*
-  name: color
-  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer_color_
-  commentId: Overload:KokoEngine.SpriteRenderer.color
-  fullName: KokoEngine.SpriteRenderer.color
-  nameWithType: SpriteRenderer.color
-- uid: KokoEngine.SpriteRenderer.sprite
-  name: sprite
-  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer_sprite
-  commentId: P:KokoEngine.SpriteRenderer.sprite
-  fullName: KokoEngine.SpriteRenderer.sprite
-  nameWithType: SpriteRenderer.sprite
-- uid: KokoEngine.SpriteRenderer.sprite*
-  name: sprite
-  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer_sprite_
-  commentId: Overload:KokoEngine.SpriteRenderer.sprite
-  fullName: KokoEngine.SpriteRenderer.sprite
-  nameWithType: SpriteRenderer.sprite
+- uid: KokoEngine.SpriteRenderer.Color
+  name: Color
+  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer_Color
+  commentId: P:KokoEngine.SpriteRenderer.Color
+  fullName: KokoEngine.SpriteRenderer.Color
+  nameWithType: SpriteRenderer.Color
+- uid: KokoEngine.SpriteRenderer.Color*
+  name: Color
+  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer_Color_
+  commentId: Overload:KokoEngine.SpriteRenderer.Color
+  fullName: KokoEngine.SpriteRenderer.Color
+  nameWithType: SpriteRenderer.Color
+- uid: KokoEngine.SpriteRenderer.Layer
+  name: Layer
+  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer_Layer
+  commentId: P:KokoEngine.SpriteRenderer.Layer
+  fullName: KokoEngine.SpriteRenderer.Layer
+  nameWithType: SpriteRenderer.Layer
+- uid: KokoEngine.SpriteRenderer.Layer*
+  name: Layer
+  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer_Layer_
+  commentId: Overload:KokoEngine.SpriteRenderer.Layer
+  fullName: KokoEngine.SpriteRenderer.Layer
+  nameWithType: SpriteRenderer.Layer
+- uid: KokoEngine.SpriteRenderer.Sprite
+  name: Sprite
+  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer_Sprite
+  commentId: P:KokoEngine.SpriteRenderer.Sprite
+  fullName: KokoEngine.SpriteRenderer.Sprite
+  nameWithType: SpriteRenderer.Sprite
+- uid: KokoEngine.SpriteRenderer.Sprite*
+  name: Sprite
+  href: api/KokoEngine.SpriteRenderer.html#KokoEngine_SpriteRenderer_Sprite_
+  commentId: Overload:KokoEngine.SpriteRenderer.Sprite
+  fullName: KokoEngine.SpriteRenderer.Sprite
+  nameWithType: SpriteRenderer.Sprite
 - uid: KokoEngine.State
   name: State
   href: api/KokoEngine.State.html
@@ -3778,6 +4342,48 @@ references:
   commentId: Overload:KokoEngine.Time.TotalTime
   fullName: KokoEngine.Time.TotalTime
   nameWithType: Time.TotalTime
+- uid: KokoEngine.TimeManager
+  name: TimeManager
+  href: api/KokoEngine.TimeManager.html
+  commentId: T:KokoEngine.TimeManager
+  fullName: KokoEngine.TimeManager
+  nameWithType: TimeManager
+- uid: KokoEngine.TimeManager.DeltaTime
+  name: DeltaTime
+  href: api/KokoEngine.TimeManager.html#KokoEngine_TimeManager_DeltaTime
+  commentId: P:KokoEngine.TimeManager.DeltaTime
+  fullName: KokoEngine.TimeManager.DeltaTime
+  nameWithType: TimeManager.DeltaTime
+- uid: KokoEngine.TimeManager.DeltaTime*
+  name: DeltaTime
+  href: api/KokoEngine.TimeManager.html#KokoEngine_TimeManager_DeltaTime_
+  commentId: Overload:KokoEngine.TimeManager.DeltaTime
+  fullName: KokoEngine.TimeManager.DeltaTime
+  nameWithType: TimeManager.DeltaTime
+- uid: KokoEngine.TimeManager.TimeScale
+  name: TimeScale
+  href: api/KokoEngine.TimeManager.html#KokoEngine_TimeManager_TimeScale
+  commentId: P:KokoEngine.TimeManager.TimeScale
+  fullName: KokoEngine.TimeManager.TimeScale
+  nameWithType: TimeManager.TimeScale
+- uid: KokoEngine.TimeManager.TimeScale*
+  name: TimeScale
+  href: api/KokoEngine.TimeManager.html#KokoEngine_TimeManager_TimeScale_
+  commentId: Overload:KokoEngine.TimeManager.TimeScale
+  fullName: KokoEngine.TimeManager.TimeScale
+  nameWithType: TimeManager.TimeScale
+- uid: KokoEngine.TimeManager.TotalTime
+  name: TotalTime
+  href: api/KokoEngine.TimeManager.html#KokoEngine_TimeManager_TotalTime
+  commentId: P:KokoEngine.TimeManager.TotalTime
+  fullName: KokoEngine.TimeManager.TotalTime
+  nameWithType: TimeManager.TotalTime
+- uid: KokoEngine.TimeManager.TotalTime*
+  name: TotalTime
+  href: api/KokoEngine.TimeManager.html#KokoEngine_TimeManager_TotalTime_
+  commentId: Overload:KokoEngine.TimeManager.TotalTime
+  fullName: KokoEngine.TimeManager.TotalTime
+  nameWithType: TimeManager.TotalTime
 - uid: KokoEngine.Transform
   name: Transform
   href: api/KokoEngine.Transform.html
