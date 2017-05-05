@@ -33,7 +33,7 @@ namespace KokoEngine
 
             _animationTimer += Time.DeltaTime;
 
-            if (_animationTimer > Speed)
+            if (_animationTimer >= Speed)
             {
                 if (_currentFrame < _currentAnimationClip.NumFrames - 1)
                     _currentFrame++;
@@ -42,7 +42,7 @@ namespace KokoEngine
                 else
                     Stop();
 
-                _animationTimer = 0;
+                _animationTimer -= Speed;
             }
 
             _sr.Sprite = _currentAnimationClip.Sprites[_currentFrame];
