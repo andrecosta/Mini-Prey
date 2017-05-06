@@ -36,6 +36,8 @@ namespace KokoEngine
         
         #region Operators
         public static Vector2 operator +(Vector2 a, Vector2 b) => new Vector2(a.X + b.X, a.Y + b.Y);
+        public static Vector2 operator +(Vector2 a, Vector3 b) => new Vector2(a.X + b.X, a.Y + b.Y);
+        public static Vector2 operator +(Vector3 a, Vector2 b) => new Vector2(a.X + b.X, a.Y + b.Y);
         public static Vector2 operator -(Vector2 a, Vector2 b) => new Vector2(a.X - b.X, a.Y - b.Y);
         public static Vector2 operator -(Vector2 a) => new Vector2(-a.X, -a.Y);
         public static Vector2 operator *(Vector2 a, float d) => new Vector2(a.X * d, a.Y * d);

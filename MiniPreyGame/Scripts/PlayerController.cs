@@ -1,150 +1,154 @@
 ﻿using KokoEngine;
 
-namespace MiniPreyGame
+public class PlayerController : Player
 {
-    class PlayerController : Player
+    public GameController GameController;
+    public CustomCursor CustomCursor;
+
+    //private LineRenderer _lineRenderer;
+    private Planet _selectedPlanet;
+    private Planet _lastHoveredPlanet;
+
+    private ILineRenderer _lineRenderer;
+    private float _selectedPercentage = 0.25f;
+
+    protected override void Awake()
     {
-        public GameController GameController;
-        public Texture2D CursorTexture25;
-        public Texture2D CursorTexture50;
-        public Texture2D CursorTexture75;
-        public Texture2D CursorTexture100;
+        _lineRenderer = GetComponent<LineRenderer>();
+    }
 
-        //private LineRenderer _lineRenderer;
-        private Structure _selectedStructure;
-        private Structure _lastHoveredStructure;
+    protected override void Start()
+    {
+        UpdateMouseTexture();
+    }
 
-        private float _selectedPercentage = 0.25f;
+    protected override void Update()
+    {
+        Planet planet = null;
 
-        void Awake()
+        // Detect if there is a planet under the mouse cursor
+        foreach (var p in GameController.Planets)
         {
-            //_lineRenderer = GetComponent<LineRenderer>();
+            if (Vector3.Distance(Input.GetMousePosition(), p.Transform.Position) < 30)
+            {
+                planet = p;
+            }
+        }
+
+        if (planet)
+        {
+            _lastHoveredPlanet = planet;
+
+            if (planet.Owner == this)
+            {
+                // Show hover
+                if (!_selectedPlanet || (_selectedPlanet != null && _selectedPlanet != planet))
+                {
+                    planet.HoverOutline.GameObject.SetActive(true);
+                    planet.IsHovered = true;
+                }
+
+                // Select structure
+                if (Input.GetActionUp("PrimaryAction"))
+                {
+                    Debug.Log("Selected structure");
+                    if (_selectedPlanet)
+                        _selectedPlanet.SelectedOutline.GameObject.SetActive(false);
+
+                    _selectedPlanet = planet;
+                    _selectedPlanet.SelectedOutline.GameObject.SetActive(true);
+                    //_selectedPlanet.HideUpgradeMenu();
+                    UnHover();
+                }
+
+                if (_selectedPlanet != null && _selectedPlanet == planet)
+                {
+                    // Toggle upgrade menu
+                    if (Input.GetActionDown("SecondaryAction"))
+                    {
+                        //planet.ToggleUpgradeMenu();
+                    }
+                }
+            }
+
+            if (_selectedPlanet != null && _selectedPlanet != planet)
+            {
+                // Show line
+                _lineRenderer.Start = _selectedPlanet.Transform.Position;
+                _lineRenderer.End = planet.Transform.Position;
+                _lineRenderer.Size = 2;
+                _lineRenderer.Color = Color.Green;
+
+                if (Input.GetActionDown("SecondaryAction") && _selectedPlanet != null)
+                {
+                    Debug.Log("Selected target structure");
+                    _selectedPlanet.LaunchShips(planet, _selectedPercentage);
+                    _selectedPlanet.SelectedOutline.GameObject.SetActive(false);
+                    //_selectedPlanet.HideUpgradeMenu();
+                    _selectedPlanet = null;
+                    UnHover();
+                }
+            }
+        }
+        else
+        {
+            UnHover();
+
+            if (Input.GetActionUp("PrimaryAction"))
+            {
+                if (_selectedPlanet)
+                {
+                    _selectedPlanet.SelectedOutline.GameObject.SetActive(false);
+                    //_selectedPlanet.HideUpgradeMenu();
+                    _selectedPlanet = null;
+                }
+            }
+        }
+
+        if (Input.GetMouseScrollDelta() > 0 || Input.GetActionUp("Fire"))
+        {
+            _selectedPercentage += 0.25f;
+            if (_selectedPercentage > 1)
+                _selectedPercentage = 1;
             UpdateMouseTexture();
         }
-
-        void Update()
+        else if (Input.GetMouseScrollDelta() < 0)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
-            {
-                // Get hovered structure
-                Structure structure = hit.transform.GetComponent<Structure>();
+            _selectedPercentage -= 0.25f;
+            if (_selectedPercentage < 0.25f)
+                _selectedPercentage = 0.25f;
+            UpdateMouseTexture();
+        }
+    }
 
-                if (structure)
-                {
-                    _lastHoveredStructure = structure;
+    void UnHover()
+    {
+        _lineRenderer.Start = Vector2.Zero;
+        _lineRenderer.End = Vector2.Zero;
+        _lineRenderer.Size = 0;
 
-                    if (structure.Owner == this)
-                    {
-                        // Show hover
-                        if (!_selectedStructure || (_selectedStructure && _selectedStructure != structure))
-                        {
-                            structure.HoverOutline.SetActive(true);
-                            structure.IsHovered = true;
-                        }
-
-                        // Select structure
-                        if (Input.GetMouseButtonUp(0))
-                        {
-                            Debug.Log("Selected structure");
-                            if (_selectedStructure)
-                                _selectedStructure.SelectedOutline.SetActive(false);
-
-                            _selectedStructure = structure;
-                            _selectedStructure.SelectedOutline.SetActive(true);
-                            _selectedStructure.HideUpgradeMenu();
-                            UnHover();
-                        }
-
-                        if (_selectedStructure && _selectedStructure == structure)
-                        {
-                            // Toggle upgrade menu
-                            if (Input.GetMouseButtonDown(1))
-                            {
-                                structure.ToggleUpgradeMenu();
-                            }
-                        }
-                    }
-
-                    if (_selectedStructure && _selectedStructure != structure)
-                    {
-                        // Show line
-                        //Vector3 dir = transform.InverseTransformDirection(structure.transform.position - transform.position).normalized;
-
-                        _lineRenderer.positionCount = 2;
-                        _lineRenderer.SetPosition(0, _selectedStructure.transform.position);
-                        _lineRenderer.SetPosition(1, structure.transform.position);
-
-                        if (Input.GetMouseButtonDown(1) && _selectedStructure)
-                        {
-                            Debug.Log("Selected target structure");
-                            _selectedStructure.LaunchCitizens(structure, _selectedPercentage);
-                            _selectedStructure.SelectedOutline.SetActive(false);
-                            _selectedStructure.HideUpgradeMenu();
-                            _selectedStructure = null;
-                            UnHover();
-                        }
-                    }
-                }
-                else
-                {
-                    UnHover();
-
-                    if (Input.GetMouseButtonUp(0))
-                    {
-                        if (_selectedStructure)
-                        {
-                            _selectedStructure.SelectedOutline.SetActive(false);
-                            _selectedStructure.HideUpgradeMenu();
-                            _selectedStructure = null;
-                        }
-                    }
-                }
-            }
-
-            if (Input.mouseScrollDelta.y > 0)
-            {
-                _selectedPercentage += 0.25f;
-                if (_selectedPercentage > 1)
-                    _selectedPercentage = 1;
-                UpdateMouseTexture();
-            }
-            else if (Input.mouseScrollDelta.y < 0)
-            {
-                _selectedPercentage -= 0.25f;
-                if (_selectedPercentage < 0.25f)
-                    _selectedPercentage = 0.25f;
-                UpdateMouseTexture();
-            }
+        if (_lastHoveredPlanet)
+        {
+            _lastHoveredPlanet.HoverOutline.GameObject.SetActive(false);
+            _lastHoveredPlanet.IsHovered = false;
         }
 
-        void UnHover()
+        if (_selectedPlanet)
         {
-            //_lineRenderer.positionCount = 0;
-
-            if (_lastHoveredStructure)
-            {
-                _lastHoveredStructure.HoverOutline.SetActive(false);
-                _lastHoveredStructure.IsHovered = false;
-            }
-
-            if (_selectedStructure)
-            {
-                _selectedStructure.HoverOutline.SetActive(false);
-                _selectedStructure.IsHovered = false;
-            }
+            _selectedPlanet.HoverOutline.GameObject.SetActive(false);
+            _selectedPlanet.IsHovered = false;
         }
+    }
 
-        void UpdateMouseTexture()
-        {
-            if (_selectedPercentage == 0.25f)
-                Cursor.SetCursor(CursorTexture25, Vector2.zero, CursorMode.Auto);
-            else if (_selectedPercentage == 0.5f)
-                Cursor.SetCursor(CursorTexture50, Vector2.zero, CursorMode.Auto);
-            else if (_selectedPercentage == 0.75f)
-                Cursor.SetCursor(CursorTexture75, Vector2.zero, CursorMode.Auto);
-            else if (_selectedPercentage == 1f)
-                Cursor.SetCursor(CursorTexture100, Vector2.zero, CursorMode.Auto);
-        }
+    void UpdateMouseTexture()
+    {
+        if (_selectedPercentage == 0.25f)
+            CustomCursor.SetCursor(25);
+        else if (_selectedPercentage == 0.5f)
+            CustomCursor.SetCursor(50);
+        else if (_selectedPercentage == 0.75f)
+            CustomCursor.SetCursor(75);
+        else if (_selectedPercentage == 1f)
+            CustomCursor.SetCursor(100);
     }
 }

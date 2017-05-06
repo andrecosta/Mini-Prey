@@ -8,6 +8,7 @@ namespace KokoEngine
         public ITransform Transform { get; }
         public string Tag { get; set; }
         public IScene Scene { get; private set; }
+        public bool IsActive { get; private set; } = true;
         IScene IGameObjectInternal.Scene
         {
             set { Scene = value; }
@@ -46,5 +47,10 @@ namespace KokoEngine
         }
         
         public List<IComponent> GetComponents() => _components;
+
+        public void SetActive(bool active)
+        {
+            IsActive = active;
+        }
     }
 }

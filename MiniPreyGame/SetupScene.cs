@@ -10,130 +10,96 @@ namespace MiniPreyGame
             // Create scene
             IScene scene = new Scene("Game");
 
-            // Create the GameController GameObject
+            // Create the human player
+            IGameObject playerControllerGameObject = scene.CreateGameObject("PlayerController");
+            PlayerController playerController = playerControllerGameObject.AddComponent<PlayerController>();
+            playerController.TeamColor = Color.Blue;
+            playerControllerGameObject.AddComponent<LineRenderer>();
+
+            // Create the AI player
+            IGameObject aiControllerGameObject = scene.CreateGameObject("AIController");
+            AIController aiController = aiControllerGameObject.AddComponent<AIController>();
+            aiController.TeamColor = Color.Red;
+
+            // Create the Neutral player
+            IGameObject neutralControllerGameObject = scene.CreateGameObject("NeutralController");
+            AIController neutralController = neutralControllerGameObject.AddComponent<AIController>();
+            neutralController.TeamColor = Color.White;
+            neutralController.IsNeutral = true;
+
+            // Create the GameController
             IGameObject gameControllerObject = scene.CreateGameObject("GameController");
             {
-                // Add some components to the player GameObject
                 var gc = gameControllerObject.AddComponent<GameController>();
-            }
+                gc.PlanetSprite = new Sprite(assetManager.GetAsset<Texture2D>("planet"));
+                gc.ShipSprite = new Sprite(assetManager.GetAsset<Texture2D>("ship"));
+                gc.PlanetPopulationFont = assetManager.GetAsset<Font>("main_font");
+                gc.Players = new Player[] {playerController, aiController, neutralController};
 
-            // Create the GameController GameObject
-            IGameObject playerControllerObject = scene.CreateGameObject("GameController");
-            {
-                // Add some components to the player GameObject
-                var gc = gameControllerObject.AddComponent<GameController>();
-            }
-
-            // Create the GameController GameObject
-            IGameObject gameControllerObject = scene.CreateGameObject("GameController");
-            {
-                // Add some components to the player GameObject
-                var gc = gameControllerObject.AddComponent<GameController>();
-            }
-
-            // Create the GameController GameObject
-            IGameObject gameControllerObject = scene.CreateGameObject("GameController");
-            {
-                // Add some components to the player GameObject
-                var gc = gameControllerObject.AddComponent<GameController>();
-            }
-
-            Stack<IGameObject> boids = new Stack<IGameObject>();
-            // Create 20 NPC boids
-            for (int i = 0; i < 20; i++)
-            {
-                // Create the boid GameObject
-                var boid = scene.CreateGameObject("Boid");
-
-                // Add some components to the boid GameObject
-                var sr = boid.AddComponent<SpriteRenderer>();
-                var a = boid.AddComponent<Animator>();
-                var au = boid.AddComponent<AudioSource>();
-                var rb = boid.AddComponent<Rigidbody>();
-                var cc = boid.AddComponent<BoxCollider>();
-                var v = boid.AddComponent<Vehicle>();
-                var seek = boid.AddComponent<Seek>();
-                var flee = boid.AddComponent<Flee>();
-                var pursuit = boid.AddComponent<Pursuit>();
-                var fsm = boid.AddComponent<FSM>();
-                var b = boid.AddComponent<Boid>();
-                
-                // Create sprites based on the boid textures
-                var boidTexture = assetManager.GetAsset<Texture2D>("boid");
-                var boidRainbowTexture = assetManager.GetAsset<Texture2D>("boid_rainbow");
-
-                var boidSprite = new Sprite(boidTexture);
-                var boidRainbowSprite = new Sprite(boidRainbowTexture);
-
-                // Create animation clips based on the created sprites, with different number of frames
-                var seekAnimationClip = new AnimationClip(boidSprite, 1);
-                var fleeAnimationClip = new AnimationClip(boidRainbowSprite, 12);
-                var defenderAnimationClip = new AnimationClip(boidSprite, 1);
-
-                // Add the created animations to the Animator component
-                a.AddAnimation("seek", seekAnimationClip);
-                a.AddAnimation("flee", fleeAnimationClip);
-                a.AddAnimation("defend", defenderAnimationClip);
-
-                // Set the BoxCollider component's bounds based on the boid texture's dimensions
-                cc.Width = boidSprite.Texture.Height;
-                cc.Height = boidSprite.Texture.Height;
-
-                // Add the created steering behaviours to the vehicle's behaviour list
-                v.Behaviours.Add(seek);
-                v.Behaviours.Add(flee);
-                v.Behaviours.Add(pursuit);
-
-                // Set the player as the boid's target
-                b.Target = player.Transform;
-                var boidSeekSound = assetManager.GetAsset<AudioClip>("seekSound");
-                var boidFleeSound = assetManager.GetAsset<AudioClip>("fleeSound");
-                b.SeekSound = boidSeekSound;
-                b.FleeSound = boidFleeSound;
-
-                // Assign half of the boids to seek the player, and another half to pursue other boids
-                if (i < 10)
+                // Set the planet types and upgrades
+                gc.PlanetTypes = new[]
                 {
-                    b.Target = player.Transform;
-                    boids.Push(boid);
-                }
-                else
-                {
-                    b.Target = boids.Pop().Transform;
-                    b.Pursuer = true;
-                }
+                    new Planet.Type
+                    {
+                        UpgradeLevels = new[]
+                        {
+                            new Planet.Upgrade
+                            {
+                                Cost = 10,
+                                FireRate = 0,
+                                Sprite = gc.PlanetSprite,
+                                PopGenerationLimit = 20,
+                                PopGenerationRate = 2f
+                            },
+                            new Planet.Upgrade
+                            {
+                                Cost = 20,
+                                FireRate = 0,
+                                Sprite = gc.PlanetSprite,
+                                PopGenerationLimit = 40,
+                                PopGenerationRate = 1.5f
+                            }
+                        }
+                    },
+                    new Planet.Type
+                    {
+                        UpgradeLevels = new[]
+                        {
+                            new Planet.Upgrade
+                            {
+                                Cost = 15,
+                                FireRate = 2,
+                                Sprite = gc.PlanetSprite,
+                                PopGenerationLimit = 0,
+                                PopGenerationRate = 0
+                            },
+                            new Planet.Upgrade
+                            {
+                                Cost = 25,
+                                FireRate = 1,
+                                Sprite = gc.PlanetSprite,
+                                PopGenerationLimit = 0,
+                                PopGenerationRate = 0
+                            }
+                        }
+                    }
+                };
+
+                playerController.GameController = gc;
+                aiController.GameController = gc;
             }
 
-            // Create the waypoints controller GameObject and add it to the scene
-            var waypointsController = scene.CreateGameObject("Waypoints Controller");
-            var wc = waypointsController.AddComponent<WaypointsController>();
-            wc.player = player;
-
-            // Create 25 waypoints
-            for (int i = 0; i < 25; i++)
+            // Create the Custom Cursor
+            IGameObject customCursorGameObject = scene.CreateGameObject("CustomCursor");
             {
-                // Create the waypoint GameObject
-                var waypoint = scene.CreateGameObject("Waypoint");
+                customCursorGameObject.AddComponent<SpriteRenderer>();
 
-                // Add some components to the boid GameObject
-                var sr = waypoint.AddComponent<SpriteRenderer>();
-                var a = waypoint.AddComponent<Animator>();
-                var au = waypoint.AddComponent<AudioSource>();
-                var w = waypoint.AddComponent<Waypoint>();
-                
-                // Create sprites based on the boid textures
-                var waypointTexture = assetManager.GetAsset<Texture2D>("waypoint_red");
-                var waypointSprite = new Sprite(waypointTexture);
-                sr.Sprite = waypointSprite;
-
-                // Create animation clips based on the created sprites, with different number of frames
-                var waypointAnimationClip = new AnimationClip(waypointSprite, 6);
-
-                // Add the created animations to the Animator component
-                a.AddAnimation("waypoint", waypointAnimationClip);
-
-                // Add the waypoint to the controller
-                wc.AddWaypoint(w);
+                var cc = customCursorGameObject.AddComponent<CustomCursor>();
+                cc.Percent25Sprite = new Sprite(assetManager.GetAsset<Texture2D>("cursor_25"));
+                cc.Percent50Sprite = new Sprite(assetManager.GetAsset<Texture2D>("cursor_50"));
+                cc.Percent75Sprite = new Sprite(assetManager.GetAsset<Texture2D>("cursor_75"));
+                cc.Percent100Sprite = new Sprite(assetManager.GetAsset<Texture2D>("cursor_100"));
+                playerController.CustomCursor = cc;
             }
 
             return scene;

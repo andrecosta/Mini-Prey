@@ -10,19 +10,10 @@
             Guid = System.Guid.NewGuid().ToString();
         }
 
-        public override string ToString()
-        {
-            return $"{Name} [GUID={Guid}]";
-        }
+        public override string ToString() => $"{Name} [GUID={Guid}]";
 
-        public static bool operator true(Entity e)
-        {
-            return e != null;
-        }
-
-        public static bool operator false(Entity e)
-        {
-            return e == null;
-        }
+        public static bool operator true(Entity e) => e != null;
+        public static bool operator false(Entity e) => e == null;
+        public static bool operator !(Entity e) => e == null;
     }
 }

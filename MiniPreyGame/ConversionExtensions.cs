@@ -31,6 +31,11 @@ namespace MiniPreyGame
             return new Vector2(input.X, input.Y);
         }
 
+        public static Vector2 ToMonoVector2(this KokoEngine.Vector3 input)
+        {
+            return new Vector2(input.X, input.Y);
+        }
+
         public static Point ToMonoPoint(this KokoEngine.Vector2 input)
         {
             return new Point((int) input.X, (int) input.Y);
@@ -44,6 +49,11 @@ namespace MiniPreyGame
         public static Texture2D ToMonoTexture2D(this KokoEngine.Texture2D input)
         {
             return input.RawData as Texture2D;
+        }
+
+        public static SpriteFont ToMonoSpriteFont(this KokoEngine.Font input)
+        {
+            return input.RawData as SpriteFont;
         }
 
         public static Rectangle ToMonoRectangle(this KokoEngine.Rect input)

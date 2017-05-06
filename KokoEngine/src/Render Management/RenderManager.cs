@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Linq;
 
 namespace KokoEngine
 {
     public class RenderManager : IRenderManagerInternal
     {
         public Action<ISpriteRenderer> RenderSpriteHandler { get; set; }
-        public Action<Vector2, Vector2, Color> RenderLineHandler { get; set; }
+        public Action<ITextRenderer> RenderTextHandler { get; set; }
+        public Action<ILineRenderer> RenderLineHandler { get; set; }
         public Action<Rect, Color> RenderRectangleHandler { get; set; }
         public Action<Vector2, float, Color> RenderCircleHandler { get; set; }
         public Action<Vector2, float, Color> RenderRayHandler { get; set; }
@@ -13,7 +15,7 @@ namespace KokoEngine
         void IRenderManagerInternal.RenderScene(IScene scene)
         {
             // Draw the active scene's game objects which contain renderable components
-            foreach (IGameObject rootGameObject in scene.GetRootGameObjects())
+            foreach (IGameObject rootGameObject in scene.GetRootGameObjects().Where(go => go.IsActive))
                 DrawGameObjects(rootGameObject);
         }
 
@@ -22,9 +24,14 @@ namespace KokoEngine
             RenderSpriteHandler?.Invoke(sr);
         }
 
-        void IRenderManagerInternal.RenderLine(Vector2 start, Vector2 end, Color color)
+        void IRenderManagerInternal.RenderText(ITextRenderer tr)
         {
-            RenderLineHandler?.Invoke(start, end, color);
+            RenderTextHandler?.Invoke(tr);
+        }
+
+        void IRenderManagerInternal.RenderLine(ILineRenderer lr)
+        {
+            RenderLineHandler?.Invoke(lr);
         }
 
         void IRenderManagerInternal.RenderRectangle(Rect rectangle, Color color)
@@ -47,9 +54,16 @@ namespace KokoEngine
             foreach (IComponent component in rootGameObject.GetComponents())
             {
                 ISpriteRenderer sr = component as ISpriteRenderer;
-                if (sr == null) continue;
+                if (sr != null)
+                    RenderSpriteHandler?.Invoke(sr);
 
-                RenderSpriteHandler?.Invoke(sr);
+                ITextRenderer tr = component as ITextRenderer;
+                if (tr != null)
+                    RenderTextHandler?.Invoke(tr);
+
+                ILineRenderer lr = component as ILineRenderer;
+                if (lr != null)
+                    RenderLineHandler?.Invoke(lr);
             }
 
             // Recursive call for all children GameObjects

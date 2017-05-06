@@ -16,6 +16,7 @@ namespace KokoEngine
         internal IInputManager InputManager => _inputManager;
         internal IScreenManager ScreenManager => _screenManager;
         internal ITimeManager TimeManager => _timeManager;
+        internal IRenderManager RenderManager => _renderManager;
 
         internal static Engine Instance { get; private set; }
 

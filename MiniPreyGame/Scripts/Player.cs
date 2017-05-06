@@ -1,14 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using KokoEngine;
+﻿using KokoEngine;
 
-namespace MiniPreyGame
+public abstract class Player : Behaviour
 {
-    public abstract class Player : Behaviour
-    {
-        public string Name;
-        public Color TeamColor;
-        //public Material TeamMaterial;
-        public bool IsNeutral;
-    }
+    public string Name;
+    public Color TeamColor;
+    public bool IsNeutral;
 }

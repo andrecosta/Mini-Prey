@@ -8,13 +8,16 @@ namespace KokoEngine
     {
         // HOOKS FOR MONOGAME
         public Func<string, bool> GetUpdatedKeyState { get; set; }
-        public Func<Vector2> GetUpdatedMouseState { get; set; }
+        public Func<Vector2> GetUpdatedMousePosition { get; set; }
+        public Func<int> GetUpdatedMouseScrollValue { get; set; }
 
         // Action bindings
         private List<InputAction> _actionBindings = new List<InputAction>();
         private List<InputAxis> _axisBindings = new List<InputAxis>();
         private List<Key> _trackedKeys = new List<Key>();
         private Vector2 _mousePosition;
+        private int _currentMouseScrollValue;
+        private int _lastMouseScrollValue;
 
         public void AddActionBinding(string actionName, params string[] keyNames)
         {
@@ -50,6 +53,11 @@ namespace KokoEngine
             return _mousePosition;
         }
 
+        public int GetMouseScrollDelta()
+        {
+            return  _currentMouseScrollValue - _lastMouseScrollValue;
+        }
+
         public bool GetAction(string actionName)
         {
             List<Key> actionKeys = GetKeysByActionName(actionName);
@@ -82,7 +90,7 @@ namespace KokoEngine
 
         void IInputManagerInternal.Update(float dt)
         {
-            // Update keys state
+            // Update keys and clicks state
             foreach (Key key in _trackedKeys)
             {
                 key.PreviousState = key.CurrentState;
@@ -114,6 +122,10 @@ namespace KokoEngine
                     // If negative key is not pressed, progressively return axis value to 0 (modified by gravity)
                     axis.Value = Math.Min(axis.Value + dt * axis.Gravity, 0);
             }
+
+            _mousePosition = GetUpdatedMousePosition();
+            _lastMouseScrollValue = _currentMouseScrollValue;
+            _currentMouseScrollValue = GetUpdatedMouseScrollValue();
         }
 
         private List<Key> GetKeysByActionName(string actionName)

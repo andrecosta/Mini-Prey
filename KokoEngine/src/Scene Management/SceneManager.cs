@@ -24,12 +24,6 @@ namespace KokoEngine
         {
             // Get the scene reference from the scene map and set it as active
             _sceneMap.TryGetValue(sceneName, out _activeScene);
-
-            // Call the Awake method for every scene component
-            AwakeScene();
-
-            // Call the Start method for every scene component
-            StartScene();
         }
 
         public void LoadScene(int sceneIndex)
@@ -47,18 +41,13 @@ namespace KokoEngine
             }
         }
 
-        private void AwakeScene()
-        {
-            if (_activeScene != null)
-                foreach (IGameObject rootGameObject in _activeScene.GetRootGameObjects())
-                    AwakeGameObjects(rootGameObject);
-        }
-
         private void AwakeGameObjects(IGameObject rootGameObject)
         {
             foreach (IComponent component in rootGameObject.GetComponents())
             {
-                (component as IBehaviour)?.Awake();
+                var behaviour = component as IBehaviour;
+                if (behaviour != null && !behaviour.IsAwake)
+                    behaviour.Awake();
             }
 
             // Recursively start all children GameObjects
@@ -66,23 +55,13 @@ namespace KokoEngine
                 AwakeGameObjects(child.GameObject);
         }
 
-        private void StartScene()
-        {
-            if (_activeScene != null)
-                foreach (IGameObject rootGameObject in _activeScene.GetRootGameObjects())
-                    StartGameObjects(rootGameObject);
-        }
-
         private void StartGameObjects(IGameObject rootGameObject)
         {
             foreach (IComponent component in rootGameObject.GetComponents())
             {
-                IBehaviour script = component as IBehaviour;
-                if (script != null)
-                {
-                    script.Start();
-                    script.Enabled = true;
-                }
+                IBehaviour behaviour = component as IBehaviour;
+                if (behaviour != null && !behaviour.IsStarted)
+                    behaviour.Start();
             }
 
             // Recursively start all children GameObjects
@@ -98,8 +77,23 @@ namespace KokoEngine
 
         void ISceneManagerInternal.Update()
         {
-            foreach(var rootGameObject in _activeScene.GetRootGameObjects())
+            if (_activeScene.GetPendingGameObjects().Count > 0)
+            {
+                foreach (var go in _activeScene.GetPendingGameObjects())
+                    _activeScene.GetRootGameObjects().Add(go);
+                _activeScene.GetPendingGameObjects().Clear();
+            }
+
+            // Awake all GameObjects
+            foreach (var rootGameObject in _activeScene.GetRootGameObjects())
+                AwakeGameObjects(rootGameObject);
+
+            // Start and uptade all GameObjects
+            foreach (var rootGameObject in _activeScene.GetRootGameObjects().Where(go => go.IsActive))
+            {
+                StartGameObjects(rootGameObject);
                 UpdateGameObjects(rootGameObject);
+            }
         }
 
         private void UpdateGameObjects(IGameObject rootGameObject)

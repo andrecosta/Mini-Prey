@@ -18,6 +18,11 @@ namespace KokoEngine
         string Tag { get; set; }
 
         /// <summary>
+        /// Whether the GameObject is active or not.
+        /// </summary>
+        bool IsActive { get; }
+
+        /// <summary>
         /// The Scene this GameObject belongs to.
         /// </summary>
         IScene Scene { get; }
@@ -41,5 +46,11 @@ namespace KokoEngine
         /// Returns all the components attached to this GameObject.
         /// </summary>
         List<IComponent> GetComponents();
+
+        /// <summary>
+        /// Sets the GameObject as either active or not active. Inactive objects will be hidden.
+        /// </summary>
+        /// <param name="active">The state to set.</param>
+        void SetActive(bool active);
     }
 }

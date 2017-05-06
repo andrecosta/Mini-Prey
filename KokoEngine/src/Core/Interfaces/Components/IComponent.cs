@@ -18,6 +18,13 @@ namespace KokoEngine
         ITransform Transform { get; }
 
         /// <summary>
+        /// Proxy method which calls the <see cref="IGameObject.AddComponent{T}"/> of the GameObject to which this component is attached.
+        /// </summary>
+        /// <typeparam name="T">The type of the component to add.</typeparam>
+        /// <returns>The created component.</returns>
+        T AddComponent<T>() where T : IComponent, new();
+
+        /// <summary>
         /// Proxy method which calls the <see cref="IGameObject.GetComponent{T}"/> of the GameObject to which this component is attached.
         /// </summary>
         /// <typeparam name="T">The type of the component to get.</typeparam>

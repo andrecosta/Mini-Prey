@@ -4,6 +4,6 @@
     {
         public ISprite Sprite { get; set; }
         public Color Color { get; set; } = Color.White;
-        public float Layer { get; set; }
+        public float Layer { get; set; } = 0.5f;
     }
 }

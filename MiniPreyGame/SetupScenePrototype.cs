@@ -17,7 +17,7 @@ namespace MiniPreyGame
                 var sr = player.AddComponent<SpriteRenderer>();
                 var rb = player.AddComponent<Rigidbody>();
                 var cc = player.AddComponent<BoxCollider>();
-                var pc = player.AddComponent<PlayerController>();
+                var pc = player.AddComponent<PlayerController1>();
                 var v = player.AddComponent<Vehicle>();
                 
                 // Create a sprite based on the player texture and store it on the player's SpriteRenderer component

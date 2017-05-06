@@ -1,6 +1,6 @@
 ﻿using KokoEngine;
 
-class PlayerController : Behaviour
+class PlayerController1 : Behaviour
 {
     public float Speed { get; set; } = 3;
 

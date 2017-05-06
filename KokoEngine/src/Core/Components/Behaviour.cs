@@ -2,8 +2,10 @@
 {
     public abstract class Behaviour : Component, IBehaviour
     {
-        private bool _enabled;
+        public bool IsAwake { get; private set; }
+        public bool IsStarted { get; private set; }
 
+        private bool _enabled;
         public bool Enabled
         {
             get
@@ -21,10 +23,18 @@
         }
 
         protected virtual void Awake() { }
-        void IBehaviour.Awake() => Awake();
+        void IBehaviour.Awake()
+        {
+            Awake();
+            IsAwake = true;
+        }
 
         protected virtual void Start() { }
-        void IBehaviour.Start() => Start();
+        void IBehaviour.Start()
+        {
+            Start();
+            IsStarted = true;
+        }
 
         protected virtual void End() { }
         void IBehaviour.End() => End();
@@ -34,5 +44,17 @@
 
         protected virtual void OnDisable() { }
         void IBehaviour.OnDisable() => OnDisable();
+
+        protected T Instantiate<T>(string name, Vector2 position) where T : IComponent, new()
+        {
+            IGameObject go = GameObject.Scene.CreateGameObject(name);
+            go.Transform.Position = position;
+            return go.AddComponent<T>();
+        }
+
+        /*protected void SetCursor(Texture2D texture)
+        {
+            Engine.Instance.RenderManager.SetCursor(texture);
+        }*/
     }
 }

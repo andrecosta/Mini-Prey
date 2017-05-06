@@ -1,5 +1,6 @@
 ﻿using System;
 using KokoEngine;
+using Random = KokoEngine.Random;
 
 namespace MiniPreyGame
 {
@@ -22,8 +23,6 @@ namespace MiniPreyGame
         private IRigidbody _rb;
         private FSM _fsm;
 
-        static Random r = new Random();
-
         protected override void Awake()
         {
             _rb = GetComponent<IRigidbody>();
@@ -39,7 +38,7 @@ namespace MiniPreyGame
             AudioSource = GetComponent<IAudioSource>();
 
             // Place the boid on a random location on the screen
-            Transform.Position = new Vector3(r.Next(0, Screen.Width), r.Next(0, Screen.Height));
+            Transform.Position = new Vector3(Random.Range(0, Screen.Width), Random.Range(0, Screen.Height));
         }
 
         protected override void Start()

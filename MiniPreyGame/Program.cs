@@ -41,21 +41,18 @@ namespace MiniPreyGame
 
             // Setup the asset manager
             assetManager.RootDirectory = "Content";
-            assetManager.AddAsset<Texture2D>("boid.png");
-            assetManager.AddAsset<Texture2D>("boid_rainbow.png");
-            assetManager.AddAsset<Texture2D>("waypoint_red.png");
-            assetManager.AddAsset<Texture2D>("player.png");
-            assetManager.AddAsset<AudioClip>("seekSound.wav");
-            assetManager.AddAsset<AudioClip>("fleeSound.wav");
+            assetManager.AddAsset<Texture2D>("planet.png");
+            assetManager.AddAsset<Texture2D>("ship.png");
+            assetManager.AddAsset<Texture2D>("cursor_25.png");
+            assetManager.AddAsset<Texture2D>("cursor_50.png");
+            assetManager.AddAsset<Texture2D>("cursor_75.png");
+            assetManager.AddAsset<Texture2D>("cursor_100.png");
+            assetManager.AddAsset<Font>("main_font.spritefont");
             assetManager.AddAsset<Font>("debug.spritefont");
 
             // Setup the input manager
-            inputManager.AddActionBinding("Jump", "Space");
-            inputManager.AddActionBinding("Fire", "F", "X", "C", "V");
-            inputManager.AddAxisBinding("Horizontal", "A", "D", 10);
-            inputManager.AddAxisBinding("Vertical", "W", "S", 10);
-            inputManager.AddAxisBinding("Horizontal", "Left", "Right", 10);
-            inputManager.AddAxisBinding("Vertical", "Up", "Down", 10);
+            inputManager.AddActionBinding("PrimaryAction", "MouseLeft");
+            inputManager.AddActionBinding("SecondaryAction", "MouseRight");
 
             // Setup the screen manager
             screenManager.AddSupportedResolution(1280, 720);

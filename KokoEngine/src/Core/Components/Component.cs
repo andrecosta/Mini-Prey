@@ -14,10 +14,11 @@ namespace KokoEngine
 
         internal Component() { }
 
-        // Component management
+        // Proxy methods for convenience
+        public T AddComponent<T>() where T : IComponent, new() => GameObject.AddComponent<T>();
         public T GetComponent<T>() where T : IComponent => GameObject.GetComponent<T>();
         public List<IComponent> GetComponents() => GameObject.GetComponents();
-        
+
         // Update
         protected virtual void Update() { }
         void IComponentInternal.Update() => Update();

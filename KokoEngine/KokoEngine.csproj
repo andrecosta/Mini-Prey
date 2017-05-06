@@ -49,7 +49,11 @@
   <ItemGroup>
     <Compile Include="src\Asset Management\IAssetInternal.cs" />
     <Compile Include="src\Asset Management\IAssetManagerInternal.cs" />
+    <Compile Include="src\Core\Components\LineRenderer.cs" />
+    <Compile Include="src\Core\Components\TextRenderer.cs" />
     <Compile Include="src\Core\Interfaces\Components\Behaviours\Animation\IAnimationClipInternal.cs" />
+    <Compile Include="src\Core\Interfaces\Components\ILineRenderer.cs" />
+    <Compile Include="src\Core\Interfaces\Components\ITextRenderer.cs" />
     <Compile Include="src\Core\Structs\Resolution.cs" />
     <Compile Include="src\Asset Management\Font.cs" />
     <Compile Include="src\IEngine.cs" />

@@ -3,133 +3,153 @@ using System.Collections.Generic;
 using System.Linq;
 using KokoEngine;
 
-namespace MiniPreyGame
+public class GameController : Behaviour
 {
-    class GameController : Behaviour
+    // Properties populated from setup
+    public ISprite PlanetType1Sprite { get; set; }
+    public ISprite PlanetType2Sprite { get; set; }
+    public ISprite PlanetSprite { get; set; }
+    public ISprite ShipSprite { get; set; }
+    public Font PlanetPopulationFont { get; set; }
+    public Player[] Players { get; set; }
+    public Planet.Type[] PlanetTypes { get; set; }
+
+    public List<Planet> Planets { get; private set; }
+    public List<Ship> Ships { get; private set; }
+    public Dictionary<Player, int> PlayerPopulations { get; set; }
+    public int TotalPopulation { get { return PlayerPopulations.Values.Sum(); } }
+
+    // Callbacks
+    public Action<Planet> OnPlanetCreated { get; set; }
+    public Action<Planet> OnStructureUpgraded { get; set; }
+    public Action<Planet> OnStructureAttacked { get; set; }
+    public Action<Planet, int> OnStructureCaptured { get; set; }
+    public Action<Ship> OnCitizenCreated { get; set; }
+    public Action<Ship> OnCitizenLaunched { get; set; }
+    public Action<Ship> OnCitizenKilled { get; set; }
+
+    public Action<Planet> OnStructureHovered { get; set; }
+    public Action<Planet> OnStructureSelected { get; set; }
+
+    public Action OnPopulationChange { get; set; }
+
+    //public Action<Planet, Planet> OnCitizenLaunched { get; set; }
+
+    protected override void Awake()
     {
-        public Citizen CitizenPrefab;
-        public Structure StructurePrefab;
-        public GameObject StructureSpawns;
-        public Player[] Players;
-
-        public static GameController Instance { get; private set; }
-        public List<Structure> Structures { get; private set; }
-        public List<Citizen> Citizens { get; private set; }
-        public Dictionary<Player, int> PlayerPopulations { get; set; }
-        public int TotalPopulation { get { return PlayerPopulations.Values.Sum(); } }
-
-        // Callbacks
-        public Action<Structure> OnStructureCreated { get; set; }
-        public Action<Structure> OnStructureUpgraded { get; set; }
-        public Action<Structure> OnStructureAttacked { get; set; }
-        public Action<Structure, int> OnStructureCaptured { get; set; }
-        public Action<Citizen> OnCitizenCreated { get; set; }
-        public Action<Citizen> OnCitizenLaunched { get; set; }
-        public Action<Citizen> OnCitizenKilled { get; set; }
-
-        public Action<Structure> OnStructureHovered { get; set; }
-        public Action<Structure> OnStructureSelected { get; set; }
-
-        public Action OnPopulationChange { get; set; }
-
-        //public Action<Structure, Structure> OnCitizenLaunched { get; set; }
-
-        void Awake()
+        Planets = new List<Planet>();
+        Ships = new List<Ship>();
+        PlayerPopulations = new Dictionary<Player, int>();
+        foreach (var player in Players)
         {
-            if (Instance)
-            {
-                Destroy(gameObject);
-                return;
-            }
+            PlayerPopulations.Add(player, 0);
+        }
+    }
 
-            Instance = this;
+    protected override void Start()
+    {
+        // Create the planets
+        CreatePlanets();
+    }
 
-            Structures = new List<Structure>();
-            Citizens = new List<Citizen>();
-            PlayerPopulations = new Dictionary<Player, int>();
-            foreach (var player in Players)
-            {
-                PlayerPopulations.Add(player, 0);
-            }
+    protected override void Update()
+    {
+        
+    }
+
+    private void CreatePlanets()
+    {
+        CreatePlanet(new Vector2(100, 100), Players[0], 0, 1, 15);
+        CreatePlanet(new Vector2(100, 400), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(300, 200), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(300, 500), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(500, 300), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(500, 600), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(Screen.Width - 100, 100), Players[1], 0, 1, 10);
+        CreatePlanet(new Vector2(Screen.Width - 100, 400), Players[1], 0, 1, 10);
+        CreatePlanet(new Vector2(Screen.Width - 300, 200), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(Screen.Width - 300, 500), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(Screen.Width - 500, 300), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(Screen.Width - 500, 600), Players[2], 0, 0, 5);
+    }
+
+    private void CreatePlanet(Vector2 position, Player owner, int currentType, int currentUpgradeLevel, int population)
+    {
+        Planet planet = Instantiate<Planet>("Planet", position);
+        planet.Owner = owner;
+        planet.CurrentType = currentType;
+        planet.CurrentUpgradeLevel = currentUpgradeLevel;
+        planet.Population = population;
+        planet.GameController = this;
+
+        // Add SpriteRenderer component
+        var sr = planet.AddComponent<SpriteRenderer>();
+        sr.Sprite = PlanetSprite;
+        sr.Color = owner.TeamColor;
+
+        // Add TextRenderer component
+        var tr = planet.AddComponent<TextRenderer>();
+        tr.Font = PlanetPopulationFont;
+        tr.Offset = new Vector2(0, -40);
+        tr.Size = 0.75f;
+
+        // Bind callbacks
+        planet.LaunchShipHandler += LaunchShip;
+        planet.OnPopulationChange += UpdateTotalPopulation;
+        
+        // Add to list
+        Planets.Add(planet);
+
+        // Invoke callback
+        OnPlanetCreated?.Invoke(planet);
+    }
+
+    private void LaunchShip(Planet source, Planet target)
+    {
+        var ship = Instantiate<Ship>("Ship", source.Transform.Position);
+        var sr = ship.AddComponent<SpriteRenderer>();
+        var rb = ship.AddComponent<Rigidbody>();
+        var fsm = ship.AddComponent<FSM>();
+        var v = ship.AddComponent<Vehicle>();
+        var seek = ship.AddComponent<Seek>();
+
+        sr.Sprite = ShipSprite;
+        sr.Layer = 0.55f;
+        sr.Color = source.Owner.TeamColor;
+
+        v.Behaviours.Add(seek);
+
+        ship.GameController = this;
+        ship.Owner = source.Owner;
+        ship.Source = source;
+        ship.Target = target;
+
+        Ships.Add(ship);
+    }
+
+    private void UpdateTotalPopulation()
+    {
+        foreach (var player in PlayerPopulations.Keys.ToList())
+        {
+            var p = player;
+
+            // Reset player populations
+            PlayerPopulations[p] = 0;
+
+            // Find population inside structures
+            foreach (var structure in Planets.Where(s => s.Owner == p))
+                PlayerPopulations[p] += structure.Population;
+
+            // Find population on the field
+            //int ownedCitizens = FindObjectsOfType<Ship>().Count(c => c.Owner == p);
+            //PlayerPopulations[p] += ownedCitizens;
         }
 
-        void Start()
-        {
-            //var structure = new City(10);
-            //Structures.Add(structure);
-            //OnStructureCreated(structure);
+        OnPopulationChange?.Invoke();
+    }
 
-            foreach (var spawn in StructureSpawns.GetComponentsInChildren<StructureSpawn>())
-            {
-                Structure structure = Instantiate(StructurePrefab, spawn.transform.position, 0);
-                structure.Owner = spawn.Player;
-                structure.CurrentType = spawn.StructureType;
-                structure.CurrentUpgradeLevel = spawn.StructureUpgradeLevel;
-                structure.Population = spawn.Population;
-                structure.GameController = this;
-
-                structure.LaunchCitizenHandler += LaunchCitizen;
-                structure.OnPopulationChange += UpdateTotalPopulation;
-
-                Structures.Add(structure);
-                structure.GameObject.SetActive(true);
-                structure.Init();
-
-                if (OnStructureCreated != null)
-                    OnStructureCreated(structure);
-            }
-
-            // foreach structure location
-            // Create neutral structures
-
-
-            // Create player structures
-            // foreach team
-        }
-
-        void Update()
-        {
-            /*foreach (var structure in Structures)
-            {
-                structure.Update(Time.deltaTime);
-            }*/
-        }
-
-        public void LaunchCitizen(Structure source, Structure target)
-        {
-            var citizen = Instantiate(CitizenPrefab, source.transform.position, 0);
-            citizen.transform.SetParent(Transform);
-            citizen.GameController = this;
-            citizen.Owner = source.Owner;
-            citizen.SetTarget(target);
-            citizen.Source = source;
-            //Citizens.Add(citizen);
-        }
-
-        void UpdateTotalPopulation()
-        {
-            foreach (var player in PlayerPopulations.Keys.ToList())
-            {
-                var p = player;
-
-                // Reset player populations
-                PlayerPopulations[p] = 0;
-
-                // Find population inside structures
-                foreach (var structure in Structures.Where(s => s.Owner == p))
-                    PlayerPopulations[p] += structure.Population;
-
-                // Find population on the field
-                int ownedCitizens = FindObjectsOfType<Citizen>().Count(c => c.Owner == p);
-                PlayerPopulations[p] += ownedCitizens;
-            }
-
-            OnPopulationChange?.Invoke();
-        }
-
-        public void Quit()
-        {
-            //Application.Quit();
-        }
+    public void Quit()
+    {
+        //Application.Quit();
     }
 }

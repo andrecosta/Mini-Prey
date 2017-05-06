@@ -6,6 +6,9 @@ namespace KokoEngine
     /// </summary>
     public interface IBehaviour : IComponent
     {
+        bool IsAwake { get; }
+        bool IsStarted { get; }
+
         /// <summary>
         /// The state of this behaviour.
         /// </summary>

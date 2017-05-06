@@ -87,7 +87,7 @@ namespace MiniPreyGame
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(new Color(29, 29, 29));
-            _spriteBatch.Begin();
+            _spriteBatch.Begin(SpriteSortMode.BackToFront);
 
             _engine.Render();
 
@@ -103,12 +103,14 @@ namespace MiniPreyGame
         {
             // Setup specific manager callbacks
             inputManager.GetUpdatedKeyState += GetKeyDownState;
-            inputManager.GetUpdatedMouseState += GetMousePosition;
+            inputManager.GetUpdatedMousePosition += GetMousePosition;
+            inputManager.GetUpdatedMouseScrollValue += GetMouseScrollWheelValue;
             assetManager.LoadTextureHandler += LoadTexture;
             assetManager.LoadAudioClipHandler += LoadSoundEffect;
             assetManager.LoadFontHandler += LoadSpriteFont;
             renderManager.RenderSpriteHandler += DrawSprite;
-            //renderManager.RenderLineHandler += DrawLine;
+            renderManager.RenderTextHandler += DrawText;
+            renderManager.RenderLineHandler += DrawLine;
             //renderManager.RenderRectangleHandler += DrawRectangle;
 
             // ------ MonoGame options ------
@@ -146,8 +148,8 @@ namespace MiniPreyGame
         void DrawSprite(ISpriteRenderer sr)
         {
             // Parameters of draw call
-            Texture2D texture = sr.Sprite.Texture.ToMonoTexture2D() ?? _dummyTexture; // If no texture exists, use dummy texture
-            Rectangle sourceRectangle = sr.Sprite.SourceRect.ToMonoRectangle();
+            Texture2D texture = sr.Sprite?.Texture.ToMonoTexture2D() ?? _dummyTexture; // If no texture exists, use dummy texture
+            Rectangle sourceRectangle = sr.Sprite?.SourceRect.ToMonoRectangle() ?? Rectangle.Empty;
             Rectangle destinationRectangle = new Rectangle((int) sr.Transform.Position.X, (int) sr.Transform.Position.Y,
                 (int) (sourceRectangle.Width * sr.Transform.Scale.X),
                 (int) (sourceRectangle.Height * sr.Transform.Scale.Y));
@@ -158,6 +160,35 @@ namespace MiniPreyGame
 
             // Draw call
             _spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, color, rotation, origin, SpriteEffects.None, layerDepth);
+        }
+
+        void DrawText(ITextRenderer tr)
+        {
+            // Parameters of draw call
+            SpriteFont font = tr.Font.ToMonoSpriteFont();
+            string text = tr.Text;
+            Vector2 position = (tr.Transform.Position + tr.Offset).ToMonoVector2();
+            Color color = tr.Color.ToMonoColor();
+            float rotation = tr.Transform.Rotation;
+            Vector2 origin = font.MeasureString(text) / 2f;
+            float scale = tr.Size;
+
+            // Draw call
+            _spriteBatch.DrawString(font, text, position, color, rotation, origin, scale, SpriteEffects.None, 0.5f);
+        }
+
+        void DrawLine(ILineRenderer lr)
+        {
+            Vector2 start = lr.Start.ToMonoVector2();
+            Vector2 end = lr.End.ToMonoVector2();
+            Vector2 edge = end - start;
+            float angle = (float)Math.Atan2(edge.Y, edge.X);
+            Color color = lr.Color.ToMonoColor();
+            int size = lr.Size;
+
+            // Draw call
+            _spriteBatch.Draw(_dummyTexture, new Rectangle((int)start.X, (int)start.Y, (int)edge.Length(), size), null,
+                color, angle, new Vector2(0, 0), SpriteEffects.None, 0.6f);
         }
 
         /*void RenderCallback(ISceneManager sceneManager)
@@ -191,20 +222,18 @@ namespace MiniPreyGame
 
         }*/
 
-        /*void DrawLine(Vector2 start, Vector2 end, Color color, int size = 1)
-        {
-            Vector2 edge = end - start;
-            float angle = (float) Math.Atan2(edge.Y, edge.X);
 
-            var t = _engine.AssetManager.GetAsset<KokoEngine.Texture2D>("dummy").RawData as Texture2D;
-
-            _spriteBatch.Draw(t, new Rectangle((int) start.X, (int) start.Y, (int) edge.Length(), size), null,
-                color, angle, new Vector2(0, 0), SpriteEffects.None, 0);
-        }*/
 
 
         private bool GetKeyDownState(string keyName)
         {
+            if (keyName == "MouseLeft")
+                return Mouse.GetState().LeftButton == ButtonState.Pressed;
+            if (keyName == "MouseMiddle")
+                return Mouse.GetState().MiddleButton == ButtonState.Pressed;
+            if (keyName == "MouseRight")
+                return Mouse.GetState().RightButton == ButtonState.Pressed;
+
             Keys k;
             if (Enum.TryParse(keyName, true, out k))
                 return Keyboard.GetState().IsKeyDown(k);
@@ -215,6 +244,11 @@ namespace MiniPreyGame
         private KokoEngine.Vector2 GetMousePosition()
         {
             return Mouse.GetState().Position.ToKokoVector2();
+        }
+
+        private int GetMouseScrollWheelValue()
+        {
+            return Mouse.GetState().ScrollWheelValue;
         }
 
         void PlaySounds(IGameObject rootGameObject)

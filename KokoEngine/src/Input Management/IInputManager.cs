@@ -7,7 +7,8 @@ namespace KokoEngine
     {
         // HOOKS FOR MONOGAME
         Func<string, bool> GetUpdatedKeyState { get; set; }
-        Func<Vector2> GetUpdatedMouseState { get; set; }
+        Func<Vector2> GetUpdatedMousePosition { get; set; }
+        Func<int> GetUpdatedMouseScrollValue { get; set; }
 
         // Initial setup
         void AddActionBinding(string name, params string[] keys);
@@ -19,5 +20,6 @@ namespace KokoEngine
         bool GetActionUp(string actionName);
         float GetAxis(string axisName);
         Vector2 GetMousePosition();
+        int GetMouseScrollDelta();
     }
 }
