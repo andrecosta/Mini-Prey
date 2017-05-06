@@ -106,6 +106,9 @@
                   <a class="xref" href="KokoEngine.Component.html#KokoEngine_Component_Time">Component.Time</a>
                 </div>
                 <div>
+                  <a class="xref" href="KokoEngine.Component.html#KokoEngine_Component_AddComponent__1">Component.AddComponent&lt;T&gt;()</a>
+                </div>
+                <div>
                   <a class="xref" href="KokoEngine.Component.html#KokoEngine_Component_GetComponent__1">Component.GetComponent&lt;T&gt;()</a>
                 </div>
                 <div>
@@ -174,6 +177,60 @@
               </table>
               <h5 class="implements">Implements</h5>
                   <div><a class="xref" href="KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_Enabled">IBehaviour.Enabled</a></div>
+              
+              
+              <a id="KokoEngine_Behaviour_IsAwake_" data-uid="KokoEngine.Behaviour.IsAwake*"></a>
+              <h4 id="KokoEngine_Behaviour_IsAwake" data-uid="KokoEngine.Behaviour.IsAwake">IsAwake</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsAwake { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_IsAwake">IBehaviour.IsAwake</a></div>
+              
+              
+              <a id="KokoEngine_Behaviour_IsStarted_" data-uid="KokoEngine.Behaviour.IsStarted*"></a>
+              <h4 id="KokoEngine_Behaviour_IsStarted" data-uid="KokoEngine.Behaviour.IsStarted">IsStarted</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsStarted { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_IsStarted">IBehaviour.IsStarted</a></div>
               <h3 id="methods">Methods
               </h3>
               
@@ -196,6 +253,68 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">protected virtual void End()</code></pre>
               </div>
+              
+              
+              <a id="KokoEngine_Behaviour_Instantiate_" data-uid="KokoEngine.Behaviour.Instantiate*"></a>
+              <h4 id="KokoEngine_Behaviour_Instantiate__1_System_String_KokoEngine_Vector2_" data-uid="KokoEngine.Behaviour.Instantiate``1(System.String,KokoEngine.Vector2)">Instantiate&lt;T&gt;(String, Vector2)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected T Instantiate&lt;T&gt;(string name, Vector2 position)where T : IComponent, new ()</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">name</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="KokoEngine.Vector2.html">Vector2</a></td>
+                    <td><span class="parametername">position</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               
               
               <a id="KokoEngine_Behaviour_OnDisable_" data-uid="KokoEngine.Behaviour.OnDisable*"></a>

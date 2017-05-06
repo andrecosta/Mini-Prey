@@ -157,6 +157,30 @@ references:
   commentId: Overload:KokoEngine.Animator.Update
   fullName: KokoEngine.Animator.Update
   nameWithType: Animator.Update
+- uid: KokoEngine.Arrive
+  name: Arrive
+  href: api/KokoEngine.Arrive.html
+  commentId: T:KokoEngine.Arrive
+  fullName: KokoEngine.Arrive
+  nameWithType: Arrive
+- uid: KokoEngine.Arrive.Calculate(KokoEngine.Vehicle)
+  name: Calculate(Vehicle)
+  href: api/KokoEngine.Arrive.html#KokoEngine_Arrive_Calculate_KokoEngine_Vehicle_
+  commentId: M:KokoEngine.Arrive.Calculate(KokoEngine.Vehicle)
+  fullName: KokoEngine.Arrive.Calculate(KokoEngine.Vehicle)
+  nameWithType: Arrive.Calculate(Vehicle)
+- uid: KokoEngine.Arrive.Calculate*
+  name: Calculate
+  href: api/KokoEngine.Arrive.html#KokoEngine_Arrive_Calculate_
+  commentId: Overload:KokoEngine.Arrive.Calculate
+  fullName: KokoEngine.Arrive.Calculate
+  nameWithType: Arrive.Calculate
+- uid: KokoEngine.Arrive.target
+  name: target
+  href: api/KokoEngine.Arrive.html#KokoEngine_Arrive_target
+  commentId: F:KokoEngine.Arrive.target
+  fullName: KokoEngine.Arrive.target
+  nameWithType: Arrive.target
 - uid: KokoEngine.Asset
   name: Asset
   href: api/KokoEngine.Asset.html
@@ -490,6 +514,45 @@ references:
   commentId: Overload:KokoEngine.Behaviour.End
   fullName: KokoEngine.Behaviour.End
   nameWithType: Behaviour.End
+- uid: KokoEngine.Behaviour.Instantiate*
+  name: Instantiate
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_Instantiate_
+  commentId: Overload:KokoEngine.Behaviour.Instantiate
+  fullName: KokoEngine.Behaviour.Instantiate
+  nameWithType: Behaviour.Instantiate
+- uid: KokoEngine.Behaviour.Instantiate``1(System.String,KokoEngine.Vector2)
+  name: Instantiate<T>(String, Vector2)
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_Instantiate__1_System_String_KokoEngine_Vector2_
+  commentId: M:KokoEngine.Behaviour.Instantiate``1(System.String,KokoEngine.Vector2)
+  name.vb: Instantiate(Of T)(String, Vector2)
+  fullName: KokoEngine.Behaviour.Instantiate<T>(System.String, KokoEngine.Vector2)
+  fullName.vb: KokoEngine.Behaviour.Instantiate(Of T)(System.String, KokoEngine.Vector2)
+  nameWithType: Behaviour.Instantiate<T>(String, Vector2)
+  nameWithType.vb: Behaviour.Instantiate(Of T)(String, Vector2)
+- uid: KokoEngine.Behaviour.IsAwake
+  name: IsAwake
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_IsAwake
+  commentId: P:KokoEngine.Behaviour.IsAwake
+  fullName: KokoEngine.Behaviour.IsAwake
+  nameWithType: Behaviour.IsAwake
+- uid: KokoEngine.Behaviour.IsAwake*
+  name: IsAwake
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_IsAwake_
+  commentId: Overload:KokoEngine.Behaviour.IsAwake
+  fullName: KokoEngine.Behaviour.IsAwake
+  nameWithType: Behaviour.IsAwake
+- uid: KokoEngine.Behaviour.IsStarted
+  name: IsStarted
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_IsStarted
+  commentId: P:KokoEngine.Behaviour.IsStarted
+  fullName: KokoEngine.Behaviour.IsStarted
+  nameWithType: Behaviour.IsStarted
+- uid: KokoEngine.Behaviour.IsStarted*
+  name: IsStarted
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_IsStarted_
+  commentId: Overload:KokoEngine.Behaviour.IsStarted
+  fullName: KokoEngine.Behaviour.IsStarted
+  nameWithType: Behaviour.IsStarted
 - uid: KokoEngine.Behaviour.KokoEngine#IBehaviour#Awake
   name: IBehaviour.Awake()
   href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_KokoEngine_IBehaviour_Awake
@@ -672,6 +735,24 @@ references:
   commentId: Overload:KokoEngine.Collider.IsColliding
   fullName: KokoEngine.Collider.IsColliding
   nameWithType: Collider.IsColliding
+- uid: KokoEngine.CollisionManager
+  name: CollisionManager
+  href: api/KokoEngine.CollisionManager.html
+  commentId: T:KokoEngine.CollisionManager
+  fullName: KokoEngine.CollisionManager
+  nameWithType: CollisionManager
+- uid: KokoEngine.CollisionManager.CheckCollisions(KokoEngine.IScene)
+  name: CheckCollisions(IScene)
+  href: api/KokoEngine.CollisionManager.html#KokoEngine_CollisionManager_CheckCollisions_KokoEngine_IScene_
+  commentId: M:KokoEngine.CollisionManager.CheckCollisions(KokoEngine.IScene)
+  fullName: KokoEngine.CollisionManager.CheckCollisions(KokoEngine.IScene)
+  nameWithType: CollisionManager.CheckCollisions(IScene)
+- uid: KokoEngine.CollisionManager.CheckCollisions*
+  name: CheckCollisions
+  href: api/KokoEngine.CollisionManager.html#KokoEngine_CollisionManager_CheckCollisions_
+  commentId: Overload:KokoEngine.CollisionManager.CheckCollisions
+  fullName: KokoEngine.CollisionManager.CheckCollisions
+  nameWithType: CollisionManager.CheckCollisions
 - uid: KokoEngine.Color
   name: Color
   href: api/KokoEngine.Color.html
@@ -720,6 +801,18 @@ references:
   commentId: Overload:KokoEngine.Color.Blue
   fullName: KokoEngine.Color.Blue
   nameWithType: Color.Blue
+- uid: KokoEngine.Color.Cyan
+  name: Cyan
+  href: api/KokoEngine.Color.html#KokoEngine_Color_Cyan
+  commentId: P:KokoEngine.Color.Cyan
+  fullName: KokoEngine.Color.Cyan
+  nameWithType: Color.Cyan
+- uid: KokoEngine.Color.Cyan*
+  name: Cyan
+  href: api/KokoEngine.Color.html#KokoEngine_Color_Cyan_
+  commentId: Overload:KokoEngine.Color.Cyan
+  fullName: KokoEngine.Color.Cyan
+  nameWithType: Color.Cyan
 - uid: KokoEngine.Color.G
   name: G
   href: api/KokoEngine.Color.html#KokoEngine_Color_G
@@ -738,6 +831,18 @@ references:
   commentId: Overload:KokoEngine.Color.Green
   fullName: KokoEngine.Color.Green
   nameWithType: Color.Green
+- uid: KokoEngine.Color.Grey
+  name: Grey
+  href: api/KokoEngine.Color.html#KokoEngine_Color_Grey
+  commentId: P:KokoEngine.Color.Grey
+  fullName: KokoEngine.Color.Grey
+  nameWithType: Color.Grey
+- uid: KokoEngine.Color.Grey*
+  name: Grey
+  href: api/KokoEngine.Color.html#KokoEngine_Color_Grey_
+  commentId: Overload:KokoEngine.Color.Grey
+  fullName: KokoEngine.Color.Grey
+  nameWithType: Color.Grey
 - uid: KokoEngine.Color.R
   name: R
   href: api/KokoEngine.Color.html#KokoEngine_Color_R
@@ -774,6 +879,21 @@ references:
   commentId: T:KokoEngine.Component
   fullName: KokoEngine.Component
   nameWithType: Component
+- uid: KokoEngine.Component.AddComponent*
+  name: AddComponent
+  href: api/KokoEngine.Component.html#KokoEngine_Component_AddComponent_
+  commentId: Overload:KokoEngine.Component.AddComponent
+  fullName: KokoEngine.Component.AddComponent
+  nameWithType: Component.AddComponent
+- uid: KokoEngine.Component.AddComponent``1
+  name: AddComponent<T>()
+  href: api/KokoEngine.Component.html#KokoEngine_Component_AddComponent__1
+  commentId: M:KokoEngine.Component.AddComponent``1
+  name.vb: AddComponent(Of T)()
+  fullName: KokoEngine.Component.AddComponent<T>()
+  fullName.vb: KokoEngine.Component.AddComponent(Of T)()
+  nameWithType: Component.AddComponent<T>()
+  nameWithType.vb: Component.AddComponent(Of T)()
 - uid: KokoEngine.Component.GameObject
   name: GameObject
   href: api/KokoEngine.Component.html#KokoEngine_Component_GameObject
@@ -921,6 +1041,18 @@ references:
   commentId: Overload:KokoEngine.Engine.#ctor
   fullName: KokoEngine.Engine.Engine
   nameWithType: Engine.Engine
+- uid: KokoEngine.Engine.GraphicsFrameworks
+  name: Engine.GraphicsFrameworks
+  href: api/KokoEngine.Engine.GraphicsFrameworks.html
+  commentId: T:KokoEngine.Engine.GraphicsFrameworks
+  fullName: KokoEngine.Engine.GraphicsFrameworks
+  nameWithType: Engine.GraphicsFrameworks
+- uid: KokoEngine.Engine.GraphicsFrameworks.MonoGame
+  name: MonoGame
+  href: api/KokoEngine.Engine.GraphicsFrameworks.html#KokoEngine_Engine_GraphicsFrameworks_MonoGame
+  commentId: F:KokoEngine.Engine.GraphicsFrameworks.MonoGame
+  fullName: KokoEngine.Engine.GraphicsFrameworks.MonoGame
+  nameWithType: Engine.GraphicsFrameworks.MonoGame
 - uid: KokoEngine.Engine.Initialize
   name: Initialize()
   href: api/KokoEngine.Engine.html#KokoEngine_Engine_Initialize
@@ -1002,6 +1134,42 @@ references:
   commentId: Overload:KokoEngine.Entity.Name
   fullName: KokoEngine.Entity.Name
   nameWithType: Entity.Name
+- uid: KokoEngine.Entity.op_False(KokoEngine.Entity)
+  name: False(Entity)
+  href: api/KokoEngine.Entity.html#KokoEngine_Entity_op_False_KokoEngine_Entity_
+  commentId: M:KokoEngine.Entity.op_False(KokoEngine.Entity)
+  fullName: KokoEngine.Entity.False(KokoEngine.Entity)
+  nameWithType: Entity.False(Entity)
+- uid: KokoEngine.Entity.op_False*
+  name: "False"
+  href: api/KokoEngine.Entity.html#KokoEngine_Entity_op_False_
+  commentId: Overload:KokoEngine.Entity.op_False
+  fullName: KokoEngine.Entity.False
+  nameWithType: Entity.False
+- uid: KokoEngine.Entity.op_LogicalNot(KokoEngine.Entity)
+  name: LogicalNot(Entity)
+  href: api/KokoEngine.Entity.html#KokoEngine_Entity_op_LogicalNot_KokoEngine_Entity_
+  commentId: M:KokoEngine.Entity.op_LogicalNot(KokoEngine.Entity)
+  fullName: KokoEngine.Entity.LogicalNot(KokoEngine.Entity)
+  nameWithType: Entity.LogicalNot(Entity)
+- uid: KokoEngine.Entity.op_LogicalNot*
+  name: LogicalNot
+  href: api/KokoEngine.Entity.html#KokoEngine_Entity_op_LogicalNot_
+  commentId: Overload:KokoEngine.Entity.op_LogicalNot
+  fullName: KokoEngine.Entity.LogicalNot
+  nameWithType: Entity.LogicalNot
+- uid: KokoEngine.Entity.op_True(KokoEngine.Entity)
+  name: True(Entity)
+  href: api/KokoEngine.Entity.html#KokoEngine_Entity_op_True_KokoEngine_Entity_
+  commentId: M:KokoEngine.Entity.op_True(KokoEngine.Entity)
+  fullName: KokoEngine.Entity.True(KokoEngine.Entity)
+  nameWithType: Entity.True(Entity)
+- uid: KokoEngine.Entity.op_True*
+  name: "True"
+  href: api/KokoEngine.Entity.html#KokoEngine_Entity_op_True_
+  commentId: Overload:KokoEngine.Entity.op_True
+  fullName: KokoEngine.Entity.True
+  nameWithType: Entity.True
 - uid: KokoEngine.Entity.ToString
   name: ToString()
   href: api/KokoEngine.Entity.html#KokoEngine_Entity_ToString
@@ -1167,6 +1335,18 @@ references:
   commentId: Overload:KokoEngine.GameObject.GetComponents
   fullName: KokoEngine.GameObject.GetComponents
   nameWithType: GameObject.GetComponents
+- uid: KokoEngine.GameObject.IsActive
+  name: IsActive
+  href: api/KokoEngine.GameObject.html#KokoEngine_GameObject_IsActive
+  commentId: P:KokoEngine.GameObject.IsActive
+  fullName: KokoEngine.GameObject.IsActive
+  nameWithType: GameObject.IsActive
+- uid: KokoEngine.GameObject.IsActive*
+  name: IsActive
+  href: api/KokoEngine.GameObject.html#KokoEngine_GameObject_IsActive_
+  commentId: Overload:KokoEngine.GameObject.IsActive
+  fullName: KokoEngine.GameObject.IsActive
+  nameWithType: GameObject.IsActive
 - uid: KokoEngine.GameObject.Scene
   name: Scene
   href: api/KokoEngine.GameObject.html#KokoEngine_GameObject_Scene
@@ -1179,6 +1359,18 @@ references:
   commentId: Overload:KokoEngine.GameObject.Scene
   fullName: KokoEngine.GameObject.Scene
   nameWithType: GameObject.Scene
+- uid: KokoEngine.GameObject.SetActive(System.Boolean)
+  name: SetActive(Boolean)
+  href: api/KokoEngine.GameObject.html#KokoEngine_GameObject_SetActive_System_Boolean_
+  commentId: M:KokoEngine.GameObject.SetActive(System.Boolean)
+  fullName: KokoEngine.GameObject.SetActive(System.Boolean)
+  nameWithType: GameObject.SetActive(Boolean)
+- uid: KokoEngine.GameObject.SetActive*
+  name: SetActive
+  href: api/KokoEngine.GameObject.html#KokoEngine_GameObject_SetActive_
+  commentId: Overload:KokoEngine.GameObject.SetActive
+  fullName: KokoEngine.GameObject.SetActive
+  nameWithType: GameObject.SetActive
 - uid: KokoEngine.GameObject.Tag
   name: Tag
   href: api/KokoEngine.GameObject.html#KokoEngine_GameObject_Tag
@@ -1716,6 +1908,30 @@ references:
   commentId: Overload:KokoEngine.IBehaviour.End
   fullName: KokoEngine.IBehaviour.End
   nameWithType: IBehaviour.End
+- uid: KokoEngine.IBehaviour.IsAwake
+  name: IsAwake
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_IsAwake
+  commentId: P:KokoEngine.IBehaviour.IsAwake
+  fullName: KokoEngine.IBehaviour.IsAwake
+  nameWithType: IBehaviour.IsAwake
+- uid: KokoEngine.IBehaviour.IsAwake*
+  name: IsAwake
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_IsAwake_
+  commentId: Overload:KokoEngine.IBehaviour.IsAwake
+  fullName: KokoEngine.IBehaviour.IsAwake
+  nameWithType: IBehaviour.IsAwake
+- uid: KokoEngine.IBehaviour.IsStarted
+  name: IsStarted
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_IsStarted
+  commentId: P:KokoEngine.IBehaviour.IsStarted
+  fullName: KokoEngine.IBehaviour.IsStarted
+  nameWithType: IBehaviour.IsStarted
+- uid: KokoEngine.IBehaviour.IsStarted*
+  name: IsStarted
+  href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_IsStarted_
+  commentId: Overload:KokoEngine.IBehaviour.IsStarted
+  fullName: KokoEngine.IBehaviour.IsStarted
+  nameWithType: IBehaviour.IsStarted
 - uid: KokoEngine.IBehaviour.OnDisable
   name: OnDisable()
   href: api/KokoEngine.IBehaviour.html#KokoEngine_IBehaviour_OnDisable
@@ -1752,12 +1968,45 @@ references:
   commentId: Overload:KokoEngine.IBehaviour.Start
   fullName: KokoEngine.IBehaviour.Start
   nameWithType: IBehaviour.Start
+- uid: KokoEngine.ICollisionManager
+  name: ICollisionManager
+  href: api/KokoEngine.ICollisionManager.html
+  commentId: T:KokoEngine.ICollisionManager
+  fullName: KokoEngine.ICollisionManager
+  nameWithType: ICollisionManager
+- uid: KokoEngine.ICollisionManager.CheckCollisions(KokoEngine.IScene)
+  name: CheckCollisions(IScene)
+  href: api/KokoEngine.ICollisionManager.html#KokoEngine_ICollisionManager_CheckCollisions_KokoEngine_IScene_
+  commentId: M:KokoEngine.ICollisionManager.CheckCollisions(KokoEngine.IScene)
+  fullName: KokoEngine.ICollisionManager.CheckCollisions(KokoEngine.IScene)
+  nameWithType: ICollisionManager.CheckCollisions(IScene)
+- uid: KokoEngine.ICollisionManager.CheckCollisions*
+  name: CheckCollisions
+  href: api/KokoEngine.ICollisionManager.html#KokoEngine_ICollisionManager_CheckCollisions_
+  commentId: Overload:KokoEngine.ICollisionManager.CheckCollisions
+  fullName: KokoEngine.ICollisionManager.CheckCollisions
+  nameWithType: ICollisionManager.CheckCollisions
 - uid: KokoEngine.IComponent
   name: IComponent
   href: api/KokoEngine.IComponent.html
   commentId: T:KokoEngine.IComponent
   fullName: KokoEngine.IComponent
   nameWithType: IComponent
+- uid: KokoEngine.IComponent.AddComponent*
+  name: AddComponent
+  href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_AddComponent_
+  commentId: Overload:KokoEngine.IComponent.AddComponent
+  fullName: KokoEngine.IComponent.AddComponent
+  nameWithType: IComponent.AddComponent
+- uid: KokoEngine.IComponent.AddComponent``1
+  name: AddComponent<T>()
+  href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_AddComponent__1
+  commentId: M:KokoEngine.IComponent.AddComponent``1
+  name.vb: AddComponent(Of T)()
+  fullName: KokoEngine.IComponent.AddComponent<T>()
+  fullName.vb: KokoEngine.IComponent.AddComponent(Of T)()
+  nameWithType: IComponent.AddComponent<T>()
+  nameWithType.vb: IComponent.AddComponent(Of T)()
 - uid: KokoEngine.IComponent.GameObject
   name: GameObject
   href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_GameObject
@@ -1980,6 +2229,18 @@ references:
   commentId: Overload:KokoEngine.IGameObject.GetComponents
   fullName: KokoEngine.IGameObject.GetComponents
   nameWithType: IGameObject.GetComponents
+- uid: KokoEngine.IGameObject.IsActive
+  name: IsActive
+  href: api/KokoEngine.IGameObject.html#KokoEngine_IGameObject_IsActive
+  commentId: P:KokoEngine.IGameObject.IsActive
+  fullName: KokoEngine.IGameObject.IsActive
+  nameWithType: IGameObject.IsActive
+- uid: KokoEngine.IGameObject.IsActive*
+  name: IsActive
+  href: api/KokoEngine.IGameObject.html#KokoEngine_IGameObject_IsActive_
+  commentId: Overload:KokoEngine.IGameObject.IsActive
+  fullName: KokoEngine.IGameObject.IsActive
+  nameWithType: IGameObject.IsActive
 - uid: KokoEngine.IGameObject.Scene
   name: Scene
   href: api/KokoEngine.IGameObject.html#KokoEngine_IGameObject_Scene
@@ -1992,6 +2253,18 @@ references:
   commentId: Overload:KokoEngine.IGameObject.Scene
   fullName: KokoEngine.IGameObject.Scene
   nameWithType: IGameObject.Scene
+- uid: KokoEngine.IGameObject.SetActive(System.Boolean)
+  name: SetActive(Boolean)
+  href: api/KokoEngine.IGameObject.html#KokoEngine_IGameObject_SetActive_System_Boolean_
+  commentId: M:KokoEngine.IGameObject.SetActive(System.Boolean)
+  fullName: KokoEngine.IGameObject.SetActive(System.Boolean)
+  nameWithType: IGameObject.SetActive(Boolean)
+- uid: KokoEngine.IGameObject.SetActive*
+  name: SetActive
+  href: api/KokoEngine.IGameObject.html#KokoEngine_IGameObject_SetActive_
+  commentId: Overload:KokoEngine.IGameObject.SetActive
+  fullName: KokoEngine.IGameObject.SetActive
+  nameWithType: IGameObject.SetActive
 - uid: KokoEngine.IGameObject.Tag
   name: Tag
   href: api/KokoEngine.IGameObject.html#KokoEngine_IGameObject_Tag
@@ -2157,6 +2430,18 @@ references:
   commentId: Overload:KokoEngine.IInputManager.GetMousePosition
   fullName: KokoEngine.IInputManager.GetMousePosition
   nameWithType: IInputManager.GetMousePosition
+- uid: KokoEngine.IInputManager.GetMouseScrollDelta
+  name: GetMouseScrollDelta()
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetMouseScrollDelta
+  commentId: M:KokoEngine.IInputManager.GetMouseScrollDelta
+  fullName: KokoEngine.IInputManager.GetMouseScrollDelta()
+  nameWithType: IInputManager.GetMouseScrollDelta()
+- uid: KokoEngine.IInputManager.GetMouseScrollDelta*
+  name: GetMouseScrollDelta
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetMouseScrollDelta_
+  commentId: Overload:KokoEngine.IInputManager.GetMouseScrollDelta
+  fullName: KokoEngine.IInputManager.GetMouseScrollDelta
+  nameWithType: IInputManager.GetMouseScrollDelta
 - uid: KokoEngine.IInputManager.GetUpdatedKeyState
   name: GetUpdatedKeyState
   href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetUpdatedKeyState
@@ -2169,18 +2454,150 @@ references:
   commentId: Overload:KokoEngine.IInputManager.GetUpdatedKeyState
   fullName: KokoEngine.IInputManager.GetUpdatedKeyState
   nameWithType: IInputManager.GetUpdatedKeyState
-- uid: KokoEngine.IInputManager.GetUpdatedMouseState
-  name: GetUpdatedMouseState
-  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetUpdatedMouseState
-  commentId: P:KokoEngine.IInputManager.GetUpdatedMouseState
-  fullName: KokoEngine.IInputManager.GetUpdatedMouseState
-  nameWithType: IInputManager.GetUpdatedMouseState
-- uid: KokoEngine.IInputManager.GetUpdatedMouseState*
-  name: GetUpdatedMouseState
-  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetUpdatedMouseState_
-  commentId: Overload:KokoEngine.IInputManager.GetUpdatedMouseState
-  fullName: KokoEngine.IInputManager.GetUpdatedMouseState
-  nameWithType: IInputManager.GetUpdatedMouseState
+- uid: KokoEngine.IInputManager.GetUpdatedMousePosition
+  name: GetUpdatedMousePosition
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetUpdatedMousePosition
+  commentId: P:KokoEngine.IInputManager.GetUpdatedMousePosition
+  fullName: KokoEngine.IInputManager.GetUpdatedMousePosition
+  nameWithType: IInputManager.GetUpdatedMousePosition
+- uid: KokoEngine.IInputManager.GetUpdatedMousePosition*
+  name: GetUpdatedMousePosition
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetUpdatedMousePosition_
+  commentId: Overload:KokoEngine.IInputManager.GetUpdatedMousePosition
+  fullName: KokoEngine.IInputManager.GetUpdatedMousePosition
+  nameWithType: IInputManager.GetUpdatedMousePosition
+- uid: KokoEngine.IInputManager.GetUpdatedMouseScrollValue
+  name: GetUpdatedMouseScrollValue
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetUpdatedMouseScrollValue
+  commentId: P:KokoEngine.IInputManager.GetUpdatedMouseScrollValue
+  fullName: KokoEngine.IInputManager.GetUpdatedMouseScrollValue
+  nameWithType: IInputManager.GetUpdatedMouseScrollValue
+- uid: KokoEngine.IInputManager.GetUpdatedMouseScrollValue*
+  name: GetUpdatedMouseScrollValue
+  href: api/KokoEngine.IInputManager.html#KokoEngine_IInputManager_GetUpdatedMouseScrollValue_
+  commentId: Overload:KokoEngine.IInputManager.GetUpdatedMouseScrollValue
+  fullName: KokoEngine.IInputManager.GetUpdatedMouseScrollValue
+  nameWithType: IInputManager.GetUpdatedMouseScrollValue
+- uid: KokoEngine.ILineRenderer
+  name: ILineRenderer
+  href: api/KokoEngine.ILineRenderer.html
+  commentId: T:KokoEngine.ILineRenderer
+  fullName: KokoEngine.ILineRenderer
+  nameWithType: ILineRenderer
+- uid: KokoEngine.ILineRenderer.Color
+  name: Color
+  href: api/KokoEngine.ILineRenderer.html#KokoEngine_ILineRenderer_Color
+  commentId: P:KokoEngine.ILineRenderer.Color
+  fullName: KokoEngine.ILineRenderer.Color
+  nameWithType: ILineRenderer.Color
+- uid: KokoEngine.ILineRenderer.Color*
+  name: Color
+  href: api/KokoEngine.ILineRenderer.html#KokoEngine_ILineRenderer_Color_
+  commentId: Overload:KokoEngine.ILineRenderer.Color
+  fullName: KokoEngine.ILineRenderer.Color
+  nameWithType: ILineRenderer.Color
+- uid: KokoEngine.ILineRenderer.End
+  name: End
+  href: api/KokoEngine.ILineRenderer.html#KokoEngine_ILineRenderer_End
+  commentId: P:KokoEngine.ILineRenderer.End
+  fullName: KokoEngine.ILineRenderer.End
+  nameWithType: ILineRenderer.End
+- uid: KokoEngine.ILineRenderer.End*
+  name: End
+  href: api/KokoEngine.ILineRenderer.html#KokoEngine_ILineRenderer_End_
+  commentId: Overload:KokoEngine.ILineRenderer.End
+  fullName: KokoEngine.ILineRenderer.End
+  nameWithType: ILineRenderer.End
+- uid: KokoEngine.ILineRenderer.Size
+  name: Size
+  href: api/KokoEngine.ILineRenderer.html#KokoEngine_ILineRenderer_Size
+  commentId: P:KokoEngine.ILineRenderer.Size
+  fullName: KokoEngine.ILineRenderer.Size
+  nameWithType: ILineRenderer.Size
+- uid: KokoEngine.ILineRenderer.Size*
+  name: Size
+  href: api/KokoEngine.ILineRenderer.html#KokoEngine_ILineRenderer_Size_
+  commentId: Overload:KokoEngine.ILineRenderer.Size
+  fullName: KokoEngine.ILineRenderer.Size
+  nameWithType: ILineRenderer.Size
+- uid: KokoEngine.ILineRenderer.Start
+  name: Start
+  href: api/KokoEngine.ILineRenderer.html#KokoEngine_ILineRenderer_Start
+  commentId: P:KokoEngine.ILineRenderer.Start
+  fullName: KokoEngine.ILineRenderer.Start
+  nameWithType: ILineRenderer.Start
+- uid: KokoEngine.ILineRenderer.Start*
+  name: Start
+  href: api/KokoEngine.ILineRenderer.html#KokoEngine_ILineRenderer_Start_
+  commentId: Overload:KokoEngine.ILineRenderer.Start
+  fullName: KokoEngine.ILineRenderer.Start
+  nameWithType: ILineRenderer.Start
+- uid: KokoEngine.Input
+  name: Input
+  href: api/KokoEngine.Input.html
+  commentId: T:KokoEngine.Input
+  fullName: KokoEngine.Input
+  nameWithType: Input
+- uid: KokoEngine.Input.GetAction(System.String)
+  name: GetAction(String)
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetAction_System_String_
+  commentId: M:KokoEngine.Input.GetAction(System.String)
+  fullName: KokoEngine.Input.GetAction(System.String)
+  nameWithType: Input.GetAction(String)
+- uid: KokoEngine.Input.GetAction*
+  name: GetAction
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetAction_
+  commentId: Overload:KokoEngine.Input.GetAction
+  fullName: KokoEngine.Input.GetAction
+  nameWithType: Input.GetAction
+- uid: KokoEngine.Input.GetActionDown(System.String)
+  name: GetActionDown(String)
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetActionDown_System_String_
+  commentId: M:KokoEngine.Input.GetActionDown(System.String)
+  fullName: KokoEngine.Input.GetActionDown(System.String)
+  nameWithType: Input.GetActionDown(String)
+- uid: KokoEngine.Input.GetActionDown*
+  name: GetActionDown
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetActionDown_
+  commentId: Overload:KokoEngine.Input.GetActionDown
+  fullName: KokoEngine.Input.GetActionDown
+  nameWithType: Input.GetActionDown
+- uid: KokoEngine.Input.GetActionUp(System.String)
+  name: GetActionUp(String)
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetActionUp_System_String_
+  commentId: M:KokoEngine.Input.GetActionUp(System.String)
+  fullName: KokoEngine.Input.GetActionUp(System.String)
+  nameWithType: Input.GetActionUp(String)
+- uid: KokoEngine.Input.GetActionUp*
+  name: GetActionUp
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetActionUp_
+  commentId: Overload:KokoEngine.Input.GetActionUp
+  fullName: KokoEngine.Input.GetActionUp
+  nameWithType: Input.GetActionUp
+- uid: KokoEngine.Input.GetAxis(System.String)
+  name: GetAxis(String)
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetAxis_System_String_
+  commentId: M:KokoEngine.Input.GetAxis(System.String)
+  fullName: KokoEngine.Input.GetAxis(System.String)
+  nameWithType: Input.GetAxis(String)
+- uid: KokoEngine.Input.GetAxis*
+  name: GetAxis
+  href: api/KokoEngine.Input.html#KokoEngine_Input_GetAxis_
+  commentId: Overload:KokoEngine.Input.GetAxis
+  fullName: KokoEngine.Input.GetAxis
+  nameWithType: Input.GetAxis
+- uid: KokoEngine.Input.Init(KokoEngine.IInputManager)
+  name: Init(IInputManager)
+  href: api/KokoEngine.Input.html#KokoEngine_Input_Init_KokoEngine_IInputManager_
+  commentId: M:KokoEngine.Input.Init(KokoEngine.IInputManager)
+  fullName: KokoEngine.Input.Init(KokoEngine.IInputManager)
+  nameWithType: Input.Init(IInputManager)
+- uid: KokoEngine.Input.Init*
+  name: Init
+  href: api/KokoEngine.Input.html#KokoEngine_Input_Init_
+  commentId: Overload:KokoEngine.Input.Init
+  fullName: KokoEngine.Input.Init
+  nameWithType: Input.Init
 - uid: KokoEngine.InputAction
   name: InputAction
   href: api/KokoEngine.InputAction.html
@@ -2421,6 +2838,18 @@ references:
   commentId: Overload:KokoEngine.InputManager.GetMousePosition
   fullName: KokoEngine.InputManager.GetMousePosition
   nameWithType: InputManager.GetMousePosition
+- uid: KokoEngine.InputManager.GetMouseScrollDelta
+  name: GetMouseScrollDelta()
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetMouseScrollDelta
+  commentId: M:KokoEngine.InputManager.GetMouseScrollDelta
+  fullName: KokoEngine.InputManager.GetMouseScrollDelta()
+  nameWithType: InputManager.GetMouseScrollDelta()
+- uid: KokoEngine.InputManager.GetMouseScrollDelta*
+  name: GetMouseScrollDelta
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetMouseScrollDelta_
+  commentId: Overload:KokoEngine.InputManager.GetMouseScrollDelta
+  fullName: KokoEngine.InputManager.GetMouseScrollDelta
+  nameWithType: InputManager.GetMouseScrollDelta
 - uid: KokoEngine.InputManager.GetUpdatedKeyState
   name: GetUpdatedKeyState
   href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetUpdatedKeyState
@@ -2433,18 +2862,30 @@ references:
   commentId: Overload:KokoEngine.InputManager.GetUpdatedKeyState
   fullName: KokoEngine.InputManager.GetUpdatedKeyState
   nameWithType: InputManager.GetUpdatedKeyState
-- uid: KokoEngine.InputManager.GetUpdatedMouseState
-  name: GetUpdatedMouseState
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetUpdatedMouseState
-  commentId: P:KokoEngine.InputManager.GetUpdatedMouseState
-  fullName: KokoEngine.InputManager.GetUpdatedMouseState
-  nameWithType: InputManager.GetUpdatedMouseState
-- uid: KokoEngine.InputManager.GetUpdatedMouseState*
-  name: GetUpdatedMouseState
-  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetUpdatedMouseState_
-  commentId: Overload:KokoEngine.InputManager.GetUpdatedMouseState
-  fullName: KokoEngine.InputManager.GetUpdatedMouseState
-  nameWithType: InputManager.GetUpdatedMouseState
+- uid: KokoEngine.InputManager.GetUpdatedMousePosition
+  name: GetUpdatedMousePosition
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetUpdatedMousePosition
+  commentId: P:KokoEngine.InputManager.GetUpdatedMousePosition
+  fullName: KokoEngine.InputManager.GetUpdatedMousePosition
+  nameWithType: InputManager.GetUpdatedMousePosition
+- uid: KokoEngine.InputManager.GetUpdatedMousePosition*
+  name: GetUpdatedMousePosition
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetUpdatedMousePosition_
+  commentId: Overload:KokoEngine.InputManager.GetUpdatedMousePosition
+  fullName: KokoEngine.InputManager.GetUpdatedMousePosition
+  nameWithType: InputManager.GetUpdatedMousePosition
+- uid: KokoEngine.InputManager.GetUpdatedMouseScrollValue
+  name: GetUpdatedMouseScrollValue
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetUpdatedMouseScrollValue
+  commentId: P:KokoEngine.InputManager.GetUpdatedMouseScrollValue
+  fullName: KokoEngine.InputManager.GetUpdatedMouseScrollValue
+  nameWithType: InputManager.GetUpdatedMouseScrollValue
+- uid: KokoEngine.InputManager.GetUpdatedMouseScrollValue*
+  name: GetUpdatedMouseScrollValue
+  href: api/KokoEngine.InputManager.html#KokoEngine_InputManager_GetUpdatedMouseScrollValue_
+  commentId: Overload:KokoEngine.InputManager.GetUpdatedMouseScrollValue
+  fullName: KokoEngine.InputManager.GetUpdatedMouseScrollValue
+  nameWithType: InputManager.GetUpdatedMouseScrollValue
 - uid: KokoEngine.IRenderManager
   name: IRenderManager
   href: api/KokoEngine.IRenderManager.html
@@ -2511,6 +2952,18 @@ references:
   commentId: Overload:KokoEngine.IRenderManager.RenderSpriteHandler
   fullName: KokoEngine.IRenderManager.RenderSpriteHandler
   nameWithType: IRenderManager.RenderSpriteHandler
+- uid: KokoEngine.IRenderManager.RenderTextHandler
+  name: RenderTextHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderTextHandler
+  commentId: P:KokoEngine.IRenderManager.RenderTextHandler
+  fullName: KokoEngine.IRenderManager.RenderTextHandler
+  nameWithType: IRenderManager.RenderTextHandler
+- uid: KokoEngine.IRenderManager.RenderTextHandler*
+  name: RenderTextHandler
+  href: api/KokoEngine.IRenderManager.html#KokoEngine_IRenderManager_RenderTextHandler_
+  commentId: Overload:KokoEngine.IRenderManager.RenderTextHandler
+  fullName: KokoEngine.IRenderManager.RenderTextHandler
+  nameWithType: IRenderManager.RenderTextHandler
 - uid: KokoEngine.IRigidbody
   name: IRigidbody
   href: api/KokoEngine.IRigidbody.html
@@ -2607,6 +3060,18 @@ references:
   commentId: Overload:KokoEngine.IScene.CreateGameObject
   fullName: KokoEngine.IScene.CreateGameObject
   nameWithType: IScene.CreateGameObject
+- uid: KokoEngine.IScene.GetPendingGameObjects
+  name: GetPendingGameObjects()
+  href: api/KokoEngine.IScene.html#KokoEngine_IScene_GetPendingGameObjects
+  commentId: M:KokoEngine.IScene.GetPendingGameObjects
+  fullName: KokoEngine.IScene.GetPendingGameObjects()
+  nameWithType: IScene.GetPendingGameObjects()
+- uid: KokoEngine.IScene.GetPendingGameObjects*
+  name: GetPendingGameObjects
+  href: api/KokoEngine.IScene.html#KokoEngine_IScene_GetPendingGameObjects_
+  commentId: Overload:KokoEngine.IScene.GetPendingGameObjects
+  fullName: KokoEngine.IScene.GetPendingGameObjects
+  nameWithType: IScene.GetPendingGameObjects
 - uid: KokoEngine.IScene.GetRootGameObjects
   name: GetRootGameObjects()
   href: api/KokoEngine.IScene.html#KokoEngine_IScene_GetRootGameObjects
@@ -2949,6 +3414,72 @@ references:
   commentId: Overload:KokoEngine.ISteeringBehaviour.Calculate
   fullName: KokoEngine.ISteeringBehaviour.Calculate
   nameWithType: ISteeringBehaviour.Calculate
+- uid: KokoEngine.ITextRenderer
+  name: ITextRenderer
+  href: api/KokoEngine.ITextRenderer.html
+  commentId: T:KokoEngine.ITextRenderer
+  fullName: KokoEngine.ITextRenderer
+  nameWithType: ITextRenderer
+- uid: KokoEngine.ITextRenderer.Color
+  name: Color
+  href: api/KokoEngine.ITextRenderer.html#KokoEngine_ITextRenderer_Color
+  commentId: P:KokoEngine.ITextRenderer.Color
+  fullName: KokoEngine.ITextRenderer.Color
+  nameWithType: ITextRenderer.Color
+- uid: KokoEngine.ITextRenderer.Color*
+  name: Color
+  href: api/KokoEngine.ITextRenderer.html#KokoEngine_ITextRenderer_Color_
+  commentId: Overload:KokoEngine.ITextRenderer.Color
+  fullName: KokoEngine.ITextRenderer.Color
+  nameWithType: ITextRenderer.Color
+- uid: KokoEngine.ITextRenderer.Font
+  name: Font
+  href: api/KokoEngine.ITextRenderer.html#KokoEngine_ITextRenderer_Font
+  commentId: P:KokoEngine.ITextRenderer.Font
+  fullName: KokoEngine.ITextRenderer.Font
+  nameWithType: ITextRenderer.Font
+- uid: KokoEngine.ITextRenderer.Font*
+  name: Font
+  href: api/KokoEngine.ITextRenderer.html#KokoEngine_ITextRenderer_Font_
+  commentId: Overload:KokoEngine.ITextRenderer.Font
+  fullName: KokoEngine.ITextRenderer.Font
+  nameWithType: ITextRenderer.Font
+- uid: KokoEngine.ITextRenderer.Offset
+  name: Offset
+  href: api/KokoEngine.ITextRenderer.html#KokoEngine_ITextRenderer_Offset
+  commentId: P:KokoEngine.ITextRenderer.Offset
+  fullName: KokoEngine.ITextRenderer.Offset
+  nameWithType: ITextRenderer.Offset
+- uid: KokoEngine.ITextRenderer.Offset*
+  name: Offset
+  href: api/KokoEngine.ITextRenderer.html#KokoEngine_ITextRenderer_Offset_
+  commentId: Overload:KokoEngine.ITextRenderer.Offset
+  fullName: KokoEngine.ITextRenderer.Offset
+  nameWithType: ITextRenderer.Offset
+- uid: KokoEngine.ITextRenderer.Size
+  name: Size
+  href: api/KokoEngine.ITextRenderer.html#KokoEngine_ITextRenderer_Size
+  commentId: P:KokoEngine.ITextRenderer.Size
+  fullName: KokoEngine.ITextRenderer.Size
+  nameWithType: ITextRenderer.Size
+- uid: KokoEngine.ITextRenderer.Size*
+  name: Size
+  href: api/KokoEngine.ITextRenderer.html#KokoEngine_ITextRenderer_Size_
+  commentId: Overload:KokoEngine.ITextRenderer.Size
+  fullName: KokoEngine.ITextRenderer.Size
+  nameWithType: ITextRenderer.Size
+- uid: KokoEngine.ITextRenderer.Text
+  name: Text
+  href: api/KokoEngine.ITextRenderer.html#KokoEngine_ITextRenderer_Text
+  commentId: P:KokoEngine.ITextRenderer.Text
+  fullName: KokoEngine.ITextRenderer.Text
+  nameWithType: ITextRenderer.Text
+- uid: KokoEngine.ITextRenderer.Text*
+  name: Text
+  href: api/KokoEngine.ITextRenderer.html#KokoEngine_ITextRenderer_Text_
+  commentId: Overload:KokoEngine.ITextRenderer.Text
+  fullName: KokoEngine.ITextRenderer.Text
+  nameWithType: ITextRenderer.Text
 - uid: KokoEngine.ITimeManager
   name: ITimeManager
   href: api/KokoEngine.ITimeManager.html
@@ -3117,6 +3648,79 @@ references:
   commentId: Overload:KokoEngine.ITransform.Up
   fullName: KokoEngine.ITransform.Up
   nameWithType: ITransform.Up
+- uid: KokoEngine.ITree`1
+  name: ITree<T>
+  href: api/KokoEngine.ITree-1.html
+  commentId: T:KokoEngine.ITree`1
+  name.vb: ITree(Of T)
+  fullName: KokoEngine.ITree<T>
+  fullName.vb: KokoEngine.ITree(Of T)
+  nameWithType: ITree<T>
+  nameWithType.vb: ITree(Of T)
+- uid: KokoEngine.ITree`1.ChildCount
+  name: ChildCount
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_ChildCount
+  commentId: P:KokoEngine.ITree`1.ChildCount
+  fullName: KokoEngine.ITree<T>.ChildCount
+  fullName.vb: KokoEngine.ITree(Of T).ChildCount
+  nameWithType: ITree<T>.ChildCount
+  nameWithType.vb: ITree(Of T).ChildCount
+- uid: KokoEngine.ITree`1.ChildCount*
+  name: ChildCount
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_ChildCount_
+  commentId: Overload:KokoEngine.ITree`1.ChildCount
+  fullName: KokoEngine.ITree<T>.ChildCount
+  fullName.vb: KokoEngine.ITree(Of T).ChildCount
+  nameWithType: ITree<T>.ChildCount
+  nameWithType.vb: ITree(Of T).ChildCount
+- uid: KokoEngine.ITree`1.Children
+  name: Children
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_Children
+  commentId: P:KokoEngine.ITree`1.Children
+  fullName: KokoEngine.ITree<T>.Children
+  fullName.vb: KokoEngine.ITree(Of T).Children
+  nameWithType: ITree<T>.Children
+  nameWithType.vb: ITree(Of T).Children
+- uid: KokoEngine.ITree`1.Children*
+  name: Children
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_Children_
+  commentId: Overload:KokoEngine.ITree`1.Children
+  fullName: KokoEngine.ITree<T>.Children
+  fullName.vb: KokoEngine.ITree(Of T).Children
+  nameWithType: ITree<T>.Children
+  nameWithType.vb: ITree(Of T).Children
+- uid: KokoEngine.ITree`1.GetChild(System.Int32)
+  name: GetChild(Int32)
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_GetChild_System_Int32_
+  commentId: M:KokoEngine.ITree`1.GetChild(System.Int32)
+  fullName: KokoEngine.ITree<T>.GetChild(System.Int32)
+  fullName.vb: KokoEngine.ITree(Of T).GetChild(System.Int32)
+  nameWithType: ITree<T>.GetChild(Int32)
+  nameWithType.vb: ITree(Of T).GetChild(Int32)
+- uid: KokoEngine.ITree`1.GetChild*
+  name: GetChild
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_GetChild_
+  commentId: Overload:KokoEngine.ITree`1.GetChild
+  fullName: KokoEngine.ITree<T>.GetChild
+  fullName.vb: KokoEngine.ITree(Of T).GetChild
+  nameWithType: ITree<T>.GetChild
+  nameWithType.vb: ITree(Of T).GetChild
+- uid: KokoEngine.ITree`1.Parent
+  name: Parent
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_Parent
+  commentId: P:KokoEngine.ITree`1.Parent
+  fullName: KokoEngine.ITree<T>.Parent
+  fullName.vb: KokoEngine.ITree(Of T).Parent
+  nameWithType: ITree<T>.Parent
+  nameWithType.vb: ITree(Of T).Parent
+- uid: KokoEngine.ITree`1.Parent*
+  name: Parent
+  href: api/KokoEngine.ITree-1.html#KokoEngine_ITree_1_Parent_
+  commentId: Overload:KokoEngine.ITree`1.Parent
+  fullName: KokoEngine.ITree<T>.Parent
+  fullName.vb: KokoEngine.ITree(Of T).Parent
+  nameWithType: ITree<T>.Parent
+  nameWithType.vb: ITree(Of T).Parent
 - uid: KokoEngine.IVehicle
   name: IVehicle
   href: api/KokoEngine.IVehicle.html
@@ -3237,6 +3841,60 @@ references:
   commentId: F:KokoEngine.Key.State.Up
   fullName: KokoEngine.Key.State.Up
   nameWithType: Key.State.Up
+- uid: KokoEngine.LineRenderer
+  name: LineRenderer
+  href: api/KokoEngine.LineRenderer.html
+  commentId: T:KokoEngine.LineRenderer
+  fullName: KokoEngine.LineRenderer
+  nameWithType: LineRenderer
+- uid: KokoEngine.LineRenderer.Color
+  name: Color
+  href: api/KokoEngine.LineRenderer.html#KokoEngine_LineRenderer_Color
+  commentId: P:KokoEngine.LineRenderer.Color
+  fullName: KokoEngine.LineRenderer.Color
+  nameWithType: LineRenderer.Color
+- uid: KokoEngine.LineRenderer.Color*
+  name: Color
+  href: api/KokoEngine.LineRenderer.html#KokoEngine_LineRenderer_Color_
+  commentId: Overload:KokoEngine.LineRenderer.Color
+  fullName: KokoEngine.LineRenderer.Color
+  nameWithType: LineRenderer.Color
+- uid: KokoEngine.LineRenderer.End
+  name: End
+  href: api/KokoEngine.LineRenderer.html#KokoEngine_LineRenderer_End
+  commentId: P:KokoEngine.LineRenderer.End
+  fullName: KokoEngine.LineRenderer.End
+  nameWithType: LineRenderer.End
+- uid: KokoEngine.LineRenderer.End*
+  name: End
+  href: api/KokoEngine.LineRenderer.html#KokoEngine_LineRenderer_End_
+  commentId: Overload:KokoEngine.LineRenderer.End
+  fullName: KokoEngine.LineRenderer.End
+  nameWithType: LineRenderer.End
+- uid: KokoEngine.LineRenderer.Size
+  name: Size
+  href: api/KokoEngine.LineRenderer.html#KokoEngine_LineRenderer_Size
+  commentId: P:KokoEngine.LineRenderer.Size
+  fullName: KokoEngine.LineRenderer.Size
+  nameWithType: LineRenderer.Size
+- uid: KokoEngine.LineRenderer.Size*
+  name: Size
+  href: api/KokoEngine.LineRenderer.html#KokoEngine_LineRenderer_Size_
+  commentId: Overload:KokoEngine.LineRenderer.Size
+  fullName: KokoEngine.LineRenderer.Size
+  nameWithType: LineRenderer.Size
+- uid: KokoEngine.LineRenderer.Start
+  name: Start
+  href: api/KokoEngine.LineRenderer.html#KokoEngine_LineRenderer_Start
+  commentId: P:KokoEngine.LineRenderer.Start
+  fullName: KokoEngine.LineRenderer.Start
+  nameWithType: LineRenderer.Start
+- uid: KokoEngine.LineRenderer.Start*
+  name: Start
+  href: api/KokoEngine.LineRenderer.html#KokoEngine_LineRenderer_Start_
+  commentId: Overload:KokoEngine.LineRenderer.Start
+  fullName: KokoEngine.LineRenderer.Start
+  nameWithType: LineRenderer.Start
 - uid: KokoEngine.Pursuit
   name: Pursuit
   href: api/KokoEngine.Pursuit.html
@@ -3261,6 +3919,42 @@ references:
   commentId: F:KokoEngine.Pursuit.target
   fullName: KokoEngine.Pursuit.target
   nameWithType: Pursuit.target
+- uid: KokoEngine.Random
+  name: Random
+  href: api/KokoEngine.Random.html
+  commentId: T:KokoEngine.Random
+  fullName: KokoEngine.Random
+  nameWithType: Random
+- uid: KokoEngine.Random.Range(System.Int32,System.Int32)
+  name: Range(Int32, Int32)
+  href: api/KokoEngine.Random.html#KokoEngine_Random_Range_System_Int32_System_Int32_
+  commentId: M:KokoEngine.Random.Range(System.Int32,System.Int32)
+  fullName: KokoEngine.Random.Range(System.Int32, System.Int32)
+  nameWithType: Random.Range(Int32, Int32)
+- uid: KokoEngine.Random.Range(System.Single,System.Single)
+  name: Range(Single, Single)
+  href: api/KokoEngine.Random.html#KokoEngine_Random_Range_System_Single_System_Single_
+  commentId: M:KokoEngine.Random.Range(System.Single,System.Single)
+  fullName: KokoEngine.Random.Range(System.Single, System.Single)
+  nameWithType: Random.Range(Single, Single)
+- uid: KokoEngine.Random.Range*
+  name: Range
+  href: api/KokoEngine.Random.html#KokoEngine_Random_Range_
+  commentId: Overload:KokoEngine.Random.Range
+  fullName: KokoEngine.Random.Range
+  nameWithType: Random.Range
+- uid: KokoEngine.Random.Value
+  name: Value
+  href: api/KokoEngine.Random.html#KokoEngine_Random_Value
+  commentId: P:KokoEngine.Random.Value
+  fullName: KokoEngine.Random.Value
+  nameWithType: Random.Value
+- uid: KokoEngine.Random.Value*
+  name: Value
+  href: api/KokoEngine.Random.html#KokoEngine_Random_Value_
+  commentId: Overload:KokoEngine.Random.Value
+  fullName: KokoEngine.Random.Value
+  nameWithType: Random.Value
 - uid: KokoEngine.Rect
   name: Rect
   href: api/KokoEngine.Rect.html
@@ -3393,6 +4087,18 @@ references:
   commentId: Overload:KokoEngine.RenderManager.RenderSpriteHandler
   fullName: KokoEngine.RenderManager.RenderSpriteHandler
   nameWithType: RenderManager.RenderSpriteHandler
+- uid: KokoEngine.RenderManager.RenderTextHandler
+  name: RenderTextHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderTextHandler
+  commentId: P:KokoEngine.RenderManager.RenderTextHandler
+  fullName: KokoEngine.RenderManager.RenderTextHandler
+  nameWithType: RenderManager.RenderTextHandler
+- uid: KokoEngine.RenderManager.RenderTextHandler*
+  name: RenderTextHandler
+  href: api/KokoEngine.RenderManager.html#KokoEngine_RenderManager_RenderTextHandler_
+  commentId: Overload:KokoEngine.RenderManager.RenderTextHandler
+  fullName: KokoEngine.RenderManager.RenderTextHandler
+  nameWithType: RenderManager.RenderTextHandler
 - uid: KokoEngine.Resolution
   name: Resolution
   href: api/KokoEngine.Resolution.html
@@ -3555,6 +4261,18 @@ references:
   commentId: Overload:KokoEngine.Scene.CreateGameObject
   fullName: KokoEngine.Scene.CreateGameObject
   nameWithType: Scene.CreateGameObject
+- uid: KokoEngine.Scene.GetPendingGameObjects
+  name: GetPendingGameObjects()
+  href: api/KokoEngine.Scene.html#KokoEngine_Scene_GetPendingGameObjects
+  commentId: M:KokoEngine.Scene.GetPendingGameObjects
+  fullName: KokoEngine.Scene.GetPendingGameObjects()
+  nameWithType: Scene.GetPendingGameObjects()
+- uid: KokoEngine.Scene.GetPendingGameObjects*
+  name: GetPendingGameObjects
+  href: api/KokoEngine.Scene.html#KokoEngine_Scene_GetPendingGameObjects_
+  commentId: Overload:KokoEngine.Scene.GetPendingGameObjects
+  fullName: KokoEngine.Scene.GetPendingGameObjects
+  nameWithType: Scene.GetPendingGameObjects
 - uid: KokoEngine.Scene.GetRootGameObjects
   name: GetRootGameObjects()
   href: api/KokoEngine.Scene.html#KokoEngine_Scene_GetRootGameObjects
@@ -3633,6 +4351,48 @@ references:
   commentId: Overload:KokoEngine.SceneManager.LoadScene
   fullName: KokoEngine.SceneManager.LoadScene
   nameWithType: SceneManager.LoadScene
+- uid: KokoEngine.Screen
+  name: Screen
+  href: api/KokoEngine.Screen.html
+  commentId: T:KokoEngine.Screen
+  fullName: KokoEngine.Screen
+  nameWithType: Screen
+- uid: KokoEngine.Screen.Height
+  name: Height
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_Height
+  commentId: P:KokoEngine.Screen.Height
+  fullName: KokoEngine.Screen.Height
+  nameWithType: Screen.Height
+- uid: KokoEngine.Screen.Height*
+  name: Height
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_Height_
+  commentId: Overload:KokoEngine.Screen.Height
+  fullName: KokoEngine.Screen.Height
+  nameWithType: Screen.Height
+- uid: KokoEngine.Screen.SetResolution(System.Int32,System.Int32)
+  name: SetResolution(Int32, Int32)
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_SetResolution_System_Int32_System_Int32_
+  commentId: M:KokoEngine.Screen.SetResolution(System.Int32,System.Int32)
+  fullName: KokoEngine.Screen.SetResolution(System.Int32, System.Int32)
+  nameWithType: Screen.SetResolution(Int32, Int32)
+- uid: KokoEngine.Screen.SetResolution*
+  name: SetResolution
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_SetResolution_
+  commentId: Overload:KokoEngine.Screen.SetResolution
+  fullName: KokoEngine.Screen.SetResolution
+  nameWithType: Screen.SetResolution
+- uid: KokoEngine.Screen.Width
+  name: Width
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_Width
+  commentId: P:KokoEngine.Screen.Width
+  fullName: KokoEngine.Screen.Width
+  nameWithType: Screen.Width
+- uid: KokoEngine.Screen.Width*
+  name: Width
+  href: api/KokoEngine.Screen.html#KokoEngine_Screen_Width_
+  commentId: Overload:KokoEngine.Screen.Width
+  fullName: KokoEngine.Screen.Width
+  nameWithType: Screen.Width
 - uid: KokoEngine.ScreenManager
   name: ScreenManager
   href: api/KokoEngine.ScreenManager.html
@@ -3999,6 +4759,72 @@ references:
   commentId: Overload:KokoEngine.SteeringBehaviours.Seek
   fullName: KokoEngine.SteeringBehaviours.Seek
   nameWithType: SteeringBehaviours.Seek
+- uid: KokoEngine.TextRenderer
+  name: TextRenderer
+  href: api/KokoEngine.TextRenderer.html
+  commentId: T:KokoEngine.TextRenderer
+  fullName: KokoEngine.TextRenderer
+  nameWithType: TextRenderer
+- uid: KokoEngine.TextRenderer.Color
+  name: Color
+  href: api/KokoEngine.TextRenderer.html#KokoEngine_TextRenderer_Color
+  commentId: P:KokoEngine.TextRenderer.Color
+  fullName: KokoEngine.TextRenderer.Color
+  nameWithType: TextRenderer.Color
+- uid: KokoEngine.TextRenderer.Color*
+  name: Color
+  href: api/KokoEngine.TextRenderer.html#KokoEngine_TextRenderer_Color_
+  commentId: Overload:KokoEngine.TextRenderer.Color
+  fullName: KokoEngine.TextRenderer.Color
+  nameWithType: TextRenderer.Color
+- uid: KokoEngine.TextRenderer.Font
+  name: Font
+  href: api/KokoEngine.TextRenderer.html#KokoEngine_TextRenderer_Font
+  commentId: P:KokoEngine.TextRenderer.Font
+  fullName: KokoEngine.TextRenderer.Font
+  nameWithType: TextRenderer.Font
+- uid: KokoEngine.TextRenderer.Font*
+  name: Font
+  href: api/KokoEngine.TextRenderer.html#KokoEngine_TextRenderer_Font_
+  commentId: Overload:KokoEngine.TextRenderer.Font
+  fullName: KokoEngine.TextRenderer.Font
+  nameWithType: TextRenderer.Font
+- uid: KokoEngine.TextRenderer.Offset
+  name: Offset
+  href: api/KokoEngine.TextRenderer.html#KokoEngine_TextRenderer_Offset
+  commentId: P:KokoEngine.TextRenderer.Offset
+  fullName: KokoEngine.TextRenderer.Offset
+  nameWithType: TextRenderer.Offset
+- uid: KokoEngine.TextRenderer.Offset*
+  name: Offset
+  href: api/KokoEngine.TextRenderer.html#KokoEngine_TextRenderer_Offset_
+  commentId: Overload:KokoEngine.TextRenderer.Offset
+  fullName: KokoEngine.TextRenderer.Offset
+  nameWithType: TextRenderer.Offset
+- uid: KokoEngine.TextRenderer.Size
+  name: Size
+  href: api/KokoEngine.TextRenderer.html#KokoEngine_TextRenderer_Size
+  commentId: P:KokoEngine.TextRenderer.Size
+  fullName: KokoEngine.TextRenderer.Size
+  nameWithType: TextRenderer.Size
+- uid: KokoEngine.TextRenderer.Size*
+  name: Size
+  href: api/KokoEngine.TextRenderer.html#KokoEngine_TextRenderer_Size_
+  commentId: Overload:KokoEngine.TextRenderer.Size
+  fullName: KokoEngine.TextRenderer.Size
+  nameWithType: TextRenderer.Size
+- uid: KokoEngine.TextRenderer.Text
+  name: Text
+  href: api/KokoEngine.TextRenderer.html#KokoEngine_TextRenderer_Text
+  commentId: P:KokoEngine.TextRenderer.Text
+  fullName: KokoEngine.TextRenderer.Text
+  nameWithType: TextRenderer.Text
+- uid: KokoEngine.TextRenderer.Text*
+  name: Text
+  href: api/KokoEngine.TextRenderer.html#KokoEngine_TextRenderer_Text_
+  commentId: Overload:KokoEngine.TextRenderer.Text
+  fullName: KokoEngine.TextRenderer.Text
+  nameWithType: TextRenderer.Text
 - uid: KokoEngine.Texture2D
   name: Texture2D
   href: api/KokoEngine.Texture2D.html
@@ -4041,6 +4867,48 @@ references:
   commentId: Overload:KokoEngine.Texture2D.Width
   fullName: KokoEngine.Texture2D.Width
   nameWithType: Texture2D.Width
+- uid: KokoEngine.Time
+  name: Time
+  href: api/KokoEngine.Time.html
+  commentId: T:KokoEngine.Time
+  fullName: KokoEngine.Time
+  nameWithType: Time
+- uid: KokoEngine.Time.DeltaTime
+  name: DeltaTime
+  href: api/KokoEngine.Time.html#KokoEngine_Time_DeltaTime
+  commentId: P:KokoEngine.Time.DeltaTime
+  fullName: KokoEngine.Time.DeltaTime
+  nameWithType: Time.DeltaTime
+- uid: KokoEngine.Time.DeltaTime*
+  name: DeltaTime
+  href: api/KokoEngine.Time.html#KokoEngine_Time_DeltaTime_
+  commentId: Overload:KokoEngine.Time.DeltaTime
+  fullName: KokoEngine.Time.DeltaTime
+  nameWithType: Time.DeltaTime
+- uid: KokoEngine.Time.TimeScale
+  name: TimeScale
+  href: api/KokoEngine.Time.html#KokoEngine_Time_TimeScale
+  commentId: P:KokoEngine.Time.TimeScale
+  fullName: KokoEngine.Time.TimeScale
+  nameWithType: Time.TimeScale
+- uid: KokoEngine.Time.TimeScale*
+  name: TimeScale
+  href: api/KokoEngine.Time.html#KokoEngine_Time_TimeScale_
+  commentId: Overload:KokoEngine.Time.TimeScale
+  fullName: KokoEngine.Time.TimeScale
+  nameWithType: Time.TimeScale
+- uid: KokoEngine.Time.TotalTime
+  name: TotalTime
+  href: api/KokoEngine.Time.html#KokoEngine_Time_TotalTime
+  commentId: P:KokoEngine.Time.TotalTime
+  fullName: KokoEngine.Time.TotalTime
+  nameWithType: Time.TotalTime
+- uid: KokoEngine.Time.TotalTime*
+  name: TotalTime
+  href: api/KokoEngine.Time.html#KokoEngine_Time_TotalTime_
+  commentId: Overload:KokoEngine.Time.TotalTime
+  fullName: KokoEngine.Time.TotalTime
+  nameWithType: Time.TotalTime
 - uid: KokoEngine.TimeManager
   name: TimeManager
   href: api/KokoEngine.TimeManager.html
@@ -4329,6 +5197,18 @@ references:
   commentId: M:KokoEngine.Vector2.op_Addition(KokoEngine.Vector2,KokoEngine.Vector2)
   fullName: KokoEngine.Vector2.Addition(KokoEngine.Vector2, KokoEngine.Vector2)
   nameWithType: Vector2.Addition(Vector2, Vector2)
+- uid: KokoEngine.Vector2.op_Addition(KokoEngine.Vector2,KokoEngine.Vector3)
+  name: Addition(Vector2, Vector3)
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_op_Addition_KokoEngine_Vector2_KokoEngine_Vector3_
+  commentId: M:KokoEngine.Vector2.op_Addition(KokoEngine.Vector2,KokoEngine.Vector3)
+  fullName: KokoEngine.Vector2.Addition(KokoEngine.Vector2, KokoEngine.Vector3)
+  nameWithType: Vector2.Addition(Vector2, Vector3)
+- uid: KokoEngine.Vector2.op_Addition(KokoEngine.Vector3,KokoEngine.Vector2)
+  name: Addition(Vector3, Vector2)
+  href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_op_Addition_KokoEngine_Vector3_KokoEngine_Vector2_
+  commentId: M:KokoEngine.Vector2.op_Addition(KokoEngine.Vector3,KokoEngine.Vector2)
+  fullName: KokoEngine.Vector2.Addition(KokoEngine.Vector3, KokoEngine.Vector2)
+  nameWithType: Vector2.Addition(Vector3, Vector2)
 - uid: KokoEngine.Vector2.op_Addition*
   name: Addition
   href: api/KokoEngine.Vector2.html#KokoEngine_Vector2_op_Addition_
@@ -4881,3 +5761,39 @@ references:
   commentId: Overload:KokoEngine.Vehicle.Velocity
   fullName: KokoEngine.Vehicle.Velocity
   nameWithType: Vehicle.Velocity
+- uid: KokoEngine.Wander
+  name: Wander
+  href: api/KokoEngine.Wander.html
+  commentId: T:KokoEngine.Wander
+  fullName: KokoEngine.Wander
+  nameWithType: Wander
+- uid: KokoEngine.Wander.Calculate(KokoEngine.Vehicle)
+  name: Calculate(Vehicle)
+  href: api/KokoEngine.Wander.html#KokoEngine_Wander_Calculate_KokoEngine_Vehicle_
+  commentId: M:KokoEngine.Wander.Calculate(KokoEngine.Vehicle)
+  fullName: KokoEngine.Wander.Calculate(KokoEngine.Vehicle)
+  nameWithType: Wander.Calculate(Vehicle)
+- uid: KokoEngine.Wander.Calculate*
+  name: Calculate
+  href: api/KokoEngine.Wander.html#KokoEngine_Wander_Calculate_
+  commentId: Overload:KokoEngine.Wander.Calculate
+  fullName: KokoEngine.Wander.Calculate
+  nameWithType: Wander.Calculate
+- uid: KokoEngine.Wander.distance
+  name: distance
+  href: api/KokoEngine.Wander.html#KokoEngine_Wander_distance
+  commentId: F:KokoEngine.Wander.distance
+  fullName: KokoEngine.Wander.distance
+  nameWithType: Wander.distance
+- uid: KokoEngine.Wander.jitter
+  name: jitter
+  href: api/KokoEngine.Wander.html#KokoEngine_Wander_jitter
+  commentId: F:KokoEngine.Wander.jitter
+  fullName: KokoEngine.Wander.jitter
+  nameWithType: Wander.jitter
+- uid: KokoEngine.Wander.radius
+  name: radius
+  href: api/KokoEngine.Wander.html#KokoEngine_Wander_radius
+  commentId: F:KokoEngine.Wander.radius
+  fullName: KokoEngine.Wander.radius
+  nameWithType: Wander.radius
