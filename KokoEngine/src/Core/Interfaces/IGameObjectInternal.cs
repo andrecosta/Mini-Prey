@@ -2,6 +2,6 @@ namespace KokoEngine
 {
     internal interface IGameObjectInternal : IGameObject
     {
-        IScene Scene { set; }
+        ISceneInternal Scene { get; set; }
     }
 }

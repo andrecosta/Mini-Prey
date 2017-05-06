@@ -43,20 +43,17 @@ public class PlayerController : Player
             {
                 // Show hover
                 if (!_selectedPlanet || (_selectedPlanet != null && _selectedPlanet != planet))
-                {
-                    planet.HoverOutline.GameObject.SetActive(true);
-                    planet.IsHovered = true;
-                }
+                    planet.Hover();
 
                 // Select structure
                 if (Input.GetActionUp("PrimaryAction"))
                 {
                     Debug.Log("Selected structure");
                     if (_selectedPlanet)
-                        _selectedPlanet.SelectedOutline.GameObject.SetActive(false);
+                        _selectedPlanet.DeSelect();
 
                     _selectedPlanet = planet;
-                    _selectedPlanet.SelectedOutline.GameObject.SetActive(true);
+                    _selectedPlanet.Select();
                     //_selectedPlanet.HideUpgradeMenu();
                     UnHover();
                 }
@@ -76,14 +73,14 @@ public class PlayerController : Player
                 // Show line
                 _lineRenderer.Start = _selectedPlanet.Transform.Position;
                 _lineRenderer.End = planet.Transform.Position;
-                _lineRenderer.Size = 2;
+                _lineRenderer.Size = 3;
                 _lineRenderer.Color = Color.Green;
 
                 if (Input.GetActionDown("SecondaryAction") && _selectedPlanet != null)
                 {
                     Debug.Log("Selected target structure");
                     _selectedPlanet.LaunchShips(planet, _selectedPercentage);
-                    _selectedPlanet.SelectedOutline.GameObject.SetActive(false);
+                    _selectedPlanet.DeSelect();
                     //_selectedPlanet.HideUpgradeMenu();
                     _selectedPlanet = null;
                     UnHover();
@@ -98,7 +95,7 @@ public class PlayerController : Player
             {
                 if (_selectedPlanet)
                 {
-                    _selectedPlanet.SelectedOutline.GameObject.SetActive(false);
+                    _selectedPlanet.DeSelect();
                     //_selectedPlanet.HideUpgradeMenu();
                     _selectedPlanet = null;
                 }
@@ -128,16 +125,10 @@ public class PlayerController : Player
         _lineRenderer.Size = 0;
 
         if (_lastHoveredPlanet)
-        {
-            _lastHoveredPlanet.HoverOutline.GameObject.SetActive(false);
-            _lastHoveredPlanet.IsHovered = false;
-        }
+            _lastHoveredPlanet.UnHover();
 
         if (_selectedPlanet)
-        {
-            _selectedPlanet.HoverOutline.GameObject.SetActive(false);
-            _selectedPlanet.IsHovered = false;
-        }
+            _selectedPlanet.UnHover();
     }
 
     void UpdateMouseTexture()

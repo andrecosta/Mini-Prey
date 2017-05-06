@@ -13,26 +13,26 @@ namespace MiniPreyGame
             // Create the human player
             IGameObject playerControllerGameObject = scene.CreateGameObject("PlayerController");
             PlayerController playerController = playerControllerGameObject.AddComponent<PlayerController>();
-            playerController.TeamColor = Color.Blue;
+            playerController.TeamColor = new Color(183, 68, 231);
             playerControllerGameObject.AddComponent<LineRenderer>();
 
             // Create the AI player
             IGameObject aiControllerGameObject = scene.CreateGameObject("AIController");
             AIController aiController = aiControllerGameObject.AddComponent<AIController>();
-            aiController.TeamColor = Color.Red;
+            aiController.TeamColor = new Color(68, 231, 118);
 
             // Create the Neutral player
             IGameObject neutralControllerGameObject = scene.CreateGameObject("NeutralController");
             AIController neutralController = neutralControllerGameObject.AddComponent<AIController>();
-            neutralController.TeamColor = Color.White;
+            neutralController.TeamColor = new Color(230, 230, 230);
             neutralController.IsNeutral = true;
 
             // Create the GameController
             IGameObject gameControllerObject = scene.CreateGameObject("GameController");
             {
                 var gc = gameControllerObject.AddComponent<GameController>();
-                gc.PlanetSprite = new Sprite(assetManager.GetAsset<Texture2D>("planet"));
                 gc.ShipSprite = new Sprite(assetManager.GetAsset<Texture2D>("ship"));
+                gc.OutlineSprite = new Sprite(assetManager.GetAsset<Texture2D>("outline"));
                 gc.PlanetPopulationFont = assetManager.GetAsset<Font>("main_font");
                 gc.Players = new Player[] {playerController, aiController, neutralController};
 
@@ -47,7 +47,7 @@ namespace MiniPreyGame
                             {
                                 Cost = 10,
                                 FireRate = 0,
-                                Sprite = gc.PlanetSprite,
+                                Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet1")),
                                 PopGenerationLimit = 20,
                                 PopGenerationRate = 2f
                             },
@@ -55,9 +55,17 @@ namespace MiniPreyGame
                             {
                                 Cost = 20,
                                 FireRate = 0,
-                                Sprite = gc.PlanetSprite,
+                                Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet2")),
                                 PopGenerationLimit = 40,
                                 PopGenerationRate = 1.5f
+                            },
+                            new Planet.Upgrade
+                            {
+                                Cost = 30,
+                                FireRate = 0,
+                                Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet3")),
+                                PopGenerationLimit = 60,
+                                PopGenerationRate = 1f
                             }
                         }
                     },
@@ -69,7 +77,7 @@ namespace MiniPreyGame
                             {
                                 Cost = 15,
                                 FireRate = 2,
-                                Sprite = gc.PlanetSprite,
+                                Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Sentry1")),
                                 PopGenerationLimit = 0,
                                 PopGenerationRate = 0
                             },
@@ -77,7 +85,15 @@ namespace MiniPreyGame
                             {
                                 Cost = 25,
                                 FireRate = 1,
-                                Sprite = gc.PlanetSprite,
+                                Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Sentry2")),
+                                PopGenerationLimit = 0,
+                                PopGenerationRate = 0
+                            },
+                            new Planet.Upgrade
+                            {
+                                Cost = 35,
+                                FireRate = 0.5f,
+                                Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Sentry3")),
                                 PopGenerationLimit = 0,
                                 PopGenerationRate = 0
                             }

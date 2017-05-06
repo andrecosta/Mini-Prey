@@ -6,16 +6,16 @@ namespace KokoEngine
     public class RenderManager : IRenderManagerInternal
     {
         public Action<ISpriteRenderer> RenderSpriteHandler { get; set; }
-        public Action<ITextRenderer> RenderTextHandler { get; set; }
+        public Action<Font, string, Vector2, Color, float, float, float, float> RenderTextHandler { get; set; }
         public Action<ILineRenderer> RenderLineHandler { get; set; }
-        public Action<Rect, Color> RenderRectangleHandler { get; set; }
+        public Action<Rect, Color, float> RenderRectangleHandler { get; set; }
         public Action<Vector2, float, Color> RenderCircleHandler { get; set; }
         public Action<Vector2, float, Color> RenderRayHandler { get; set; }
 
-        void IRenderManagerInternal.RenderScene(IScene scene)
+        void IRenderManagerInternal.RenderScene(ISceneInternal scene)
         {
             // Draw the active scene's game objects which contain renderable components
-            foreach (IGameObject rootGameObject in scene.GetRootGameObjects().Where(go => go.IsActive))
+            foreach (IGameObject rootGameObject in scene.GameObjects.Where(go => go.IsActive))
                 DrawGameObjects(rootGameObject);
         }
 
@@ -24,9 +24,9 @@ namespace KokoEngine
             RenderSpriteHandler?.Invoke(sr);
         }
 
-        void IRenderManagerInternal.RenderText(ITextRenderer tr)
+        void IRenderManagerInternal.RenderText(Font font, string text, Vector2 position, Color color, float alignmentOffset, float rotation, float scale, float layer)
         {
-            RenderTextHandler?.Invoke(tr);
+            RenderTextHandler?.Invoke(font, text, position, color, alignmentOffset, rotation, scale, layer);
         }
 
         void IRenderManagerInternal.RenderLine(ILineRenderer lr)
@@ -34,9 +34,9 @@ namespace KokoEngine
             RenderLineHandler?.Invoke(lr);
         }
 
-        void IRenderManagerInternal.RenderRectangle(Rect rectangle, Color color)
+        void IRenderManagerInternal.RenderRectangle(Rect rectangle, Color color, float layer)
         {
-            RenderRectangleHandler?.Invoke(rectangle, color);
+            RenderRectangleHandler?.Invoke(rectangle, color, layer);
         }
 
         void IRenderManagerInternal.RenderCircle(Vector2 position, float radius, Color color)
@@ -59,7 +59,7 @@ namespace KokoEngine
 
                 ITextRenderer tr = component as ITextRenderer;
                 if (tr != null)
-                    RenderTextHandler?.Invoke(tr);
+                    RenderTextHandler?.Invoke(tr.Font, tr.Text, tr.Transform.Position + tr.Offset, tr.Color, 0.5f, tr.Transform.Rotation, tr.Size, 0.5f);
 
                 ILineRenderer lr = component as ILineRenderer;
                 if (lr != null)

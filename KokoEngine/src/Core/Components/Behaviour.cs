@@ -47,14 +47,13 @@
 
         protected T Instantiate<T>(string name, Vector2 position) where T : IComponent, new()
         {
-            IGameObject go = GameObject.Scene.CreateGameObject(name);
-            go.Transform.Position = position;
-            return go.AddComponent<T>();
+            return (GameObject as IGameObjectInternal).Scene.CreateGameObject<T>(name, position);
         }
 
-        /*protected void SetCursor(Texture2D texture)
+        protected void Destroy(IGameObject go)
         {
-            Engine.Instance.RenderManager.SetCursor(texture);
-        }*/
+            (go as IGameObjectInternal)?.Scene.DestroyGameObject(go);
+        }
+            
     }
 }

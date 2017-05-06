@@ -25,12 +25,7 @@ public class Planet : Behaviour
     // Planet Properties
     public Player Owner;
     public int Population;
-    public IGameObject Model;
-
-    // Visual effects
-    public ISpriteRenderer HoverOutline;
-    public ISpriteRenderer SelectedOutline;
-
+    
     //public UpgradeMenu UpgradeMenu;
 
     public Action<Planet, Planet> LaunchShipHandler { get; set; }
@@ -40,7 +35,7 @@ public class Planet : Behaviour
     public bool IsUpgrading { get; set; }
     public bool IsConverting { get; set; }
 
-    public int AvailablePopulation { get { return Population - _queuedToLaunch.Count; } }
+    public int AvailablePopulation => Population - _queuedToLaunch.Count;
 
     private List<Planet> _queuedToLaunch;
     private float _shipGenerationTimer;
@@ -57,10 +52,10 @@ public class Planet : Behaviour
     public int CurrentUpgradeLevel { get; set; }
     public Upgrade CurrentUpgrade { get { return GameController.PlanetTypes[CurrentType].UpgradeLevels[CurrentUpgradeLevel]; } }
 
-    //private Material OldOwnerMaterial;
-    //private Material NewOwnerMaterial;
+    // Visual effects
+    private ISpriteRenderer _hoverOutline;
+    private ISpriteRenderer _selectedOutline;
 
-    //private Renderer[] _modelRenderers;
     private bool _pendingStructureUpgradeLevel;
     private float _hp = 1;
 
@@ -74,20 +69,19 @@ public class Planet : Behaviour
         _animator = GetComponent<Animator>();
         _queuedToLaunch = new List<Planet>();
 
-        // Add extra visual elements
-        HoverOutline = Instantiate<SpriteRenderer>("HoverOutline", Transform.Position);
-        HoverOutline.Sprite = CurrentUpgrade.Sprite;
-        HoverOutline.Color = Color.Cyan;
-        HoverOutline.Layer = 0.6f;
-        HoverOutline.Transform.Scale *= 1.15f;
-        HoverOutline.GameObject.SetActive(false);
+        // Add outline visual elements
+        _hoverOutline = Instantiate<SpriteRenderer>("HoverOutline", Transform.Position);
+        _hoverOutline.Sprite = GameController.OutlineSprite;
+        _hoverOutline.Color = Color.Cyan;
+        _hoverOutline.Layer = 0.6f;
+        _hoverOutline.GameObject.SetActive(false);
 
-        SelectedOutline = Instantiate<SpriteRenderer>("SelectedOutline", Transform.Position);
-        SelectedOutline.Sprite = CurrentUpgrade.Sprite;
-        SelectedOutline.Color = Color.Green;
-        SelectedOutline.Transform.Scale *= 1.15f;
-        SelectedOutline.Layer = 0.6f;
-        SelectedOutline.GameObject.SetActive(false);
+        _selectedOutline = Instantiate<SpriteRenderer>("SelectedOutline", Transform.Position);
+        _selectedOutline.Sprite = GameController.OutlineSprite;
+        _selectedOutline.Color = Color.Green;
+        _selectedOutline.Transform.Scale *= 1f;
+        _selectedOutline.Layer = 0.6f;
+        _selectedOutline.GameObject.SetActive(false);
 
         OnPopulationChange += UpdatePopulationText;
         OnPopulationChange();
@@ -141,6 +135,7 @@ public class Planet : Behaviour
             _upgradeTimer += Time.DeltaTime;
 
         // Animation
+        _selectedOutline.Transform.Rotation += Time.DeltaTime * 0.25f;
         /*_animator.SetBool("IsHovered", IsHovered);
         _animator.SetBool("IsUnderAttack", IsUnderAttack);
         _animator.SetBool("IsUpgrading", IsUpgrading);*/
@@ -319,6 +314,29 @@ public class Planet : Behaviour
     void UpdateAppearance()
     {
         _sr.Color = Owner.TeamColor;
+    }
+
+    public void Hover()
+    {
+        _hoverOutline.GameObject.SetActive(true);
+        IsHovered = true;
+    }
+
+    public void UnHover()
+    {
+        _hoverOutline.GameObject.SetActive(false);
+        IsHovered = false;
+    }
+
+    public void Select()
+    {
+        _selectedOutline.GameObject.SetActive(true);
+        _selectedOutline.Transform.Rotation = 0;
+    }
+
+    public void DeSelect()
+    {
+        _selectedOutline.GameObject.SetActive(false);
     }
 
     /*public void ToggleUpgradeMenu()

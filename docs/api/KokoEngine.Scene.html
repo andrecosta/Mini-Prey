@@ -107,7 +107,7 @@
               <h6><strong>Assembly</strong>:KokoEngine.dll</h6>
               <h5 id="KokoEngine_Scene_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Scene : IScene</code></pre>
+                <pre><code class="lang-csharp hljs">public class Scene : ISceneInternal, IScene</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
@@ -215,14 +215,36 @@
                   <div><a class="xref" href="KokoEngine.IScene.html#KokoEngine_IScene_CreateGameObject_System_String_">IScene.CreateGameObject(String)</a></div>
               
               
-              <a id="KokoEngine_Scene_GetPendingGameObjects_" data-uid="KokoEngine.Scene.GetPendingGameObjects*"></a>
-              <h4 id="KokoEngine_Scene_GetPendingGameObjects" data-uid="KokoEngine.Scene.GetPendingGameObjects">GetPendingGameObjects()</h4>
+              <a id="KokoEngine_Scene_CreateGameObject_" data-uid="KokoEngine.Scene.CreateGameObject*"></a>
+              <h4 id="KokoEngine_Scene_CreateGameObject__1_System_String_KokoEngine_Vector2_" data-uid="KokoEngine.Scene.CreateGameObject``1(System.String,KokoEngine.Vector2)">CreateGameObject&lt;T&gt;(String, Vector2)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public List&lt;IGameObject&gt; GetPendingGameObjects()</code></pre>
+                <pre><code class="lang-csharp hljs">public T CreateGameObject&lt;T&gt;(string name, Vector2 position)where T : IComponent, new ()</code></pre>
               </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">name</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="KokoEngine.Vector2.html">Vector2</a></td>
+                    <td><span class="parametername">position</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -233,40 +255,28 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="KokoEngine.IGameObject.html">IGameObject</a>&gt;</td>
+                    <td><span class="xref">T</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="KokoEngine.IScene.html#KokoEngine_IScene_GetPendingGameObjects">IScene.GetPendingGameObjects()</a></div>
-              
-              
-              <a id="KokoEngine_Scene_GetRootGameObjects_" data-uid="KokoEngine.Scene.GetRootGameObjects*"></a>
-              <h4 id="KokoEngine_Scene_GetRootGameObjects" data-uid="KokoEngine.Scene.GetRootGameObjects">GetRootGameObjects()</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public List&lt;IGameObject&gt; GetRootGameObjects()</code></pre>
-              </div>
-              <h5 class="returns">Returns</h5>
+              <h5 class="typeParameters">Type Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
-                    <th>Type</th>
+                    <th>Name</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="KokoEngine.IGameObject.html">IGameObject</a>&gt;</td>
+                    <td><span class="parametername">T</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="KokoEngine.IScene.html#KokoEngine_IScene_GetRootGameObjects">IScene.GetRootGameObjects()</a></div>
+                  <div><a class="xref" href="KokoEngine.IScene.html#KokoEngine_IScene_CreateGameObject__1_System_String_KokoEngine_Vector2_">IScene.CreateGameObject&lt;T&gt;(String, Vector2)</a></div>
                         </article>
           </div>
           

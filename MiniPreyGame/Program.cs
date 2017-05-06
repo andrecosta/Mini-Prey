@@ -27,6 +27,8 @@ namespace MiniPreyGame
              * - IScreenManager
              * - ITimeManager
              * - ISceneManager
+             * - IRenderManager
+             * - IDebugManager
              * 
              * TODO: IN THE FUTURE, THESE CONFIGURATIONS COULD COME FROM A FILE OR AN EDITOR IN THE ENGINE STARTUP STAGE!
              */
@@ -38,11 +40,18 @@ namespace MiniPreyGame
             ITimeManager timeManager = new TimeManager();
             ISceneManager sceneManager = new SceneManager();
             IRenderManager renderManager = new RenderManager();
+            IDebugManager debugManager = new DebugManager();
 
             // Setup the asset manager
             assetManager.RootDirectory = "Content";
-            assetManager.AddAsset<Texture2D>("planet.png");
             assetManager.AddAsset<Texture2D>("ship.png");
+            assetManager.AddAsset<Texture2D>("Planet1.png");
+            assetManager.AddAsset<Texture2D>("Planet2.png");
+            assetManager.AddAsset<Texture2D>("Planet3.png");
+            assetManager.AddAsset<Texture2D>("Sentry1.png");
+            assetManager.AddAsset<Texture2D>("Sentry2.png");
+            assetManager.AddAsset<Texture2D>("Sentry3.png");
+            assetManager.AddAsset<Texture2D>("outline.png");
             assetManager.AddAsset<Texture2D>("cursor_25.png");
             assetManager.AddAsset<Texture2D>("cursor_50.png");
             assetManager.AddAsset<Texture2D>("cursor_75.png");
@@ -53,11 +62,14 @@ namespace MiniPreyGame
             // Setup the input manager
             inputManager.AddActionBinding("PrimaryAction", "MouseLeft");
             inputManager.AddActionBinding("SecondaryAction", "MouseRight");
+            inputManager.AddActionBinding("ToggleFullScreen", "F11");
+            inputManager.AddActionBinding("ToggleDebugConsole", "F12");
 
             // Setup the screen manager
+            screenManager.AddSupportedResolution(1920, 1080);
             screenManager.AddSupportedResolution(1280, 720);
-            // TODO: set resolution!
-            screenManager.IsFullscreen = false;
+            screenManager.SetResolution(1);
+            screenManager.IsFullScreen = false;
 
             // Setup the time manager
             timeManager.TimeScale = 1;
@@ -67,8 +79,11 @@ namespace MiniPreyGame
             IScene myScene = SetupScene(assetManager);
             sceneManager.AddScene(myScene);
 
+            // Setup the debug manager
+            debugManager.ConsoleFont = assetManager.GetAsset<Font>("debug");
+
             // Instantiate the engine with the settings created above
-            IEngine engine = new Engine(assetManager, inputManager, screenManager, timeManager, sceneManager, renderManager);
+            IEngine engine = new Engine(assetManager, inputManager, screenManager, timeManager, sceneManager, renderManager, debugManager);
 
             // Start MonoGame
             // MonoGame will load the resources and call the engine's update method

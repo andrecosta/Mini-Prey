@@ -11,6 +11,7 @@ namespace KokoEngine
         protected IInputManager Input => Engine.Instance.InputManager;
         protected IScreenManager Screen => Engine.Instance.ScreenManager;
         protected ITimeManager Time => Engine.Instance.TimeManager;
+        protected IDebugManager Debug => Engine.Instance.DebugManager;
 
         internal Component() { }
 

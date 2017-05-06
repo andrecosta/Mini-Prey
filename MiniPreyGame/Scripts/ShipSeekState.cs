@@ -12,7 +12,6 @@ class ShipSeekState : State
     public override void OnEnterState()
     {
         base.OnEnterState();
-        Debug.Log("SEEK STATE");
 
         _ship.Seek.target = _ship.Target.Transform;
         _ship.Seek.Enabled = true;

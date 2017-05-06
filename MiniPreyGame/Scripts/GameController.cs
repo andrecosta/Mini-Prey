@@ -6,10 +6,8 @@ using KokoEngine;
 public class GameController : Behaviour
 {
     // Properties populated from setup
-    public ISprite PlanetType1Sprite { get; set; }
-    public ISprite PlanetType2Sprite { get; set; }
-    public ISprite PlanetSprite { get; set; }
     public ISprite ShipSprite { get; set; }
+    public ISprite OutlineSprite { get; set; }
     public Font PlanetPopulationFont { get; set; }
     public Player[] Players { get; set; }
     public Planet.Type[] PlanetTypes { get; set; }
@@ -54,17 +52,21 @@ public class GameController : Behaviour
 
     protected override void Update()
     {
-        
+        if (Input.GetActionDown("ToggleFullScreen"))
+            Screen.IsFullScreen = !Screen.IsFullScreen;
+
+        if (Input.GetActionDown("ToggleDebugConsole"))
+            Debug.Toggle();
     }
 
     private void CreatePlanets()
     {
         CreatePlanet(new Vector2(100, 100), Players[0], 0, 1, 15);
-        CreatePlanet(new Vector2(100, 400), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(100, 400), Players[2], 0, 2, 5);
         CreatePlanet(new Vector2(300, 200), Players[2], 0, 0, 5);
-        CreatePlanet(new Vector2(300, 500), Players[2], 0, 0, 5);
-        CreatePlanet(new Vector2(500, 300), Players[2], 0, 0, 5);
-        CreatePlanet(new Vector2(500, 600), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(300, 500), Players[2], 1, 1, 5);
+        CreatePlanet(new Vector2(500, 300), Players[2], 1, 2, 5);
+        CreatePlanet(new Vector2(500, 600), Players[2], 1, 0, 5);
         CreatePlanet(new Vector2(Screen.Width - 100, 100), Players[1], 0, 1, 10);
         CreatePlanet(new Vector2(Screen.Width - 100, 400), Players[1], 0, 1, 10);
         CreatePlanet(new Vector2(Screen.Width - 300, 200), Players[2], 0, 0, 5);
@@ -84,13 +86,13 @@ public class GameController : Behaviour
 
         // Add SpriteRenderer component
         var sr = planet.AddComponent<SpriteRenderer>();
-        sr.Sprite = PlanetSprite;
+        sr.Sprite = planet.CurrentUpgrade.Sprite;
         sr.Color = owner.TeamColor;
 
         // Add TextRenderer component
         var tr = planet.AddComponent<TextRenderer>();
         tr.Font = PlanetPopulationFont;
-        tr.Offset = new Vector2(0, -40);
+        tr.Offset = new Vector2(0, -54);
         tr.Size = 0.75f;
 
         // Bind callbacks

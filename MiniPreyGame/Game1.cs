@@ -86,7 +86,7 @@ namespace MiniPreyGame
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(new Color(29, 29, 29));
+            GraphicsDevice.Clear(new Color(35, 35, 35));
             _spriteBatch.Begin(SpriteSortMode.BackToFront);
 
             _engine.Render();
@@ -108,24 +108,29 @@ namespace MiniPreyGame
             assetManager.LoadTextureHandler += LoadTexture;
             assetManager.LoadAudioClipHandler += LoadSoundEffect;
             assetManager.LoadFontHandler += LoadSpriteFont;
+            screenManager.ResolutionUpdateHandler += UpdateGraphicsSettings;
             renderManager.RenderSpriteHandler += DrawSprite;
             renderManager.RenderTextHandler += DrawText;
             renderManager.RenderLineHandler += DrawLine;
-            //renderManager.RenderRectangleHandler += DrawRectangle;
+            renderManager.RenderRectangleHandler += DrawRectangle;
 
             // ------ MonoGame options ------
 
             // Set graphics options
             _graphics = new GraphicsDeviceManager(this);
-            _graphics.PreferredBackBufferWidth = screenManager.CurrentResolution.Width;
-            _graphics.PreferredBackBufferHeight = screenManager.CurrentResolution.Height;
-            _graphics.IsFullScreen = screenManager.IsFullscreen;
-
+            UpdateGraphicsSettings(screenManager);
+            
             // Set content root directory
             Content.RootDirectory = assetManager.RootDirectory;
         }
 
-        #endregion
+        void UpdateGraphicsSettings(IScreenManager screenManager)
+        {
+            _graphics.PreferredBackBufferWidth = screenManager.CurrentResolution.Width;
+            _graphics.PreferredBackBufferHeight = screenManager.CurrentResolution.Height;
+            _graphics.IsFullScreen = screenManager.IsFullScreen;
+            _graphics.ApplyChanges();
+        }
 
         void LoadTexture(KokoEngine.Texture2D asset)
         {
@@ -162,19 +167,16 @@ namespace MiniPreyGame
             _spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, color, rotation, origin, SpriteEffects.None, layerDepth);
         }
 
-        void DrawText(ITextRenderer tr)
+        void DrawText(Font font, string text, KokoEngine.Vector2 position, KokoEngine.Color color, float alignmentOffset, float rotation, float scale, float layer)
         {
             // Parameters of draw call
-            SpriteFont font = tr.Font.ToMonoSpriteFont();
-            string text = tr.Text;
-            Vector2 position = (tr.Transform.Position + tr.Offset).ToMonoVector2();
-            Color color = tr.Color.ToMonoColor();
-            float rotation = tr.Transform.Rotation;
-            Vector2 origin = font.MeasureString(text) / 2f;
-            float scale = tr.Size;
+            SpriteFont font_ = font.ToMonoSpriteFont();
+            Vector2 position_ = position.ToMonoVector2();
+            Color color_ = color.ToMonoColor();
+            Vector2 origin = font_.MeasureString(text) * alignmentOffset;
 
             // Draw call
-            _spriteBatch.DrawString(font, text, position, color, rotation, origin, scale, SpriteEffects.None, 0.5f);
+            _spriteBatch.DrawString(font_, text, position_, color_, rotation, origin, scale, SpriteEffects.None, layer);
         }
 
         void DrawLine(ILineRenderer lr)
@@ -185,11 +187,21 @@ namespace MiniPreyGame
             float angle = (float)Math.Atan2(edge.Y, edge.X);
             Color color = lr.Color.ToMonoColor();
             int size = lr.Size;
+            Rectangle destinationRectangle = new Rectangle((int) start.X, (int) start.Y, (int) edge.Length(), size);
 
             // Draw call
-            _spriteBatch.Draw(_dummyTexture, new Rectangle((int)start.X, (int)start.Y, (int)edge.Length(), size), null,
-                color, angle, new Vector2(0, 0), SpriteEffects.None, 0.6f);
+            _spriteBatch.Draw(_dummyTexture, destinationRectangle, null, color, angle, new Vector2(0, 0), SpriteEffects.None, 0.6f);
         }
+
+        void DrawRectangle(KokoEngine.Rect rect, KokoEngine.Color color, float layer)
+        {
+            Rectangle destinationRectangle = rect.ToMonoRectangle();
+            Color color_ = color.ToMonoColor();
+
+            // Draw call
+            _spriteBatch.Draw(_dummyTexture, destinationRectangle, null, color_, 0, new Vector2(0, 0), SpriteEffects.None, layer);
+        }
+
 
         /*void RenderCallback(ISceneManager sceneManager)
         {
@@ -266,5 +278,7 @@ namespace MiniPreyGame
                 }
             }*/
         }
+
+        #endregion
     }
 }

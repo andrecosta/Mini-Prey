@@ -21,12 +21,7 @@ namespace KokoEngine
         /// Whether the GameObject is active or not.
         /// </summary>
         bool IsActive { get; }
-
-        /// <summary>
-        /// The Scene this GameObject belongs to.
-        /// </summary>
-        IScene Scene { get; }
-
+        
         /// <summary>
         /// Adds a new component of type T to this GameObject.
         /// </summary>

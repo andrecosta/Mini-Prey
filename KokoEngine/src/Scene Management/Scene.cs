@@ -2,12 +2,13 @@
 
 namespace KokoEngine
 {
-    public class Scene : IScene
+    public class Scene : ISceneInternal
     {
         public string Name { get; }
 
-        private readonly List<IGameObject> _rootGameObjects = new List<IGameObject>();
-        private readonly List<IGameObject> _pendingGameObjects = new List<IGameObject>();
+        List<IGameObject> ISceneInternal.GameObjects { get; } = new List<IGameObject>();
+        List<IGameObject> ISceneInternal.GameObjectsPendingCreation { get; } = new List<IGameObject>();
+        List<IGameObject> ISceneInternal.GameObjectsPendingDestruction { get; } = new List<IGameObject>();
 
         public Scene(string name)
         {
@@ -17,12 +18,25 @@ namespace KokoEngine
         public IGameObject CreateGameObject(string name)
         {
             GameObject go = new GameObject(name, this);
-            _pendingGameObjects.Add(go);
+            (this as ISceneInternal).GameObjectsPendingCreation.Add(go);
 
             return go;
         }
 
-        public List<IGameObject> GetRootGameObjects() => _rootGameObjects;
-        public List<IGameObject> GetPendingGameObjects() => _pendingGameObjects;
+        public T CreateGameObject<T>(string name, Vector2 position) where T : IComponent, new()
+        {
+            IGameObject go = CreateGameObject(name);
+            go.Transform.Position = position;
+
+            return go.AddComponent<T>();
+        }
+
+        void ISceneInternal.DestroyGameObject(IGameObject go)
+        {
+            // Disable components
+
+            // Remove the GameObject from the scene
+            (this as ISceneInternal).GameObjectsPendingDestruction.Add(go);
+        }
     }
 }

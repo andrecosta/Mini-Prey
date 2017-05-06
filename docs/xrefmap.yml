@@ -490,6 +490,18 @@ references:
   commentId: Overload:KokoEngine.Behaviour.Awake
   fullName: KokoEngine.Behaviour.Awake
   nameWithType: Behaviour.Awake
+- uid: KokoEngine.Behaviour.Destroy(KokoEngine.IGameObject)
+  name: Destroy(IGameObject)
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_Destroy_KokoEngine_IGameObject_
+  commentId: M:KokoEngine.Behaviour.Destroy(KokoEngine.IGameObject)
+  fullName: KokoEngine.Behaviour.Destroy(KokoEngine.IGameObject)
+  nameWithType: Behaviour.Destroy(IGameObject)
+- uid: KokoEngine.Behaviour.Destroy*
+  name: Destroy
+  href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_Destroy_
+  commentId: Overload:KokoEngine.Behaviour.Destroy
+  fullName: KokoEngine.Behaviour.Destroy
+  nameWithType: Behaviour.Destroy
 - uid: KokoEngine.Behaviour.Enabled
   name: Enabled
   href: api/KokoEngine.Behaviour.html#KokoEngine_Behaviour_Enabled
@@ -759,18 +771,24 @@ references:
   commentId: T:KokoEngine.Color
   fullName: KokoEngine.Color
   nameWithType: Color
-- uid: KokoEngine.Color.#ctor(System.Int32,System.Int32,System.Int32)
-  name: Color(Int32, Int32, Int32)
-  href: api/KokoEngine.Color.html#KokoEngine_Color__ctor_System_Int32_System_Int32_System_Int32_
-  commentId: M:KokoEngine.Color.#ctor(System.Int32,System.Int32,System.Int32)
-  fullName: KokoEngine.Color.Color(System.Int32, System.Int32, System.Int32)
-  nameWithType: Color.Color(Int32, Int32, Int32)
+- uid: KokoEngine.Color.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  name: Color(Int32, Int32, Int32, Int32)
+  href: api/KokoEngine.Color.html#KokoEngine_Color__ctor_System_Int32_System_Int32_System_Int32_System_Int32_
+  commentId: M:KokoEngine.Color.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)
+  fullName: KokoEngine.Color.Color(System.Int32, System.Int32, System.Int32, System.Int32)
+  nameWithType: Color.Color(Int32, Int32, Int32, Int32)
 - uid: KokoEngine.Color.#ctor*
   name: Color
   href: api/KokoEngine.Color.html#KokoEngine_Color__ctor_
   commentId: Overload:KokoEngine.Color.#ctor
   fullName: KokoEngine.Color.Color
   nameWithType: Color.Color
+- uid: KokoEngine.Color.A
+  name: A
+  href: api/KokoEngine.Color.html#KokoEngine_Color_A
+  commentId: F:KokoEngine.Color.A
+  fullName: KokoEngine.Color.A
+  nameWithType: Color.A
 - uid: KokoEngine.Color.B
   name: B
   href: api/KokoEngine.Color.html#KokoEngine_Color_B
@@ -789,6 +807,18 @@ references:
   commentId: Overload:KokoEngine.Color.Black
   fullName: KokoEngine.Color.Black
   nameWithType: Color.Black
+- uid: KokoEngine.Color.BlackTransparent
+  name: BlackTransparent
+  href: api/KokoEngine.Color.html#KokoEngine_Color_BlackTransparent
+  commentId: P:KokoEngine.Color.BlackTransparent
+  fullName: KokoEngine.Color.BlackTransparent
+  nameWithType: Color.BlackTransparent
+- uid: KokoEngine.Color.BlackTransparent*
+  name: BlackTransparent
+  href: api/KokoEngine.Color.html#KokoEngine_Color_BlackTransparent_
+  commentId: Overload:KokoEngine.Color.BlackTransparent
+  fullName: KokoEngine.Color.BlackTransparent
+  nameWithType: Color.BlackTransparent
 - uid: KokoEngine.Color.Blue
   name: Blue
   href: api/KokoEngine.Color.html#KokoEngine_Color_Blue
@@ -894,6 +924,18 @@ references:
   fullName.vb: KokoEngine.Component.AddComponent(Of T)()
   nameWithType: Component.AddComponent<T>()
   nameWithType.vb: Component.AddComponent(Of T)()
+- uid: KokoEngine.Component.Debug
+  name: Debug
+  href: api/KokoEngine.Component.html#KokoEngine_Component_Debug
+  commentId: P:KokoEngine.Component.Debug
+  fullName: KokoEngine.Component.Debug
+  nameWithType: Component.Debug
+- uid: KokoEngine.Component.Debug*
+  name: Debug
+  href: api/KokoEngine.Component.html#KokoEngine_Component_Debug_
+  commentId: Overload:KokoEngine.Component.Debug
+  fullName: KokoEngine.Component.Debug
+  nameWithType: Component.Debug
 - uid: KokoEngine.Component.GameObject
   name: GameObject
   href: api/KokoEngine.Component.html#KokoEngine_Component_GameObject
@@ -1023,18 +1065,76 @@ references:
   commentId: Overload:KokoEngine.Debug.Log
   fullName: KokoEngine.Debug.Log
   nameWithType: Debug.Log
+- uid: KokoEngine.DebugManager
+  name: DebugManager
+  href: api/KokoEngine.DebugManager.html
+  commentId: T:KokoEngine.DebugManager
+  fullName: KokoEngine.DebugManager
+  nameWithType: DebugManager
+- uid: KokoEngine.DebugManager.IsOpen
+  name: IsOpen
+  href: api/KokoEngine.DebugManager.html#KokoEngine_DebugManager_IsOpen
+  commentId: P:KokoEngine.DebugManager.IsOpen
+  fullName: KokoEngine.DebugManager.IsOpen
+  nameWithType: DebugManager.IsOpen
+- uid: KokoEngine.DebugManager.IsOpen*
+  name: IsOpen
+  href: api/KokoEngine.DebugManager.html#KokoEngine_DebugManager_IsOpen_
+  commentId: Overload:KokoEngine.DebugManager.IsOpen
+  fullName: KokoEngine.DebugManager.IsOpen
+  nameWithType: DebugManager.IsOpen
+- uid: KokoEngine.DebugManager.KokoEngine#IDebugManager#ConsoleFont
+  name: IDebugManager.ConsoleFont
+  href: api/KokoEngine.DebugManager.html#KokoEngine_DebugManager_KokoEngine_IDebugManager_ConsoleFont
+  commentId: P:KokoEngine.DebugManager.KokoEngine#IDebugManager#ConsoleFont
+  name.vb: KokoEngine.IDebugManager.ConsoleFont
+  fullName: KokoEngine.DebugManager.KokoEngine.IDebugManager.ConsoleFont
+  nameWithType: DebugManager.IDebugManager.ConsoleFont
+  nameWithType.vb: DebugManager.KokoEngine.IDebugManager.ConsoleFont
+- uid: KokoEngine.DebugManager.KokoEngine#IDebugManager#ConsoleFont*
+  name: IDebugManager.ConsoleFont
+  href: api/KokoEngine.DebugManager.html#KokoEngine_DebugManager_KokoEngine_IDebugManager_ConsoleFont_
+  commentId: Overload:KokoEngine.DebugManager.KokoEngine#IDebugManager#ConsoleFont
+  name.vb: KokoEngine.IDebugManager.ConsoleFont
+  fullName: KokoEngine.DebugManager.KokoEngine.IDebugManager.ConsoleFont
+  nameWithType: DebugManager.IDebugManager.ConsoleFont
+  nameWithType.vb: DebugManager.KokoEngine.IDebugManager.ConsoleFont
+- uid: KokoEngine.DebugManager.Log(System.String)
+  name: Log(String)
+  href: api/KokoEngine.DebugManager.html#KokoEngine_DebugManager_Log_System_String_
+  commentId: M:KokoEngine.DebugManager.Log(System.String)
+  fullName: KokoEngine.DebugManager.Log(System.String)
+  nameWithType: DebugManager.Log(String)
+- uid: KokoEngine.DebugManager.Log*
+  name: Log
+  href: api/KokoEngine.DebugManager.html#KokoEngine_DebugManager_Log_
+  commentId: Overload:KokoEngine.DebugManager.Log
+  fullName: KokoEngine.DebugManager.Log
+  nameWithType: DebugManager.Log
+- uid: KokoEngine.DebugManager.Toggle
+  name: Toggle()
+  href: api/KokoEngine.DebugManager.html#KokoEngine_DebugManager_Toggle
+  commentId: M:KokoEngine.DebugManager.Toggle
+  fullName: KokoEngine.DebugManager.Toggle()
+  nameWithType: DebugManager.Toggle()
+- uid: KokoEngine.DebugManager.Toggle*
+  name: Toggle
+  href: api/KokoEngine.DebugManager.html#KokoEngine_DebugManager_Toggle_
+  commentId: Overload:KokoEngine.DebugManager.Toggle
+  fullName: KokoEngine.DebugManager.Toggle
+  nameWithType: DebugManager.Toggle
 - uid: KokoEngine.Engine
   name: Engine
   href: api/KokoEngine.Engine.html
   commentId: T:KokoEngine.Engine
   fullName: KokoEngine.Engine
   nameWithType: Engine
-- uid: KokoEngine.Engine.#ctor(KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.IScreenManager,KokoEngine.ITimeManager,KokoEngine.ISceneManager,KokoEngine.IRenderManager)
-  name: Engine(IAssetManager, IInputManager, IScreenManager, ITimeManager, ISceneManager, IRenderManager)
-  href: api/KokoEngine.Engine.html#KokoEngine_Engine__ctor_KokoEngine_IAssetManager_KokoEngine_IInputManager_KokoEngine_IScreenManager_KokoEngine_ITimeManager_KokoEngine_ISceneManager_KokoEngine_IRenderManager_
-  commentId: M:KokoEngine.Engine.#ctor(KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.IScreenManager,KokoEngine.ITimeManager,KokoEngine.ISceneManager,KokoEngine.IRenderManager)
-  fullName: KokoEngine.Engine.Engine(KokoEngine.IAssetManager, KokoEngine.IInputManager, KokoEngine.IScreenManager, KokoEngine.ITimeManager, KokoEngine.ISceneManager, KokoEngine.IRenderManager)
-  nameWithType: Engine.Engine(IAssetManager, IInputManager, IScreenManager, ITimeManager, ISceneManager, IRenderManager)
+- uid: KokoEngine.Engine.#ctor(KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.IScreenManager,KokoEngine.ITimeManager,KokoEngine.ISceneManager,KokoEngine.IRenderManager,KokoEngine.IDebugManager)
+  name: Engine(IAssetManager, IInputManager, IScreenManager, ITimeManager, ISceneManager, IRenderManager, IDebugManager)
+  href: api/KokoEngine.Engine.html#KokoEngine_Engine__ctor_KokoEngine_IAssetManager_KokoEngine_IInputManager_KokoEngine_IScreenManager_KokoEngine_ITimeManager_KokoEngine_ISceneManager_KokoEngine_IRenderManager_KokoEngine_IDebugManager_
+  commentId: M:KokoEngine.Engine.#ctor(KokoEngine.IAssetManager,KokoEngine.IInputManager,KokoEngine.IScreenManager,KokoEngine.ITimeManager,KokoEngine.ISceneManager,KokoEngine.IRenderManager,KokoEngine.IDebugManager)
+  fullName: KokoEngine.Engine.Engine(KokoEngine.IAssetManager, KokoEngine.IInputManager, KokoEngine.IScreenManager, KokoEngine.ITimeManager, KokoEngine.ISceneManager, KokoEngine.IRenderManager, KokoEngine.IDebugManager)
+  nameWithType: Engine.Engine(IAssetManager, IInputManager, IScreenManager, ITimeManager, ISceneManager, IRenderManager, IDebugManager)
 - uid: KokoEngine.Engine.#ctor*
   name: Engine
   href: api/KokoEngine.Engine.html#KokoEngine_Engine__ctor_
@@ -1347,18 +1447,6 @@ references:
   commentId: Overload:KokoEngine.GameObject.IsActive
   fullName: KokoEngine.GameObject.IsActive
   nameWithType: GameObject.IsActive
-- uid: KokoEngine.GameObject.Scene
-  name: Scene
-  href: api/KokoEngine.GameObject.html#KokoEngine_GameObject_Scene
-  commentId: P:KokoEngine.GameObject.Scene
-  fullName: KokoEngine.GameObject.Scene
-  nameWithType: GameObject.Scene
-- uid: KokoEngine.GameObject.Scene*
-  name: Scene
-  href: api/KokoEngine.GameObject.html#KokoEngine_GameObject_Scene_
-  commentId: Overload:KokoEngine.GameObject.Scene
-  fullName: KokoEngine.GameObject.Scene
-  nameWithType: GameObject.Scene
 - uid: KokoEngine.GameObject.SetActive(System.Boolean)
   name: SetActive(Boolean)
   href: api/KokoEngine.GameObject.html#KokoEngine_GameObject_SetActive_System_Boolean_
@@ -2058,6 +2146,60 @@ references:
   commentId: Overload:KokoEngine.IComponent.Transform
   fullName: KokoEngine.IComponent.Transform
   nameWithType: IComponent.Transform
+- uid: KokoEngine.IDebugManager
+  name: IDebugManager
+  href: api/KokoEngine.IDebugManager.html
+  commentId: T:KokoEngine.IDebugManager
+  fullName: KokoEngine.IDebugManager
+  nameWithType: IDebugManager
+- uid: KokoEngine.IDebugManager.ConsoleFont
+  name: ConsoleFont
+  href: api/KokoEngine.IDebugManager.html#KokoEngine_IDebugManager_ConsoleFont
+  commentId: P:KokoEngine.IDebugManager.ConsoleFont
+  fullName: KokoEngine.IDebugManager.ConsoleFont
+  nameWithType: IDebugManager.ConsoleFont
+- uid: KokoEngine.IDebugManager.ConsoleFont*
+  name: ConsoleFont
+  href: api/KokoEngine.IDebugManager.html#KokoEngine_IDebugManager_ConsoleFont_
+  commentId: Overload:KokoEngine.IDebugManager.ConsoleFont
+  fullName: KokoEngine.IDebugManager.ConsoleFont
+  nameWithType: IDebugManager.ConsoleFont
+- uid: KokoEngine.IDebugManager.IsOpen
+  name: IsOpen
+  href: api/KokoEngine.IDebugManager.html#KokoEngine_IDebugManager_IsOpen
+  commentId: P:KokoEngine.IDebugManager.IsOpen
+  fullName: KokoEngine.IDebugManager.IsOpen
+  nameWithType: IDebugManager.IsOpen
+- uid: KokoEngine.IDebugManager.IsOpen*
+  name: IsOpen
+  href: api/KokoEngine.IDebugManager.html#KokoEngine_IDebugManager_IsOpen_
+  commentId: Overload:KokoEngine.IDebugManager.IsOpen
+  fullName: KokoEngine.IDebugManager.IsOpen
+  nameWithType: IDebugManager.IsOpen
+- uid: KokoEngine.IDebugManager.Log(System.String)
+  name: Log(String)
+  href: api/KokoEngine.IDebugManager.html#KokoEngine_IDebugManager_Log_System_String_
+  commentId: M:KokoEngine.IDebugManager.Log(System.String)
+  fullName: KokoEngine.IDebugManager.Log(System.String)
+  nameWithType: IDebugManager.Log(String)
+- uid: KokoEngine.IDebugManager.Log*
+  name: Log
+  href: api/KokoEngine.IDebugManager.html#KokoEngine_IDebugManager_Log_
+  commentId: Overload:KokoEngine.IDebugManager.Log
+  fullName: KokoEngine.IDebugManager.Log
+  nameWithType: IDebugManager.Log
+- uid: KokoEngine.IDebugManager.Toggle
+  name: Toggle()
+  href: api/KokoEngine.IDebugManager.html#KokoEngine_IDebugManager_Toggle
+  commentId: M:KokoEngine.IDebugManager.Toggle
+  fullName: KokoEngine.IDebugManager.Toggle()
+  nameWithType: IDebugManager.Toggle()
+- uid: KokoEngine.IDebugManager.Toggle*
+  name: Toggle
+  href: api/KokoEngine.IDebugManager.html#KokoEngine_IDebugManager_Toggle_
+  commentId: Overload:KokoEngine.IDebugManager.Toggle
+  fullName: KokoEngine.IDebugManager.Toggle
+  nameWithType: IDebugManager.Toggle
 - uid: KokoEngine.IEngine
   name: IEngine
   href: api/KokoEngine.IEngine.html
@@ -2241,18 +2383,6 @@ references:
   commentId: Overload:KokoEngine.IGameObject.IsActive
   fullName: KokoEngine.IGameObject.IsActive
   nameWithType: IGameObject.IsActive
-- uid: KokoEngine.IGameObject.Scene
-  name: Scene
-  href: api/KokoEngine.IGameObject.html#KokoEngine_IGameObject_Scene
-  commentId: P:KokoEngine.IGameObject.Scene
-  fullName: KokoEngine.IGameObject.Scene
-  nameWithType: IGameObject.Scene
-- uid: KokoEngine.IGameObject.Scene*
-  name: Scene
-  href: api/KokoEngine.IGameObject.html#KokoEngine_IGameObject_Scene_
-  commentId: Overload:KokoEngine.IGameObject.Scene
-  fullName: KokoEngine.IGameObject.Scene
-  nameWithType: IGameObject.Scene
 - uid: KokoEngine.IGameObject.SetActive(System.Boolean)
   name: SetActive(Boolean)
   href: api/KokoEngine.IGameObject.html#KokoEngine_IGameObject_SetActive_System_Boolean_
@@ -3060,30 +3190,15 @@ references:
   commentId: Overload:KokoEngine.IScene.CreateGameObject
   fullName: KokoEngine.IScene.CreateGameObject
   nameWithType: IScene.CreateGameObject
-- uid: KokoEngine.IScene.GetPendingGameObjects
-  name: GetPendingGameObjects()
-  href: api/KokoEngine.IScene.html#KokoEngine_IScene_GetPendingGameObjects
-  commentId: M:KokoEngine.IScene.GetPendingGameObjects
-  fullName: KokoEngine.IScene.GetPendingGameObjects()
-  nameWithType: IScene.GetPendingGameObjects()
-- uid: KokoEngine.IScene.GetPendingGameObjects*
-  name: GetPendingGameObjects
-  href: api/KokoEngine.IScene.html#KokoEngine_IScene_GetPendingGameObjects_
-  commentId: Overload:KokoEngine.IScene.GetPendingGameObjects
-  fullName: KokoEngine.IScene.GetPendingGameObjects
-  nameWithType: IScene.GetPendingGameObjects
-- uid: KokoEngine.IScene.GetRootGameObjects
-  name: GetRootGameObjects()
-  href: api/KokoEngine.IScene.html#KokoEngine_IScene_GetRootGameObjects
-  commentId: M:KokoEngine.IScene.GetRootGameObjects
-  fullName: KokoEngine.IScene.GetRootGameObjects()
-  nameWithType: IScene.GetRootGameObjects()
-- uid: KokoEngine.IScene.GetRootGameObjects*
-  name: GetRootGameObjects
-  href: api/KokoEngine.IScene.html#KokoEngine_IScene_GetRootGameObjects_
-  commentId: Overload:KokoEngine.IScene.GetRootGameObjects
-  fullName: KokoEngine.IScene.GetRootGameObjects
-  nameWithType: IScene.GetRootGameObjects
+- uid: KokoEngine.IScene.CreateGameObject``1(System.String,KokoEngine.Vector2)
+  name: CreateGameObject<T>(String, Vector2)
+  href: api/KokoEngine.IScene.html#KokoEngine_IScene_CreateGameObject__1_System_String_KokoEngine_Vector2_
+  commentId: M:KokoEngine.IScene.CreateGameObject``1(System.String,KokoEngine.Vector2)
+  name.vb: CreateGameObject(Of T)(String, Vector2)
+  fullName: KokoEngine.IScene.CreateGameObject<T>(System.String, KokoEngine.Vector2)
+  fullName.vb: KokoEngine.IScene.CreateGameObject(Of T)(System.String, KokoEngine.Vector2)
+  nameWithType: IScene.CreateGameObject<T>(String, Vector2)
+  nameWithType.vb: IScene.CreateGameObject(Of T)(String, Vector2)
 - uid: KokoEngine.IScene.Name
   name: Name
   href: api/KokoEngine.IScene.html#KokoEngine_IScene_Name
@@ -3192,24 +3307,42 @@ references:
   commentId: Overload:KokoEngine.IScreenManager.Height
   fullName: KokoEngine.IScreenManager.Height
   nameWithType: IScreenManager.Height
-- uid: KokoEngine.IScreenManager.IsFullscreen
-  name: IsFullscreen
-  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_IsFullscreen
-  commentId: P:KokoEngine.IScreenManager.IsFullscreen
-  fullName: KokoEngine.IScreenManager.IsFullscreen
-  nameWithType: IScreenManager.IsFullscreen
-- uid: KokoEngine.IScreenManager.IsFullscreen*
-  name: IsFullscreen
-  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_IsFullscreen_
-  commentId: Overload:KokoEngine.IScreenManager.IsFullscreen
-  fullName: KokoEngine.IScreenManager.IsFullscreen
-  nameWithType: IScreenManager.IsFullscreen
+- uid: KokoEngine.IScreenManager.IsFullScreen
+  name: IsFullScreen
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_IsFullScreen
+  commentId: P:KokoEngine.IScreenManager.IsFullScreen
+  fullName: KokoEngine.IScreenManager.IsFullScreen
+  nameWithType: IScreenManager.IsFullScreen
+- uid: KokoEngine.IScreenManager.IsFullScreen*
+  name: IsFullScreen
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_IsFullScreen_
+  commentId: Overload:KokoEngine.IScreenManager.IsFullScreen
+  fullName: KokoEngine.IScreenManager.IsFullScreen
+  nameWithType: IScreenManager.IsFullScreen
+- uid: KokoEngine.IScreenManager.ResolutionUpdateHandler
+  name: ResolutionUpdateHandler
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_ResolutionUpdateHandler
+  commentId: P:KokoEngine.IScreenManager.ResolutionUpdateHandler
+  fullName: KokoEngine.IScreenManager.ResolutionUpdateHandler
+  nameWithType: IScreenManager.ResolutionUpdateHandler
+- uid: KokoEngine.IScreenManager.ResolutionUpdateHandler*
+  name: ResolutionUpdateHandler
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_ResolutionUpdateHandler_
+  commentId: Overload:KokoEngine.IScreenManager.ResolutionUpdateHandler
+  fullName: KokoEngine.IScreenManager.ResolutionUpdateHandler
+  nameWithType: IScreenManager.ResolutionUpdateHandler
 - uid: KokoEngine.IScreenManager.SetResolution(KokoEngine.Resolution)
   name: SetResolution(Resolution)
   href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_SetResolution_KokoEngine_Resolution_
   commentId: M:KokoEngine.IScreenManager.SetResolution(KokoEngine.Resolution)
   fullName: KokoEngine.IScreenManager.SetResolution(KokoEngine.Resolution)
   nameWithType: IScreenManager.SetResolution(Resolution)
+- uid: KokoEngine.IScreenManager.SetResolution(System.Int32)
+  name: SetResolution(Int32)
+  href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_SetResolution_System_Int32_
+  commentId: M:KokoEngine.IScreenManager.SetResolution(System.Int32)
+  fullName: KokoEngine.IScreenManager.SetResolution(System.Int32)
+  nameWithType: IScreenManager.SetResolution(Int32)
 - uid: KokoEngine.IScreenManager.SetResolution(System.Int32,System.Int32)
   name: SetResolution(Int32, Int32)
   href: api/KokoEngine.IScreenManager.html#KokoEngine_IScreenManager_SetResolution_System_Int32_System_Int32_
@@ -3246,6 +3379,12 @@ references:
   commentId: Overload:KokoEngine.IScreenManager.Width
   fullName: KokoEngine.IScreenManager.Width
   nameWithType: IScreenManager.Width
+- uid: KokoEngine.IScreenManagerInternal
+  name: IScreenManagerInternal
+  href: api/KokoEngine.IScreenManagerInternal.html
+  commentId: T:KokoEngine.IScreenManagerInternal
+  fullName: KokoEngine.IScreenManagerInternal
+  nameWithType: IScreenManagerInternal
 - uid: KokoEngine.ISprite
   name: ISprite
   href: api/KokoEngine.ISprite.html
@@ -4261,30 +4400,15 @@ references:
   commentId: Overload:KokoEngine.Scene.CreateGameObject
   fullName: KokoEngine.Scene.CreateGameObject
   nameWithType: Scene.CreateGameObject
-- uid: KokoEngine.Scene.GetPendingGameObjects
-  name: GetPendingGameObjects()
-  href: api/KokoEngine.Scene.html#KokoEngine_Scene_GetPendingGameObjects
-  commentId: M:KokoEngine.Scene.GetPendingGameObjects
-  fullName: KokoEngine.Scene.GetPendingGameObjects()
-  nameWithType: Scene.GetPendingGameObjects()
-- uid: KokoEngine.Scene.GetPendingGameObjects*
-  name: GetPendingGameObjects
-  href: api/KokoEngine.Scene.html#KokoEngine_Scene_GetPendingGameObjects_
-  commentId: Overload:KokoEngine.Scene.GetPendingGameObjects
-  fullName: KokoEngine.Scene.GetPendingGameObjects
-  nameWithType: Scene.GetPendingGameObjects
-- uid: KokoEngine.Scene.GetRootGameObjects
-  name: GetRootGameObjects()
-  href: api/KokoEngine.Scene.html#KokoEngine_Scene_GetRootGameObjects
-  commentId: M:KokoEngine.Scene.GetRootGameObjects
-  fullName: KokoEngine.Scene.GetRootGameObjects()
-  nameWithType: Scene.GetRootGameObjects()
-- uid: KokoEngine.Scene.GetRootGameObjects*
-  name: GetRootGameObjects
-  href: api/KokoEngine.Scene.html#KokoEngine_Scene_GetRootGameObjects_
-  commentId: Overload:KokoEngine.Scene.GetRootGameObjects
-  fullName: KokoEngine.Scene.GetRootGameObjects
-  nameWithType: Scene.GetRootGameObjects
+- uid: KokoEngine.Scene.CreateGameObject``1(System.String,KokoEngine.Vector2)
+  name: CreateGameObject<T>(String, Vector2)
+  href: api/KokoEngine.Scene.html#KokoEngine_Scene_CreateGameObject__1_System_String_KokoEngine_Vector2_
+  commentId: M:KokoEngine.Scene.CreateGameObject``1(System.String,KokoEngine.Vector2)
+  name.vb: CreateGameObject(Of T)(String, Vector2)
+  fullName: KokoEngine.Scene.CreateGameObject<T>(System.String, KokoEngine.Vector2)
+  fullName.vb: KokoEngine.Scene.CreateGameObject(Of T)(System.String, KokoEngine.Vector2)
+  nameWithType: Scene.CreateGameObject<T>(String, Vector2)
+  nameWithType.vb: Scene.CreateGameObject(Of T)(String, Vector2)
 - uid: KokoEngine.Scene.Name
   name: Name
   href: api/KokoEngine.Scene.html#KokoEngine_Scene_Name
@@ -4435,24 +4559,42 @@ references:
   commentId: Overload:KokoEngine.ScreenManager.Height
   fullName: KokoEngine.ScreenManager.Height
   nameWithType: ScreenManager.Height
-- uid: KokoEngine.ScreenManager.IsFullscreen
-  name: IsFullscreen
-  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_IsFullscreen
-  commentId: P:KokoEngine.ScreenManager.IsFullscreen
-  fullName: KokoEngine.ScreenManager.IsFullscreen
-  nameWithType: ScreenManager.IsFullscreen
-- uid: KokoEngine.ScreenManager.IsFullscreen*
-  name: IsFullscreen
-  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_IsFullscreen_
-  commentId: Overload:KokoEngine.ScreenManager.IsFullscreen
-  fullName: KokoEngine.ScreenManager.IsFullscreen
-  nameWithType: ScreenManager.IsFullscreen
+- uid: KokoEngine.ScreenManager.IsFullScreen
+  name: IsFullScreen
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_IsFullScreen
+  commentId: P:KokoEngine.ScreenManager.IsFullScreen
+  fullName: KokoEngine.ScreenManager.IsFullScreen
+  nameWithType: ScreenManager.IsFullScreen
+- uid: KokoEngine.ScreenManager.IsFullScreen*
+  name: IsFullScreen
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_IsFullScreen_
+  commentId: Overload:KokoEngine.ScreenManager.IsFullScreen
+  fullName: KokoEngine.ScreenManager.IsFullScreen
+  nameWithType: ScreenManager.IsFullScreen
+- uid: KokoEngine.ScreenManager.ResolutionUpdateHandler
+  name: ResolutionUpdateHandler
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_ResolutionUpdateHandler
+  commentId: P:KokoEngine.ScreenManager.ResolutionUpdateHandler
+  fullName: KokoEngine.ScreenManager.ResolutionUpdateHandler
+  nameWithType: ScreenManager.ResolutionUpdateHandler
+- uid: KokoEngine.ScreenManager.ResolutionUpdateHandler*
+  name: ResolutionUpdateHandler
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_ResolutionUpdateHandler_
+  commentId: Overload:KokoEngine.ScreenManager.ResolutionUpdateHandler
+  fullName: KokoEngine.ScreenManager.ResolutionUpdateHandler
+  nameWithType: ScreenManager.ResolutionUpdateHandler
 - uid: KokoEngine.ScreenManager.SetResolution(KokoEngine.Resolution)
   name: SetResolution(Resolution)
   href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_SetResolution_KokoEngine_Resolution_
   commentId: M:KokoEngine.ScreenManager.SetResolution(KokoEngine.Resolution)
   fullName: KokoEngine.ScreenManager.SetResolution(KokoEngine.Resolution)
   nameWithType: ScreenManager.SetResolution(Resolution)
+- uid: KokoEngine.ScreenManager.SetResolution(System.Int32)
+  name: SetResolution(Int32)
+  href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_SetResolution_System_Int32_
+  commentId: M:KokoEngine.ScreenManager.SetResolution(System.Int32)
+  fullName: KokoEngine.ScreenManager.SetResolution(System.Int32)
+  nameWithType: ScreenManager.SetResolution(Int32)
 - uid: KokoEngine.ScreenManager.SetResolution(System.Int32,System.Int32)
   name: SetResolution(Int32, Int32)
   href: api/KokoEngine.ScreenManager.html#KokoEngine_ScreenManager_SetResolution_System_Int32_System_Int32_

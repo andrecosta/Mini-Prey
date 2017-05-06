@@ -56,6 +56,8 @@
     <Compile Include="src\Core\Interfaces\Components\ITextRenderer.cs" />
     <Compile Include="src\Core\Structs\Resolution.cs" />
     <Compile Include="src\Asset Management\Font.cs" />
+    <Compile Include="src\Debug Management\IDebugManager.cs" />
+    <Compile Include="src\Debug Management\IDebugManagerInternal.cs" />
     <Compile Include="src\IEngine.cs" />
     <Compile Include="src\Input Management\IInputManagerInternal.cs" />
     <Compile Include="src\Input Management\InputAxis.cs" />
@@ -68,14 +70,16 @@
     <Compile Include="src\Render Management\IRenderManagerInternal.cs" />
     <Compile Include="src\Render Management\IRenderManager.cs" />
     <Compile Include="src\Render Management\RenderManager.cs" />
+    <Compile Include="src\Scene Management\ISceneInternal.cs" />
     <Compile Include="src\Scene Management\ISceneManagerInternal.cs" />
+    <Compile Include="src\Screen Management\IScreenManagerInternal.cs" />
     <Compile Include="src\Screen Management\IScreenManager.cs" />
     <Compile Include="src\Screen Management\ScreenManager.cs" />
-    <Compile Include="src\Debug System\Debug.cs" />
+    <Compile Include="src\Debug Management\DebugManager.cs" />
     <Compile Include="src\Core\Structs\Rect.cs" />
     <Compile Include="src\Core\Interfaces\Components\IRigidbody.cs" />
     <Compile Include="src\Core\Interfaces\Components\ISpriteRenderer.cs" />
-    <Compile Include="src\Core\Interfaces\Components\IComponentInternal.cs" />
+    <Compile Include="src\Core\Interfaces\IComponentInternal.cs" />
     <Compile Include="src\Core\Interfaces\IGameObjectInternal.cs" />
     <Compile Include="src\Scene Management\IScene.cs" />
     <Compile Include="src\Asset Management\IAssetManager.cs" />
@@ -97,7 +101,7 @@
     <Compile Include="src\Core\Components\Colliders\BoxCollider.cs" />
     <Compile Include="src\Core\Components\Colliders\CircleCollider.cs" />
     <Compile Include="src\Core\Components\Collider.cs" />
-    <Compile Include="src\Core\Components\Component.cs" />
+    <Compile Include="src\Core\Component.cs" />
     <Compile Include="src\Core\Interfaces\Components\ITransform.cs" />
     <Compile Include="src\Core\Interfaces\Components\IBehaviour.cs" />
     <Compile Include="src\Core\Interfaces\Components\IAudioSource.cs" />
@@ -112,7 +116,7 @@
     <Compile Include="src\Core\Components\Behaviours\Steering Behaviours\Vehicle.cs" />
     <Compile Include="src\Core\Entity.cs" />
     <Compile Include="src\Core\GameObject.cs" />
-    <Compile Include="src\Core\Interfaces\Components\IComponent.cs" />
+    <Compile Include="src\Core\Interfaces\IComponent.cs" />
     <Compile Include="src\Core\Interfaces\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Asset Management\AssetManager.cs" />

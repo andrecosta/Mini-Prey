@@ -14,7 +14,6 @@ namespace MiniPreyGame
         public override void OnEnterState()
         {
             base.OnEnterState();
-            Debug.Log("PURSUIT STATE");
 
             _boid.Seek.Enabled = false;
             _boid.Flee.Enabled = false;

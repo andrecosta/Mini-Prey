@@ -7,16 +7,12 @@ namespace KokoEngine
     {
         public ITransform Transform { get; }
         public string Tag { get; set; }
-        public IScene Scene { get; private set; }
         public bool IsActive { get; private set; } = true;
-        IScene IGameObjectInternal.Scene
-        {
-            set { Scene = value; }
-        }
+        ISceneInternal IGameObjectInternal.Scene { get; set; }
 
         private readonly List<IComponent> _components = new List<IComponent>();
 
-        internal GameObject(string name, IScene scene)
+        internal GameObject(string name, ISceneInternal scene)
         {
             Name = name;
             (this as IGameObjectInternal).Scene = scene;

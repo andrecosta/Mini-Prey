@@ -13,13 +13,6 @@ namespace KokoEngine
         string Name { get; }
 
         IGameObject CreateGameObject(string name);
-
-        /// <summary>
-        /// Returns all the root GameObjects contained in the scene.
-        /// </summary>
-        /// <returns>List of GameObjects.</returns>
-        List<IGameObject> GetRootGameObjects();
-
-        List<IGameObject> GetPendingGameObjects();
+        T CreateGameObject<T>(string name, Vector2 position) where T : IComponent, new();
     }
 }

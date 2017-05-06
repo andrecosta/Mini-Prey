@@ -53,15 +53,14 @@ public class Ship : Behaviour
             Transform.Position += _velocity;
         }*/
 
-        if (Vector3.Distance(Transform.Position, Target.Transform.Position) <= 10)
+        if (Vector3.Distance(Transform.Position, Target.Transform.Position) <= 20)
         {
             Target.InsertShip(this);
-            GameObject.SetActive(false);
-            // TODO: Destroy!!!
+            Destroy(GameObject);
         }
     }
 
-    void OnDisable()
+    protected override void OnDisable()
     {
         GameController.Ships.Remove(this);
     }
@@ -69,7 +68,7 @@ public class Ship : Behaviour
     public void Kill()
     {
         Source.Population--;
-        //Destroy(gameObject);
+        Destroy(GameObject);
     }
 
     /*void OnTriggerEnter(Collider other)

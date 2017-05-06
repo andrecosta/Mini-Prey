@@ -2,11 +2,11 @@
 {
     internal interface IRenderManagerInternal : IRenderManager
     {
-        void RenderScene(IScene scene);
+        void RenderScene(ISceneInternal scene);
         void RenderSprite(ISpriteRenderer sr);
-        void RenderText(ITextRenderer tr);
+        void RenderText(Font font, string text, Vector2 position, Color color, float alignmentOffset, float rotation, float scale, float layer);
         void RenderLine(ILineRenderer lr);
-        void RenderRectangle(Rect rectangle, Color color);
+        void RenderRectangle(Rect rectangle, Color color, float layer);
         void RenderCircle(Vector2 position, float radius, Color color);
         void RenderRay(Vector2 position, float distance, Color color);
     }

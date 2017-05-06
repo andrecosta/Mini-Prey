@@ -155,40 +155,36 @@
               </table>
               
               
-              <a id="KokoEngine_IScene_GetPendingGameObjects_" data-uid="KokoEngine.IScene.GetPendingGameObjects*"></a>
-              <h4 id="KokoEngine_IScene_GetPendingGameObjects" data-uid="KokoEngine.IScene.GetPendingGameObjects">GetPendingGameObjects()</h4>
+              <a id="KokoEngine_IScene_CreateGameObject_" data-uid="KokoEngine.IScene.CreateGameObject*"></a>
+              <h4 id="KokoEngine_IScene_CreateGameObject__1_System_String_KokoEngine_Vector2_" data-uid="KokoEngine.IScene.CreateGameObject``1(System.String,KokoEngine.Vector2)">CreateGameObject&lt;T&gt;(String, Vector2)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">List&lt;IGameObject&gt; GetPendingGameObjects()</code></pre>
+                <pre><code class="lang-csharp hljs">T CreateGameObject&lt;T&gt;(string name, Vector2 position)where T : IComponent, new ()</code></pre>
               </div>
-              <h5 class="returns">Returns</h5>
+              <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
                     <th>Type</th>
+                    <th>Name</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="KokoEngine.IGameObject.html">IGameObject</a>&gt;</td>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">name</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="KokoEngine.Vector2.html">Vector2</a></td>
+                    <td><span class="parametername">position</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              
-              
-              <a id="KokoEngine_IScene_GetRootGameObjects_" data-uid="KokoEngine.IScene.GetRootGameObjects*"></a>
-              <h4 id="KokoEngine_IScene_GetRootGameObjects" data-uid="KokoEngine.IScene.GetRootGameObjects">GetRootGameObjects()</h4>
-              <div class="markdown level1 summary"><p>Returns all the root GameObjects contained in the scene.</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">List&lt;IGameObject&gt; GetRootGameObjects()</code></pre>
-              </div>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
@@ -199,9 +195,23 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="KokoEngine.IGameObject.html">IGameObject</a>&gt;</td>
-                    <td><p>List of GameObjects.</p>
-</td>
+                    <td><span class="xref">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>

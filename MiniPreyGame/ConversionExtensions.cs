@@ -43,7 +43,7 @@ namespace MiniPreyGame
 
         public static Color ToMonoColor(this KokoEngine.Color input)
         {
-            return new Color(input.R, input.G, input.B);
+            return new Color(input.R, input.G, input.B, input.A);
         }
 
         public static Texture2D ToMonoTexture2D(this KokoEngine.Texture2D input)
