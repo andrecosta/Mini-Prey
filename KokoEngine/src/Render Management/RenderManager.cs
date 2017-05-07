@@ -7,7 +7,7 @@ namespace KokoEngine
     {
         public Action<ISpriteRenderer> RenderSpriteHandler { get; set; }
         public Action<Font, string, Vector2, Color, float, float, float, float> RenderTextHandler { get; set; }
-        public Action<ILineRenderer> RenderLineHandler { get; set; }
+        public Action<Vector2, Vector2, Color, int> RenderLineHandler { get; set; }
         public Action<Rect, Color, float> RenderRectangleHandler { get; set; }
         public Action<Vector2, float, Color> RenderCircleHandler { get; set; }
         public Action<Vector2, float, Color> RenderRayHandler { get; set; }
@@ -29,9 +29,9 @@ namespace KokoEngine
             RenderTextHandler?.Invoke(font, text, position, color, alignmentOffset, rotation, scale, layer);
         }
 
-        void IRenderManagerInternal.RenderLine(ILineRenderer lr)
+        void IRenderManagerInternal.RenderLine(Vector2 start, Vector2 end, Color color, int size)
         {
-            RenderLineHandler?.Invoke(lr);
+            RenderLineHandler?.Invoke(start, end, color, size);
         }
 
         void IRenderManagerInternal.RenderRectangle(Rect rectangle, Color color, float layer)
@@ -63,7 +63,7 @@ namespace KokoEngine
 
                 ILineRenderer lr = component as ILineRenderer;
                 if (lr != null)
-                    RenderLineHandler?.Invoke(lr);
+                    RenderLineHandler?.Invoke(lr.Start, lr.End, lr.Color, lr.Size);
             }
 
             // Recursive call for all children GameObjects

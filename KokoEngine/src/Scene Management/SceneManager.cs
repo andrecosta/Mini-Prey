@@ -9,7 +9,6 @@ namespace KokoEngine
         private readonly Dictionary<string, ISceneInternal> _sceneMap = new Dictionary<string, ISceneInternal>();
         private ISceneInternal _activeScene;
         
-        // TODO: Build-time!
         public void AddScene(IScene scene)
         {
             _sceneMap.Add(scene.Name, scene as ISceneInternal);

@@ -7,7 +7,9 @@ public class GameController : Behaviour
 {
     // Properties populated from setup
     public ISprite ShipSprite { get; set; }
+    public ISprite ShotSprite { get; set; }
     public ISprite OutlineSprite { get; set; }
+    public ISprite RangeSprite { get; set; }
     public Font PlanetPopulationFont { get; set; }
     public Player[] Players { get; set; }
     public Planet.Type[] PlanetTypes { get; set; }
@@ -87,7 +89,6 @@ public class GameController : Behaviour
         // Add SpriteRenderer component
         var sr = planet.AddComponent<SpriteRenderer>();
         sr.Sprite = planet.CurrentUpgrade.Sprite;
-        sr.Color = owner.TeamColor;
 
         // Add TextRenderer component
         var tr = planet.AddComponent<TextRenderer>();
@@ -143,8 +144,8 @@ public class GameController : Behaviour
                 PlayerPopulations[p] += structure.Population;
 
             // Find population on the field
-            //int ownedCitizens = FindObjectsOfType<Ship>().Count(c => c.Owner == p);
-            //PlayerPopulations[p] += ownedCitizens;
+            int ownedCitizens = FindObjectsOfType<Ship>().Count(c => c.Owner == p);
+            PlayerPopulations[p] += ownedCitizens;
         }
 
         OnPopulationChange?.Invoke();

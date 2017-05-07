@@ -352,6 +352,90 @@
                   <div><a class="xref" href="KokoEngine.IComponent.html#KokoEngine_IComponent_AddComponent__1">IComponent.AddComponent&lt;T&gt;()</a></div>
               
               
+              <a id="KokoEngine_Component_FindObjectOfType_" data-uid="KokoEngine.Component.FindObjectOfType*"></a>
+              <h4 id="KokoEngine_Component_FindObjectOfType__1" data-uid="KokoEngine.Component.FindObjectOfType``1">FindObjectOfType&lt;T&gt;()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public T FindObjectOfType&lt;T&gt;()where T : IComponent</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="KokoEngine.IComponent.html#KokoEngine_IComponent_FindObjectOfType__1">IComponent.FindObjectOfType&lt;T&gt;()</a></div>
+              
+              
+              <a id="KokoEngine_Component_FindObjectsOfType_" data-uid="KokoEngine.Component.FindObjectsOfType*"></a>
+              <h4 id="KokoEngine_Component_FindObjectsOfType__1" data-uid="KokoEngine.Component.FindObjectsOfType``1">FindObjectsOfType&lt;T&gt;()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;T&gt; FindObjectsOfType&lt;T&gt;()where T : IComponent</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="KokoEngine.IComponent.html#KokoEngine_IComponent_FindObjectsOfType__1">IComponent.FindObjectsOfType&lt;T&gt;()</a></div>
+              
+              
               <a id="KokoEngine_Component_GetComponent_" data-uid="KokoEngine.Component.GetComponent*"></a>
               <h4 id="KokoEngine_Component_GetComponent__1" data-uid="KokoEngine.Component.GetComponent``1">GetComponent&lt;T&gt;()</h4>
               <div class="markdown level1 summary"></div>
@@ -395,12 +479,12 @@
               
               
               <a id="KokoEngine_Component_GetComponents_" data-uid="KokoEngine.Component.GetComponents*"></a>
-              <h4 id="KokoEngine_Component_GetComponents" data-uid="KokoEngine.Component.GetComponents">GetComponents()</h4>
+              <h4 id="KokoEngine_Component_GetComponents__1" data-uid="KokoEngine.Component.GetComponents``1">GetComponents&lt;T&gt;()</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public List&lt;IComponent&gt; GetComponents()</code></pre>
+                <pre><code class="lang-csharp hljs">public List&lt;T&gt; GetComponents&lt;T&gt;()where T : IComponent</code></pre>
               </div>
               <h5 class="returns">Returns</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -412,13 +496,28 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="KokoEngine.IComponent.html">IComponent</a>&gt;</td>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
               <h5 class="implements">Implements</h5>
-                  <div><a class="xref" href="KokoEngine.IComponent.html#KokoEngine_IComponent_GetComponents">IComponent.GetComponents()</a></div>
+                  <div><a class="xref" href="KokoEngine.IComponent.html#KokoEngine_IComponent_GetComponents__1">IComponent.GetComponents&lt;T&gt;()</a></div>
               
               
               <a id="KokoEngine_Component_Update_" data-uid="KokoEngine.Component.Update*"></a>

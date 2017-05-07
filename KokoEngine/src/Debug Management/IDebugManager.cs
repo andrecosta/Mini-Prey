@@ -7,5 +7,6 @@
 
         void Toggle();
         void Log(string message);
+        void DrawLine(Vector2 start, Vector2 end, Color color, int size);
     }
 }

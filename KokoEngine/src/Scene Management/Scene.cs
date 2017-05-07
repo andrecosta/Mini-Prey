@@ -33,10 +33,34 @@ namespace KokoEngine
 
         void ISceneInternal.DestroyGameObject(IGameObject go)
         {
-            // Disable components
-
             // Remove the GameObject from the scene
             (this as ISceneInternal).GameObjectsPendingDestruction.Add(go);
+        }
+
+        T ISceneInternal.FindObjectOfType<T>()
+        {
+            foreach (var go in (this as ISceneInternal).GameObjects)
+            {
+                var component = go.GetComponent<T>();
+                if (component != null)
+                    return component;
+            }
+
+            return default(T);
+        }
+
+        List<T> ISceneInternal.FindObjectsOfType<T>()
+        {
+            List<T> components = new List<T>();
+
+            foreach (var go in (this as ISceneInternal).GameObjects)
+            {
+                var component = go.GetComponent<T>();
+                if (component != null)
+                    components.Add(component);
+            }
+
+            return components;
         }
     }
 }

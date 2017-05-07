@@ -936,6 +936,36 @@ references:
   commentId: Overload:KokoEngine.Component.Debug
   fullName: KokoEngine.Component.Debug
   nameWithType: Component.Debug
+- uid: KokoEngine.Component.FindObjectOfType*
+  name: FindObjectOfType
+  href: api/KokoEngine.Component.html#KokoEngine_Component_FindObjectOfType_
+  commentId: Overload:KokoEngine.Component.FindObjectOfType
+  fullName: KokoEngine.Component.FindObjectOfType
+  nameWithType: Component.FindObjectOfType
+- uid: KokoEngine.Component.FindObjectOfType``1
+  name: FindObjectOfType<T>()
+  href: api/KokoEngine.Component.html#KokoEngine_Component_FindObjectOfType__1
+  commentId: M:KokoEngine.Component.FindObjectOfType``1
+  name.vb: FindObjectOfType(Of T)()
+  fullName: KokoEngine.Component.FindObjectOfType<T>()
+  fullName.vb: KokoEngine.Component.FindObjectOfType(Of T)()
+  nameWithType: Component.FindObjectOfType<T>()
+  nameWithType.vb: Component.FindObjectOfType(Of T)()
+- uid: KokoEngine.Component.FindObjectsOfType*
+  name: FindObjectsOfType
+  href: api/KokoEngine.Component.html#KokoEngine_Component_FindObjectsOfType_
+  commentId: Overload:KokoEngine.Component.FindObjectsOfType
+  fullName: KokoEngine.Component.FindObjectsOfType
+  nameWithType: Component.FindObjectsOfType
+- uid: KokoEngine.Component.FindObjectsOfType``1
+  name: FindObjectsOfType<T>()
+  href: api/KokoEngine.Component.html#KokoEngine_Component_FindObjectsOfType__1
+  commentId: M:KokoEngine.Component.FindObjectsOfType``1
+  name.vb: FindObjectsOfType(Of T)()
+  fullName: KokoEngine.Component.FindObjectsOfType<T>()
+  fullName.vb: KokoEngine.Component.FindObjectsOfType(Of T)()
+  nameWithType: Component.FindObjectsOfType<T>()
+  nameWithType.vb: Component.FindObjectsOfType(Of T)()
 - uid: KokoEngine.Component.GameObject
   name: GameObject
   href: api/KokoEngine.Component.html#KokoEngine_Component_GameObject
@@ -963,18 +993,21 @@ references:
   fullName.vb: KokoEngine.Component.GetComponent(Of T)()
   nameWithType: Component.GetComponent<T>()
   nameWithType.vb: Component.GetComponent(Of T)()
-- uid: KokoEngine.Component.GetComponents
-  name: GetComponents()
-  href: api/KokoEngine.Component.html#KokoEngine_Component_GetComponents
-  commentId: M:KokoEngine.Component.GetComponents
-  fullName: KokoEngine.Component.GetComponents()
-  nameWithType: Component.GetComponents()
 - uid: KokoEngine.Component.GetComponents*
   name: GetComponents
   href: api/KokoEngine.Component.html#KokoEngine_Component_GetComponents_
   commentId: Overload:KokoEngine.Component.GetComponents
   fullName: KokoEngine.Component.GetComponents
   nameWithType: Component.GetComponents
+- uid: KokoEngine.Component.GetComponents``1
+  name: GetComponents<T>()
+  href: api/KokoEngine.Component.html#KokoEngine_Component_GetComponents__1
+  commentId: M:KokoEngine.Component.GetComponents``1
+  name.vb: GetComponents(Of T)()
+  fullName: KokoEngine.Component.GetComponents<T>()
+  fullName.vb: KokoEngine.Component.GetComponents(Of T)()
+  nameWithType: Component.GetComponents<T>()
+  nameWithType.vb: Component.GetComponents(Of T)()
 - uid: KokoEngine.Component.Input
   name: Input
   href: api/KokoEngine.Component.html#KokoEngine_Component_Input
@@ -1071,6 +1104,18 @@ references:
   commentId: T:KokoEngine.DebugManager
   fullName: KokoEngine.DebugManager
   nameWithType: DebugManager
+- uid: KokoEngine.DebugManager.DrawLine(KokoEngine.Vector2,KokoEngine.Vector2,KokoEngine.Color,System.Int32)
+  name: DrawLine(Vector2, Vector2, Color, Int32)
+  href: api/KokoEngine.DebugManager.html#KokoEngine_DebugManager_DrawLine_KokoEngine_Vector2_KokoEngine_Vector2_KokoEngine_Color_System_Int32_
+  commentId: M:KokoEngine.DebugManager.DrawLine(KokoEngine.Vector2,KokoEngine.Vector2,KokoEngine.Color,System.Int32)
+  fullName: KokoEngine.DebugManager.DrawLine(KokoEngine.Vector2, KokoEngine.Vector2, KokoEngine.Color, System.Int32)
+  nameWithType: DebugManager.DrawLine(Vector2, Vector2, Color, Int32)
+- uid: KokoEngine.DebugManager.DrawLine*
+  name: DrawLine
+  href: api/KokoEngine.DebugManager.html#KokoEngine_DebugManager_DrawLine_
+  commentId: Overload:KokoEngine.DebugManager.DrawLine
+  fullName: KokoEngine.DebugManager.DrawLine
+  nameWithType: DebugManager.DrawLine
 - uid: KokoEngine.DebugManager.IsOpen
   name: IsOpen
   href: api/KokoEngine.DebugManager.html#KokoEngine_DebugManager_IsOpen
@@ -1435,6 +1480,15 @@ references:
   commentId: Overload:KokoEngine.GameObject.GetComponents
   fullName: KokoEngine.GameObject.GetComponents
   nameWithType: GameObject.GetComponents
+- uid: KokoEngine.GameObject.GetComponents``1
+  name: GetComponents<T>()
+  href: api/KokoEngine.GameObject.html#KokoEngine_GameObject_GetComponents__1
+  commentId: M:KokoEngine.GameObject.GetComponents``1
+  name.vb: GetComponents(Of T)()
+  fullName: KokoEngine.GameObject.GetComponents<T>()
+  fullName.vb: KokoEngine.GameObject.GetComponents(Of T)()
+  nameWithType: GameObject.GetComponents<T>()
+  nameWithType.vb: GameObject.GetComponents(Of T)()
 - uid: KokoEngine.GameObject.IsActive
   name: IsActive
   href: api/KokoEngine.GameObject.html#KokoEngine_GameObject_IsActive
@@ -2095,6 +2149,36 @@ references:
   fullName.vb: KokoEngine.IComponent.AddComponent(Of T)()
   nameWithType: IComponent.AddComponent<T>()
   nameWithType.vb: IComponent.AddComponent(Of T)()
+- uid: KokoEngine.IComponent.FindObjectOfType*
+  name: FindObjectOfType
+  href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_FindObjectOfType_
+  commentId: Overload:KokoEngine.IComponent.FindObjectOfType
+  fullName: KokoEngine.IComponent.FindObjectOfType
+  nameWithType: IComponent.FindObjectOfType
+- uid: KokoEngine.IComponent.FindObjectOfType``1
+  name: FindObjectOfType<T>()
+  href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_FindObjectOfType__1
+  commentId: M:KokoEngine.IComponent.FindObjectOfType``1
+  name.vb: FindObjectOfType(Of T)()
+  fullName: KokoEngine.IComponent.FindObjectOfType<T>()
+  fullName.vb: KokoEngine.IComponent.FindObjectOfType(Of T)()
+  nameWithType: IComponent.FindObjectOfType<T>()
+  nameWithType.vb: IComponent.FindObjectOfType(Of T)()
+- uid: KokoEngine.IComponent.FindObjectsOfType*
+  name: FindObjectsOfType
+  href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_FindObjectsOfType_
+  commentId: Overload:KokoEngine.IComponent.FindObjectsOfType
+  fullName: KokoEngine.IComponent.FindObjectsOfType
+  nameWithType: IComponent.FindObjectsOfType
+- uid: KokoEngine.IComponent.FindObjectsOfType``1
+  name: FindObjectsOfType<T>()
+  href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_FindObjectsOfType__1
+  commentId: M:KokoEngine.IComponent.FindObjectsOfType``1
+  name.vb: FindObjectsOfType(Of T)()
+  fullName: KokoEngine.IComponent.FindObjectsOfType<T>()
+  fullName.vb: KokoEngine.IComponent.FindObjectsOfType(Of T)()
+  nameWithType: IComponent.FindObjectsOfType<T>()
+  nameWithType.vb: IComponent.FindObjectsOfType(Of T)()
 - uid: KokoEngine.IComponent.GameObject
   name: GameObject
   href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_GameObject
@@ -2122,18 +2206,21 @@ references:
   fullName.vb: KokoEngine.IComponent.GetComponent(Of T)()
   nameWithType: IComponent.GetComponent<T>()
   nameWithType.vb: IComponent.GetComponent(Of T)()
-- uid: KokoEngine.IComponent.GetComponents
-  name: GetComponents()
-  href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_GetComponents
-  commentId: M:KokoEngine.IComponent.GetComponents
-  fullName: KokoEngine.IComponent.GetComponents()
-  nameWithType: IComponent.GetComponents()
 - uid: KokoEngine.IComponent.GetComponents*
   name: GetComponents
   href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_GetComponents_
   commentId: Overload:KokoEngine.IComponent.GetComponents
   fullName: KokoEngine.IComponent.GetComponents
   nameWithType: IComponent.GetComponents
+- uid: KokoEngine.IComponent.GetComponents``1
+  name: GetComponents<T>()
+  href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_GetComponents__1
+  commentId: M:KokoEngine.IComponent.GetComponents``1
+  name.vb: GetComponents(Of T)()
+  fullName: KokoEngine.IComponent.GetComponents<T>()
+  fullName.vb: KokoEngine.IComponent.GetComponents(Of T)()
+  nameWithType: IComponent.GetComponents<T>()
+  nameWithType.vb: IComponent.GetComponents(Of T)()
 - uid: KokoEngine.IComponent.Transform
   name: Transform
   href: api/KokoEngine.IComponent.html#KokoEngine_IComponent_Transform
@@ -2164,6 +2251,18 @@ references:
   commentId: Overload:KokoEngine.IDebugManager.ConsoleFont
   fullName: KokoEngine.IDebugManager.ConsoleFont
   nameWithType: IDebugManager.ConsoleFont
+- uid: KokoEngine.IDebugManager.DrawLine(KokoEngine.Vector2,KokoEngine.Vector2,KokoEngine.Color,System.Int32)
+  name: DrawLine(Vector2, Vector2, Color, Int32)
+  href: api/KokoEngine.IDebugManager.html#KokoEngine_IDebugManager_DrawLine_KokoEngine_Vector2_KokoEngine_Vector2_KokoEngine_Color_System_Int32_
+  commentId: M:KokoEngine.IDebugManager.DrawLine(KokoEngine.Vector2,KokoEngine.Vector2,KokoEngine.Color,System.Int32)
+  fullName: KokoEngine.IDebugManager.DrawLine(KokoEngine.Vector2, KokoEngine.Vector2, KokoEngine.Color, System.Int32)
+  nameWithType: IDebugManager.DrawLine(Vector2, Vector2, Color, Int32)
+- uid: KokoEngine.IDebugManager.DrawLine*
+  name: DrawLine
+  href: api/KokoEngine.IDebugManager.html#KokoEngine_IDebugManager_DrawLine_
+  commentId: Overload:KokoEngine.IDebugManager.DrawLine
+  fullName: KokoEngine.IDebugManager.DrawLine
+  nameWithType: IDebugManager.DrawLine
 - uid: KokoEngine.IDebugManager.IsOpen
   name: IsOpen
   href: api/KokoEngine.IDebugManager.html#KokoEngine_IDebugManager_IsOpen
@@ -2371,6 +2470,15 @@ references:
   commentId: Overload:KokoEngine.IGameObject.GetComponents
   fullName: KokoEngine.IGameObject.GetComponents
   nameWithType: IGameObject.GetComponents
+- uid: KokoEngine.IGameObject.GetComponents``1
+  name: GetComponents<T>()
+  href: api/KokoEngine.IGameObject.html#KokoEngine_IGameObject_GetComponents__1
+  commentId: M:KokoEngine.IGameObject.GetComponents``1
+  name.vb: GetComponents(Of T)()
+  fullName: KokoEngine.IGameObject.GetComponents<T>()
+  fullName.vb: KokoEngine.IGameObject.GetComponents(Of T)()
+  nameWithType: IGameObject.GetComponents<T>()
+  nameWithType.vb: IGameObject.GetComponents(Of T)()
 - uid: KokoEngine.IGameObject.IsActive
   name: IsActive
   href: api/KokoEngine.IGameObject.html#KokoEngine_IGameObject_IsActive

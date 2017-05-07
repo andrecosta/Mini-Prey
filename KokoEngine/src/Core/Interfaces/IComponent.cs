@@ -35,6 +35,20 @@ namespace KokoEngine
         /// Proxy method which calls the <see cref="IGameObject.GetComponents"/> of the GameObject to which this component is attached.
         /// </summary>
         /// <returns>The components attached to the GameObject.</returns>
-        List<IComponent> GetComponents();
+        List<T> GetComponents<T>() where T : IComponent;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        List<T> FindObjectsOfType<T>() where T : IComponent;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        T FindObjectOfType<T>() where T : IComponent;
     }
 }

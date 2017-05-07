@@ -40,6 +40,11 @@ namespace KokoEngine
         /// <summary>
         /// Returns all the components attached to this GameObject.
         /// </summary>
+        List<T> GetComponents<T>() where T : IComponent;
+
+        /// <summary>
+        /// Returns all the components attached to this GameObject.
+        /// </summary>
         List<IComponent> GetComponents();
 
         /// <summary>
@@ -47,5 +52,6 @@ namespace KokoEngine
         /// </summary>
         /// <param name="active">The state to set.</param>
         void SetActive(bool active);
+
     }
 }

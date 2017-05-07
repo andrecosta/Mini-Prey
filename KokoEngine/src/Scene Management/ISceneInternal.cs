@@ -17,5 +17,8 @@ namespace KokoEngine
         /// <returns>List of GameObjects.</returns>
 
         void DestroyGameObject(IGameObject go);
+
+        T FindObjectOfType<T>() where T : IComponent;
+        List<T> FindObjectsOfType<T>() where T : IComponent;
     }
 }

@@ -51,6 +51,11 @@ namespace KokoEngine
                 _messages.RemoveAt(14);
         }
 
+        public void DrawLine(Vector2 start, Vector2 end, Color color, int size)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void Toggle() => IsOpen = !IsOpen;
     }
 }

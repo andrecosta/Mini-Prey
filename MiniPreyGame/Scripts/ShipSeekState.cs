@@ -16,7 +16,7 @@ class ShipSeekState : State
         _ship.Seek.target = _ship.Target.Transform;
         _ship.Seek.Enabled = true;
 
-        _ship.GetComponent<Vehicle>().MaxSpeed = 100;
+        _ship.GetComponent<Vehicle>().MaxSpeed = 90;
 
         // Play seek animation
         //_ship.Animator.Play("seek");

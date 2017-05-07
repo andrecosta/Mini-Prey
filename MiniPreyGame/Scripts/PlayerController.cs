@@ -52,10 +52,11 @@ public class PlayerController : Player
                     if (_selectedPlanet)
                         _selectedPlanet.DeSelect();
 
+                    UnHover();
+
                     _selectedPlanet = planet;
                     _selectedPlanet.Select();
                     //_selectedPlanet.HideUpgradeMenu();
-                    UnHover();
                 }
 
                 if (_selectedPlanet != null && _selectedPlanet == planet)
@@ -74,7 +75,7 @@ public class PlayerController : Player
                 _lineRenderer.Start = _selectedPlanet.Transform.Position;
                 _lineRenderer.End = planet.Transform.Position;
                 _lineRenderer.Size = 3;
-                _lineRenderer.Color = Color.Green;
+                _lineRenderer.Color = new Color(236, 196, 73);
 
                 if (Input.GetActionDown("SecondaryAction") && _selectedPlanet != null)
                 {
@@ -124,11 +125,11 @@ public class PlayerController : Player
         _lineRenderer.End = Vector2.Zero;
         _lineRenderer.Size = 0;
 
-        if (_lastHoveredPlanet)
+        if (_lastHoveredPlanet != null && _lastHoveredPlanet != _selectedPlanet)
             _lastHoveredPlanet.UnHover();
 
-        if (_selectedPlanet)
-            _selectedPlanet.UnHover();
+        //if (_selectedPlanet)
+        //    _selectedPlanet.UnHover();
     }
 
     void UpdateMouseTexture()

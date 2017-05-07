@@ -32,7 +32,9 @@ namespace MiniPreyGame
             {
                 var gc = gameControllerObject.AddComponent<GameController>();
                 gc.ShipSprite = new Sprite(assetManager.GetAsset<Texture2D>("ship"));
+                gc.ShotSprite = new Sprite(assetManager.GetAsset<Texture2D>("bullet"));
                 gc.OutlineSprite = new Sprite(assetManager.GetAsset<Texture2D>("outline"));
+                gc.RangeSprite = new Sprite(assetManager.GetAsset<Texture2D>("range"));
                 gc.PlanetPopulationFont = assetManager.GetAsset<Font>("main_font");
                 gc.Players = new Player[] {playerController, aiController, neutralController};
 
@@ -46,25 +48,22 @@ namespace MiniPreyGame
                             new Planet.Upgrade
                             {
                                 Cost = 10,
-                                FireRate = 0,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet1")),
-                                PopGenerationLimit = 20,
-                                PopGenerationRate = 2f
+                                PopGenerationLimit = 30,
+                                PopGenerationRate = 1.6f
                             },
                             new Planet.Upgrade
                             {
                                 Cost = 20,
-                                FireRate = 0,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet2")),
-                                PopGenerationLimit = 40,
-                                PopGenerationRate = 1.5f
+                                PopGenerationLimit = 50,
+                                PopGenerationRate = 1.3f
                             },
                             new Planet.Upgrade
                             {
                                 Cost = 30,
-                                FireRate = 0,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet3")),
-                                PopGenerationLimit = 60,
+                                PopGenerationLimit = 80,
                                 PopGenerationRate = 1f
                             }
                         }
@@ -76,26 +75,23 @@ namespace MiniPreyGame
                             new Planet.Upgrade
                             {
                                 Cost = 15,
-                                FireRate = 2,
+                                FireRate = 0.8f,
+                                Range = 120,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Sentry1")),
-                                PopGenerationLimit = 0,
-                                PopGenerationRate = 0
                             },
                             new Planet.Upgrade
                             {
                                 Cost = 25,
-                                FireRate = 1,
+                                FireRate = 0.6f,
+                                Range = 170,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Sentry2")),
-                                PopGenerationLimit = 0,
-                                PopGenerationRate = 0
                             },
                             new Planet.Upgrade
                             {
                                 Cost = 35,
-                                FireRate = 0.5f,
+                                FireRate = 0.3f,
+                                Range = 210,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Sentry3")),
-                                PopGenerationLimit = 0,
-                                PopGenerationRate = 0
                             }
                         }
                     }

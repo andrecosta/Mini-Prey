@@ -36,12 +36,9 @@ namespace KokoEngine
 
             return component;
         }
-        
-        public T GetComponent<T>() where T : IComponent
-        {
-            return (T) _components.FirstOrDefault(c => c is T);
-        }
-        
+
+        public T GetComponent<T>() where T : IComponent => (T) _components.FirstOrDefault(c => c is T);
+        public List<T> GetComponents<T>() where T : IComponent => _components.Where(c => c is T).Cast<T>().ToList();
         public List<IComponent> GetComponents() => _components;
 
         public void SetActive(bool active)

@@ -51,7 +51,9 @@ namespace MiniPreyGame
             assetManager.AddAsset<Texture2D>("Sentry1.png");
             assetManager.AddAsset<Texture2D>("Sentry2.png");
             assetManager.AddAsset<Texture2D>("Sentry3.png");
+            assetManager.AddAsset<Texture2D>("bullet.png");
             assetManager.AddAsset<Texture2D>("outline.png");
+            assetManager.AddAsset<Texture2D>("range.png");
             assetManager.AddAsset<Texture2D>("cursor_25.png");
             assetManager.AddAsset<Texture2D>("cursor_50.png");
             assetManager.AddAsset<Texture2D>("cursor_75.png");

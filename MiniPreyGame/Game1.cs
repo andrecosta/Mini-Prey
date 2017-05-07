@@ -179,18 +179,17 @@ namespace MiniPreyGame
             _spriteBatch.DrawString(font_, text, position_, color_, rotation, origin, scale, SpriteEffects.None, layer);
         }
 
-        void DrawLine(ILineRenderer lr)
+        void DrawLine(KokoEngine.Vector2 start, KokoEngine.Vector2 end, KokoEngine.Color color, int size)
         {
-            Vector2 start = lr.Start.ToMonoVector2();
-            Vector2 end = lr.End.ToMonoVector2();
-            Vector2 edge = end - start;
+            Vector2 start_ = start.ToMonoVector2();
+            Vector2 end_ = end.ToMonoVector2();
+            Vector2 edge = end_ - start_;
             float angle = (float)Math.Atan2(edge.Y, edge.X);
-            Color color = lr.Color.ToMonoColor();
-            int size = lr.Size;
+            Color color_ = color.ToMonoColor();
             Rectangle destinationRectangle = new Rectangle((int) start.X, (int) start.Y, (int) edge.Length(), size);
 
             // Draw call
-            _spriteBatch.Draw(_dummyTexture, destinationRectangle, null, color, angle, new Vector2(0, 0), SpriteEffects.None, 0.6f);
+            _spriteBatch.Draw(_dummyTexture, destinationRectangle, null, color_, angle, new Vector2(0, 0), SpriteEffects.None, 0.6f);
         }
 
         void DrawRectangle(KokoEngine.Rect rect, KokoEngine.Color color, float layer)

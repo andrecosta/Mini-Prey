@@ -18,6 +18,7 @@ public class Planet : Behaviour
         public float PopGenerationRate;
         public int PopGenerationLimit;
         public float FireRate;
+        public float Range;
     }
 
     public GameController GameController;
@@ -53,8 +54,8 @@ public class Planet : Behaviour
     public Upgrade CurrentUpgrade { get { return GameController.PlanetTypes[CurrentType].UpgradeLevels[CurrentUpgradeLevel]; } }
 
     // Visual effects
-    private ISpriteRenderer _hoverOutline;
-    private ISpriteRenderer _selectedOutline;
+    private ISpriteRenderer _planetOutline;
+    private ISpriteRenderer _rangeOutline;
 
     private bool _pendingStructureUpgradeLevel;
     private float _hp = 1;
@@ -70,18 +71,17 @@ public class Planet : Behaviour
         _queuedToLaunch = new List<Planet>();
 
         // Add outline visual elements
-        _hoverOutline = Instantiate<SpriteRenderer>("HoverOutline", Transform.Position);
-        _hoverOutline.Sprite = GameController.OutlineSprite;
-        _hoverOutline.Color = Color.Cyan;
-        _hoverOutline.Layer = 0.6f;
-        _hoverOutline.GameObject.SetActive(false);
+        _planetOutline = Instantiate<SpriteRenderer>("HoverOutline", Transform.Position);
+        _planetOutline.Sprite = GameController.OutlineSprite;
+        _planetOutline.Layer = 0.6f;
+        _planetOutline.GameObject.SetActive(false);
 
-        _selectedOutline = Instantiate<SpriteRenderer>("SelectedOutline", Transform.Position);
-        _selectedOutline.Sprite = GameController.OutlineSprite;
-        _selectedOutline.Color = Color.Green;
-        _selectedOutline.Transform.Scale *= 1f;
-        _selectedOutline.Layer = 0.6f;
-        _selectedOutline.GameObject.SetActive(false);
+        _rangeOutline = Instantiate<SpriteRenderer>("RangeOutline", Transform.Position);
+        _rangeOutline.Sprite = GameController.RangeSprite;
+        _rangeOutline.Color = new Color(38, 38, 38, 25);
+        _rangeOutline.Layer = 0.61f;
+
+        UpdateAppearance();
 
         OnPopulationChange += UpdatePopulationText;
         OnPopulationChange();
@@ -134,8 +134,11 @@ public class Planet : Behaviour
         else
             _upgradeTimer += Time.DeltaTime;
 
-        // Animation
-        _selectedOutline.Transform.Rotation += Time.DeltaTime * 0.25f;
+        // Animations
+        if (!IsHovered)
+            _planetOutline.Transform.Rotation += Time.DeltaTime * 0.25f;
+
+        _rangeOutline.Transform.Rotation += Time.DeltaTime * 0.1f;
         /*_animator.SetBool("IsHovered", IsHovered);
         _animator.SetBool("IsUnderAttack", IsUnderAttack);
         _animator.SetBool("IsUpgrading", IsUpgrading);*/
@@ -143,14 +146,24 @@ public class Planet : Behaviour
 
     private void Shoot()
     {
-        foreach (var ship in GameController.Ships.Where(x => x.Owner != Owner))
+        foreach (var ship in GameController.Ships.Where(x => x.Owner != Owner && !x.IsBeingTargeted))
         {
-            if ((ship.Transform.Position - Transform.Position).SqrMagnitude < 10 * 10)
+            if (Vector2.Distance(ship.Transform.Position, Transform.Position) <= CurrentUpgrade.Range)
             {
+                var shot = Instantiate<Shot>("Shot", Transform.Position);
+                var sr = shot.AddComponent<SpriteRenderer>();
+                var rb = shot.AddComponent<Rigidbody>();
+                var v = shot.AddComponent<Vehicle>();
+                var pursuit = shot.AddComponent<Pursuit>();
 
-                // TODO
-                //var shot = Instantiate(ShotPrefab, Transform.Position + Transform.Up, Quaternion.identity);
-                //shot.Target = ship;
+                sr.Sprite = GameController.ShotSprite;
+                sr.Color = new Color(236, 196, 73);
+
+                v.Behaviours.Add(pursuit);
+                
+                shot.Target = ship;
+                ship.IsBeingTargeted = true;
+
                 break;
             }
         }
@@ -271,8 +284,7 @@ public class Planet : Behaviour
 
         Population -= cost;
 
-        if (OnPopulationChange != null)
-            OnPopulationChange();
+        OnPopulationChange?.Invoke();
 
         //HideUpgradeMenu();
     }
@@ -313,30 +325,41 @@ public class Planet : Behaviour
 
     void UpdateAppearance()
     {
+        _sr.Sprite = CurrentUpgrade.Sprite;
         _sr.Color = Owner.TeamColor;
+
+        if (CurrentType == 0)
+            _rangeOutline.GameObject.SetActive(false);
+        else
+        {
+            _rangeOutline.GameObject.SetActive(true);
+            _rangeOutline.Transform.Scale = Vector2.One * (CurrentUpgrade.Range * 2 / 253f);
+        }
     }
 
     public void Hover()
     {
-        _hoverOutline.GameObject.SetActive(true);
+        _planetOutline.Color = new Color(230, 230, 230);
+        _planetOutline.GameObject.SetActive(true);
         IsHovered = true;
     }
 
     public void UnHover()
     {
-        _hoverOutline.GameObject.SetActive(false);
+        _planetOutline.GameObject.SetActive(false);
         IsHovered = false;
     }
 
     public void Select()
     {
-        _selectedOutline.GameObject.SetActive(true);
-        _selectedOutline.Transform.Rotation = 0;
+        _planetOutline.Color = new Color(236, 196, 73);
+        _planetOutline.Transform.Rotation = 0;
+        _planetOutline.GameObject.SetActive(true);
     }
 
     public void DeSelect()
     {
-        _selectedOutline.GameObject.SetActive(false);
+        _planetOutline.GameObject.SetActive(false);
     }
 
     /*public void ToggleUpgradeMenu()

@@ -15,10 +15,12 @@ namespace KokoEngine
 
         internal Component() { }
 
-        // Proxy methods for convenience
+        // Proxy methods for convenient access from user scripts
         public T AddComponent<T>() where T : IComponent, new() => GameObject.AddComponent<T>();
         public T GetComponent<T>() where T : IComponent => GameObject.GetComponent<T>();
-        public List<IComponent> GetComponents() => GameObject.GetComponents();
+        public List<T> GetComponents<T>() where T : IComponent => GameObject.GetComponents<T>();
+        public List<T> FindObjectsOfType<T>() where T : IComponent => (GameObject as IGameObjectInternal).Scene.FindObjectsOfType<T>();
+        public T FindObjectOfType<T>() where T : IComponent => (GameObject as IGameObjectInternal).Scene.FindObjectOfType<T>();
 
         // Update
         protected virtual void Update() { }

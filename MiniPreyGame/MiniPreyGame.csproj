@@ -53,6 +53,7 @@
     <Compile Include="Scripts\PlayerController.cs" />
     <Compile Include="Scripts\Planet.cs" />
     <Compile Include="Scripts\ShipSeekState.cs" />
+    <Compile Include="Scripts\Shot.cs" />
     <Compile Include="SetupScenePrototype.cs" />
     <Compile Include="SetupScene.cs" />
     <Compile Include="Scripts\Prototype\Boid.cs" />
@@ -74,6 +75,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bullet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\cursor_100.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -86,8 +90,7 @@
     <Content Include="Content\cursor_75.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\outline.png" />
-    <Content Include="Content\planet.png">
+    <Content Include="Content\outline.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Planet1.png">
@@ -97,6 +100,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Planet3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\range.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Sentry1.png">
