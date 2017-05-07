@@ -57,21 +57,21 @@ namespace MiniPreyGame
                             {
                                 Cost = 10,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet1")),
-                                PopGenerationLimit = 30,
-                                PopGenerationRate = 1.6f
+                                PopGenerationLimit = 20,
+                                PopGenerationRate = 1.5f
+                            },
+                            new Planet.Upgrade
+                            {
+                                Cost = 15,
+                                Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet2")),
+                                PopGenerationLimit = 40,
+                                PopGenerationRate = 1.2f
                             },
                             new Planet.Upgrade
                             {
                                 Cost = 20,
-                                Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet2")),
-                                PopGenerationLimit = 50,
-                                PopGenerationRate = 1.3f
-                            },
-                            new Planet.Upgrade
-                            {
-                                Cost = 30,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet3")),
-                                PopGenerationLimit = 80,
+                                PopGenerationLimit = 60,
                                 PopGenerationRate = 1f
                             }
                         }
@@ -83,20 +83,20 @@ namespace MiniPreyGame
                             new Planet.Upgrade
                             {
                                 Cost = 15,
-                                FireRate = 0.7f,
+                                FireRate = 0.5f,
                                 Range = 120,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Sentry1")),
                             },
                             new Planet.Upgrade
                             {
-                                Cost = 25,
-                                FireRate = 0.5f,
+                                Cost = 20,
+                                FireRate = 0.4f,
                                 Range = 170,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Sentry2")),
                             },
                             new Planet.Upgrade
                             {
-                                Cost = 35,
+                                Cost = 25,
                                 FireRate = 0.3f,
                                 Range = 210,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Sentry3")),

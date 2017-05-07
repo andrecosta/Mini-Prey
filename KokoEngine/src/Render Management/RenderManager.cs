@@ -65,10 +65,6 @@ namespace KokoEngine
                 if (lr != null)
                     RenderLineHandler?.Invoke(lr.Start, lr.End, lr.Color, lr.Size);
             }
-
-            // Recursive call for all children GameObjects
-            foreach (var child in rootGameObject.Transform.Children)
-                DrawGameObjects(child.GameObject);
         }
     }
 }

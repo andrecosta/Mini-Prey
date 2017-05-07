@@ -31,12 +31,8 @@ public class PlayerController : Player
 
         // Detect if there is a planet under the mouse cursor
         foreach (var p in GameController.Planets)
-        {
             if (Vector3.Distance(Input.GetMousePosition(), p.Transform.Position) < 30)
-            {
                 planet = p;
-            }
-        }
 
         if (planet)
         {
@@ -59,17 +55,15 @@ public class PlayerController : Player
 
                     _selectedPlanet = planet;
                     _selectedPlanet.Select();
-                    //_selectedPlanet.HideUpgradeMenu();
                 }
 
-                if (_selectedPlanet != null && _selectedPlanet == planet)
+                /*if (_selectedPlanet != null && _selectedPlanet == planet)
                 {
                     // Toggle upgrade menu
                     if (Input.GetActionDown("SecondaryAction"))
                     {
-                        //planet.ToggleUpgradeMenu();
                     }
-                }
+                }*/
             }
 
             if (_selectedPlanet != null && _selectedPlanet != planet)
@@ -86,7 +80,6 @@ public class PlayerController : Player
                     _au.Play(AttackCommandSound);
                     _selectedPlanet.LaunchShips(planet, _selectedPercentage);
                     _selectedPlanet.DeSelect();
-                    //_selectedPlanet.HideUpgradeMenu();
                     _selectedPlanet = null;
                     UnHover();
                 }
@@ -101,9 +94,25 @@ public class PlayerController : Player
                 if (_selectedPlanet)
                 {
                     _selectedPlanet.DeSelect();
-                    //_selectedPlanet.HideUpgradeMenu();
                     _selectedPlanet = null;
                 }
+            }
+        }
+
+        // Upgrade planet
+        if (_selectedPlanet)
+        {
+            if (Input.GetActionDown("UpgradePlanet"))
+            {
+                _selectedPlanet.StartUpgrade();
+            }
+            else if (Input.GetActionDown("ChangePlanetToColony"))
+            {
+                _selectedPlanet.StartConversion(0);
+            }
+            else if (Input.GetActionDown("ChangePlanetToSentry"))
+            {
+                _selectedPlanet.StartConversion(1);
             }
         }
 

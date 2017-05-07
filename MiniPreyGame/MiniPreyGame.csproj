@@ -47,6 +47,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Scripts\AIController.cs" />
     <Compile Include="Scripts\CustomCursor.cs" />
+    <Compile Include="Scripts\UpgradeMenu.cs" />
     <Compile Include="Scripts\HUD.cs" />
     <Compile Include="Scripts\Player.cs" />
     <Compile Include="Scripts\Ship.cs" />
@@ -142,6 +143,9 @@
     <Content Include="Content\main_font.spritefont">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Content\Roboto-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Content\Supersonic Rocketship.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

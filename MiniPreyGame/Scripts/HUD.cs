@@ -28,13 +28,13 @@ class HUD : Behaviour
 
         LeftText.Color = p1.TeamColor;
         LeftText.Text = GameController.PlayerPopulations[p1].ToString();
-        LeftText.Transform.Position = new Vector3(Screen.Width / 2f - 220, 25);
+        LeftText.Transform.Position = new Vector2(Screen.Width / 2f - 220, 21);
         LeftText.Font = UIFont;
         LeftText.Size = 0.6f;
 
         RightText.Color = p2.TeamColor;
         RightText.Text = GameController.PlayerPopulations[p2].ToString();
-        RightText.Transform.Position = new Vector3(Screen.Width / 2f + 220, 25);
+        RightText.Transform.Position = new Vector2(Screen.Width / 2f + 220, 21);
         RightText.Font = UIFont;
         RightText.Size = 0.6f;
     }

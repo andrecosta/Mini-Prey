@@ -97,11 +97,19 @@ public class GameController : Behaviour
         // Add TextRenderer component
         var tr = planet.AddComponent<TextRenderer>();
         tr.Font = PlanetPopulationFont;
-        tr.Offset = new Vector2(0, -54);
+        tr.Offset = new Vector2(0, -58);
         tr.Size = 0.75f;
 
         // Add AudioSource component
         var au = planet.AddComponent<AudioSource>();
+
+        // Add upgrade menu
+        var upgradeMenu = planet.AddComponent<UpgradeMenu>();
+        upgradeMenu.UIFont = PlanetPopulationFont;
+        upgradeMenu.UpgradeText = Instantiate<TextRenderer>("Text", Vector2.Zero);
+        upgradeMenu.Convert1Text = Instantiate<TextRenderer>("Text", Vector2.Zero);
+        upgradeMenu.Convert2Text = Instantiate<TextRenderer>("Text", Vector2.Zero);
+        upgradeMenu.Hide();
 
         // Bind callbacks
         planet.LaunchShipHandler += LaunchShip;

@@ -71,6 +71,9 @@ namespace MiniPreyGame
             inputManager.AddActionBinding("SecondaryAction", "MouseRight");
             inputManager.AddActionBinding("ToggleFullScreen", "F11");
             inputManager.AddActionBinding("ToggleDebugConsole", "F12");
+            inputManager.AddActionBinding("UpgradePlanet", "W");
+            inputManager.AddActionBinding("ChangePlanetToColony", "A");
+            inputManager.AddActionBinding("ChangePlanetToSentry", "D");
 
             // Setup the screen manager
             screenManager.AddSupportedResolution(1920, 1080);

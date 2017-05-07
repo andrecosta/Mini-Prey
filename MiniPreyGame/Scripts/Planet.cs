@@ -35,8 +35,10 @@ public class Planet : Behaviour
     public bool IsUnderAttack { get; set; }
     public bool IsUpgrading { get; set; }
     public bool IsConverting { get; set; }
-
     public int AvailablePopulation => Population - _queuedToLaunch.Count;
+    public int CurrentType { get; set; }
+    public int CurrentUpgradeLevel { get; set; }
+    public Upgrade CurrentUpgrade { get { return GameController.PlanetTypes[CurrentType].UpgradeLevels[CurrentUpgradeLevel]; } }
 
     private List<Planet> _queuedToLaunch;
     private float _shipGenerationTimer;
@@ -48,11 +50,7 @@ public class Planet : Behaviour
     private ITextRenderer _text;
     private IAudioSource _au;
     private IAnimator _animator;
-
-
-    public int CurrentType { get; set; }
-    public int CurrentUpgradeLevel { get; set; }
-    public Upgrade CurrentUpgrade { get { return GameController.PlanetTypes[CurrentType].UpgradeLevels[CurrentUpgradeLevel]; } }
+    private UpgradeMenu _upgradeMenu;
 
     // Visual effects
     private ISpriteRenderer _planetOutline;
@@ -71,6 +69,7 @@ public class Planet : Behaviour
         _au = GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
         _queuedToLaunch = new List<Planet>();
+        _upgradeMenu = GetComponent<UpgradeMenu>();
 
         // Add outline visual elements
         _planetOutline = Instantiate<SpriteRenderer>("HoverOutline", Transform.Position);
@@ -252,6 +251,7 @@ public class Planet : Behaviour
         DowngradePlanet();
         IsUpgrading = false;
         IsConverting = false;
+        DeSelect();
 
         IsHovered = false;
 
@@ -324,9 +324,12 @@ public class Planet : Behaviour
             return;
 
         CurrentType = newType;
+        CurrentUpgradeLevel = 0;
         IsUpgrading = false;
         IsConverting = false;
         _au.Play(GameController.PlanetUpgradeSound);
+        HideUpgradeMenu();
+        ShowUpgradeMenu();
 
         UpdateAppearance();
     }
@@ -348,6 +351,7 @@ public class Planet : Behaviour
     public void Hover()
     {
         _planetOutline.Color = new Color(230, 230, 230);
+        _planetOutline.Transform.Rotation = 0;
         _planetOutline.GameObject.SetActive(true);
         IsHovered = true;
     }
@@ -365,25 +369,22 @@ public class Planet : Behaviour
         _planetOutline.GameObject.SetActive(true);
         if (Owner == GameController.Players[0])
             _au.Play(GameController.PlanetSelectSound);
+        ShowUpgradeMenu();
     }
 
     public void DeSelect()
     {
         _planetOutline.GameObject.SetActive(false);
-    }
-
-    /*public void ToggleUpgradeMenu()
-    {
-        UpgradeMenu.Toggle();
+        HideUpgradeMenu();
     }
 
     public void ShowUpgradeMenu()
     {
-        UpgradeMenu.Show();
+        _upgradeMenu.Show();
     }
 
     public void HideUpgradeMenu()
     {
-        UpgradeMenu.Hide();
-    }*/
+        _upgradeMenu.Hide();
+    }
 }
