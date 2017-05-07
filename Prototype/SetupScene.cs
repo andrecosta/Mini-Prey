@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using KokoEngine;
 
-namespace MiniPreyGame
+namespace Prototype
 {
     public static partial class Program
     {

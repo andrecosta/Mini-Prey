@@ -10,7 +10,7 @@ using Vector2 = Microsoft.Xna.Framework.Vector2;
 using Color = Microsoft.Xna.Framework.Color;
 using KokoEngine;
 
-namespace MiniPreyGame
+namespace Prototype
 {
     /// <summary>
     /// This is the main type for your game.

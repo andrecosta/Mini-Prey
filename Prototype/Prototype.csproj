@@ -8,8 +8,8 @@
     <ProjectGuid>{D52F2E09-78E0-437B-B8CE-390563FC91DC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MiniPreyGame</RootNamespace>
-    <AssemblyName>MiniPreyGame</AssemblyName>
+    <RootNamespace>Prototype</RootNamespace>
+    <AssemblyName>Prototype</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MonoGamePlatform>Windows</MonoGamePlatform>
     <MonoGameContentBuilderExe>

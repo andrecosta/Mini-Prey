@@ -1,7 +1,7 @@
 ﻿using System;
 using KokoEngine;
 
-namespace MiniPreyGame
+namespace Prototype
 {
 #if WINDOWS || LINUX
     /// <summary>

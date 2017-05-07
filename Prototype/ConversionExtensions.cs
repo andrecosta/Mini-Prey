@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace MiniPreyGame
+namespace Prototype
 {
     /// <summary>
     /// Extensions to convert between formats common to MonoGame and KokoEngine

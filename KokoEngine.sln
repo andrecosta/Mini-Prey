@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KokoEngine", "KokoEngine\KokoEngine.csproj", "{DCA9A08B-325A-40C4-9780-FBD194D74783}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniPreyGame", "MiniPreyGame\MiniPreyGame.csproj", "{D52F2E09-78E0-437B-B8CE-390563FC91DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Prototype\Prototype.csproj", "{D52F2E09-78E0-437B-B8CE-390563FC91DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
