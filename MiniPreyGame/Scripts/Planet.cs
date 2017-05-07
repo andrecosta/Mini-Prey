@@ -193,7 +193,6 @@ public class Planet : Behaviour
             // Get target
             foreach (var target in _queuedToLaunch.Distinct().ToList())
             {
-                //Planet target = QueuedToLaunch[Random.Range(0, QueuedToLaunch.Count)];
                 if (LaunchShipHandler != null)
                 {
                     Population--;

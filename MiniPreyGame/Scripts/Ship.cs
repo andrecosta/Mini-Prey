@@ -49,6 +49,7 @@ public class Ship : Behaviour
     public void Kill()
     {
         GameController.Ships.Remove(this);
+        GameController.OnPopulationChange?.Invoke();
         Destroy(GameObject);
     }
 }

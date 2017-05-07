@@ -47,6 +47,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Scripts\AIController.cs" />
     <Compile Include="Scripts\CustomCursor.cs" />
+    <Compile Include="Scripts\HUD.cs" />
     <Compile Include="Scripts\Player.cs" />
     <Compile Include="Scripts\Ship.cs" />
     <Compile Include="Scripts\GameController.cs" />

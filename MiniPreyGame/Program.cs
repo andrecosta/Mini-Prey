@@ -30,7 +30,7 @@ namespace MiniPreyGame
              * - IRenderManager
              * - IDebugManager
              * 
-             * TODO: IN THE FUTURE, THESE CONFIGURATIONS COULD COME FROM A FILE OR AN EDITOR IN THE ENGINE STARTUP STAGE!
+             * TODO: IN THE FUTURE, THESE CONFIGURATIONS COULD COME FROM A FILE OR AN EDITOR !
              */
 
             // Instantiate the managers

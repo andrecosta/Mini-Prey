@@ -11,28 +11,30 @@ namespace MiniPreyGame
             IScene scene = new Scene("Game");
 
             // Create the human player
-            IGameObject playerGameObject = scene.CreateGameObject("PlayerController");
-            PlayerController player = playerGameObject.AddComponent<PlayerController>();
-            player.TeamColor = new Color(183, 68, 231);
-            player.AttackCommandSound = assetManager.GetAsset<AudioClip>("AttackCommand");
-            playerGameObject.AddComponent<LineRenderer>();
-            playerGameObject.AddComponent<AudioSource>();
+            PlayerController player = scene.CreateGameObject<PlayerController>("PlayerController", Vector2.Zero);
+            {
+                player.TeamColor = new Color(183, 68, 231);
+                player.AttackCommandSound = assetManager.GetAsset<AudioClip>("AttackCommand");
+                player.AddComponent<LineRenderer>();
+                player.AddComponent<AudioSource>();
+            }
 
             // Create the AI player
-            IGameObject aiPlayerGameObject = scene.CreateGameObject("AIController");
-            AIController aiPlayer = aiPlayerGameObject.AddComponent<AIController>();
-            aiPlayer.TeamColor = new Color(68, 231, 118);
+            AIController aiPlayer = scene.CreateGameObject<AIController>("AIController", Vector2.Zero);
+            {
+                aiPlayer.TeamColor = new Color(68, 231, 118);
+            }
 
             // Create the Neutral player
-            IGameObject neutralPlayerGameObject = scene.CreateGameObject("NeutralController");
-            AIController neutralPlayer = neutralPlayerGameObject.AddComponent<AIController>();
-            neutralPlayer.TeamColor = new Color(230, 230, 230);
-            neutralPlayer.IsNeutral = true;
+            AIController neutralPlayer = scene.CreateGameObject<AIController>("NeutralController", Vector2.Zero);
+            {
+                neutralPlayer.TeamColor = new Color(230, 230, 230);
+                neutralPlayer.IsNeutral = true;
+            }
 
             // Create the GameController
-            IGameObject gameControllerObject = scene.CreateGameObject("GameController");
+            GameController gc = scene.CreateGameObject<GameController>("GameController", Vector2.Zero);
             {
-                var gc = gameControllerObject.AddComponent<GameController>();
                 gc.ShipSprite = new Sprite(assetManager.GetAsset<Texture2D>("ship"));
                 gc.ShotSprite = new Sprite(assetManager.GetAsset<Texture2D>("bullet"));
                 gc.OutlineSprite = new Sprite(assetManager.GetAsset<Texture2D>("outline"));
@@ -108,16 +110,30 @@ namespace MiniPreyGame
             }
 
             // Create the Custom Cursor
-            IGameObject customCursorGameObject = scene.CreateGameObject("CustomCursor");
+            CustomCursor cc = scene.CreateGameObject<CustomCursor>("CustomCursor", Vector2.Zero);
             {
-                customCursorGameObject.AddComponent<SpriteRenderer>();
-
-                var cc = customCursorGameObject.AddComponent<CustomCursor>();
+                cc.AddComponent<SpriteRenderer>();
                 cc.Percent25Sprite = new Sprite(assetManager.GetAsset<Texture2D>("cursor_25"));
                 cc.Percent50Sprite = new Sprite(assetManager.GetAsset<Texture2D>("cursor_50"));
                 cc.Percent75Sprite = new Sprite(assetManager.GetAsset<Texture2D>("cursor_75"));
                 cc.Percent100Sprite = new Sprite(assetManager.GetAsset<Texture2D>("cursor_100"));
                 player.CustomCursor = cc;
+            }
+
+            // Create the HUD
+            HUD hud = scene.CreateGameObject<HUD>("HUD", Vector2.Zero);
+            {
+                var leftBar = scene.CreateGameObject<LineRenderer>("LeftBar", Vector2.Zero);
+                var rightBar = scene.CreateGameObject<LineRenderer>("RightBar", Vector2.Zero);
+                var leftText = scene.CreateGameObject<TextRenderer>("LeftText", Vector2.Zero);
+                var rightText = scene.CreateGameObject<TextRenderer>("RightText", Vector2.Zero);
+
+                hud.LeftBar = leftBar;
+                hud.RightBar = rightBar;
+                hud.LeftText = leftText;
+                hud.RightText = rightText;
+                hud.UIFont = assetManager.GetAsset<Font>("main_font");
+                hud.GameController = gc;
             }
 
             return scene;

@@ -44,7 +44,7 @@ public class GameController : Behaviour
         Planets = new List<Planet>();
         Ships = new List<Ship>();
         PlayerPopulations = new Dictionary<Player, int>();
-        foreach (var player in Players)
+        foreach (var player in Players.Where(p => !p.IsNeutral))
         {
             PlayerPopulations.Add(player, 0);
         }
