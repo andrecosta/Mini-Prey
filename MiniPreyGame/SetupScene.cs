@@ -58,14 +58,14 @@ namespace MiniPreyGame
                                 Cost = 10,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet1")),
                                 PopGenerationLimit = 20,
-                                PopGenerationRate = 1.5f
+                                PopGenerationRate = 2f
                             },
                             new Planet.Upgrade
                             {
                                 Cost = 15,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Planet2")),
                                 PopGenerationLimit = 40,
-                                PopGenerationRate = 1.2f
+                                PopGenerationRate = 1.5f
                             },
                             new Planet.Upgrade
                             {

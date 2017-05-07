@@ -2563,12 +2563,12 @@ references:
   commentId: T:KokoEngine.IHeuristicCalculator
   fullName: KokoEngine.IHeuristicCalculator
   nameWithType: IHeuristicCalculator
-- uid: KokoEngine.IHeuristicCalculator.Calculate(KokoEngine.IGraphNode,KokoEngine.IGraphNode)
-  name: Calculate(IGraphNode, IGraphNode)
-  href: api/KokoEngine.IHeuristicCalculator.html#KokoEngine_IHeuristicCalculator_Calculate_KokoEngine_IGraphNode_KokoEngine_IGraphNode_
-  commentId: M:KokoEngine.IHeuristicCalculator.Calculate(KokoEngine.IGraphNode,KokoEngine.IGraphNode)
-  fullName: KokoEngine.IHeuristicCalculator.Calculate(KokoEngine.IGraphNode, KokoEngine.IGraphNode)
-  nameWithType: IHeuristicCalculator.Calculate(IGraphNode, IGraphNode)
+- uid: KokoEngine.IHeuristicCalculator.Calculate(KokoEngine.IPathfindingNode,KokoEngine.IPathfindingNode)
+  name: Calculate(IPathfindingNode, IPathfindingNode)
+  href: api/KokoEngine.IHeuristicCalculator.html#KokoEngine_IHeuristicCalculator_Calculate_KokoEngine_IPathfindingNode_KokoEngine_IPathfindingNode_
+  commentId: M:KokoEngine.IHeuristicCalculator.Calculate(KokoEngine.IPathfindingNode,KokoEngine.IPathfindingNode)
+  fullName: KokoEngine.IHeuristicCalculator.Calculate(KokoEngine.IPathfindingNode, KokoEngine.IPathfindingNode)
+  nameWithType: IHeuristicCalculator.Calculate(IPathfindingNode, IPathfindingNode)
 - uid: KokoEngine.IHeuristicCalculator.Calculate*
   name: Calculate
   href: api/KokoEngine.IHeuristicCalculator.html#KokoEngine_IHeuristicCalculator_Calculate_
@@ -3124,6 +3124,36 @@ references:
   commentId: Overload:KokoEngine.InputManager.GetUpdatedMouseScrollValue
   fullName: KokoEngine.InputManager.GetUpdatedMouseScrollValue
   nameWithType: InputManager.GetUpdatedMouseScrollValue
+- uid: KokoEngine.IPathfindingNode
+  name: IPathfindingNode
+  href: api/KokoEngine.IPathfindingNode.html
+  commentId: T:KokoEngine.IPathfindingNode
+  fullName: KokoEngine.IPathfindingNode
+  nameWithType: IPathfindingNode
+- uid: KokoEngine.IPathfindingNode.RealNodeCost
+  name: RealNodeCost
+  href: api/KokoEngine.IPathfindingNode.html#KokoEngine_IPathfindingNode_RealNodeCost
+  commentId: P:KokoEngine.IPathfindingNode.RealNodeCost
+  fullName: KokoEngine.IPathfindingNode.RealNodeCost
+  nameWithType: IPathfindingNode.RealNodeCost
+- uid: KokoEngine.IPathfindingNode.RealNodeCost*
+  name: RealNodeCost
+  href: api/KokoEngine.IPathfindingNode.html#KokoEngine_IPathfindingNode_RealNodeCost_
+  commentId: Overload:KokoEngine.IPathfindingNode.RealNodeCost
+  fullName: KokoEngine.IPathfindingNode.RealNodeCost
+  nameWithType: IPathfindingNode.RealNodeCost
+- uid: KokoEngine.IPathfindingNode.TotalNodeCost
+  name: TotalNodeCost
+  href: api/KokoEngine.IPathfindingNode.html#KokoEngine_IPathfindingNode_TotalNodeCost
+  commentId: P:KokoEngine.IPathfindingNode.TotalNodeCost
+  fullName: KokoEngine.IPathfindingNode.TotalNodeCost
+  nameWithType: IPathfindingNode.TotalNodeCost
+- uid: KokoEngine.IPathfindingNode.TotalNodeCost*
+  name: TotalNodeCost
+  href: api/KokoEngine.IPathfindingNode.html#KokoEngine_IPathfindingNode_TotalNodeCost_
+  commentId: Overload:KokoEngine.IPathfindingNode.TotalNodeCost
+  fullName: KokoEngine.IPathfindingNode.TotalNodeCost
+  nameWithType: IPathfindingNode.TotalNodeCost
 - uid: KokoEngine.IRenderManager
   name: IRenderManager
   href: api/KokoEngine.IRenderManager.html
@@ -4142,6 +4172,96 @@ references:
   commentId: Overload:KokoEngine.LineRenderer.Start
   fullName: KokoEngine.LineRenderer.Start
   nameWithType: LineRenderer.Start
+- uid: KokoEngine.PathfindingNode
+  name: PathfindingNode
+  href: api/KokoEngine.PathfindingNode.html
+  commentId: T:KokoEngine.PathfindingNode
+  fullName: KokoEngine.PathfindingNode
+  nameWithType: PathfindingNode
+- uid: KokoEngine.PathfindingNode.AddNodeToGraph(KokoEngine.IPathfindingNode)
+  name: AddNodeToGraph(IPathfindingNode)
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_AddNodeToGraph_KokoEngine_IPathfindingNode_
+  commentId: M:KokoEngine.PathfindingNode.AddNodeToGraph(KokoEngine.IPathfindingNode)
+  fullName: KokoEngine.PathfindingNode.AddNodeToGraph(KokoEngine.IPathfindingNode)
+  nameWithType: PathfindingNode.AddNodeToGraph(IPathfindingNode)
+- uid: KokoEngine.PathfindingNode.AddNodeToGraph*
+  name: AddNodeToGraph
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_AddNodeToGraph_
+  commentId: Overload:KokoEngine.PathfindingNode.AddNodeToGraph
+  fullName: KokoEngine.PathfindingNode.AddNodeToGraph
+  nameWithType: PathfindingNode.AddNodeToGraph
+- uid: KokoEngine.PathfindingNode.Awake
+  name: Awake()
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_Awake
+  commentId: M:KokoEngine.PathfindingNode.Awake
+  fullName: KokoEngine.PathfindingNode.Awake()
+  nameWithType: PathfindingNode.Awake()
+- uid: KokoEngine.PathfindingNode.Awake*
+  name: Awake
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_Awake_
+  commentId: Overload:KokoEngine.PathfindingNode.Awake
+  fullName: KokoEngine.PathfindingNode.Awake
+  nameWithType: PathfindingNode.Awake
+- uid: KokoEngine.PathfindingNode.FindPath(KokoEngine.IPathfindingNode,KokoEngine.IPathfindingNode,KokoEngine.IHeuristicCalculator)
+  name: FindPath(IPathfindingNode, IPathfindingNode, IHeuristicCalculator)
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_FindPath_KokoEngine_IPathfindingNode_KokoEngine_IPathfindingNode_KokoEngine_IHeuristicCalculator_
+  commentId: M:KokoEngine.PathfindingNode.FindPath(KokoEngine.IPathfindingNode,KokoEngine.IPathfindingNode,KokoEngine.IHeuristicCalculator)
+  fullName: KokoEngine.PathfindingNode.FindPath(KokoEngine.IPathfindingNode, KokoEngine.IPathfindingNode, KokoEngine.IHeuristicCalculator)
+  nameWithType: PathfindingNode.FindPath(IPathfindingNode, IPathfindingNode, IHeuristicCalculator)
+- uid: KokoEngine.PathfindingNode.FindPath*
+  name: FindPath
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_FindPath_
+  commentId: Overload:KokoEngine.PathfindingNode.FindPath
+  fullName: KokoEngine.PathfindingNode.FindPath
+  nameWithType: PathfindingNode.FindPath
+- uid: KokoEngine.PathfindingNode.GraphNodes
+  name: GraphNodes
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_GraphNodes
+  commentId: P:KokoEngine.PathfindingNode.GraphNodes
+  fullName: KokoEngine.PathfindingNode.GraphNodes
+  nameWithType: PathfindingNode.GraphNodes
+- uid: KokoEngine.PathfindingNode.GraphNodes*
+  name: GraphNodes
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_GraphNodes_
+  commentId: Overload:KokoEngine.PathfindingNode.GraphNodes
+  fullName: KokoEngine.PathfindingNode.GraphNodes
+  nameWithType: PathfindingNode.GraphNodes
+- uid: KokoEngine.PathfindingNode.IsDirected
+  name: IsDirected
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_IsDirected
+  commentId: P:KokoEngine.PathfindingNode.IsDirected
+  fullName: KokoEngine.PathfindingNode.IsDirected
+  nameWithType: PathfindingNode.IsDirected
+- uid: KokoEngine.PathfindingNode.IsDirected*
+  name: IsDirected
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_IsDirected_
+  commentId: Overload:KokoEngine.PathfindingNode.IsDirected
+  fullName: KokoEngine.PathfindingNode.IsDirected
+  nameWithType: PathfindingNode.IsDirected
+- uid: KokoEngine.PathfindingNode.RealNodeCost
+  name: RealNodeCost
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_RealNodeCost
+  commentId: P:KokoEngine.PathfindingNode.RealNodeCost
+  fullName: KokoEngine.PathfindingNode.RealNodeCost
+  nameWithType: PathfindingNode.RealNodeCost
+- uid: KokoEngine.PathfindingNode.RealNodeCost*
+  name: RealNodeCost
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_RealNodeCost_
+  commentId: Overload:KokoEngine.PathfindingNode.RealNodeCost
+  fullName: KokoEngine.PathfindingNode.RealNodeCost
+  nameWithType: PathfindingNode.RealNodeCost
+- uid: KokoEngine.PathfindingNode.TotalNodeCost
+  name: TotalNodeCost
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_TotalNodeCost
+  commentId: P:KokoEngine.PathfindingNode.TotalNodeCost
+  fullName: KokoEngine.PathfindingNode.TotalNodeCost
+  nameWithType: PathfindingNode.TotalNodeCost
+- uid: KokoEngine.PathfindingNode.TotalNodeCost*
+  name: TotalNodeCost
+  href: api/KokoEngine.PathfindingNode.html#KokoEngine_PathfindingNode_TotalNodeCost_
+  commentId: Overload:KokoEngine.PathfindingNode.TotalNodeCost
+  fullName: KokoEngine.PathfindingNode.TotalNodeCost
+  nameWithType: PathfindingNode.TotalNodeCost
 - uid: KokoEngine.Pursuit
   name: Pursuit
   href: api/KokoEngine.Pursuit.html

@@ -21,7 +21,7 @@
         public Vector3 Pursuit(IVehicle target, IVehicle vehicle)
         {
             Vector3 distanceToTarget = target.Position - vehicle.Position;
-            float t = distanceToTarget.Magnitude / target.MaxSpeed;
+            float t = distanceToTarget.Magnitude / vehicle.MaxSpeed;
             Vector3 futurePosition = target.Position + target.Velocity * t;
 
             return Seek(futurePosition, vehicle);

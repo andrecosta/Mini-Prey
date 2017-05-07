@@ -66,14 +66,14 @@ public class GameController : Behaviour
 
     private void CreatePlanets()
     {
-        CreatePlanet(new Vector2(100, 100), Players[0], 0, 1, 20);
+        CreatePlanet(new Vector2(100, 100), Players[0], 0, 1, 15);
         CreatePlanet(new Vector2(100, 400), Players[2], 0, 1, 5);
         CreatePlanet(new Vector2(300, 200), Players[2], 0, 0, 5);
         CreatePlanet(new Vector2(300, 500), Players[2], 0, 0, 5);
         CreatePlanet(new Vector2(500, 300), Players[2], 1, 1, 15);
         CreatePlanet(new Vector2(500, 600), Players[2], 0, 0, 5);
-        CreatePlanet(new Vector2(Screen.Width - 100, 100), Players[1], 0, 1, 10);
-        CreatePlanet(new Vector2(Screen.Width - 100, 400), Players[1], 0, 1, 10);
+        CreatePlanet(new Vector2(Screen.Width - 100, 100), Players[1], 0, 1, 20);
+        CreatePlanet(new Vector2(Screen.Width - 100, 400), Players[1], 0, 1, 15);
         CreatePlanet(new Vector2(Screen.Width - 300, 200), Players[2], 0, 0, 5);
         CreatePlanet(new Vector2(Screen.Width - 300, 500), Players[2], 0, 0, 5);
         CreatePlanet(new Vector2(Screen.Width - 500, 300), Players[2], 1, 1, 15);
@@ -183,8 +183,6 @@ public class GameController : Behaviour
 
     void Restart()
     {
-        if (!IsGameOver) return;
-
         foreach (var planet in Planets)
             Destroy(planet.GameObject);
         Planets.Clear();

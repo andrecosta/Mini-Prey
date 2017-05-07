@@ -1,9 +1,11 @@
-﻿namespace KokoEngine
+﻿using System;
+
+namespace KokoEngine
 {
     public static class Random
     {
         private static System.Random _instance;
-        private static System.Random Instance => _instance ?? (_instance = new System.Random());
+        private static System.Random Instance => _instance ?? (_instance = new System.Random(Guid.NewGuid().GetHashCode()));
 
         public static float Value => Instance.Next(0, 100) / 100f;
 

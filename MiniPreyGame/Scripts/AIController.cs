@@ -6,12 +6,8 @@ using Random = KokoEngine.Random;
 public class AIController : Player
 {
     public GameController GameController;
+
     private float _decisionTimer;
-
-    protected override void Start()
-    {
-
-    }
 
     protected override void Update()
     {
@@ -60,7 +56,7 @@ public class AIController : Player
         // Find a neutral planet sorted by least pop
         // TODO: sort by distance also?
         bool neutralChoosen = false;
-        foreach (var neutralPlanet in GameController.Planets.Where(s => s.Owner.IsNeutral).OrderBy(s => s.AvailablePopulation))
+        foreach (var neutralPlanet in GameController.Planets.ToList().Where(s => s.Owner.IsNeutral).Reverse().OrderBy(s => s.AvailablePopulation))
         {
             // Find an owned planet sorted by most pop
             foreach (var planet in GameController.Planets.Where(s => s.Owner == this).OrderByDescending(s => s.AvailablePopulation))
