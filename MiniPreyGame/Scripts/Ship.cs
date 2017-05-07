@@ -34,7 +34,19 @@ public class Ship : Behaviour
     {
         Transform.Rotation = (float)Math.Atan2(_rb.velocity.X, -_rb.velocity.Y);
 
-        if (Vector3.Distance(Transform.Position, Target.Transform.Position) <= 20)
+        foreach (Ship ship in GameController.Ships)
+        {
+            Vector2 diff = ship.Transform.Position - Transform.Position;
+            if (diff.Magnitude < 40)
+            {
+                if (ship.Owner == null)
+                    continue;
+
+                _rb.AddForce(-diff.Normalized * 4f);
+            }
+        }
+
+        if (Vector2.Distance(Transform.Position, Target.Transform.Position) <= 20)
         {
             Target.InsertShip(this);
             Destroy(GameObject);

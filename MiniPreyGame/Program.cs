@@ -74,6 +74,7 @@ namespace MiniPreyGame
             inputManager.AddActionBinding("UpgradePlanet", "W");
             inputManager.AddActionBinding("ChangePlanetToColony", "A");
             inputManager.AddActionBinding("ChangePlanetToSentry", "D");
+            inputManager.AddActionBinding("Restart", "R");
 
             // Setup the screen manager
             screenManager.AddSupportedResolution(1920, 1080);

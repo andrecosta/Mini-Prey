@@ -86,7 +86,7 @@ namespace KokoEngine
             if (_activeScene.GameObjectsPendingDestruction.Count > 0)
             {
                 // Disable the GameObject's components
-                foreach (var go in _activeScene.GameObjectsPendingDestruction)
+                foreach (var go in _activeScene.GameObjectsPendingDestruction.ToList())
                     DisableGameObject(go);
 
                 // Remove the GameObject from the scene
@@ -128,6 +128,8 @@ namespace KokoEngine
                 if (behaviour != null && behaviour.IsStarted && behaviour.Enabled)
                     behaviour.Enabled = false;
             }
+            go.GetComponents().Clear();
+            go.SetActive(false);
         }
     }
 }

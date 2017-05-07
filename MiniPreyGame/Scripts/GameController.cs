@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using KokoEngine;
+using Random = KokoEngine.Random;
 
 public class GameController : Behaviour
 {
@@ -20,39 +21,34 @@ public class GameController : Behaviour
 
     public List<Planet> Planets { get; private set; }
     public List<Ship> Ships { get; private set; }
-    public Dictionary<Player, int> PlayerPopulations { get; set; }
-    public int TotalPopulation { get { return PlayerPopulations.Values.Sum(); } }
+    public Dictionary<Player, int> PlayerPopulations { get; private set; }
+    public int TotalPopulation => PlayerPopulations.Values.Sum();
+    public bool IsGameOver { get; private set; }
 
     // Callbacks
     public Action<Planet> OnPlanetCreated { get; set; }
-    public Action<Planet> OnStructureUpgraded { get; set; }
-    public Action<Planet> OnStructureAttacked { get; set; }
-    public Action<Planet, int> OnStructureCaptured { get; set; }
-    public Action<Ship> OnCitizenCreated { get; set; }
-    public Action<Ship> OnCitizenLaunched { get; set; }
-    public Action<Ship> OnCitizenKilled { get; set; }
-
-    public Action<Planet> OnStructureHovered { get; set; }
-    public Action<Planet> OnStructureSelected { get; set; }
-
     public Action OnPopulationChange { get; set; }
 
-    //public Action<Planet, Planet> OnCitizenLaunched { get; set; }
+    private ITextRenderer _gameOverText { get; set; }
 
     protected override void Awake()
     {
         Planets = new List<Planet>();
         Ships = new List<Ship>();
         PlayerPopulations = new Dictionary<Player, int>();
+
+        _gameOverText = Instantiate<TextRenderer>("GameOverText", new Vector2(Screen.Width/2f, 50));
+        _gameOverText.Font = PlanetPopulationFont;
+        _gameOverText.Size = 0.5f;
+        OnPopulationChange += CheckForGameOver;
+
         foreach (var player in Players.Where(p => !p.IsNeutral))
-        {
             PlayerPopulations.Add(player, 0);
-        }
     }
 
     protected override void Start()
     {
-        // Create the planets
+        // Place the planets on the environment
         CreatePlanets();
     }
 
@@ -63,21 +59,24 @@ public class GameController : Behaviour
 
         if (Input.GetActionDown("ToggleDebugConsole"))
             Debug.Toggle();
+        
+        if (Input.GetActionDown("Restart"))
+            Restart();
     }
 
     private void CreatePlanets()
     {
-        CreatePlanet(new Vector2(100, 100), Players[0], 0, 1, 15);
-        CreatePlanet(new Vector2(100, 400), Players[2], 0, 2, 5);
+        CreatePlanet(new Vector2(100, 100), Players[0], 0, 1, 20);
+        CreatePlanet(new Vector2(100, 400), Players[2], 0, 1, 5);
         CreatePlanet(new Vector2(300, 200), Players[2], 0, 0, 5);
-        CreatePlanet(new Vector2(300, 500), Players[2], 1, 1, 5);
-        CreatePlanet(new Vector2(500, 300), Players[2], 1, 2, 5);
-        CreatePlanet(new Vector2(500, 600), Players[2], 1, 0, 5);
+        CreatePlanet(new Vector2(300, 500), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(500, 300), Players[2], 1, 1, 15);
+        CreatePlanet(new Vector2(500, 600), Players[2], 0, 0, 5);
         CreatePlanet(new Vector2(Screen.Width - 100, 100), Players[1], 0, 1, 10);
         CreatePlanet(new Vector2(Screen.Width - 100, 400), Players[1], 0, 1, 10);
         CreatePlanet(new Vector2(Screen.Width - 300, 200), Players[2], 0, 0, 5);
         CreatePlanet(new Vector2(Screen.Width - 300, 500), Players[2], 0, 0, 5);
-        CreatePlanet(new Vector2(Screen.Width - 500, 300), Players[2], 0, 0, 5);
+        CreatePlanet(new Vector2(Screen.Width - 500, 300), Players[2], 1, 1, 15);
         CreatePlanet(new Vector2(Screen.Width - 500, 600), Players[2], 0, 0, 5);
     }
 
@@ -124,13 +123,13 @@ public class GameController : Behaviour
 
     private void LaunchShip(Planet source, Planet target)
     {
-        var ship = Instantiate<Ship>("Ship", source.Transform.Position);
+        var ship = Instantiate<Ship>("Ship", source.Transform.Position + new Vector2(Random.Range(0, 10f), Random.Range(0, 10f)));
         var sr = ship.AddComponent<SpriteRenderer>();
         var rb = ship.AddComponent<Rigidbody>();
         var fsm = ship.AddComponent<FSM>();
         var v = ship.AddComponent<Vehicle>();
         var seek = ship.AddComponent<Seek>();
-
+        
         sr.Sprite = ShipSprite;
         sr.Layer = 0.55f;
         sr.Color = source.Owner.TeamColor;
@@ -154,20 +153,50 @@ public class GameController : Behaviour
             // Reset player populations
             PlayerPopulations[p] = 0;
 
-            // Find population inside structures
-            foreach (var structure in Planets.Where(s => s.Owner == p))
-                PlayerPopulations[p] += structure.Population;
+            // Find population inside planets
+            foreach (var planet in Planets.Where(s => s.Owner == p))
+                PlayerPopulations[p] += planet.Population;
 
             // Find population on the field
-            int ownedCitizens = FindObjectsOfType<Ship>().Count(c => c.Owner == p);
-            PlayerPopulations[p] += ownedCitizens;
+            int ownedShips = FindObjectsOfType<Ship>().Count(c => c.Owner == p);
+            PlayerPopulations[p] += ownedShips;
         }
 
         OnPopulationChange?.Invoke();
     }
 
-    public void Quit()
+    void CheckForGameOver()
     {
-        //Application.Quit();
+        if (PlayerPopulations[Players[0]] == 0)
+        {
+            IsGameOver = true;
+            _gameOverText.Text = "DEFEAT -- Press [R] to Restart";
+            _gameOverText.Color = Color.Red;
+        }
+        else if (PlayerPopulations[Players[1]] == 0)
+        {
+            IsGameOver = true;
+            _gameOverText.Text = "VICTORY -- Press [R] to Restart";
+            _gameOverText.Color = Color.Green;
+        }
+    }
+
+    void Restart()
+    {
+        if (!IsGameOver) return;
+
+        foreach (var planet in Planets)
+            Destroy(planet.GameObject);
+        Planets.Clear();
+
+        foreach (var ship in Ships)
+            Destroy(ship.GameObject);
+        Ships.Clear();
+
+        _gameOverText.Text = "";
+        IsGameOver = false;
+
+        Awake();
+        Start();
     }
 }

@@ -126,7 +126,7 @@ public class Planet : Behaviour
         if (IsUpgrading && _upgradeTimer > 0)
         {
             if (IsConverting)
-                ChangeStructureType(_targetType);
+                ChangePlanetType(_targetType);
             else
                 UpgradePlanet();
 
@@ -261,6 +261,10 @@ public class Planet : Behaviour
     public void StartUpgrade()
     {
         Debug.Log("Start upgrade!");
+
+        if (CurrentUpgradeLevel + 1 >= GameController.PlanetTypes[CurrentType].UpgradeLevels.Length)
+            return;
+
         int cost = GameController.PlanetTypes[CurrentType].UpgradeLevels[CurrentUpgradeLevel + 1].Cost;
         if (AvailablePopulation < cost) return;
 
@@ -277,7 +281,7 @@ public class Planet : Behaviour
     public void StartConversion(int newType)
     {
         int cost = GameController.PlanetTypes[newType].UpgradeLevels[0].Cost;
-        if (AvailablePopulation < cost) return;
+        if (AvailablePopulation < cost || CurrentType == newType) return;
 
         Debug.Log("Start conversion!");
         IsUpgrading = true;
@@ -318,7 +322,7 @@ public class Planet : Behaviour
         UpdateAppearance();
     }
 
-    void ChangeStructureType(int newType)
+    void ChangePlanetType(int newType)
     {
         if (newType < 0 || newType > GameController.PlanetTypes.Length - 1)
             return;
@@ -386,5 +390,11 @@ public class Planet : Behaviour
     public void HideUpgradeMenu()
     {
         _upgradeMenu.Hide();
+    }
+
+    protected override void OnDisable()
+    {
+        Destroy(_planetOutline.GameObject);
+        Destroy(_rangeOutline.GameObject);
     }
 }

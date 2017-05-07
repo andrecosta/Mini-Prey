@@ -44,10 +44,10 @@ public class PlayerController : Player
                 if (!_selectedPlanet || (_selectedPlanet != null && _selectedPlanet != planet))
                     planet.Hover();
 
-                // Select structure
+                // Select planet
                 if (Input.GetActionUp("PrimaryAction"))
                 {
-                    Debug.Log("Selected structure");
+                    Debug.Log("Selected planet");
                     if (_selectedPlanet)
                         _selectedPlanet.DeSelect();
 
@@ -76,7 +76,7 @@ public class PlayerController : Player
 
                 if (Input.GetActionDown("SecondaryAction") && _selectedPlanet != null)
                 {
-                    Debug.Log("Selected target structure");
+                    Debug.Log("Selected target planet");
                     _au.Play(AttackCommandSound);
                     _selectedPlanet.LaunchShips(planet, _selectedPercentage);
                     _selectedPlanet.DeSelect();

@@ -62,7 +62,7 @@ public class AIController : Player
         bool neutralChoosen = false;
         foreach (var neutralPlanet in GameController.Planets.Where(s => s.Owner.IsNeutral).OrderBy(s => s.AvailablePopulation))
         {
-            // Find an owned structure sorted by most pop
+            // Find an owned planet sorted by most pop
             foreach (var planet in GameController.Planets.Where(s => s.Owner == this).OrderByDescending(s => s.AvailablePopulation))
             {
                 float percentage = 0.25f;
@@ -81,13 +81,13 @@ public class AIController : Player
             }
         }
 
-        // TRY TO CAPTURE AN ENEMY STRUCTURE
-        // Find an enemy structure sorted by least pop
+        // TRY TO CAPTURE AN ENEMY PLANET
+        // Find an enemy planet sorted by least pop
         if (Random.Value < 0.5f)
             return;
         foreach (var enemyPlanet in GameController.Planets.Where(s => !s.Owner.IsNeutral && s.Owner != this).OrderBy(s => s.AvailablePopulation))
         {
-            // Find an owned structure sorted by most pop
+            // Find an owned planet sorted by most pop
             foreach (var planet in GameController.Planets.Where(s => s.Owner == this).OrderByDescending(s => s.AvailablePopulation))
             {
                 float percentage = 0.25f;
@@ -141,7 +141,7 @@ public class AIController : Player
         // Find an owned planet sorted by most pop
         foreach (var planet in GameController.Planets.Where(s => s.Owner == this).OrderByDescending(s => s.AvailablePopulation))
         {
-            // Find another owned structure sorted by least pop
+            // Find another owned planet sorted by least pop
             foreach (var targetPlanet in GameController.Planets.Where(s => s.Owner == this).OrderBy(s => s.AvailablePopulation))
             {
                 // Exclude same planet (obviously)
