@@ -82,7 +82,7 @@ namespace MiniPreyGame
                         {
                             new Planet.Upgrade
                             {
-                                Cost = 15,
+                                Cost = 10,
                                 FireRate = 0.5f,
                                 Range = 120,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Sentry1")),
@@ -96,7 +96,7 @@ namespace MiniPreyGame
                             },
                             new Planet.Upgrade
                             {
-                                Cost = 25,
+                                Cost = 30,
                                 FireRate = 0.3f,
                                 Range = 210,
                                 Sprite = new Sprite(assetManager.GetAsset<Texture2D>("Sentry3")),

@@ -37,7 +37,7 @@ class UpgradeMenu : Behaviour
             else
                 UpgradeText.Color = new Color(236, 196, 73);
 
-            UpgradeText.Text = "[W] UPGRADE TO LEVEL " + (_planet.CurrentUpgradeLevel + 1) + " (" + cost + ")";
+            UpgradeText.Text = "[W] UPGRADE TO LEVEL " + (_planet.CurrentUpgradeLevel + 2) + " (" + cost + ")";
         }
         else
         {
