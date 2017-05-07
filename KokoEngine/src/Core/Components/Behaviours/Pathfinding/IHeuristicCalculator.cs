@@ -2,6 +2,6 @@
 {
     public interface IHeuristicCalculator
     {
-        float Calculate(IGraphNode node, IGraphNode target);
+        float Calculate(IPathfindingNode node, IPathfindingNode target);
     }
 }

@@ -50,6 +50,7 @@
     <Compile Include="src\Asset Management\IAssetInternal.cs" />
     <Compile Include="src\Asset Management\IAssetManagerInternal.cs" />
     <Compile Include="src\Core\Components\LineRenderer.cs" />
+    <Compile Include="src\Core\Components\Behaviours\Pathfinding\PathfindingNode.cs" />
     <Compile Include="src\Core\Components\TextRenderer.cs" />
     <Compile Include="src\Core\Interfaces\Components\Behaviours\Animation\IAnimationClipInternal.cs" />
     <Compile Include="src\Core\Interfaces\Components\ILineRenderer.cs" />
@@ -129,12 +130,12 @@
     <Compile Include="src\Core\Structs\Vector3.cs" />
     <Compile Include="src\Core\Components\Behaviours\FSM\State.cs" />
     <Compile Include="src\Core\Components\Behaviours\Steering Behaviours\SteeringBehaviours.cs" />
-    <Compile Include="src\Core\Pathfinding\AStarGraphSearch.cs" />
-    <Compile Include="src\Core\Pathfinding\Graph.cs" />
-    <Compile Include="src\Core\Pathfinding\GraphEdge.cs" />
-    <Compile Include="src\Core\Pathfinding\GraphNodePriorityQueue.cs" />
-    <Compile Include="src\Core\Pathfinding\IGraphNode.cs" />
-    <Compile Include="src\Core\Pathfinding\IHeuristicCalculator.cs" />
+    <Compile Include="src\Core\Components\Behaviours\Pathfinding\AStarGraphSearch.cs" />
+    <Compile Include="src\Core\Components\Behaviours\Pathfinding\Graph.cs" />
+    <Compile Include="src\Core\Components\Behaviours\Pathfinding\GraphEdge.cs" />
+    <Compile Include="src\Core\Components\Behaviours\Pathfinding\GraphNodePriorityQueue.cs" />
+    <Compile Include="src\Core\Interfaces\Components\Behaviours\Pathfinding\IPathfindingNode.cs" />
+    <Compile Include="src\Core\Components\Behaviours\Pathfinding\IHeuristicCalculator.cs" />
     <Compile Include="src\Time Management\ITimeManagerInternal.cs" />
     <Compile Include="src\Time Management\ITimeManager.cs" />
     <Compile Include="src\Time Management\TimeManager.cs" />

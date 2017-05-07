@@ -1,11 +1,11 @@
 ﻿namespace KokoEngine
 {
-    public class GraphEdge
+    internal class GraphEdge
     {
-        public IGraphNode from, to;
+        public IPathfindingNode from, to;
         public float cost;
 
-        public GraphEdge(IGraphNode from, IGraphNode to, float cost)
+        public GraphEdge(IPathfindingNode from, IPathfindingNode to, float cost)
         {
             this.to = to;
             this.from = from;

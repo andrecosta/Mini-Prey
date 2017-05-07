@@ -227,10 +227,10 @@ namespace MiniPreyGame
             }
 
             // Draw shortest path
-            List<IGraphNode> spEdges = _waypointsController.GetComponent<WaypointsController>().shortestPath;
+            List<IPathfindingNode> spEdges = _waypointsController.GetComponent<WaypointsController>().shortestPath;
             for (int i = 0; i < spEdges.Count-1; i++)
             {
-                IGraphNode n = spEdges[i];
+                IPathfindingNode n = spEdges[i];
                 Waypoint t1 = n as Waypoint;
                 Waypoint t2 = spEdges[i+1] as Waypoint;
 

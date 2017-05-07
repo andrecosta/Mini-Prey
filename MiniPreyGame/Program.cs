@@ -86,7 +86,6 @@ namespace MiniPreyGame
             timeManager.TimeScale = 1;
 
             // Setup the scenes that will be usable in the game
-            //IScene myScene = SetupScenePrototype(assetManager);
             IScene myScene = SetupScene(assetManager);
             sceneManager.AddScene(myScene);
 

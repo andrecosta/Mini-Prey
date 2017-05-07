@@ -2,16 +2,16 @@
 
 namespace KokoEngine
 {
-    class GraphNodePriorityQueue
+    internal class GraphNodePriorityQueue
     {
-        List<IGraphNode> queue;
+        List<IPathfindingNode> queue;
 
         // A bool to indicate that sorting is needed
         bool needsSorting = false;
 
         public GraphNodePriorityQueue()
         {
-            queue = new List<IGraphNode>();
+            queue = new List<IPathfindingNode>();
         }
 
         // Getter with the number of elements in the queue
@@ -24,26 +24,26 @@ namespace KokoEngine
         }
 
         // This method will remove and return the GraphNode with the lowest cost
-        public IGraphNode PopFirst()
+        public IPathfindingNode PopFirst()
         {
             if (needsSorting)
             {
                 Sort();
             }
-            IGraphNode first = queue[0];
+            IPathfindingNode first = queue[0];
             queue.RemoveAt(0);
             return first;
         }
 
         // Adds a GraphNode and marks the queue that it need to Sort
-        public void Add(IGraphNode o)
+        public void Add(IPathfindingNode o)
         {
             queue.Add(o);
             needsSorting = true;
         }
 
         // Removes an element and marks to Sort
-        public void Remove(IGraphNode o)
+        public void Remove(IPathfindingNode o)
         {
             queue.Remove(o);
             needsSorting = true;
@@ -64,7 +64,7 @@ namespace KokoEngine
         // Sorts the queue
         public void Sort()
         {
-            queue.Sort((a, b) => a.totalNodeCost.CompareTo(b.totalNodeCost));
+            queue.Sort((a, b) => a.TotalNodeCost.CompareTo(b.TotalNodeCost));
             needsSorting = false;
         }
     }

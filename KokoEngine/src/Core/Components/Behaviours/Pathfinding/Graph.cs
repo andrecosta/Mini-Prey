@@ -2,11 +2,11 @@
 
 namespace KokoEngine
 {
-    public class Graph
+    internal class Graph
     {
-        public List<IGraphNode> nodes = new List<IGraphNode>();
+        public List<IPathfindingNode> nodes = new List<IPathfindingNode>();
         public List<GraphEdge> edges = new List<GraphEdge>();
-        public Dictionary<IGraphNode, List<GraphEdge>> nodeFrontiers = new Dictionary<IGraphNode, List<GraphEdge>>();
+        public Dictionary<IPathfindingNode, List<GraphEdge>> nodeFrontiers = new Dictionary<IPathfindingNode, List<GraphEdge>>();
 
         private bool directed;
 
@@ -15,7 +15,7 @@ namespace KokoEngine
             this.directed = directed;
         }
 
-        public bool AddNode(IGraphNode n)
+        public bool AddNode(IPathfindingNode n)
         {
             if (nodes.Contains(n))
             {
@@ -26,12 +26,12 @@ namespace KokoEngine
             return true;
         }
 
-        public IGraphNode GetNode(int index)
+        public IPathfindingNode GetNode(int index)
         {
             return nodes[index];
         }
 
-        public bool RemoveNode(IGraphNode n)
+        public bool RemoveNode(IPathfindingNode n)
         {
             if (nodes.Remove(n))
             {
@@ -80,7 +80,7 @@ namespace KokoEngine
             return false;
         }
 
-        private GraphEdge FindEdge(IGraphNode from, IGraphNode to)
+        private GraphEdge FindEdge(IPathfindingNode from, IPathfindingNode to)
         {
             for (int i = 0; i < edges.Count; i++)
             {
@@ -93,7 +93,7 @@ namespace KokoEngine
             return null;
         }
 
-        public List<GraphEdge> GetFrontier(IGraphNode n)
+        public List<GraphEdge> GetFrontier(IPathfindingNode n)
         {
             return nodeFrontiers[n];
         }

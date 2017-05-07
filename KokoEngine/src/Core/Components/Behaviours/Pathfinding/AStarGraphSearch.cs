@@ -2,21 +2,21 @@
 
 namespace KokoEngine
 {
-    public class AStarGraphSearch
+    internal class AStarGraphSearch
     {
-        public Dictionary<IGraphNode, GraphEdge> shortestPahTree = new Dictionary<IGraphNode, GraphEdge>();
-        public Dictionary<IGraphNode, GraphEdge> searchFrontier = new Dictionary<IGraphNode, GraphEdge>();
-        public List<IGraphNode> shortestPath = new List<IGraphNode>();
+        public Dictionary<IPathfindingNode, GraphEdge> shortestPahTree = new Dictionary<IPathfindingNode, GraphEdge>();
+        public Dictionary<IPathfindingNode, GraphEdge> searchFrontier = new Dictionary<IPathfindingNode, GraphEdge>();
+        public List<IPathfindingNode> shortestPath = new List<IPathfindingNode>();
 
         GraphNodePriorityQueue pq = new GraphNodePriorityQueue();
 
-        public bool Search(Graph graph, IGraphNode source, IGraphNode target, IHeuristicCalculator hc)
+        public bool Search(Graph graph, IPathfindingNode source, IPathfindingNode target, IHeuristicCalculator hc)
         {
             pq.Add(source);
 
             while (pq.count > 0)
             {
-                IGraphNode nextClosestNode = pq.PopFirst();
+                IPathfindingNode nextClosestNode = pq.PopFirst();
                 if (searchFrontier.ContainsKey(nextClosestNode))
                 {
                     GraphEdge nearestEdge = searchFrontier[nextClosestNode];
@@ -40,23 +40,23 @@ namespace KokoEngine
                 for (int i = 0; i < frontier.Count; i++)
                 {
                     GraphEdge frontierEdge = frontier[i];
-                    IGraphNode neighbour = frontierEdge.to;
+                    IPathfindingNode neighbour = frontierEdge.to;
 
-                    float realCost = nextClosestNode.realNodeCost + frontierEdge.cost;
+                    float realCost = nextClosestNode.RealNodeCost + frontierEdge.cost;
                     float heuristicCost = hc.Calculate(neighbour, target);
-                    float totalCost = nextClosestNode.totalNodeCost + frontierEdge.cost;
+                    float totalCost = nextClosestNode.TotalNodeCost + frontierEdge.cost;
 
                     if (searchFrontier.ContainsKey(neighbour) == false)
                     {
-                        neighbour.totalNodeCost = totalCost;
-                        neighbour.realNodeCost = realCost;
+                        neighbour.TotalNodeCost = totalCost;
+                        neighbour.RealNodeCost = realCost;
                         searchFrontier.Add(neighbour, frontierEdge);
                         pq.Add(neighbour);
                     }
-                    else if (realCost < neighbour.realNodeCost)
+                    else if (realCost < neighbour.RealNodeCost)
                     {
-                        neighbour.totalNodeCost = totalCost;
-                        neighbour.realNodeCost = realCost;
+                        neighbour.TotalNodeCost = totalCost;
+                        neighbour.RealNodeCost = realCost;
                         pq.MarkToSort();
                         searchFrontier[neighbour] = frontierEdge;
                     }
@@ -65,7 +65,7 @@ namespace KokoEngine
             return false;
         }
 
-        private void ConstructPath(IGraphNode source, IGraphNode target)
+        private void ConstructPath(IPathfindingNode source, IPathfindingNode target)
         {
             GraphEdge edge = shortestPahTree[target];
 

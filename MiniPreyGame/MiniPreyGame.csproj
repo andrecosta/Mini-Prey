@@ -56,18 +56,9 @@
     <Compile Include="Scripts\Planet.cs" />
     <Compile Include="Scripts\ShipSeekState.cs" />
     <Compile Include="Scripts\Shot.cs" />
-    <Compile Include="SetupScenePrototype.cs" />
     <Compile Include="SetupScene.cs" />
-    <Compile Include="Scripts\Prototype\Boid.cs" />
-    <Compile Include="Scripts\Prototype\Boid States\BoidPursuitState.cs" />
-    <Compile Include="Scripts\Prototype\WaypointEuclideanHeuristicCAlculator.cs" />
-    <Compile Include="Scripts\Prototype\WaypointsController.cs" />
-    <Compile Include="Scripts\Prototype\Waypoint.cs" />
-    <Compile Include="Scripts\Prototype\PlayerController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scripts\Prototype\Boid States\BoidFleeState.cs" />
-    <Compile Include="Scripts\Prototype\Boid States\BoidSeekState.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
