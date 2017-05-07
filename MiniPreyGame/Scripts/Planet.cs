@@ -138,7 +138,7 @@ public class Planet : Behaviour
         if (!IsHovered)
             _planetOutline.Transform.Rotation += Time.DeltaTime * 0.25f;
 
-        _rangeOutline.Transform.Rotation += Time.DeltaTime * 0.1f;
+        _rangeOutline.Transform.Rotation += Time.DeltaTime * 0.02f;
         /*_animator.SetBool("IsHovered", IsHovered);
         _animator.SetBool("IsUnderAttack", IsUnderAttack);
         _animator.SetBool("IsUpgrading", IsUpgrading);*/
