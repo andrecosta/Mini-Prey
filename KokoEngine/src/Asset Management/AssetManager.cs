@@ -9,6 +9,7 @@ namespace KokoEngine
         public Action<Texture2D> LoadTextureHandler { get; set; }
         public Action<AudioClip> LoadAudioClipHandler { get; set; }
         public Action<Font> LoadFontHandler { get; set; }
+        public Action<IAudioSource, AudioClip> PlaySoundHandler { get; set; }
 
         public string RootDirectory { get; set; }
 
@@ -53,6 +54,11 @@ namespace KokoEngine
                 else if (asset is Font)
                     LoadFontHandler?.Invoke(asset as Font);
             }
+        }
+
+        void IAssetManagerInternal.PlaySound(IAudioSource au, AudioClip clip)
+        {
+            PlaySoundHandler?.Invoke(au, clip);
         }
     }
 }

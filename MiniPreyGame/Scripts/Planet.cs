@@ -46,6 +46,7 @@ public class Planet : Behaviour
     private float _underAttackTimer;
     private ISpriteRenderer _sr;
     private ITextRenderer _text;
+    private IAudioSource _au;
     private IAnimator _animator;
 
 
@@ -57,7 +58,7 @@ public class Planet : Behaviour
     private ISpriteRenderer _planetOutline;
     private ISpriteRenderer _rangeOutline;
 
-    private bool _pendingStructureUpgradeLevel;
+    private bool _pendingPlanetUpgradeLevel;
     private float _hp = 1;
 
     private bool _isUpgradeMenuOpen;
@@ -67,6 +68,7 @@ public class Planet : Behaviour
     {
         _sr = GetComponent<SpriteRenderer>();
         _text = GetComponent<TextRenderer>();
+        _au = GetComponent<AudioSource>();
         _animator = GetComponent<Animator>();
         _queuedToLaunch = new List<Planet>();
 
@@ -122,12 +124,12 @@ public class Planet : Behaviour
             _underAttackTimer += Time.DeltaTime;
 
         // Upgrade
-        if (IsUpgrading && _upgradeTimer > 10)
+        if (IsUpgrading && _upgradeTimer > 0)
         {
             if (IsConverting)
                 ChangeStructureType(_targetType);
             else
-                UpgradeStructure();
+                UpgradePlanet();
 
             _upgradeTimer = 0;
         }
@@ -153,15 +155,17 @@ public class Planet : Behaviour
                 var shot = Instantiate<Shot>("Shot", Transform.Position);
                 var sr = shot.AddComponent<SpriteRenderer>();
                 var rb = shot.AddComponent<Rigidbody>();
+                var au = shot.AddComponent<AudioSource>();
                 var v = shot.AddComponent<Vehicle>();
                 var pursuit = shot.AddComponent<Pursuit>();
 
                 sr.Sprite = GameController.ShotSprite;
                 sr.Color = new Color(236, 196, 73);
-
+                
                 v.Behaviours.Add(pursuit);
                 
                 shot.Target = ship;
+                shot.ShipShotSound = GameController.ShipShotSound;
                 ship.IsBeingTargeted = true;
 
                 break;
@@ -223,7 +227,7 @@ public class Planet : Behaviour
             if (Population <= 0)
             {
                 Population = 0;
-                ConvertStructure(ship.Owner);
+                ConvertPlanet(ship.Owner);
             }
         }
         else
@@ -239,14 +243,14 @@ public class Planet : Behaviour
         _text.Text = Population.ToString();
     }
 
-    void ConvertStructure(Player newOwner)
+    void ConvertPlanet(Player newOwner)
     {
         Owner = newOwner;
         _queuedToLaunch.Clear();
         //HideUpgradeMenu();
 
-        _pendingStructureUpgradeLevel = true;
-        DowngradeStructure();
+        _pendingPlanetUpgradeLevel = true;
+        DowngradePlanet();
         IsUpgrading = false;
         IsConverting = false;
 
@@ -289,19 +293,23 @@ public class Planet : Behaviour
         //HideUpgradeMenu();
     }
 
-    void UpgradeStructure()
+    void UpgradePlanet()
     {
         if (CurrentUpgradeLevel == GameController.PlanetTypes[CurrentType].UpgradeLevels.Length - 1)
             return;
 
         CurrentUpgradeLevel++;
         IsUpgrading = false;
+        if (Owner == GameController.Players[0])
+            _au.Play(GameController.PlanetUpgradeSound);
 
         UpdateAppearance();
     }
 
-    void DowngradeStructure()
+    void DowngradePlanet()
     {
+        _au.Play(GameController.PlanetConqueredSound);
+
         if (CurrentUpgradeLevel == 0)
             return;
 
@@ -319,6 +327,7 @@ public class Planet : Behaviour
         CurrentType = newType;
         IsUpgrading = false;
         IsConverting = false;
+        _au.Play(GameController.PlanetUpgradeSound);
 
         UpdateAppearance();
     }
@@ -355,6 +364,8 @@ public class Planet : Behaviour
         _planetOutline.Color = new Color(236, 196, 73);
         _planetOutline.Transform.Rotation = 0;
         _planetOutline.GameObject.SetActive(true);
+        if (Owner == GameController.Players[0])
+            _au.Play(GameController.PlanetSelectSound);
     }
 
     public void DeSelect()

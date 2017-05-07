@@ -31,7 +31,7 @@ namespace MiniPreyGame
             _boid.Transform.Scale = Vector3.One * 0.7f;
 
             // Play seek sound
-            _boid.AudioSource.Play(_boid.SeekSound);
+            //_boid.AudioSource.Play(_boid.SeekSound);
         }
 
         public override void UpdateState()

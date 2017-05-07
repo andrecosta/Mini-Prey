@@ -13,6 +13,7 @@ namespace KokoEngine
         Action<Texture2D> LoadTextureHandler { get; set; }
         Action<AudioClip> LoadAudioClipHandler { get; set; }
         Action<Font> LoadFontHandler { get; set; }
+        Action<IAudioSource, AudioClip> PlaySoundHandler { get; set; }
 
         /// <summary>
         /// Adds an asset of type T.

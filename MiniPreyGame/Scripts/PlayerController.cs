@@ -2,19 +2,22 @@
 
 public class PlayerController : Player
 {
-    public GameController GameController;
-    public CustomCursor CustomCursor;
+    public GameController GameController { get; set; }
+    public CustomCursor CustomCursor { get; set; }
+    public AudioClip AttackCommandSound { get; set; }
 
     //private LineRenderer _lineRenderer;
     private Planet _selectedPlanet;
     private Planet _lastHoveredPlanet;
 
     private ILineRenderer _lineRenderer;
+    private IAudioSource _au;
     private float _selectedPercentage = 0.25f;
 
     protected override void Awake()
     {
         _lineRenderer = GetComponent<LineRenderer>();
+        _au = GetComponent<AudioSource>();
     }
 
     protected override void Start()
@@ -80,6 +83,7 @@ public class PlayerController : Player
                 if (Input.GetActionDown("SecondaryAction") && _selectedPlanet != null)
                 {
                     Debug.Log("Selected target structure");
+                    _au.Play(AttackCommandSound);
                     _selectedPlanet.LaunchShips(planet, _selectedPercentage);
                     _selectedPlanet.DeSelect();
                     //_selectedPlanet.HideUpgradeMenu();

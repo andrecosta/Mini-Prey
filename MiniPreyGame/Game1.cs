@@ -108,6 +108,7 @@ namespace MiniPreyGame
             assetManager.LoadTextureHandler += LoadTexture;
             assetManager.LoadAudioClipHandler += LoadSoundEffect;
             assetManager.LoadFontHandler += LoadSpriteFont;
+            assetManager.PlaySoundHandler += PlaySound;
             screenManager.ResolutionUpdateHandler += UpdateGraphicsSettings;
             renderManager.RenderSpriteHandler += DrawSprite;
             renderManager.RenderTextHandler += DrawText;
@@ -148,6 +149,12 @@ namespace MiniPreyGame
         {
             SpriteFont font = Content.Load<SpriteFont>(asset.Name);
             asset.SetData(font);
+        }
+
+        private void PlaySound(IAudioSource au, AudioClip clip)
+        {
+            SoundEffect sound = clip.ToMonoSoundEffect();
+            sound?.Play(au.Volume, au.Pitch, au.Pan);
         }
 
         void DrawSprite(ISpriteRenderer sr)
@@ -260,22 +267,6 @@ namespace MiniPreyGame
         private int GetMouseScrollWheelValue()
         {
             return Mouse.GetState().ScrollWheelValue;
-        }
-
-        void PlaySounds(IGameObject rootGameObject)
-        {
-            /*foreach (IComponent component in rootGameObject.GetComponents())
-            {
-                IAudioSource au = component as IAudioSource;
-
-                // Play MonoGame sound effect
-                if (au?.AudioClip?.RawData != null)
-                {
-                    var soundEffect = au.AudioClip.RawData as SoundEffect;
-                    soundEffect?.Play(au.Volume, au.Pitch, au.Pan);
-                    au.AudioClip = null;
-                }
-            }*/
         }
 
         #endregion

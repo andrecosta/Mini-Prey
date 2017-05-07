@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace MiniPreyGame
@@ -54,6 +55,11 @@ namespace MiniPreyGame
         public static SpriteFont ToMonoSpriteFont(this KokoEngine.Font input)
         {
             return input.RawData as SpriteFont;
+        }
+
+        public static SoundEffect ToMonoSoundEffect(this KokoEngine.AudioClip input)
+        {
+            return input.RawData as SoundEffect;
         }
 
         public static Rectangle ToMonoRectangle(this KokoEngine.Rect input)

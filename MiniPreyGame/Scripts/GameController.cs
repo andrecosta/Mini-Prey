@@ -10,6 +10,10 @@ public class GameController : Behaviour
     public ISprite ShotSprite { get; set; }
     public ISprite OutlineSprite { get; set; }
     public ISprite RangeSprite { get; set; }
+    public AudioClip PlanetConqueredSound { get; set; }
+    public AudioClip PlanetSelectSound { get; set; }
+    public AudioClip PlanetUpgradeSound { get; set; }
+    public AudioClip ShipShotSound { get; set; }
     public Font PlanetPopulationFont { get; set; }
     public Player[] Players { get; set; }
     public Planet.Type[] PlanetTypes { get; set; }
@@ -96,10 +100,13 @@ public class GameController : Behaviour
         tr.Offset = new Vector2(0, -54);
         tr.Size = 0.75f;
 
+        // Add AudioSource component
+        var au = planet.AddComponent<AudioSource>();
+
         // Bind callbacks
         planet.LaunchShipHandler += LaunchShip;
         planet.OnPopulationChange += UpdateTotalPopulation;
-        
+
         // Add to list
         Planets.Add(planet);
 

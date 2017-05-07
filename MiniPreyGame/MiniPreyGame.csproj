@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\AttackCommand.wav" />
     <Content Include="Content\bullet.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -102,6 +103,9 @@
     <Content Include="Content\Planet3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\PlanetConquered.wav" />
+    <Content Include="Content\PlanetSelect.wav" />
+    <Content Include="Content\PlanetUpgrade.wav" />
     <Content Include="Content\range.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -117,6 +121,7 @@
     <Content Include="Content\ship.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\ShipShotDown.wav" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>

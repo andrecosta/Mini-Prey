@@ -31,7 +31,7 @@ namespace MiniPreyGame
             _boid.Transform.Scale = Vector3.One*0.7f;
 
             // Play flee sound
-            _boid.AudioSource.Play(_boid.FleeSound);
+            //_boid.AudioSource.Play(_boid.FleeSound);
         }
 
         public override void UpdateState()

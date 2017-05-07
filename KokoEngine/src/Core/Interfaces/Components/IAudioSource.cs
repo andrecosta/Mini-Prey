@@ -7,11 +7,6 @@
     public interface IAudioSource : IComponent
     {
         /// <summary>
-        /// The audio clip asset.
-        /// </summary>
-        AudioClip AudioClip { get; set; }
-
-        /// <summary>
         /// The volume of the audio playback. [0 to 1]
         /// </summary>
         float Volume { get; set; }

@@ -179,3 +179,33 @@
 /processorParam:TextureFormat=Color
 /build:range.png
 
+#begin AttackCommand.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:AttackCommand.wav
+
+#begin PlanetConquered.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:PlanetConquered.wav
+
+#begin PlanetSelect.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:PlanetSelect.wav
+
+#begin PlanetUpgrade.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:PlanetUpgrade.wav
+
+#begin ShipShotDown.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:ShipShotDown.wav
+

@@ -58,6 +58,11 @@ namespace MiniPreyGame
             assetManager.AddAsset<Texture2D>("cursor_50.png");
             assetManager.AddAsset<Texture2D>("cursor_75.png");
             assetManager.AddAsset<Texture2D>("cursor_100.png");
+            assetManager.AddAsset<AudioClip>("AttackCommand.wav");
+            assetManager.AddAsset<AudioClip>("PlanetConquered.wav");
+            assetManager.AddAsset<AudioClip>("PlanetSelect.wav");
+            assetManager.AddAsset<AudioClip>("PlanetUpgrade.wav");
+            assetManager.AddAsset<AudioClip>("ShipShotDown.wav");
             assetManager.AddAsset<Font>("main_font.spritefont");
             assetManager.AddAsset<Font>("debug.spritefont");
 

@@ -14,6 +14,7 @@ namespace KokoEngine
         private readonly IDebugManagerInternal _debugManager;
 
         // TODO: Create in internal interface!
+        internal IAssetManagerInternal AssetManager => _assetManager;
         internal IInputManagerInternal InputManager => _inputManager;
         internal IScreenManagerInternal ScreenManager => _screenManager;
         internal ITimeManagerInternal TimeManager => _timeManager;

@@ -328,6 +328,18 @@ references:
   commentId: Overload:KokoEngine.AssetManager.LoadTextureHandler
   fullName: KokoEngine.AssetManager.LoadTextureHandler
   nameWithType: AssetManager.LoadTextureHandler
+- uid: KokoEngine.AssetManager.PlaySoundHandler
+  name: PlaySoundHandler
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_PlaySoundHandler
+  commentId: P:KokoEngine.AssetManager.PlaySoundHandler
+  fullName: KokoEngine.AssetManager.PlaySoundHandler
+  nameWithType: AssetManager.PlaySoundHandler
+- uid: KokoEngine.AssetManager.PlaySoundHandler*
+  name: PlaySoundHandler
+  href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_PlaySoundHandler_
+  commentId: Overload:KokoEngine.AssetManager.PlaySoundHandler
+  fullName: KokoEngine.AssetManager.PlaySoundHandler
+  nameWithType: AssetManager.PlaySoundHandler
 - uid: KokoEngine.AssetManager.RootDirectory
   name: RootDirectory
   href: api/KokoEngine.AssetManager.html#KokoEngine_AssetManager_RootDirectory
@@ -412,18 +424,6 @@ references:
   commentId: T:KokoEngine.AudioSource
   fullName: KokoEngine.AudioSource
   nameWithType: AudioSource
-- uid: KokoEngine.AudioSource.AudioClip
-  name: AudioClip
-  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_AudioClip
-  commentId: P:KokoEngine.AudioSource.AudioClip
-  fullName: KokoEngine.AudioSource.AudioClip
-  nameWithType: AudioSource.AudioClip
-- uid: KokoEngine.AudioSource.AudioClip*
-  name: AudioClip
-  href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_AudioClip_
-  commentId: Overload:KokoEngine.AudioSource.AudioClip
-  fullName: KokoEngine.AudioSource.AudioClip
-  nameWithType: AudioSource.AudioClip
 - uid: KokoEngine.AudioSource.Pan
   name: Pan
   href: api/KokoEngine.AudioSource.html#KokoEngine_AudioSource_Pan
@@ -1930,6 +1930,18 @@ references:
   commentId: Overload:KokoEngine.IAssetManager.LoadTextureHandler
   fullName: KokoEngine.IAssetManager.LoadTextureHandler
   nameWithType: IAssetManager.LoadTextureHandler
+- uid: KokoEngine.IAssetManager.PlaySoundHandler
+  name: PlaySoundHandler
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_PlaySoundHandler
+  commentId: P:KokoEngine.IAssetManager.PlaySoundHandler
+  fullName: KokoEngine.IAssetManager.PlaySoundHandler
+  nameWithType: IAssetManager.PlaySoundHandler
+- uid: KokoEngine.IAssetManager.PlaySoundHandler*
+  name: PlaySoundHandler
+  href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_PlaySoundHandler_
+  commentId: Overload:KokoEngine.IAssetManager.PlaySoundHandler
+  fullName: KokoEngine.IAssetManager.PlaySoundHandler
+  nameWithType: IAssetManager.PlaySoundHandler
 - uid: KokoEngine.IAssetManager.RootDirectory
   name: RootDirectory
   href: api/KokoEngine.IAssetManager.html#KokoEngine_IAssetManager_RootDirectory
@@ -1948,18 +1960,6 @@ references:
   commentId: T:KokoEngine.IAudioSource
   fullName: KokoEngine.IAudioSource
   nameWithType: IAudioSource
-- uid: KokoEngine.IAudioSource.AudioClip
-  name: AudioClip
-  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_AudioClip
-  commentId: P:KokoEngine.IAudioSource.AudioClip
-  fullName: KokoEngine.IAudioSource.AudioClip
-  nameWithType: IAudioSource.AudioClip
-- uid: KokoEngine.IAudioSource.AudioClip*
-  name: AudioClip
-  href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_AudioClip_
-  commentId: Overload:KokoEngine.IAudioSource.AudioClip
-  fullName: KokoEngine.IAudioSource.AudioClip
-  nameWithType: IAudioSource.AudioClip
 - uid: KokoEngine.IAudioSource.Pan
   name: Pan
   href: api/KokoEngine.IAudioSource.html#KokoEngine_IAudioSource_Pan
