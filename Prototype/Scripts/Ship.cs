@@ -14,10 +14,12 @@ public class Ship : Behaviour
     public bool IsBeingTargeted { get; set; }
 
     private FSM _fsm;
+    private IRigidbody _rb;
 
     protected override void Awake()
     {
         _fsm = GetComponent<FSM>();
+        _rb = GetComponent<Rigidbody>();
         Seek = GetComponent<Seek>();
     }
 
@@ -26,6 +28,11 @@ public class Ship : Behaviour
         _fsm.LoadState<ShipSeekState>();
         _fsm.LoadState<ShipDestroyedState>();
         _fsm.SetState<ShipSeekState>();
+    }
+
+    protected override void Update()
+    {
+        Debug.DrawLine(Transform.Position, Transform.Position + _rb.velocity, Color.Cyan, 1);
     }
 
     protected override void OnDisable()

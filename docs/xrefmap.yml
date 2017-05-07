@@ -4280,6 +4280,12 @@ references:
   commentId: Overload:KokoEngine.Pursuit.Calculate
   fullName: KokoEngine.Pursuit.Calculate
   nameWithType: Pursuit.Calculate
+- uid: KokoEngine.Pursuit.Paused
+  name: Paused
+  href: api/KokoEngine.Pursuit.html#KokoEngine_Pursuit_Paused
+  commentId: F:KokoEngine.Pursuit.Paused
+  fullName: KokoEngine.Pursuit.Paused
+  nameWithType: Pursuit.Paused
 - uid: KokoEngine.Pursuit.target
   name: target
   href: api/KokoEngine.Pursuit.html#KokoEngine_Pursuit_target
@@ -4877,6 +4883,12 @@ references:
   commentId: Overload:KokoEngine.Seek.Calculate
   fullName: KokoEngine.Seek.Calculate
   nameWithType: Seek.Calculate
+- uid: KokoEngine.Seek.Paused
+  name: Paused
+  href: api/KokoEngine.Seek.html#KokoEngine_Seek_Paused
+  commentId: F:KokoEngine.Seek.Paused
+  fullName: KokoEngine.Seek.Paused
+  nameWithType: Seek.Paused
 - uid: KokoEngine.Seek.target
   name: target
   href: api/KokoEngine.Seek.html#KokoEngine_Seek_target

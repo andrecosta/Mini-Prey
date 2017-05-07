@@ -63,6 +63,12 @@ public class GameController : Behaviour
         
         if (Input.GetActionDown("Restart"))
             Restart();
+
+        if (Input.GetActionDown("ToggleSeek"))
+            Seek.Paused = !Seek.Paused;
+
+        if (Input.GetActionDown("TogglePursuit"))
+            Pursuit.Paused = !Pursuit.Paused;
     }
 
     private void CreatePlanets()

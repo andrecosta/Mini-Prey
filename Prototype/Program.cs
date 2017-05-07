@@ -72,6 +72,8 @@ namespace Prototype
             inputManager.AddActionBinding("SecondaryAction", "MouseRight");
             inputManager.AddActionBinding("ToggleFullScreen", "F11");
             inputManager.AddActionBinding("ToggleDebugConsole", "F12");
+            inputManager.AddActionBinding("ToggleSeek", "F1");
+            inputManager.AddActionBinding("TogglePursuit", "F2");
             inputManager.AddActionBinding("UpgradePlanet", "W");
             inputManager.AddActionBinding("ChangePlanetToColony", "A");
             inputManager.AddActionBinding("ChangePlanetToSentry", "D");
