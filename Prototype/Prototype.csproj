@@ -46,6 +46,7 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Scripts\AIController.cs" />
     <Compile Include="Scripts\CustomCursor.cs" />
+    <Compile Include="Scripts\ShipDestroyedState.cs" />
     <Compile Include="Scripts\UpgradeMenu.cs" />
     <Compile Include="Scripts\HUD.cs" />
     <Compile Include="Scripts\Player.cs" />
@@ -114,6 +115,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\ShipShotDown.wav" />
+    <Content Include="Content\ship_explosion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>

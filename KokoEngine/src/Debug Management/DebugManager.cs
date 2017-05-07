@@ -37,7 +37,7 @@ namespace KokoEngine
             {
                 Font font = (this as IDebugManagerInternal).ConsoleFont;
                 string text = _messages[i];
-                Vector2 position = new Vector2(10, Engine.Instance.ScreenManager.Height - i * 15);
+                Vector2 position = new Vector2(10, (Engine.Instance.ScreenManager.Height - 15) - i * 15);
                 Color color = Color.White;
 
                 Engine.Instance.RenderManager.RenderText(font, text, position, color, 0, 0, 1, 0);
@@ -47,8 +47,8 @@ namespace KokoEngine
         public void Log(string message)
         {
             _messages.Insert(0, message);
-            if (_messages.Count > 14)
-                _messages.RemoveAt(14);
+            if (_messages.Count > 13)
+                _messages.RemoveAt(13);
         }
 
         public void DrawLine(Vector2 start, Vector2 end, Color color, int size)

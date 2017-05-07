@@ -43,6 +43,7 @@ namespace Prototype
                 gc.PlanetSelectSound = assetManager.GetAsset<AudioClip>("PlanetSelect");
                 gc.PlanetUpgradeSound = assetManager.GetAsset<AudioClip>("PlanetUpgrade");
                 gc.ShipShotSound = assetManager.GetAsset<AudioClip>("ShipShotDown");
+                gc.ShipExplosionAnimation = new AnimationClip(new Sprite(assetManager.GetAsset<Texture2D>("ship_explosion")), 7);
                 gc.PlanetPopulationFont = assetManager.GetAsset<Font>("main_font");
                 gc.Players = new Player[] {player, aiPlayer, neutralPlayer};
 

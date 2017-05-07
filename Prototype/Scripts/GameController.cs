@@ -15,6 +15,7 @@ public class GameController : Behaviour
     public AudioClip PlanetSelectSound { get; set; }
     public AudioClip PlanetUpgradeSound { get; set; }
     public AudioClip ShipShotSound { get; set; }
+    public AnimationClip ShipExplosionAnimation { get; set; }
     public Font PlanetPopulationFont { get; set; }
     public Player[] Players { get; set; }
     public Planet.Type[] PlanetTypes { get; set; }
@@ -29,7 +30,7 @@ public class GameController : Behaviour
     public Action<Planet> OnPlanetCreated { get; set; }
     public Action OnPopulationChange { get; set; }
 
-    private ITextRenderer _gameOverText { get; set; }
+    private ITextRenderer _gameOverText;
 
     protected override void Awake()
     {
@@ -126,6 +127,7 @@ public class GameController : Behaviour
         var ship = Instantiate<Ship>("Ship", source.Transform.Position + new Vector2(Random.Range(0, 10f), Random.Range(0, 10f)));
         var sr = ship.AddComponent<SpriteRenderer>();
         var rb = ship.AddComponent<Rigidbody>();
+        var a = ship.AddComponent<Animator>();
         var fsm = ship.AddComponent<FSM>();
         var v = ship.AddComponent<Vehicle>();
         var seek = ship.AddComponent<Seek>();
@@ -133,7 +135,8 @@ public class GameController : Behaviour
         sr.Sprite = ShipSprite;
         sr.Layer = 0.55f;
         sr.Color = source.Owner.TeamColor;
-
+        a.AddAnimation("explosion", ShipExplosionAnimation);
+        a.Looping = false;
         v.Behaviours.Add(seek);
 
         ship.GameController = this;

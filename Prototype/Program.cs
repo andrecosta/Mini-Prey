@@ -45,6 +45,7 @@ namespace Prototype
             // Setup the asset manager
             assetManager.RootDirectory = "Content";
             assetManager.AddAsset<Texture2D>("ship.png");
+            assetManager.AddAsset<Texture2D>("ship_explosion.png");
             assetManager.AddAsset<Texture2D>("Planet1.png");
             assetManager.AddAsset<Texture2D>("Planet2.png");
             assetManager.AddAsset<Texture2D>("Planet3.png");
