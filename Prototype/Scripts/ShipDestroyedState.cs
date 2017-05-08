@@ -15,8 +15,11 @@ class ShipDestroyedState : State
     {
         base.OnEnterState();
 
-        _ship.GetComponent<Vehicle>().MaxSpeed = 15;
-        _ship.GetComponent<Vehicle>().Behaviours.Clear();
+        if (_ship.GetComponent<Vehicle>())
+        {
+            _ship.GetComponent<Vehicle>().MaxSpeed = 15;
+            _ship.GetComponent<Vehicle>().Behaviours.Clear();
+        }
         _animator.Play("explosion", 0.08f);
     }
 
